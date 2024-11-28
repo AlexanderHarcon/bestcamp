@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+/* < country.tpl
+* < home.tpl
+*/
+
+.shooseus
+{
+    &-lt
+    {
+        max-width: 100%;
+        @extend %flexbox;
+        @extend %flex-wrap;
+        @extend %justify-content_center;
+        gap: 1.6rem;
+
+        @include mq-w(1100px)
+        {
+            &._between
+            {
+                @include justify-content(space-between);
+            }
+        }
+
+        > *
+        {
+            max-width: 100%;
+
+            @include mq-w(1100px)
+            {
+                @include calc(max-width, '65% - 1.6rem');
+
+                &:nth-child(1)
+                {
+                    max-width: $w_prev;
+                }
+            }
+        }
+    }
+
+    &-body
+    {
+        padding: 1.4rem 1.6rem;
+        background-color: $cl-bg;
+        border-radius: 1.6rem;
+        @extend %box-shadow;
+
+        &__wrap
+        {
+            max-width: 100%;
+            width: 16rem;
+            @include mr_auto();
+
+            @include mq-w(540px)
+            {
+                width: 30rem;
+            }
+
+            @include mq-w(740px)
+            {
+                width: 44rem;
+            }
+        }
+
+        &-lt
+        {
+            max-width: 100%;
+            @extend %flexbox;
+            @extend %flex-wrap;
+            @extend %justify-content_center;
+            gap: 1.6rem;
+
+            > *
+            {
+                @extend %flex-grow_1;
+            }
+        }
+    }
+}
+
+.infohead2
+{
+    max-width: 100%;
+    width: 34rem;
+    @include rhythm-margin(1rem);
+
+    &__content
+    {
+        font-size: 0.9rem;
+    }
+}
+
+.shooseus-item
+{
+    max-width: 100%;
+    width: 190px;
+
+    @include rhythm-margin(0.4rem);
+}
+
+
+
+
+
+

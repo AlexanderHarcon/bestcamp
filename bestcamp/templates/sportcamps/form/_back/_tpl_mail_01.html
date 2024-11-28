@@ -1,0 +1,12 @@
+<br/>Посетитель {if $name}по имени: <strong>{$name}</strong>{/if}<br/>{if $page == 'bell'}
+Прислал(а) телефон для обратного звонка.<br/>{/if}
+{if $tel}
+Его Телефон: <strong>{$tel}</strong><br/>{/if}
+{if $email}
+Его электронный адрес: <strong>{$email}</strong><br/>{/if}
+{if $page && $page != 'bell' && $page != 'review'}
+Прислал вопрос по теме: <strong>{$page}</strong><br/>{/if}
+{if $page == 'review'}
+Оставил отзыв на тему: <strong>{$theme}</strong><br/>{/if}
+{if $message}
+Его сообщение / Отзыв<br/><hr/><table><tr><th align="left" style="padding: 10px">Текст сообщения</th><td style="padding: 10px">{$message}</td></tr></table>{/if}

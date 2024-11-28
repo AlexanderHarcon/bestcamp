@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.price-included {
+  background-color: #F2F9FD;
+  text-align: center;
+}
+.price-included__bl-title {
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #2F3B40;
+}
+.price-included__bl-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+@media (min-width: 1115px) {
+  .price-included__bl-grid {
+    gap: 10px;
+  }
+}
+@media (min-width: 1400px) {
+  .price-included__bl-grid {
+    gap: 24px;
+  }
+}
+.price-included__bl-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 24px 50px 0px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 139px;
+  height: 134px;
+  padding: 4px;
+}
+@media (min-width: 430px) {
+  .price-included__bl-card {
+    width: 187px;
+    height: 185px;
+    padding: 16px;
+  }
+}
+@media (min-width: 730px) {
+  .price-included__bl-card {
+    width: 332px;
+    height: 104px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 924px) {
+  .price-included__bl-card {
+    width: calc(33.3333333333% - 16px);
+  }
+}
+.price-included__bl-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.price-included__bl-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+}
+@media (min-width: 730px) {
+  .price-included__bl-icon {
+    margin-bottom: 0;
+  }
+}
+.price-included__bl-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 16px;
+  font-weight: 600;
+  font-family: Raleway;
+  font-size: 11px;
+  color: #2F3B40;
+}
+@media (min-width: 430px) {
+  .price-included__bl-name {
+    font-size: 16px;
+  }
+}
+@media (min-width: 730px) {
+  .price-included__bl-name {
+    padding: 0 16px;
+    text-align: left;
+  }
+}
+.price-included__bl-name-description {
+  line-height: 14px;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 8px;
+  color: #2F3B40;
+}
+@media (min-width: 430px) {
+  .price-included__bl-name-description {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=priceincluded.css.map */

@@ -1,0 +1,12 @@
+//- < country.html
+    < home.html
+    * $header - заголовок p
+//-************_Form_*************//
+.request-bl
+    .request.wrapper.pd_block
+        .request__body(id="{$id}")
+            p.head_slogan.head_slogan--mini.request__head {$header}
+            | {include 'file:sportcamps/form/form.tpl'
+            | form='@FILE sportcamps/modules/formrequest/formrequest_tpl.html'
+            | pagetitle_res=$res.pagetitle
+            | validate='workemail:blank,email:required:email:minLength=^6^:maxLength=^100^,dateFrom:isDate=^%d-%m-%Y^,,dateTo:isDate=^%d-%m-%Y^,number_athletes:required:isNumber:minValue=^1^:maxValue=^99^,,number_coaches:required:isNumber:minValue=^1^:maxValue=^99^,sport_type:required:minLength=^3^:maxLength=^40^:stripTags,name:maxLength=^50^:stripTags,lastname:maxLength=^100^:stripTags'}

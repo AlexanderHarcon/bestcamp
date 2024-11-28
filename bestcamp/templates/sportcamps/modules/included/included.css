@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.included {
+  background: #F8FCFF;
+}
+.included * {
+  font-family: "Raleway", sans-serif;
+}
+.included-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  .included-title {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .included-lt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.included-lt > * {
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid #FFEDDD;
+  position: relative;
+  background: #FFF;
+  padding: 1rem;
+  color: #333;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 767px) {
+  .included-lt > * {
+    padding: 1.25rem;
+    width: calc(50% - 1rem);
+  }
+  .included-lt > *:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.included-lt > *:first-child {
+  margin-top: 0;
+}
+.included-lt > *:before {
+  content: "";
+  display: block;
+  width: 1.36rem;
+  height: 1.36rem;
+  min-width: 1.36rem;
+  margin-right: 0.5rem;
+  background-image: url("images/included-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.included-btn {
+  margin-top: 1.9rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+.included-btn:hover {
+  background-color: #859d3d;
+}
+
+/*# sourceMappingURL=included.css.map */

@@ -1,0 +1,328 @@
+{extends "file:sportcamps/base/base.html"}
+{block 'var'}
+{insert "file:sportcamps/home/home.tpl"}
+{/block}
+{block 'head'}
+    {*Микроразметка FAQ*}
+    <script type="application/ld+json">{$data | toJSONunicod}</script>
+{/block}
+{block 'main'}
+    <section class="top_page_section">
+        <div class="container">
+            <div class="title_block">
+                <!--<h1>Top Performance Training Camps Organization</h1>-->
+                <h1>{$res.pagetitle}</h1>
+                <div class="subtitle">For National Teams, Federations & Clubls</div>
+            </div>
+            <div class="form_block">
+                <!--<div class="form_title">Be Active No Heading In Hotels</div>-->
+                <div class="form_wrapp">
+                    <form action="">
+                        <div class="formfield_set">
+                            <div class="input_block">
+                                <div class="input_item have_icon">
+                                    <label for="">From</label>
+                                    <input type="text" placeholder="Сheck-in date">
+                                    <img src="{$images_home}calendar_icon.svg" alt="" class="input_icon">
+                                </div>
+                                <div class="input_item have_icon">
+                                    <label for="">To</label>
+                                    <input type="text" placeholder="Сheck-in date">
+                                    <img src="{$images_home}calendar_icon.svg" alt="" class="input_icon">
+                                </div>
+                                <div class="input_item small_width have_icon">
+                                    <input type="text" placeholder="Athletes">
+                                    <img src="{$images_home}user_icon.svg" alt="" class="input_icon">
+                                </div>
+                                <div class="input_item small_width have_icon">
+                                    <input type="text" placeholder="Coaches">
+                                    <img src="{$images_home}user_icon.svg" alt="" class="input_icon">
+                                </div>
+                                <div class="input_item have_icon">
+                                    <input type="text" placeholder="Type of sport">
+                                    <img src="{$images_home}flag_icon.svg" alt="" class="input_icon">
+                                </div>
+                            </div>
+                            <div class="vertical_seporator"></div>
+                            <div class="input_block">
+                                <div class="input_item">
+                                    <input type="text" placeholder="Phone">
+                                </div>
+                                <div class="input_item">
+                                    <input type="text" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_submit">
+                            <button type="submit" class="btn_item">make a request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>HOW TO START?</h2>
+            <div class="text_grid_list">
+                <div class="text_grid_item">
+                    <span class="text_grid_title">Set your travel dates</span>
+                    <p>Shortly after your inquiry, you will receive several non-binding offers for your training camp from which you and your teammates can choose the training camp that is right for you. This service is of course completely free.</p>
+                </div>
+                <div class="text_grid_item">
+                    <span class="text_grid_title">Consider all options and select the best one </span>
+                    <p>We only need to know the overall number of participants and travel dates to plan your training camp.
+                        Have you already chosen a country and sports venue? You will receive a customized offer based on your requirements</p>
+                </div>
+                <div class="text_grid_item">
+                    <span class="text_grid_title">Enjoy training camp and achieve your goal</span>
+                    <p>After the booking, you will receive all your travel documents and you can look forward to your training camp. If someone is unable to travel to the training camp, we will make a refund. Our group's manager is always supporting the team on the spot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_padding_bottom">
+        <div class="container">
+            <div class="countries_list_wrapp have_scroll">
+                <h2 class="align-center title_have_icon">
+                    <img src="{$images_home}football_icon.svg" class="title_icon" alt="Football">
+                    Football
+                </h2>
+                <div class="country_list">
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_1.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_1.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Dominican Republic</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_2.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_2.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">United Arab Emirates</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_3.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_3.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Montenegro</span>
+                        </div>
+                    </a>
+                    <!--<a href="#" class="country_item">
+                        <img src="{$images_home}country_img_4.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_1.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_1.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_1.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_2.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_2.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_3.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_3.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_4.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_1.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>-->
+                </div>
+            </div>
+            <div class="countries_list_wrapp have_scroll">
+                <h2 class="align-center title_have_icon">
+                    <img src="{$images_home}football_icon.svg" class="title_icon" alt="Football">
+                    Swimming
+                </h2>
+                <div class="country_list">
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_1.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_1.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_2.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_2.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <a href="#" class="country_item">
+                        <img src="{$images_home}country_img_3.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_3.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>
+                    <!--<a href="#" class="country_item">
+                        <img src="{$images_home}country_img_3.jpg" width="350" height="300" alt="">
+                        <div class="country_item_label">
+                            <img src="{$images_home}flag_icon_3.svg" alt="" class="country_item_flag_icon">
+                            <span class="country_item_title">Indonezia</span>
+                        </div>
+                    </a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="background-blue">
+        <div class="container">
+            <h2 class="align-center">Just choose your sport type</h2>
+            <div class="section_subtitle align-center">Active Planet offers Olympic Non-Olympic and Paralympic training camps Worldwide</div>
+            <div class="text_image_block">
+                <div class="text_image_block_txt">
+                    <div class="h2">Other sports</div>
+                    <p>Active Planet organizes high-performance training camps for a wide range of sports. We cooperate with Olympic and Paralympic National teams and clubs. We host athletic teams from all over Europe. </p>
+                    <p>Your sports type is just a click away.</p>
+                    <button class="btn_item">Сhoose your sport type</button>
+                    <a href="#" class="text_image_block_link">Make a quick reques</a>
+                </div>
+                <div class="text_image_block_img">
+                    <img src="{$images_home}home_img_1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="align-center">OUR SERVICES</h2>
+        <div class="container">
+            <div class="services_list">
+                <div class="service_item">
+                    <div class="service_item_img_wrapp">
+                        <img src="{$images_home}service_img_1.png" alt="" class="service_item_img">
+                    </div>
+                    <div class="title service_item_title">Sports medicine</div>
+                    <div class="service_item_content">
+                        As a part of our training camps organization services, we provide a full variety of all medical treatment and testing, like cross-DNA Professional Sports Genetic Tests, Vo2 Testing, and ergometric assessments conducted by accredited Sports and Exercise Scientists. Also, we provide rehabilitation services, sports massages, and physiotherapy. Active Planet works with rehabilitation clinics all over the world.
+                    </div>
+                </div>
+                <div class="service_item">
+                    <div class="service_item_img_wrapp">
+                        <img src="{$images_home}service_img_2.png" alt="" class="service_item_img">
+                    </div>
+                    <div class="title service_item_title">Sports management</div>
+                    <div class="service_item_content">
+                        We offer professional sports management services for all functional areas of sporting, special, and cause-related training camps and sports events. From pre-event planning through post-event analysis, the company can handle all operational, technical, and participatory functions of an event, accounting for team travel plans. We provide best flight options, visa support, top performance sports venues and hotels.
+                    </div>
+                </div>
+                <div class="service_item">
+                    <div class="service_item_img_wrapp">
+                        <img src="{$images_home}service_img_3.png" alt="" class="service_item_img">
+                    </div>
+                    <div class="title service_item_title">Sports Event organization</div>
+                    <div class="service_item_content">
+                        Regardless of the type of event you are planning, we can handle every aspect of it. We provide flights, accommodation, sports equipment, transfers, inventory, tents, event personnel, and site management. Many sports venues cooperate with Active Planet. Our sporting event management partners include colleges and universities, National Championships, and Sports federations WorldWide.
+                    </div>
+                </div>
+                <div class="service_item">
+                    <div class="service_item_img_wrapp">
+                        <img src="{$images_home}service_img_4.png" alt="" class="service_item_img">
+                    </div>
+                    <div class="title service_item_title">Active Holidays & Sport Tours</div>
+                    <div class="service_item_content">
+                        This service is ideal For runners, hikers, mountaineers, bikers, explorers, families, and pretty much all lovers of the outdoors. We organize active holidays of any type all around the world for small groups. Just tell us about your ideal sports tour and we will manage it!
+                    </div>
+                </div>
+                <div class="service_item">
+                    <div class="service_item_img_wrapp">
+                        <img src="{$images_home}service_img_5.png" alt="" class="service_item_img">
+                    </div>
+                    <div class="title service_item_title">Individuals tours</div>
+                    <div class="service_item_content">
+                        Sports are your passion and you can't stand lying by the pool all day? With a list of our hotels with sporting facilities, you can easily make all travel arrangements for your individual training camps abroad.Active Planet will package all the things you need: bike hire, the use of the lap pool, other sports facilities, airport transfers, etc.</div>
+                </div>
+                <div class="service_item">
+                    <div class="service_item_img_wrapp">
+                        <img src="{$images_home}service_img_6.png" alt="" class="service_item_img">
+                    </div>
+                    <div class="title service_item_title">Athletic school</div>
+                    <div class="service_item_content">
+                        Are you traveling with kids who attend sports clubs? We selected the best sports schools and clubs around the world so you can simply find sections for various sports for any level of physical fitness. Also, we can organize different levels of individual training for any sports typ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="text_counters_block">
+                <div class="text_counter_block_text">
+                    <div class="h2">WHY CHOOSE US?</div>
+                    <p>Active Planet is one of Europe's leading providers of sport training camps & events for more than 10 years. We organized already more than 100 competitions and around 600 Trainig Camps around the world. Providing our clients with the highest level of service and individual attention is our guarantee.
+                        Due to our extensive experience, a number of partners, and the World's largest catalog of sports facilities, we consider each group's wishes and are ready to create an individual proposal that is right for you!
+                    </p>
+                </div>
+                <div class="text_counters_block counters">
+                    <div class="counters_item">
+                        <span class="counters_number">1062+</span>
+                        <span class="counters_txt">Sports Hotels WorldWide exclusively cooperate with us</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_number">336+</span>
+                        <span class="counters_txt">Teams successfully arranged training camps with us</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_number">37+</span>
+                        <span class="counters_txt">Safe Countries covered by Active Planet</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_number">1500+</span>
+                        <span class="counters_txt">Professional Sports Facilities exclusively cooperate with us</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_number">10+</span>
+                        <span class="counters_txt">Years of professional cooperation in the sports tourism market</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_number">55+</span>
+                        <span class="counters_txt">Airlines at your disposal when you book training camp Abroad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {*Блок FAQ*}
+    <section class="section_padding_bottom">
+        <div class="container">
+            <h2 class="align-center">FAQ</h2>
+            <div class="faq_wrapp">
+                {$faq_html}
+            </div>
+        </div>
+    </section>
+    <section class="background-blue section_no_padding_top section_padding_bottom">
+        <div class="container">
+            <div class="text_image_block">
+                <div class="text_image_block_img">
+                    <img src="{$images_home}home_img_2.png" alt="">
+                </div>
+                <div class="text_image_block_txt">
+                    <div class="h2">Book your training camp</div>
+                    <p>Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра</p>
+                    <button class="btn_item">Ask an Offer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+{/block}

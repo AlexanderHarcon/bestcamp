@@ -1,0 +1,21 @@
+{insert "file:sportcamps/modules/countries/countries.tpl"}{if $countries | len}
+<div class="countries-bl" data-test="{$images_path ~ $res.introtext | dbdata : 'cmpCountries' : 'photo'}"></div>
+<section class="countries wrapper {$class_untop ?: 'pd_block'}">
+  <div class="countries__header">
+    <h2 class="head_h2 head_h2--sport">{if $parents != $res.id}<a href="{$parents | url_lang ?: ($parents | resource : 'uri')}">{if $sport}<span class="head_h2--sport__img"><img src="{$images_path ~ $sport.ico}" alt="{$sport['ico_' ~ $opt.cultureKey]}" width="74" height="83" loading="lazy"/></span>{/if}{$header ?: $sport['sport_' ~ $opt.cultureKey]}</a>{else}{if $sport}<span class="head_h2--sport__img"><img src="{$images_path ~ $sport.ico}" alt="{$sport['ico_' ~ $opt.cultureKey]}" width="74" height="83" loading="lazy"/></span>{/if}{$header ?: $sport['sport_' ~ $opt.cultureKey]}{/if}
+    </h2>
+  </div>
+  <div class="countries-lt mySwiper">{foreach $countries as $country }{if $country.drop_region}
+    {set $select_country = $country.drop_region | dbarray : 'cmpRegions'}
+    {else}
+    {set $select_country = $country.drop_contry | dbarray : 'cmpCountries'}{/if}
+    <div class="country__wrap" data-test=""><a class="country" href="{$country.id | url_lang ?: $country.uri}" title="{$country.pagetitle}">
+        <div class="country__title" style="background-image: url({$images_path ~ $select_country.photo})">
+          <p class="head_h3 head_h3--flag country__title__head"><span class="head_h3 country__title__head__img"><img src="{$images_path ~ $select_country.flag}" alt="{$select_country['region_' ~ $opt.cultureKey]} flag icon" width="32" height="32" loading="lazy"/></span>{if $country.drop_region}
+            {$select_country['region_' ~ $opt.cultureKey]}
+            {else}
+            {$select_country['country_' ~ $opt.cultureKey]}{/if}
+          </p>
+        </div></a></div>{/foreach}
+  </div>
+</section>{/if}

@@ -1,0 +1,19 @@
+- var pathImg = '{$opt.assets_url}images/'
+
+.visit-card
+    .wrapper.pd_block
+        section.visit-card__bl
+            video.visit-card__bl_video(controls)
+                source(src=pathImg + 'visitVideo.mp4', type='video/mp4')
+                | Your browser does not support the video tag.
+            .visit-card__bl_text
+                .visit-card__bl_text-content
+                    img.visit-card__bl_text-content_image(src=pathImg + 'visitImg.png', alt='')
+                    h2.visit-card__bl_text-content_h2 Hi, I'm Oleg
+                    p.visit-card__bl_text-content_position CEO
+                    p.visit-card__bl_text-content_description I’ll answer your most common questions
+                .visit-card__bl_text_line
+                .visit-card__bl_text_question
+                    h4.visit-card__bl_text_question_h4 Want to ask more? Book a call with me
+                .visit-card__bl_text_button
+                    button.btn.greenBtn Schedule a Call

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+.page404-lt {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page404-lt {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.page404-lt {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.page404-lt {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.obj404_num {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: var(--ft_sz_slogan_txt);
+  color: #CC6600;
+}
+
+.page404-lt {
+  gap: 1.6rem;
+}
+.page404-lt > * {
+  max-width: 100%;
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+.page404-lt > *:nth-child(1) {
+  flex-grow: 2;
+}
+.page404__img {
+  text-align: center;
+}
+
+.obj404 > *:not(:empty):not(:last-child) {
+  margin-bottom: 3.6rem;
+}
+.obj404__header > *:not(:empty):not(:last-child) {
+  margin-bottom: 1rem;
+}
+.obj404__body > *:not(:empty):not(:last-child) {
+  margin-bottom: 2rem;
+}
+.obj404__num, .obj404__btn {
+  text-align: center;
+}
+
+/*# sourceMappingURL=system.css.map */

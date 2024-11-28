@@ -1,0 +1,39 @@
+$w_max: 68rem; //1200px;
+$w_min: 180px;
+
+$dir-i-form:  '777assets/images/ico/form/';
+//$font_dir:  '../fonts/';
+//$font_dir_aw:  $font_dir + 'awesome470/';
+//$font-awesome:  'FontAwesome';
+//$font-ion:  'Ionicons';
+//$font-menu: 'Inter', sans-serif;
+$font-text: 'Inter', sans-serif;
+$font-menu: $font-text;
+$font-head: 'Raleway', sans-serif;
+$font-sans: 'Open Sans', sans-serif;
+
+// color
+$cl-content: $cl_light;
+$cl-menutop-font: $cl_light;
+$cl-menutop-bg: $cl_bg;
+$cl-fon: #F8FCFF;
+$cl-fon-gr: #EEEEEE;
+//$cl-fon-accent: #CC6600;
+//$cl-fon-dark: #CC6600;
+$cl-company: #A1BC51;
+$cl-link: #5BB3E3;
+$cl-accent: #CC6600;
+$cl-number: #D07100;
+//$cl-accent-light: #6bc67c;
+$cl-attention: red;
+$cl_error: $cl-attention;
+
+$pd_tb_block: '1.6rem + ' + var(--pd_tb_block) !global;
+$pd_lr_block: '0.6rem + 1.6vw' !global;
+
+$pd_tb-company-el: 0.6rem;
+$w_prev: 18rem;
+
+//- Заголовок с нумерацией (_class)
+$wh_head--number: 2rem;
+$m_head--number: 1rem;

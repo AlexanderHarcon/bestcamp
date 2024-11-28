@@ -1,0 +1,1 @@
+{if $res.id == $id && ($id | resource : 'published')}<li class="active"><span class="txt_menu menu-el">{'menutitle' | field_res : $id}</span></li>{elseif ($id | resource : 'published')}<li><a class="txt_menu menu-el" href="{$id | url_lang : ($id | url)}">{'menutitle' | field_res : $id}</a></li>{/if}

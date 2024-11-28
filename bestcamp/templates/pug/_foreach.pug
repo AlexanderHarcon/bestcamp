@@ -1,0 +1,11 @@
+//- include ../pug/_foreach
+- var i = ' index=$index'
+mixin foreach(a, b, c = 'active', d = '| fromJSON', e = '')
+    if d == false
+        | {foreach !{a} as !{b} #{e}}
+    else
+        | {foreach !{a} #{d} as !{b} #{e}}
+    if c == 'active'
+        | {if #{b}.#{c} != 1}{continue}{/if}
+    block
+    | {/foreach}

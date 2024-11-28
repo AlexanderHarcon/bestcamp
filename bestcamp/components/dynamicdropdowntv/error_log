@@ -1,0 +1,36 @@
+[19-Aug-2024 14:41:56 UTC] PHP Fatal error:  Uncaught Error: Class 'PDO' not found in /home/bestsportcamps/public_html/core/model/modx/modx.class.php:499
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(444): modX->loadConfig('/home/bestsport...', Array, Array)
+#1 /home/bestsportcamps/public_html/booktors/index.php(43): modX->__construct('', Array)
+#2 /home/bestsportcamps/public_html/assets/components/dynamicdropdowntv/connector.php(29): require_once('/home/bestsport...')
+#3 {main}
+  thrown in /home/bestsportcamps/public_html/core/model/modx/modx.class.php on line 499
+[19-Aug-2024 17:42:02 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[19-Aug-2024 17:42:02 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[19-Aug-2024 17:42:03 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 18:18:22 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 18:18:22 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 18:34:01 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 18:34:25 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 18:40:12 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 18:40:12 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[11-Sep-2024 16:11:40 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 15:36:34 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 15:50:52 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 16:41:40 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 19:18:46 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 19:18:46 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 19:18:47 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:35:52 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:38:10 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:40:52 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:40:52 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:49:00 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:50:53 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:51:27 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[17-Sep-2024 17:20:27 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 14:23:48 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 18:30:28 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 18:30:28 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 18:50:17 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 18:50:31 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029

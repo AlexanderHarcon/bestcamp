@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+$cl-white: #FFF;
+$cl-green: #94BE31;
+$cl-orange: #F39540;
+$cl-blue: #5BBCE4;
+$dynamic-padding: calc(8px + ((100 - 8) * ((100vw - 320px) / (1920 - 320))));
+
+.camp-overview {
+  &__bl {
+    &-wrapper {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 10%);
+      border-radius: 16px;
+      padding: {
+        top: calc(16px + ((100 - 16) * ((40vw - 320px) / (1920 - 320))));
+        right: $dynamic-padding;
+        left: $dynamic-padding;
+        bottom: 178px;
+      }
+      position: relative;
+    }
+
+    &-title {
+      display: none;
+      @include mq-w(620px) {
+        display: block;
+        font-family: $font-head;
+        font-size: 38px;
+        font-weight: 800;
+        padding-bottom: 19px;
+      }
+    }
+
+    &-text {
+      font-family: $font-head;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      line-height: 30px;
+      color: #535556;
+      gap: 4px;
+      position: relative;
+    }
+
+    &-checkbox {
+      display: none;
+    }
+
+    &-description {
+      max-height: 19em;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      gap: 8px;
+      display: grid;
+      @include mq-w(800px) {
+        max-height: 100%;
+        overflow: visible;
+      }
+    }
+
+    &-checkbox:checked ~ &-description {
+      max-height: none;
+    }
+
+    &-toggle {
+      display: block;
+      cursor: pointer;
+      color: $cl-blue;
+      line-height: 25.6px;
+      font: {
+        weight: 700;
+        size: 16px;
+        family: Raleway;
+      }
+      @include mq-w(800px) {
+        display: none;
+      }
+    }
+
+    &-toggle::after {
+      content: "Read more";
+    }
+
+    &-checkbox:checked ~ &-toggle::after {
+      content: "Show less";
+    }
+
+
+    &-img {
+      position: relative;
+      margin: -160px auto 0;
+      padding-left: $dynamic-padding;
+      padding-right: $dynamic-padding;
+
+      &--el {
+        height: auto;
+        width: 100%;
+        max-height: 347px;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+
+      &-btn {
+        text-align: center;
+
+        .greenBtn {
+          margin-top: 24px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 16px;
+    align-items: center;
+
+    &-svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-p {
+      font-family: $font-text;
+      font-weight: 800;
+      font-size: rem(16);
+
+      &--orng {
+        color: $cl-orange;
+      }
+
+      &--blue {
+        color: $cl-blue;
+      }
+    }
+  }
+}

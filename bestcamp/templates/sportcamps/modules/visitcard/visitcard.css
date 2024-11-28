@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.visit-card {
+  background-image: url("../../../../images/visitSectroMobile.png");
+  background-repeat: no-repeat;
+}
+@media (min-width: 730px) {
+  .visit-card {
+    background-image: url("../../../../images/visitSection.png");
+  }
+}
+.visit-card__bl {
+  text-align: center;
+}
+@media (min-width: 730px) {
+  .visit-card__bl {
+    display: flex;
+    justify-content: center;
+  }
+}
+.visit-card__bl_video {
+  margin-bottom: 40px;
+  width: 243px;
+  height: 430px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+@media (min-width: 430px) {
+  .visit-card__bl_video {
+    height: 526px;
+  }
+}
+.visit-card__bl_text {
+  justify-items: center;
+}
+@media (min-width: 730px) {
+  .visit-card__bl_text {
+    padding-top: 32px;
+    padding-left: 67px;
+  }
+}
+.visit-card__bl_text-content_image {
+  padding-bottom: 16px;
+}
+.visit-card__bl_text-content_h2 {
+  padding-bottom: 8px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 38px;
+}
+.visit-card__bl_text-content_position, .visit-card__bl_text-content_description {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 16px;
+  color: #637075;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+.visit-card__bl_text_line {
+  width: 2px;
+  height: 80px;
+  background-color: #5BBCE4;
+}
+.visit-card__bl_text_question_h4 {
+  padding-top: 24px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.btn {
+  margin-top: 24px;
+  background-color: #95C032;
+  padding: 15px 32px;
+}
+
+/*# sourceMappingURL=visitcard.css.map */

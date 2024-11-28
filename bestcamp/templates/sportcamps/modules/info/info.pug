@@ -1,0 +1,50 @@
+//- < country.html
+    < home.html
+    - $class_lt - Класс разметки
+    - $header1 - Верхний заголовок H1
+    - $header2 - Верхний заголовок H2
+    - $header_slogan - Слоган
+    * $img - Изображение
+    - $imgblockfree - Плавающий блок в Блоке с изображением
+    * $head1 - заголовок H1
+    * $head2 - заголовок H2
+    * $head3 - заголовок H3
+    - $class_head
+    * $content - Контент
+    - $btn_name - Надпись на кнопке
+    - $link - Ссылка рядом с кнопкой
+    - $link_ankor - Ссылочный анкор
+include ../../../pug/_if
+.info-bl(class = "{$class_lt}")
+    section.info.wrapper.pd_block
+        +if("$header1 || $header2")
+            header.info-header
+                +if("$header1")
+                    h1.head_h2 {$header1}
+                +if("$header2")
+                    h2.head_h2 {$header2}
+                +if("$header_slogan")
+                    p.txt_headsub {$header_slogan}
+        .info-body.info-body-lt
+            div
+                .content-img.info-body__img
+                    | {$img}
+                    +if("$imgblockfree")
+                        .info-body__img__blockfree
+                            | {$imgblockfree}
+            div
+                .info__content
+                    .info-content
+                        +if("$head1")
+                            h1(class="{$class_head ?: 'head_h2'}") {$head1}
+                        +if("$head2")
+                            h2(class="{$class_head ?: 'head_h2'}") {$head2}
+                        +if("$head3")
+                            h3.head_h2 {$head3}
+                        .content.info-content__text.
+                            {$content}
+                    +if("$btn_name")
+                        .content-btn.info__content__btn
+                            button.btn {$btn_name}
+                            +if("$link && $link_ankor")
+                                a(href="{$link}").link_base {$link_ankor}

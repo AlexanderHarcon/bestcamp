@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+/* < country.tpl
+* < home.tpl
+*/
+//************_Form_*************//
+.request
+{
+    display: none;
+    position: relative;
+
+    &__body
+    {
+        @include rhythm-margin();
+
+        .popap_form &
+        {
+            @include rhythm-margin(2.4rem);
+        }
+    }
+
+    &__head
+    {
+        color: $cl-bg;
+        @extend %text-shadow;
+
+        .popap_form &
+        {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: $cl-light;
+            text-shadow: none;
+        }
+    }
+
+    &-form
+    {
+        @include rhythm-margin(1.6rem);
+        border-radius: 1.6rem;
+        background-color: $cl-bg;
+        @extend %box-shadow;
+
+        .popap_form &
+        {
+            padding: 0;
+            box-shadow: none;
+        }
+
+        &-lt
+        {
+            max-width: 100%;
+            @extend %flexbox;
+            @include align-items(flex-end);
+            @extend %flex-wrap;
+            gap: 1rem;
+
+            @include mq-w($tab)
+            {
+                gap: 1.6rem;
+            }
+
+            > *
+            {
+                max-width: 100%;
+                @extend %flex-grow_1;
+                @include flex-basis(17rem);
+            }
+        }
+
+        &__submit
+        {
+            text-align: center;
+        }
+    }
+}
+
+.input
+{
+    &-lt
+    {
+        max-width: 100%;
+        @extend %flexbox;
+        @extend %flex-wrap;
+        gap: 1rem;
+
+        @include mq-w($tab)
+        {
+            gap: 1.6rem;
+        }
+
+        > *
+        {
+            max-width: 100%;
+            @extend %flex-grow_1;
+            @include flex-basis(7rem);
+        }
+    }
+}
+
+
+
+
+
+

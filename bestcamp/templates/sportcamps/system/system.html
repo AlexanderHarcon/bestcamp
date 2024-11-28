@@ -1,0 +1,8 @@
+{extends "file:sportcamps/base/base.html"}
+{block 'var'}
+{insert "file:sportcamps/system/system.tpl"}
+{/block}
+{block 'main'}<div class="page404-bl"><div class="page404 wrapper pd_block page404-lt"><div><div class="obj404"><div class="obj404__header"><h1 class="head_h1">{$res.pagetitle}</h1><p class="txt_slogan">We didn't find the page too.</p></div><div class="obj404__body"><div class="obj404__num"><span class="obj404_num">404</span></div><div class="obj404__btn"><a class="btn" href="{$opt.site_start | url}">Go back</a></div></div></div></div><div><div class="page404__img"><picture><source srcset="{$opt.assets_url}images/system/referee.webp" type="image/webp"/><img src="{$opt.assets_url}images/system/referee.png" alt="" loading="lazy" width="451" height="617"/></picture></div></div></div></div>{/block}
+{block 'script'}
+{'minify_js_item' | placeholder}
+{/block}

@@ -1,0 +1,196 @@
+//- < base.html
+    > country.tpl
+    > modules/infostart/infostart.html
+    > modules/countries/countries.html
+    > modules/shooseus/shooseus.html
+    > modules/info/info.html
+include ../../pug/_foreach
+include ../../pug/_if
+- var pathImg = '{$opt.assets_url}images/country/'
+- var pathWeather = '{$opt.assets_url}images/ico/weather/'
+| {extends "file:sportcamps/base/base.html"}
+
+| {block 'var'}
+| {insert "file:sportcamps/country/country.tpl"}
+| {/block}
+
+| {block 'header'}
+| {parent}
+//-************_info_**********//
+| {set $img_info}
+picture
+    source(srcset="{($images_path ~ $country.map) | replace : '.png' : '.webp'}" type="image/webp")
+    img(src="{$images_path ~ $country.map}" alt="{$country['country_' ~ $lang]} map" width=540 height=478)
+| {/set}
+
+//-     ************_weather_**********//
+| {set $lockfree}
+| {if $months}
+.weather.pd_block_micro(data-test="")
+    .weather__tablewrap
+        //-| {'+3.3' | round}
+        table.table
+            caption {'polylang_site_weather-in' | lexicon}
+                span  {$country_reg['country_' ~ $lang] ?: $country['country_' ~ $lang]}
+            thead
+                tr
+                    th.table_ico: img(src=pathWeather + 'calendar.svg' alt='calendar icon' width=16 height=16)
+                    +foreach('$months', '$key => $month', false, false)
+                        th {$key}
+            tbody
+                tr
+                    td.table_ico: img(src=pathWeather + 'sun.svg' alt='sun icon' width=16 height=16)
+                    +foreach('$months', '$key => $month', false, false)
+                        td {$month | round}°
+| {/if}
+| {/set}
+
+| {include "file:{$modules}info/info.html"
+| class_lt='_inforight'
+| video=$img_info
+| head1=$res.pagetitle
+| class_head='head_h1'
+| content=$res['ace_intro_' ~ $lang] | wrap_tag : 'p'
+//-| content=($res.text_intro | wrap_tag : 'p')
+| btn_name=$res['txt_header_btn_' ~ $lang] ?: ('polylang_site_make-request' | lexicon)
+//-| btn_name=$res.txt_header_btn 'polylang_site_form-error' | lexicon
+| btn_cl='formrequest_js'
+| imgblockfree=$lockfree
+| }
+
+| {/block}
+
+| {block 'main'}
+
+//-+if("$access")
+    | {$sport| print}
+
+//-************_infostart_**********//
+| {include "file:{$modules}infostart/infostart.html"}
+
+//-************_maininfo_**********//
+| {include "file:{$modules}maininfo/maininfo.html"}
+
+//-************_campoverview_**********//
+| {include "file:{$modules}campoverview/campoverview.html"}
+
+//-************_infrastructure_**********//
+| {include "file:{$modules}infrastructure/infrastructure.html"}
+
+//-************_location_**********//
+| {include "file:{$modules}location/location.html"}
+
+//-************_hoteloverview_**********//
+| {include "file:{$modules}hoteloverview/hoteloverview.html"}
+
+//-************_priceincluded_**********//
+| {include "file:{$modules}priceincluded/priceincluded.html"}
+
+//-************_visitcard_**********//
+| {include "file:{$modules}visitcard/visitcard.html"}
+
+//-************_goodtoknow_**********//
+| {include "file:{$modules}goodtoknow/goodtoknow.html"}
+
+//-************_excursions_**********//
+| {include "file:{$modules}excursions/excursions.html"}
+
+//-************_reviews_**********//
+| {include "file:{$modules}reviews/reviews.html"}
+
+//-************_preview_**********//
+| {include "file:{$modules}preview/preview.html"}
+
+//-************_info_video_**********//
+//-+if("$access")
+    | {$res.img_alter | fromJSON | print}
+
+| {set $img_info}
++if("$res.txt_video")
+    .videobox
+        iframe.videobox__iframe(
+        src!="https://www.youtube.com/embed/{$res.txt_video | preg_match_get : $youtube_reg}"
+        srcdoc!="<style>*{ padding:0;margin:0;overflow:hidden }html,body{ height:100% }img,span{ position:absolute;width:100%;top:0;bottom:0;margin:auto }span{ height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black }</style><a href={$res.txt_video}?autoplay=1><img src=https://img.youtube.com/vi/{$res.txt_video | preg_match_get : $youtube_reg}/hqdefault.jpg alt='Demo video'><span>▶</span></a>"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        )
+| {/set}
+
+| {include "file:{$modules}info/info.html"
+| class_lt='_inforight'
+| video=$img_info
+| img=$res.img_alter
+//-| img2=$res.img_alter2 | fromJSON
+| header2=$res['txt_head_' ~ $lang]
+//-| header2=$res.txt_head
+| content=$res['ace_info_' ~ $lang] | wrap_tag : 'p'
+//-| content=($res.text_info | wrap_tag : 'p')
+| btn_name='Send a request'
+| btn_cl='formrequest_js'
+| }
+
+//************_countries_********//
+//- TODO Alt icons with translate
+| {include "file:{$modules}countries/countries.html"
+| parents=$res.parent
+| header=$res['txt_headprev_' ~ $lang]
+| sport=$sport
+| }
+
+//-************_services_**********/-----------------------/
++if('$access')
+    | {include "file:{$modules}services/services.html"
+    | source=$res.parent
+    | }
+
+//-************_shooseus_**********//
+| {include "file:{$modules}shooseus/shooseus.html"
+| class_lt='_between'
+| }
+
+//-************_info_end_**********//
+| {include "file:{$modules}info/info.html"
+| class_lt='_inforight'
+| img=$res.img_info_end
+//-| img2=$res.img_info_end2 | fromJSON
+| alt=$res['txt_alt_end_' ~ $lang]
+| head2=$res['txt_head_end_' ~ $lang]
+| content=$res['ace_infoend_' ~ $lang] | wrap_tag : 'p'
+//-| content=$res.text_info_end
+| btn_name=$res['txt_btn_' ~ $lang] ?: 'Send a request'
+//-| btn_name='Send a request'
+| btn_cl='formrequest_js'
+| }
+
+//-| {$img_i}
+
+//-************_info_**********//
+//-
+    | {set $img_info}
+    picture
+        source(srcset=pathImg + "other-sports.webp" type="image/webp")
+        img(src=pathImg + 'other-sports.png' alt='sport-other' loading="lazy")
+    | {/set}
+
+    | {set $content}
+    p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра
+    | {/set}
+
+    | {include "file:{$modules}info/info.html"
+    | class_lt='_inforight'
+    | img=$img_info
+    | header2='Active Planet offers Olympic Non-Olympic and Paralympic  training camps Worldwide. Just choose your sport type'
+    | head3='Book your training camp'
+    | content=$content
+    | btn_name='Ask an Offer'
+    | }
+
+| {/block}
+
+| {block 'script'}
+//-************_Form_popap*************//
+| {include "file:{$modules}formrequest/formrequest.html"
+| id='request'
+| }
+| {'minify_js_item' | placeholder}
+| {/block}

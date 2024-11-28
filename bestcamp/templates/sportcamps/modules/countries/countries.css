@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+.country__title__head__img, .country__title__head {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0;
+  transition: all 0.5s ease 0s;
+}
+
+.country__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.country__title {
+  width: 100%;
+  height: 100%;
+}
+
+.countries-lt {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.countries-lt {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.countries-lt {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+/* < country.tpl
+* < home.tpl
+*/
+.countries > *:not(:empty):not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.countries-bl {
+  background-color: white;
+}
+.countries-lt {
+  gap: 1.6rem;
+}
+@media (min-width: 800px) {
+  .countries-lt {
+    gap: 3.2rem;
+  }
+}
+.countries__header {
+  text-align: center;
+}
+
+.country {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-top: 83%;
+  border-radius: 1.6rem;
+}
+.country__wrap {
+  max-width: 100%;
+  width: 18rem;
+  /*@include mq-w(800px)
+  {
+      width: 14rem;
+  }*/
+}
+.country__title {
+  padding: 44% 1.2rem 1.2rem 0;
+  background: no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.country__title__head {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  padding-left: -webkit-calc(32px + (1.2rem + 0.6rem));
+  padding-left: -moz-calc(32px + (1.2rem + 0.6rem));
+  padding-left: calc(32px + (1.2rem + 0.6rem));
+  background-color: white;
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+a:hover .country__title__head {
+  padding-left: -webkit-calc(32px + (1.2rem + 0.6rem + 1.6rem));
+  padding-left: -moz-calc(32px + (1.2rem + 0.6rem + 1.6rem));
+  padding-left: calc(32px + (1.2rem + 0.6rem + 1.6rem));
+}
+.country__title__head__img {
+  position: absolute;
+  top: 0.4rem;
+  left: 1.2rem;
+  width: 32px;
+}
+a:hover .country__title__head__img {
+  left: 2.8rem;
+}
+
+/*# sourceMappingURL=countries.css.map */

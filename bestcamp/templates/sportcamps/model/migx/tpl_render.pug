@@ -1,0 +1,195 @@
+//- <
+include ../../../pug/_foreach
+include ../../../pug/_if
+include ../../../pug/_switch
++switch("$config")
+
+    //- campsportcamps
+    //- {case 'in_servicesSlave'}
+    | {case 'dbr_ObjectServices'}
+    +switch("$field")
+
+        | {case 'evaluation_migxrender'}
+
+        //- Загружаем данные из таблицы связей cmpServiceEvaluation
+            Если не заблокированы в текущей таблице
+                Выводим эти данные + Новый прайс
+        | {set $dbdataarray = $service_id | dbdataarray : 'cmpServiceEvaluation' : 'service_id'}
+
+        //- Если есть данные в таблице
+        +if("$dbdataarray | iterable")
+
+            //- Готовим массив данных по текущим Evaluation
+            | {set $evaluations = []}
+            +if("$evaluation_migx")
+
+                +foreach("$evaluation_migx", "$item", false)
+
+                    | {set $evaluations[$item.evaluation_id] = $item}
+
+            //-| {$.post.configs}
+
+
+            +if("$.post.configs == 'dbr_SportCamps'")
+                //- Готовим массив данных по Evaluation в Спорте на Объекте
+                    Вытаскиваем данные с текущего Объекта
+                | {set $sport_id = $.post.object_id | dbdata : 'cmpSportCamps' : 'sport_id'}
+                //-| {$.post.resource_id}
+                | {set $objectSportArry = $.post.resource_id | dbdataarray : 'cmpObjectSport' : 'resource_id'}
+                | {set $evaluationsSport = []}
+                //-| {$objectSportArry | print}
+                +foreach("$objectSportArry", "$item", false, false)
+                    +if("$item.sport_id != $sport_id")
+                        | {continue}
+                    //-| {$item.sport_id} - {$sport_id} <br>
+                    //-| {$item | print}
+                    +if("$item.service_migx | iterable")
+                        +foreach("$item.service_migx", "$service_migx", 'active', false)
+                            +if("$service_migx.service_id != $service_id")
+                                | {continue}
+                            +foreach("$service_migx.evaluation_migx", "$evaluation_migx")
+                                | {set $evaluationsSport[$evaluation_migx.evaluation_id] = $evaluation_migx}
+
+                //-| {$evaluationsSport | print}
+                //-| {$.post.resourse_id}
+                //-| {$.post.object_id}
+                //-| {$.post | print}
+                //-| {$evaluation_migx | fromJSON | print}
+
+            table
+                //-| {$dbdataarray | print}
+                //- Проходим по таблице связей cmpServiceEvaluation
+                +foreach("$dbdataarray", "$item", false, false)
+
+                    //- Пропускаем если заблокированно в текущей таблице
+                    +if("($item.evaluation_id == $evaluations[$item.evaluation_id].evaluation_id) && !$evaluations[$item.evaluation_id].active")
+                        | {continue}
+
+
+                    +if("$.post.configs == 'dbr_SportCamps' && $evaluationsSport | length")
+                        //- Пропускаем если заблокированно в Спорте на Объекте
+                        +if("!($item.evaluation_id | in : $evaluationsSport)")
+                            | {continue}
+
+                    //-| {$item.evaluation_id}
+                    //- Рендеринг после сохранения
+                    +if("$.post.items")
+                        //-| {$.post.items | fromJSON | print}
+                        //-| {$.post | print}
+                        //- Пропускаем если нет в текущей таблице
+                        +if("!($item.evaluation_id | in : $evaluations)")
+                            | {continue}
+
+                    | {set $price_new = $evaluations[$item.evaluation_id].price_new}
+                    +if("$evaluations[$item.evaluation_id].price_new === ''")
+                        | {set $price_new = ' - '}
+                        //-| {$evaluationsSport | print} rrrrr
+
+                    tr
+
+                        td(style="vertical-align:text-bottom") {$item.evaluation_id | dbdata : 'cmpEvaluation' : 'title_en' : 'dbr_ObjectServices-evaluation_migxrender'} —
+                        td(style="vertical-align:text-bottom") {$item.price}
+                        td(style="color:green;vertical-align:text-bottom") /
+                            strong {$price_new}
+
+
+    | {case 'in_inventoriesPrice'}
+    +switch("$field")
+
+        | {case 'evaluation_migxrender'}
+
+        +if("$evaluation_migx")
+            table
+
+                +foreach("$evaluation_migx", "$item")
+                    tr
+                        td(style="vertical-align:text-bottom") {$item.evaluation} —
+                        td(style="vertical-align:text-bottom") {$item.price}
+
+    | {case 'dbr_ObjSportInfra'}
+    +switch("$field")
+
+        | {case 'title_enrender'}
+        +if("$infrastr_id")
+            | {$title_en ?: ($infrastr_id | dbdata : 'cmpSportInfrastr' : 'title_en' : 'dbr_ObjectServices-title_enrender')}
+
+        | {case 'covering_idrender'}
+        +if("$covering_id || $marking_id")
+            +if("$covering_id")
+                p: strong Surface:
+                p {$covering_id | dbdata : 'cmpSportCoverings' : 'title_en' : 'dbr_ObjectServices-covering_idrender'}
+            +if("$marking_id")
+                p: strong Marking:
+                p {$marking_id | dbdata : 'cmpSportMarking' : 'title_en' : 'dbr_ObjectServices-covering_idrender'}
+
+    | {case 'dbr_ObjectSport'}
+    +switch("$field")
+
+        | {case 'infraobj_idsrender'}
+        +foreach("$infraobj_ids", "$item", false)
+            p {$item | dbdata : 'cmpObjSportInfra' : 'title_en' : 'dbr_ObjectSport-infraobj_idsrender'}
+
+        | {case 'service_idsrender'}
+        | {insert "file:sportcamps/model/migx/service_idsrender.tpl"}
+        //- Проходим посервисам, учитывая данные по активации
+        +foreach("$sport_service", "$item", false, false)
+            +if("($services[$item.service_id] | iterable) && $services[$item.service_id].active != 1")
+                | {continue}
+            p {$item.service_id | dbdata : 'cmpObjServices' : 'title_en' : 'dbr_ObjectSport-infraobj_idsrender'}
+
+    //- campsports
+    | {case 'in_inventories'}
+    +switch("$field")
+
+        | {case 'evaluation_idsrender'}
+
+        +if("$evaluation_ids")
+
+            table
+                +foreach("$evaluation_ids | split", "$item", false, false)
+                    tr
+                        td(style="vertical-align:text-bottom") {$item | dbdata : 'cmpEvaluation' : 'title_en' : 'in_inventories-evaluation_idsrender'}
+
+
+    //- campservices
+    | {case 'dbr_InfraHabit'}
+    +switch("$field")
+
+        | {case 'imagesrender'}
+
+        +if("$images")
+            table
+                tr
+                    //-| {$images | fromJSON | print}
+                    +foreach("$images", "$item")
+                        td(style="vertical-align:text-bottom")
+                            img(src="{$item.img}" width=75 alt)
+
+    | {case 'dbr_SportCamps'}
+    +switch("$field")
+
+        | {case 'rating_idrender'}
+        | {set $ratingarr = $rating_id | dbdataarray : 'MsfmStorageMember' : 'key'}
+        //-| {$ratingarr | print}
+        +foreach("$ratingarr", "$item", false, false)
+            +if("$item.storage_id != 2")
+                | {continue}
+            | {$item.name}
+
+        | {case 'status_idrender'}
+        | {set $statusarr = $status_id | dbdataarray : 'MsfmStorageMember' : 'key'}
+        //-| {$ratingarr | print}
+        +foreach("$statusarr", "$item", false, false)
+            +if("$item.storage_id != 1")
+                | {continue}
+            | {$item.name}
+
+        | {case 'renderico'}
+        | {set $ico = $sport_id | dbdata : 'cmpSports' : 'ico' : 'tpl_render-dbr_SportCamps-renderico'}
+        +if("$ico")
+            img(src="/assets/images/{$ico}" width=75 alt)
+        | {case 'prevrender'}
+        //-| {set $uri = $resource_id | dbdata : 'modResource' : 'uri' : 'tpl_render-dbr_SportCamps-prevrender'}
+        | {set $uri = $properties | fromJSON}
+        a(href="/{$uri.alias}" target="_blank")
+            img(src="/assets/images/ico/external-link.svg" width=16 height=16 alt)

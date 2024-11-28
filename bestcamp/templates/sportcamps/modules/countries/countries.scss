@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+/* < country.tpl
+* < home.tpl
+*/
+
+//************_countries_********//
+.countries
+{
+    //@extend %pd_block;
+
+    @include rhythm-margin(2.4rem);
+
+    &-bl
+    {
+        background-color: $cl-bg;
+    }
+
+    &-lt
+    {
+        @extend %flexbox;
+        @extend %flex-wrap;
+        @extend %justify-content_center;
+        gap: 1.6rem;
+
+        @include mq-w(800px)
+        {
+            gap: 3.2rem;
+        }
+    }
+
+    &__header
+    {
+        text-align: center;
+    }
+}
+
+//- prev country
+.country
+{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 83%;
+    border-radius: 1.6rem;
+
+    &__wrap
+    {
+        max-width: 100%;
+        width: $w_prev;
+
+        /*@include mq-w(800px)
+        {
+            width: 14rem;
+        }*/
+    }
+
+    &__title
+    {
+        @extend %absolute_100;
+        padding: 44% 1.2rem 1.2rem 0;
+        background: no-repeat center;
+        @include background-size();
+
+        &__head
+        {
+            position: relative;
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            @include calc(padding-left, '32px + (1.2rem + 0.6rem)');
+
+            background-color: $cl-bg;
+            border-radius: 0 0.6rem 0.6rem 0;
+            @extend %transit;
+
+            a:hover &
+            {
+                @include calc(padding-left, '32px + (1.2rem + 0.6rem + 1.6rem)');
+            }
+
+            &__img
+            {
+                position: absolute;
+                top: 0.4rem;
+                left: 1.2rem;
+                width: 32px;
+                @extend %transit;
+
+                a:hover &
+                {
+                    left: 1.2rem + 1.6;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

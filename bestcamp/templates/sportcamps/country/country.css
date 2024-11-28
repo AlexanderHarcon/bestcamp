@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.weather {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+
+.weather {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 1rem;
+  background-color: #F8FCFF;
+}
+.weather__tablewrap {
+  overflow-x: auto;
+}
+
+/*# sourceMappingURL=country.css.map */

@@ -1,0 +1,190 @@
+[04-Sep-2024 12:18:34 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:18:42 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:19:01 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:19:01 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:19:02 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:19:03 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:19:04 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:20:36 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:21:26 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:21:28 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:22:06 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:24:56 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 12:24:59 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 14:26:33 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 14:26:35 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 14:45:50 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 17:22:34 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 18:38:44 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 19:09:31 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 19:09:33 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 19:09:34 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 19:09:36 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function Sterc\FormIt\mb_strpos() in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php:242
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(215): Sterc\FormIt\Validator->validate('workemail', '', 'blank')
+#1 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php(139): Sterc\FormIt\Validator->_validate('workemail', '', Array)
+#2 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(327): Sterc\FormIt\Validator->validateFields(Object(Sterc\FormIt\Dictionary), Array, ',')
+#3 /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Request.php(250): Sterc\FormIt\Request->validate('workemail:blank...', ',')
+#4 /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/40.include.cache.php(45): Sterc\FormIt\Request->handle(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include('/home/bestsport. in /home/bestsportcamps/public_html/core/components/formit/src/FormIt/Validator.php on line 242
+[04-Sep-2024 17:15:33 UTC] PHP Fatal error:  Uncaught Error: Class "PDO" not found in /home/bestsportcamps/public_html/core/model/modx/modx.class.php:499
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(444): modX->loadConfig('/home/bestsport...', Array, Array)
+#1 /home/bestsportcamps/public_html/index.php(36): modX->__construct()
+#2 /home/bestsportcamps/public_html/assets/components/fetchit/action.php(5): require_once('/home/bestsport...')
+#3 {main}
+  thrown in /home/bestsportcamps/public_html/core/model/modx/modx.class.php on line 499
+[05-Sep-2024 08:00:39 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[08-Sep-2024 08:33:42 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 13:00:50 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 11:17:23 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 13:28:15 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[14-Sep-2024 12:30:25 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[18-Sep-2024 01:50:54 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029

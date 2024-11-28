@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.excursions__bl-h2 {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.excursions__complex {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+@media (min-width: 780px) {
+  .excursions__complex {
+    gap: 24px;
+  }
+}
+.excursions__complex_sector {
+  box-shadow: 0 27.6923084259px 88.6153869629px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  max-width: 183px;
+}
+.excursions__complex_sector:nth-child(3), .excursions__complex_sector:nth-child(4) {
+  display: none;
+}
+@media (min-width: 614px) {
+  .excursions__complex_sector {
+    max-width: calc(33.3333333333% - 16px);
+  }
+  .excursions__complex_sector:nth-child(3) {
+    display: block;
+  }
+}
+@media (min-width: 1320px) {
+  .excursions__complex_sector {
+    max-width: calc(25% - 12px);
+    flex: 1 1 100%;
+  }
+  .excursions__complex_sector:nth-child(4) {
+    display: block;
+  }
+}
+.excursions__complex_sector_container-img {
+  width: 100%;
+}
+.excursions__complex_sector_container_info {
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 16px;
+}
+@media (min-width: 850px) {
+  .excursions__complex_sector_container_info {
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 32px;
+  }
+}
+.excursions__complex_sector_container_info-h3 {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 27px;
+}
+@media (min-width: 401px) {
+  .excursions__complex_sector_container_info-h3 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 780px) {
+  .excursions__complex_sector_container_info-h3 {
+    font-size: 18px;
+  }
+}
+.excursions__complex_sector_container_info-price, .excursions__complex_sector_container_info-span {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 14px;
+  color: #95C03D;
+  line-height: 19.36px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px 0;
+}
+@media (min-width: 401px) {
+  .excursions__complex_sector_container_info-price, .excursions__complex_sector_container_info-span {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+}
+.excursions__complex_sector_container_info-span {
+  color: #637075;
+}
+.excursions__complex_sector_container_info-duration {
+  display: flex;
+  justify-content: center;
+}
+.excursions__complex_sector_container_info-duration-svg {
+  width: 18px;
+  height: 18px;
+  padding-left: 2px;
+}
+.excursions__complex_sector_container_info-duration-p {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 14px;
+  color: #637075;
+  line-height: 18px;
+}
+@media (min-width: 401px) {
+  .excursions__complex_sector_container_info-duration-p {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=excursions.css.map */

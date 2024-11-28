@@ -1,0 +1,34 @@
+//- < base/base.html
+    > system.tpl
+- var pathImg = '{$opt.assets_url}images/system/'
+| {extends "file:sportcamps/base/base.html"}
+
+| {block 'var'}
+| {insert "file:sportcamps/system/system.tpl"}
+| {/block}
+
+| {block 'main'}
+//-************_404_*************//
+.page404-bl
+    .page404.wrapper.pd_block.page404-lt
+        div
+            .obj404
+                .obj404__header
+                    h1.head_h1 {$res.pagetitle}
+                    p.txt_slogan We didn't find the page too.
+                .obj404__body
+                    .obj404__num
+                        span.obj404_num 404
+                    .obj404__btn
+                        a.btn(href="{$opt.site_start | url}") Go back
+        div
+            .page404__img
+                picture
+                    source(srcset=pathImg + "referee.webp" type="image/webp")
+                    img(src=pathImg + 'referee.png' alt='' loading="lazy" width=451 height=617)
+
+| {/block}
+
+| {block 'script'}
+| {'minify_js_item' | placeholder}
+| {/block}

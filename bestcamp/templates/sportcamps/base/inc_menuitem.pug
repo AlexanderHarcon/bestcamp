@@ -1,0 +1,7 @@
+//- < base.tpl
+include ../../pug/_if
++if("$res.id == $id && ($id | resource : 'published')")
+    li.active: span.txt_menu.menu-el {'menutitle' | field_res : $id}
+    | {elseif ($id | resource : 'published')}
+    li: a(href="{$id | url_lang : ($id | url)}").txt_menu.menu-el {'menutitle' | field_res : $id}
+

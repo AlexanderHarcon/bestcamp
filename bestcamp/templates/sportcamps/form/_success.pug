@@ -1,0 +1,9 @@
+//- {*Всплывающие окна ajaxForm*}
+    > tpl_form_bell.pug
+    > tpl_form_card.pug
+| {if $_pls['fi.success'] == 1}
+div.alert.alert-success {$_pls['fi.successMessage']}
+| {/if}
+| {if $_pls['fi.validation_error'] == 1}
+div.alert.alert-danger {$_pls['fi.validation_error_message']}
+| {/if}

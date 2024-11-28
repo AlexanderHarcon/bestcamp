@@ -1,0 +1,280 @@
+//- .faq интеграция
+//- < base.html
+    > home.tpl
+include ../../pug/_foreach
+include ../../pug/_if
+- var pathImg = '{$opt.assets_url}images/home/'
+- var pathImgIcoSport = '{$opt.assets_url}images/ico/sport/'
+- var pathImgIcoCountry = '{$opt.assets_url}images/ico/country/'
+- var pathImgServices = '{$opt.assets_url}images/services/'
+| {extends "file:sportcamps/base/base.html"}
+
+| {block 'var'}
+| {insert "file:sportcamps/home/home.tpl"}
+| {/block}
+
+| {block 'header'}
+| {parent}
+//-************_slide_*************//
+.slide-bl
+    .slide.wrapper.pd_lr_block
+        .slide-header
+            .slide__head
+                h1.head_h1 Top Performance Training Camps Organization
+
+            .slide__slogan.head_slogan
+                p For National Teams, Federations & Clubls
+| {/block}
+
+| {block 'main'}
+//-************_Form_*************//
+.request-bl
+    section.request.wrapper.pd_block
+        h2.head_slogan.head_slogan--mini.request__head Be Active No Heading In Hotels
+        include ../form/_form
+        form.form(action='' method='post').request-form.pd_block_mini
+            - var formid = 'request'
+            +input-hide
+            .request-form-lt
+                div
+                    +input-date(false, 'Сheck-in date', 'date.svg', 'From')
+                div
+                    +input-date(false, 'Сheck-in date', 'date.svg', 'To')
+                .input-lt
+                    div
+                        +input-number(false, 'Athletes', 'user.svg')
+                    div
+                        +input-number(false, 'Coaches', 'user.svg')
+                div
+                    +input-select(false, 'Type of sport', 'flag.svg')
+                        option(value="football").option Football
+                        option(value="swimming").option Swimming
+                        option(value="cycling").option Cycling
+                div
+                    +input-tel(false, 'Phone')
+                div
+                    +input-email(true)
+
+            .request-form__submit
+                +submit
+
+//-************_block-info_**********//
+.infostart-bl
+    section.infostart.wrapper.pd_block
+        .infostart__header
+            h2.head_h2 How to start?
+        .infostart-lt
+            article.infostart-item.content
+                h3.head_h3 Set your travel dates
+                p Shortly after your inquiry, you will receive several non-binding offers for your training camp from which you and your teammates can choose the training camp that is right for you. This service is of course completely free.
+
+            article.infostart-item.content
+                h3.head_h3 Consider all options  and select the best one
+                p We only need to know the overall number of participants and travel dates to plan your training camp.
+                p Have you already chosen a country and sports venue? You will receive a customized offer based on your requirements.
+
+            article.infostart-item.content
+                h3.head_h3 Enjoy training camp  and achieve your goal
+                p After the booking, you will receive all your travel documents and you can look forward to your training camp. If someone is unable to travel to the training camp, we will make a refund. Our group's manager is always supporting the team on the spot.
+
+//************_countries_********//
+.countries-bl
+    section.countries.wrapper.pd_block_untop
+        .countries__header
+            h2.head_h2.head_h2--sport
+                span.head_h2--sport__img
+                    img(src=pathImgIcoSport + 'football.png' alt='Football')
+                | Football
+
+        .countries-lt.mySwiper
+            .country__wrap
+                .country
+                    //-img(src=pathImgCountry + 'Indonesia.jpg' alt='Indonesia')
+                    .country__title(style="background-image: url('{$opt.assets_url}images/country/Indonesia.jpg')")
+                        p.head_h3.head_h3--flag.country__title__head
+                            span.head_h3.country__title__head__img
+                                img(src=pathImgIcoCountry + 'Indonesia.png' alt='Indonesia')
+                            | Indonesia
+
+            .country__wrap
+                .country
+                    .country__title(style="background-image: url('{$opt.assets_url}images/country/Turkey.jpg')")
+                        p.head_h3.head_h3--flag.country__title__head
+                            span.head_h3.country__title__head__img
+                                img(src=pathImgIcoCountry + 'Turkey.png' alt='Turkey')
+                            | Turkey
+
+            .country__wrap
+                .country
+                    .country__title(style="background-image: url('{$opt.assets_url}images/country/Greece.jpg')")
+                        p.head_h3.head_h3--flag.country__title__head
+                            span.head_h3.country__title__head__img
+                                img(src=pathImgIcoCountry + 'Greece.png' alt='Greece')
+                            | Greece
+
+            .country__wrap
+                .country
+                    .country__title(style="background-image: url('{$opt.assets_url}images/country/Cyprus.jpg')")
+                        p.head_h3.head_h3--flag.country__title__head
+                            span.head_h3.country__title__head__img
+                                img(src=pathImgIcoCountry + 'Cyprus.png' alt='Cyprus')
+                            | Cyprus
+
+//-************_block-info_**********//
+.infoleft-bl
+    section.infoleft.wrapper.pd_block
+        header.infoleft-header
+            h2.head_h2 Just choose your sport type
+            p.txt_headsub Active Planet offers Olympic Non-Olympic and Paralympic  training camps Worldwide
+
+        .infoleft-body.infoleft-body-lt
+            div
+                .content-img.infoleft-body__img
+                    img(src=pathImg + 'sport-other.png' alt='sport-other')
+            div
+                article.infoleft__content
+                    .infoleft-content
+                        h3.head_h2 Other sports
+                        .content.infoleft-content__text
+                            p Active Planet organizes high-performance training camps for a wide range of sports. We cooperate with Olympic and Paralympic National teams and clubs. We host athletic teams from all over Europe.
+                            p Your sports type is just a click away.
+                    footer.content-btn.infoleft__content__btn
+                        button.btn Сhoose your sport type
+                        a(href="#").link_base Make a quick reques
+
+//************_services_**********//
+.services-bl
+    section.services.wrapper.pd_block
+        .services__header
+            h2.head_h2 Our services
+        .services-lt
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-medicine.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-medicine.png' alt='#')
+                h3.head_h3 Sports medicine
+                .content.service__content
+                    p As a part of our training camps organization services, we provide a full variety of all medical treatment and testing, like cross-DNA Professional Sports Genetic Tests, Vo2 Testing, and ergometric assessments conducted by accredited Sports and Exercise Scientists. Also, we provide rehabilitation services, sports massages, and physiotherapy. Active Planet works with rehabilitation clinics all over the world.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-management.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-management.png' alt='#')
+                h3.head_h3 Sports management
+                .content.service__content
+                    p We offer professional sports management services for all functional areas of sporting, special, and cause-related training camps and sports events. From pre-event planning through post-event analysis, the company can handle all operational, technical, and participatory functions of an event, accounting for team travel plans. We provide best flight options, visa support, top performance sports venues and hotels.
+
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-event.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-event.png' alt='#')
+                h3.head_h3 Sports Event organization
+                .content.service__content
+                    p Regardless of the type of event you are planning, we can handle every aspect of it. We provide flights, accommodation, sports equipment, transfers, inventory, tents, event personnel, and site management. Many sports venues cooperate with Active Planet. Our sporting event management partners include colleges and universities, National Championships, and Sports federations WorldWide.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "active-holidays.webp" type="image/webp")
+                        img(src=pathImgServices + 'active-holidays.png' alt='#')
+                h3.head_h3 Active Holidays & Sport Tours
+                .content.service__content
+                    p This service is ideal For runners, hikers, mountaineers, bikers, explorers, families, and pretty much all lovers of the outdoors. We organize active holidays of any type all around the world for small groups. Just tell us about your ideal sports tour and we will manage it!
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "individuals-tours.webp" type="image/webp")
+                        img(src=pathImgServices + 'individuals-tours.png' alt='#')
+                h3.head_h3 Individuals tours
+                .content.service__content
+                    p Sports are your passion and you can't stand lying by the pool all day? With a list of our hotels with sporting facilities, you can easily make all travel arrangements for your individual training camps abroad.
+                    p Active Planet will package all the things you need: bike hire, the use of the lap pool, other sports facilities, airport transfers, etc.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "athletic-school.webp" type="image/webp")
+                        img(src=pathImgServices + 'athletic-school.png' alt='#')
+                h3.head_h3 Athletic school
+                .content.service__content
+                    p Are you traveling with kids who attend sports clubs? We selected the best sports schools and clubs around the world so you can simply find sections for various sports for any level of physical fitness. Also, we can organize different levels of individual training for any sports typ
+
+//-************_block-info_**********//
+.shooseus-bl
+    section.shooseus.wrapper.pd_block
+        .shooseus-lt
+            div
+                .infohead2
+                    h2.head_h2 Why shoose us?
+                    .content.infohead2__content
+                        p Active Planet is one of Europe's leading providers of sport training camps & events for more than 10 years. We organized already more than 100 competitions and around 600 Trainig Camps around the world. Providing our clients with the highest level of service and individual attention is our guarantee. Due to our extensive experience, a number of partners, and the World's largest catalog of sports facilities, we consider each group's wishes and are ready to create an individual proposal that is right for you!
+
+            div
+                .shooseus-body__wrap
+                    .shooseus-body.shooseus-body-lt
+                        .shooseus-item
+                            span.head_number 1062+
+                            p.txt_number Sports Hotels WorldWide exclusively cooperate with us
+                        .shooseus-item
+                            span.head_number 336+
+                            p.txt_number Teams successfully arranged training camps with us
+                        .shooseus-item
+                            span.head_number 37+
+                            p.txt_number Safe Countries covered by Active Planet
+
+                        .shooseus-item
+                            span.head_number 1500+
+                            p.txt_number Professional Sports Facilities exclusively cooperate with us
+                        .shooseus-item
+                            span.head_number 10+
+                            p.txt_number Years of professional cooperation in the sports tourism market
+                        .shooseus-item
+                            span.head_number 55+
+                            p.txt_number Airlines at your disposal when you book training camp Abroad
+
+//-************_faq_***********//
+.faq-bl
+    section.faq.wrapper.pd_block_untop
+        .faq__header
+            h2.head_h2 FAQ
+        .faq-body
+            article.faqitem
+                header.faqitem-header.pd_block_mini.faqitem-header-js.close-js
+                    h3.head_h3.faqitem-header__head Могу ли я в любое время сменить?
+                .faqitem-text.close-js
+                    p.faqitem__text.pd_block_mini.content.
+                        Рыба текст разработана спеицально для подобного случия реализации данной задачи. Которая в онечном итоге поможет вам сдлеать
+            article.faqitem
+                header.faqitem-header.pd_block_mini.faqitem-header-js
+                    h3.head_h3.faqitem-header__head Могу ли я в любое время сменить тарифный план?
+                .faqitem-text
+                    p.faqitem__text.pd_block_mini.content.
+                        Рыба текст разработана спеицально для подобного случия реализации данной задачи. Которая в онечном итоге поможет вам сдлеать. Рыба текст разработана спеицально для подобного случия реализации данной задачи. Которая в онечном итоге поможет вам сдлеать.
+            article.faqitem
+                header.faqitem-header.pd_block_mini.faqitem-header-js
+                    h3.head_h3.faqitem-header__head Могу ли я в любое время сменить?
+                .faqitem-text
+                    p.faqitem__text.pd_block_mini.content.
+                        Рыба текст разработана спеицально для подобного случия реализации данной задачи. Которая в онечном итоге поможет вам сдлеать
+
+//-************_block-info_**********//
+.inforight-bl
+    .inforight.wrapper.pd_block
+        .infoleft-body.infoleft-body-lt
+            div
+                .content-img.infoleft-body__img
+                    img(src=pathImg + 'training-camp.png' alt='sport-other')
+            div
+                .infoleft__content
+                    .infoleft-content
+                        h3.head_h2 Book your training camp
+                        .content.infoleft-content__text
+                            p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Его можно использовать для отображения образца шрифтов, создания текста для тестирования или обхода спам-фильтра
+                    .content-btn.infoleft__content__btn
+                        button.btn Ask an Offer
+
+| {/block}
+
+| {block 'script'}
+| {'minify_js_item' | placeholder}
+| {/block}

@@ -1,0 +1,30 @@
+// Контрольные точки
+$tel:       320px;
+$tel_albom: 480px;//480
+$smart:     544px;//480
+$tab:       768px;//800
+$note:      1008px;//992
+$pk:        1200px;
+$wide:      1360px;
+$full:      1584px;
+
+$font-sans: Verdana,Geneva,"DejaVu Sans",sans-serif;
+
+$dir_i: 'i/';
+$dir_i_base: '../base/i/';
+
+// интервал 0.75rem = 20px
+$spacing_mini:  0.06em;
+$spacing_min:   0.1em;
+$spacing_large: 0.16em;
+
+// color
+$cl:        lighten(black, 0%);
+$cl_light:  lighten(black, 20%);
+$cl_grey:   lighten(black, 60%);
+$cl-bg:     darken(white, 0%);
+$cl-viber: #834995;
+$cl-whatsapp: #00D95F;
+
+$pd_rl_flex_tab: 1rem;
+

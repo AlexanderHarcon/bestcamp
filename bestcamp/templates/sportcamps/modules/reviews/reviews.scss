@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import "../../../css/mixin";
+@import "../../../css/foundation";
+@import "../../../css/ext";
+@import "../../../css/var";
+//------------------------------
+@import "../../base/var";
+@import "../../base/class";
+@import "../../base/font";
+@import "../../base/ext";
+@import "../../base/base";
+
+
+.reviews {
+  background-color: #F2F9FD;
+
+  &__bl {
+    &-h2 {
+      text-align: center;
+      font: {
+        family: Raleway;
+        weight: 800;
+        size: 22px;
+      }
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__sector {
+    --f-carousel-spacing: 12px;
+    --f-carousel-slide-width: calc((100% - 24px) / 1);
+
+    @include mq-w(664px) {
+      --f-carousel-spacing: 24px;
+      --f-carousel-slide-width: calc((100% - 24px) / 2);
+    }
+    @include mq-w(1024px) {
+      --f-carousel-spacing: 24px;
+      --f-carousel-slide-width: calc((100% - 70px) / 3);
+    }
+
+    &_container {
+      text-align: center;
+
+      &-img {
+        width: 100px;
+        height: 100px;
+      }
+
+      &-info {
+        &-text {
+          font: {
+            family: Raleway;
+            weight: 500;
+            size: 16px;
+          }
+          line-height: 24px;
+          color: #2F3B40;
+          padding-top: 16px;
+        }
+
+        &-author {
+          font: {
+            family: Raleway;
+            weight: 700;
+            size: 14px;
+          }
+          line-height: 24px;
+          color: #5BBCE4;
+          padding-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+.f-carousel {
+
+  &__dots {
+    gap: 8px;
+  }
+
+  &__dot {
+    border-radius: 4px;
+    width: 29px;
+    height: 4px;
+  }
+}

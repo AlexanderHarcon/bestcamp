@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.location__bl {
+  justify-items: center;
+}
+@media (min-width: 760px) {
+  .location__bl {
+    display: flex;
+    gap: 24px;
+  }
+}
+.location__bl_map {
+  min-width: 287px;
+  max-width: 599px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+}
+.location__bl_map-img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.location__bl_distance {
+  padding: 24px 0;
+  width: 100%;
+}
+@media (min-width: 760px) {
+  .location__bl_distance {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+}
+.location__bl_distance-h3 {
+  line-height: 27px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 18px;
+}
+.location__bl_distance_info {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+@media (min-width: 430px) {
+  .location__bl_distance_info {
+    gap: 8px;
+  }
+}
+.location__bl_distance_info-img--revers {
+  transform: rotateY(180deg);
+}
+.location__bl_distance_info-p {
+  line-height: 18px;
+  color: #5BBCE4;
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 18px;
+}
+.location__bl_distance-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  line-height: 24px;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=location.css.map */

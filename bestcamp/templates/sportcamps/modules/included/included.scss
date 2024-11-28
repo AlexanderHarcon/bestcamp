@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+
+$media-brackpoint-mobile: 767px;
+$tab-brackpoint-mobile: 1200px;
+
+.included {
+    background: #F8FCFF;
+
+    * {
+        font-family: $font-head;
+    }
+
+    &-title {
+        margin-bottom: 2rem;
+        text-align: center;
+
+        @include mq-w($media-brackpoint-mobile) {
+            width: 100%;
+        }
+    }
+
+    &-lt {
+
+        @include mq-w($media-brackpoint-mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &>* {
+            width: 100%;
+            border-radius: 1.5rem;
+            border: 1px solid #FFEDDD;
+            position: relative;
+            background: #FFF;
+            padding: 1rem;
+            color: #333;
+            font-size: 0.9rem;
+            letter-spacing: 0.02rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+
+            @include mq-w($media-brackpoint-mobile) {
+                padding: 1.25rem;
+                width: calc(50% - 1rem);
+                &:nth-child(2) {
+                    margin-top: 0;
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                width: 1.36rem;
+                height: 1.36rem;
+                min-width: 1.36rem;
+                margin-right: 0.5rem;
+                background-image: url('images/included-icon.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    &-btn {
+        margin-top: 1.9rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: #859d3d;
+        }
+    }
+
+}

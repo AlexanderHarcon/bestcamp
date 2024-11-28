@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+$cl-blue: #5BBCE4;
+
+.good-to-know {
+  background-color: #F2F9FD;
+  display: flex;
+
+  &__bl {
+    @include mq-w(730px) {
+      display: flex;
+    }
+
+    &_text {
+      font-family: $font-head;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      line-height: 24px;
+      color: #535556;
+      position: relative;
+      padding-bottom: 40px;
+
+      &-h2 {
+        font: {
+          family: Raleway;
+          weight: 800;
+          size: 22px;
+        }
+        padding-bottom: 16px;
+        line-height: 38px;
+        color: #2F3B40;
+        @include mq-w(730px) {
+          padding-bottom: 32px;
+        }
+      }
+    }
+
+    &-checkbox {
+      display: none;
+    }
+
+    &_description {
+      max-height: 12em;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      gap: 8px;
+      display: grid;
+      @include mq-w(430px) {
+        max-height: 11em;
+      }
+      @include mq-w(916px) {
+        max-height: 9em;
+      }
+      @include mq-w(1403px) {
+        max-height: 8em;
+      }
+    }
+
+    &-checkbox:checked ~ &_description {
+      max-height: none;
+    }
+
+    &-toggle {
+      display: block;
+      cursor: pointer;
+      color: $cl-blue;
+      line-height: 25.6px;
+      font: {
+        weight: 700;
+        size: 16px;
+        family: Raleway;
+      }
+      padding-top: 8px;
+    }
+
+    &-toggle::after {
+      content: "Read more";
+    }
+
+    &-checkbox:checked ~ &-toggle::after {
+      content: "Show less";
+    }
+
+    &_weather {
+      @include mq-w(730px) {
+        margin-top: 60px;
+        margin-left: 30px;
+      }
+      @include mq-w(997px) {
+        margin-left: 113px;
+      }
+
+      &-p {
+        font: {
+          family: Raleway;
+          weight: 800;
+          size: 14px;
+        }
+        line-height: 27px;
+        padding-bottom: 16px;
+        @include mq-w(430px) {
+          font-size: 17px;
+        }
+
+        @include mq-w(997px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__weather {
+    caption {
+      font: {
+        family: Raleway;
+        weight: 500;
+        size: 12px;
+      }
+      line-height: 14px;
+
+      span {
+        color: #CC6F00;
+        padding-left: 14px;
+        font: {
+          family: Raleway;
+          weight: 800;
+          size: 12px;
+        }
+        line-height: 14px;
+        text-transform: none;
+      }
+    }
+
+    thead {
+      td {
+        border-bottom: 0;
+        font: {
+          family: Inter;
+          size: 14px;
+          weight: 500;
+        }
+        line-height: 16.41px;
+        padding: 0 20px 11px 0;
+
+        &.weather__border {
+          border-bottom: 1px solid;
+          padding: 0;
+          border-image: linear-gradient(90deg, rgba(208, 113, 0, 0.2) 2%, rgb(208, 113, 0) 44%, rgba(208, 113, 0, 0.2) 100%) 1;
+        }
+      }
+    }
+
+    tbody {
+      th {
+        font: {
+          family: Inter;
+          size: 14px;
+          weight: 300;
+        }
+        line-height: 16.41px;
+        padding: 11px 20px 0 0;
+      }
+    }
+  }
+}
+
+.table_ico {
+  filter: grayscale(1);
+  opacity: 0.75;
+}

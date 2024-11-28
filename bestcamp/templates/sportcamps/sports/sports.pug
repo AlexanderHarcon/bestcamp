@@ -1,0 +1,63 @@
+//- < base/base.html
+    > sports.tpl
+include ../../pug/_foreach
+include ../../pug/_if
+- var pathImg = '{$opt.assets_url}images/'
+- var pathImgsports = '{$opt.assets_url}images/sports/'
+| {extends "file:sportcamps/base/base.html"}
+
+| {block 'var'}
+| {insert "file:sportcamps/sports/sports.tpl"}
+| {/block}
+
+| {block 'header'}
+| {parent}
+//-************_slide_*************//
+.slide-bl(style="background-image: url('{$images_path ~ $sport.banner}')")
+    .slide.wrapper.pd_lr_block
+        .slide-header
+            .slide__head
+                h1.head_h1 {$res.pagetitle}
+| {/block}
+
+| {block 'main'}
+//-************_Form_*************//
+| {include "file:{$modules}formrequest/formrequest.html"
+| header=$res.txt_head_form
+|}
+
+//-************_info_Two**********//
+| {include "file:{$modules}info/info.html"
+| img=$res.img_info_two
+| head2=$res.txt_info_two_head
+| header_slogan=$res.txt_info_two_slogan
+| content=$res.text_info_two | wrap_tag : 'p'
+| btn_name=$res.txt_info_two_btn
+| btn_cl='formrequest_js'
+| }
+
+//************_countries_********//
+| {include "file:{$modules}countries/countries.html"
+| sport=$sport
+| header=$res.txt_head_prev
+| }
+
+//-************_info_end**********//
+| {include "file:{$modules}info/info.html"
+| class_lt='_inforight'
+| img=$res.img_info_end
+| head2=$res.txt_head_end
+| content=$res.text_info_end | wrap_tag : 'p'
+| btn_name=$res.txt_btn
+| btn_cl='formrequest_js'
+| }
+
+| {/block}
+
+| {block 'script'}
+//-************_Form_popap*************//
+| {include "file:{$modules}formrequest/formrequest.html"
+| id='request'
+| }
+| {'minify_js_item' | placeholder}
+| {/block}

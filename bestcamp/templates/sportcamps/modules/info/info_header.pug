@@ -1,0 +1,20 @@
+//- < info.html
+    < country.html
+    < home.html
+include ../../../pug/_if
+| {extends "file:{$modules}info/info.html"}
+| {block 'header'}
+header.info-header
+    h2.head_h2 {$header}
+    +if("$header_slogan")
+        p.txt_headsub {$header_slogan}
+|{/block}
+
+| {block 'head'}
+h3.head_h2 Other sports
+|{/block}
+
+| {block 'btn'}
+|{parent}
+a(href="#").link_base Make a quick reques
+|{/block}

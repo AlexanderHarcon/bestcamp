@@ -1,0 +1,6 @@
+//- < home.tpl
+article.faqitem
+    header.faqitem-header.pd_block_mini.faqitem-header-js(class="{!$i ? ' close-js' : '' }")
+        h3.head_h3.faqitem-header__head {$question}
+    .faqitem-text(class="{!$i ? ' close-js' : '' }")
+        .faqitem__text.pd_block_mini.content {$answer | wrap_tag : 'p'}

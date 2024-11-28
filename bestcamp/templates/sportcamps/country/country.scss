@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "../../css/_mixin";
+@import "../../css/_var";
+@import "../../css/_ext";
+//------------------------------
+@import "../base/_var";
+@import "../base/_ext";
+
+.weather
+{
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 1rem;
+    background-color: $cl-fon;
+    @extend %box-shadow;
+
+    &__tablewrap
+    {
+        overflow-x: auto;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+/* < country.tpl
+* < home.tpl
+*/
+
+.info
+{
+    @include rhythm-margin(2.4rem);
+
+    &-bl
+    {
+        background-color: $cl-fon;
+    }
+
+    &-body
+    {
+        &-lt
+        {
+            @extend %flexbox;
+            @extend %flex-wrap;
+            @extend %justify-content_center;
+            @extend %align-items_center;
+            gap: 1.6rem;
+
+            @include mq-w($tab)
+            {
+                max-width: 100%;
+                @include justify-content(space-between);
+            }
+
+            > *
+            {
+                max-width: 100%;
+
+                @include mq-w($tab)
+                {
+                    @include calc(max-width, '50% - 1.6rem');
+
+                    &:nth-child(1)
+                    {
+                        @include order(1);
+
+                        ._inforight &
+                        {
+                            @include order(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__img
+        {
+            position: relative;
+            max-width: 85%;
+            width: rem(420);
+            @include mr_auto();
+            text-align: center;
+
+            @include mq-w($tab)
+            {
+                max-width: 100%;
+            }
+
+            &__blockfree
+            {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                @include transform(translateX(-50%));
+                max-width: 100%;
+
+            }
+        }
+    }
+
+    &__content
+    {
+        @include rhythm-margin(1.6rem);
+
+        &__btn
+        {
+            @extend %justify-content_center;
+
+            @include mq-w($tab)
+            {
+                @include justify-content(start);
+            }
+        }
+    }
+
+    &-header
+    {
+        text-align: center;
+        max-width: 100%;
+        width: 48em;
+        @include mr_auto();
+
+        @include rhythm-margin(0.8rem);
+    }
+
+    &-content
+    {
+        @include rhythm-margin(0.8rem);
+
+        &__text
+        {
+            max-width: 100%;
+            width: 34em;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+
+
+
+

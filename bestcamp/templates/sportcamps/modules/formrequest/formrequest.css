@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+.input-lt, .request-form-lt {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input-lt, .request-form-lt {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.input-lt > *, .request-form-lt > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.request-form {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+
+.request__head {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
+}
+
+/* < country.tpl
+* < home.tpl
+*/
+.request {
+  display: none;
+  position: relative;
+}
+.request__body > *:not(:empty):not(:last-child) {
+  margin-bottom: 1rem;
+}
+.popap_form .request__body > *:not(:empty):not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.request__head {
+  color: white;
+}
+.popap_form .request__head {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #333333;
+  text-shadow: none;
+}
+.request-form {
+  border-radius: 1.6rem;
+  background-color: white;
+}
+.request-form > *:not(:empty):not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.popap_form .request-form {
+  padding: 0;
+  box-shadow: none;
+}
+.request-form-lt {
+  max-width: 100%;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .request-form-lt {
+    gap: 1.6rem;
+  }
+}
+.request-form-lt > * {
+  max-width: 100%;
+  -webkit-flex-basis: 17rem;
+  -ms-flex-preferred-size: 17rem;
+  flex-basis: 17rem;
+}
+.request-form__submit {
+  text-align: center;
+}
+
+.input-lt {
+  max-width: 100%;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .input-lt {
+    gap: 1.6rem;
+  }
+}
+.input-lt > * {
+  max-width: 100%;
+  -webkit-flex-basis: 7rem;
+  -ms-flex-preferred-size: 7rem;
+  flex-basis: 7rem;
+}
+
+/*# sourceMappingURL=formrequest.css.map */

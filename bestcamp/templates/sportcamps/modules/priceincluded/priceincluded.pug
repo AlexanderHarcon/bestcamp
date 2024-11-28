@@ -1,0 +1,15 @@
+- var pathImg = '{$opt.assets_url}images/'
+
+- const items = [{ icon: 'teamManagment.svg', text: 'Team management and pre-booking consultation' }, { icon: 'accomodation.svg', text: 'Accommodation in 4* Hotels on',description: '(All Inclusive)' }, { icon: 'twoTraining.svg', text: 'Two training sessions per day' }, { icon: 'gymDay.svg', text: 'Gym every day' }, { icon: 'drinkWater.svg', text: 'Drinking water',description: '( 2l per person per day )' }, { icon: 'transfer.svg', text: 'Transfer', description: '( Airport - Hotel - Airport )' }, { icon: 'confHall.svg', text: 'Conference hall' }, { icon: 'orgTouranments.svg', text: 'Organization of Tournaments and Friendly Games' }, { icon: 'sportMedicine.svg', text: 'Sports medicine',description: '(massages, rehabilitation, diagnostics)' }, { icon: 'videoPhotoShooting.svg', text: 'Video and photo shooting' }, { icon: 'flight.svg', text: 'Flights or other Logistics',description: '(Transport Connection, Train, Bus, Feary)' }, { icon: 'grpMeeting.svg', text: 'Groups meeting in the Airport and coordination during the training camp' }]
+
+.price-included
+    .wrapper.pd_block
+        section.price-included__bl
+            h2.price-included__bl-title Price included:
+            .price-included__bl-grid
+                each item in items
+                    .price-included__bl-card
+                        img.price-included__bl-icon(src=pathImg + item.icon, alt=item.text)
+                        h3.price-included__bl-name= item.text
+                            if item.description
+                                span.price-included__bl-name-description= item.description

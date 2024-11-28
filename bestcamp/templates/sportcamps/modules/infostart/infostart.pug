@@ -1,0 +1,12 @@
+//- < country.html
+    < home.html
+include ../../../pug/_foreach
+.infostart-bl
+    section.infostart.wrapper(class = "{$class_untop ?: 'pd_block'}")
+        .infostart__header
+            h2.head_h2 {$res.txt_head_start}
+        .infostart-lt
+            +foreach('$res.migx_head_text', '$head_text')
+                article.infostart-item.content
+                    h3.head_h3 {$head_text.param_en}
+                    | {$head_text.valueen | wrap_tag : 'p'}

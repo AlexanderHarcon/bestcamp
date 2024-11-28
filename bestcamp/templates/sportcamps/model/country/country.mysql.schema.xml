@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="campsregions" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="cmpCountries" table="cmp_countries" extends="xPDOSimpleObject">
+		<field key="country_en" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="country_de" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="key" dbtype="varchar" precision="3" phptype="string" null="false" default="" />
+        <field key="flag" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="map" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="photo" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="coord" dbtype="varchar" precision="64" phptype="string" null="false" default="" />
+        <field key="iso" dbtype="varchar" precision="3" phptype="string" null="false" default="" />
+        <field key="climate" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
+        <field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" index="index" />
+        <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cmpRegions" table="cmp_regions" extends="xPDOSimpleObject">
+        <field key="country" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="region_en" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="region_de" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="flag" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="map" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="photo" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="coord" dbtype="varchar" precision="64" phptype="string" null="false" default="" />
+        <field key="iso" dbtype="varchar" precision="3" phptype="string" null="false" default="" />
+        <field key="climate" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="type" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
+        <field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" index="index" />
+        <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+        <index alias="Country" name="country" primary="false" unique="true">
+            <column key="country" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Country" class="cmpCountries" local="country" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cmpCities" table="cmp_cities" extends="xPDOSimpleObject">
+        <field key="country" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="region" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="city_en" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="city_de" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="map" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="photo" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="coord" dbtype="varchar" precision="64" phptype="string" null="false" default="" />
+        <field key="climate" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="location" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="logistics" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="cap_country" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" index="index" />
+        <field key="cap_region" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" index="index" />
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
+        <field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" index="index" />
+        <field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+        <index alias="Country" name="country" primary="false" unique="true">
+            <column key="country" collation="A" null="false" />
+        </index>
+        <index alias="Region" name="region" primary="false" unique="false">
+            <column key="region" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Country" class="cmpCountries" local="country" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Region" class="cmpRegions" local="region" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+</model>

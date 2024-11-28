@@ -1,0 +1,75 @@
+[25-Mar-2024 11:36:58 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php:35
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(566): MsfmFieldsetGetListProcessor->prepareQueryBeforeCount(Object(xPDOQuery_mysql))
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.cl in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php on line 35
+[25-Mar-2024 11:36:58 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php:35
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(566): MsfmFieldsetGetListProcessor->prepareQueryBeforeCount(Object(xPDOQuery_mysql))
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.cl in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php on line 35
+[25-Mar-2024 11:38:05 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php:35
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(566): MsfmFieldsetGetListProcessor->prepareQueryBeforeCount(Object(xPDOQuery_mysql))
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.cl in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php on line 35
+[25-Mar-2024 11:38:06 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php:35
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(566): MsfmFieldsetGetListProcessor->prepareQueryBeforeCount(Object(xPDOQuery_mysql))
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.cl in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfieldset/getlist.class.php on line 35
+[25-Mar-2024 12:20:44 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to modObjectGetListProcessor::prepareQueryAfterCount() must be an instance of xPDOQuery, null given, called in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 568 and defined in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php:606
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(568): modObjectGetListProcessor->prepareQueryAfterCount(NULL)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.clas in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 606
+[25-Mar-2024 12:20:44 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to modObjectGetListProcessor::prepareQueryAfterCount() must be an instance of xPDOQuery, null given, called in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 568 and defined in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php:606
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(568): modObjectGetListProcessor->prepareQueryAfterCount(NULL)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.clas in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 606
+[25-Mar-2024 13:09:19 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to modObjectGetListProcessor::prepareQueryAfterCount() must be an instance of xPDOQuery, null given, called in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 568 and defined in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php:606
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(568): modObjectGetListProcessor->prepareQueryAfterCount(NULL)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.clas in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 606
+[25-Mar-2024 13:09:20 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to modObjectGetListProcessor::prepareQueryAfterCount() must be an instance of xPDOQuery, null given, called in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 568 and defined in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php:606
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(568): modObjectGetListProcessor->prepareQueryAfterCount(NULL)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(501): modObjectGetListProcessor->getData()
+#2 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): modObjectGetListProcessor->process()
+#3 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/msfmfieldse...', Array, Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.clas in /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php on line 606
+[25-Mar-2024 16:50:20 Europe/Kiev] PHP Parse error:  syntax error, unexpected '*', expecting function (T_FUNCTION) or const (T_CONST) in /home/bestsportcamps/public_html/core/components/msfieldsmanager/processors/mgr/msfmfields/update.class.php on line 96
+[13-Sep-2024 19:26:53 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[16-Sep-2024 20:45:03 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[17-Sep-2024 17:26:24 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[17-Sep-2024 18:48:45 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 15:58:39 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 17:37:42 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029

@@ -1,0 +1,24 @@
+//- < country.html
+include ../../../pug/_foreach
+include ../../../pug/_if
+//-- var pathImgIcoCountry = '{$opt.assets_url}images/ico/country/flags-32/'
+| {insert "file:sportcamps/modules/camps/camps.tpl"}
+.camps-bl
+    section.camps.wrapper(class = "{$class_untop ?: 'pd_block'}")
+        //-| {$camps | print}
+        //-| {$sport.id}
+        //-| {$country.id}
+        //-| {$products}
+        +foreach('$camps', '$camp', false, false)
+            div
+                div
+                    //-| {$camp.resource_id} <br>
+                    | {set $prod = $camp.resource_id | dbarray : 'msProductData'}
+                    img(src="{$prod.thumb}")
+                div {$camp.title_en}
+                div
+                    //-| {$camp.features_ids | print}
+                    +foreach('$camp.features_ids', '$features_id', false, false)
+                        | {set $features = $features_id | dbarray : 'cmpFeatures'}
+                        p - {$features.title_en}
+            hr

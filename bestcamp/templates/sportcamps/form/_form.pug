@@ -1,0 +1,247 @@
+- var formid = ''
+- var pathImgIcoForm = '{$opt.assets_url}images/ico/form/'
+
+//- input-hide
+mixin input-hide()
+
+    p.inhide
+        input(
+            type='email'
+            name='workemail'
+            value=""
+        )
+        
+//- input-hide2
+mixin input-hide2(r = true, v)
+    p.inhide
+        input(
+            type = 'text'
+            name = 'page'
+            value != v
+            required = r
+        )
+
+//- input-name        
+mixin input-name(r = false, title = 'Name', forid = formid)
+
+    if r
+        - var title = title + ' *'
+
+    p.form-row._name
+        span.form-row__error.error_name {$_pls['fi.error.name']}
+        input.input(
+            id = forid + '-name'
+            type = 'text'
+            name = 'name'
+            value != "{$_pls['fi.name']}"
+            placeholder != title
+            maxlength = "50"
+            required = r
+        )
+        //-label(for = forid + '-name')!= title
+
+//- input-lastname
+mixin input-lastname(r = false, title = 'Last Name', forid = formid)
+
+    if r
+        - var title = title + ' *'
+
+    p.form-row._lastname
+        span.form-row__error.error_lastname {$_pls['fi.error.lastname']}
+        input.input(
+        id = forid + '-lastname'
+        type = 'text'
+        name = 'lastname'
+        value != "{$_pls['fi.lastname']}"
+        placeholder != title
+        maxlength = "100"
+        required = r
+        )
+
+//- input-surname
+mixin input-surname(r = false, title = 'Фамилия', forid = formid)
+
+    if r
+        - var title = title + ' <span>*</span>'
+
+    p.form-row._surname
+        span.form-row__error.error_surname {$_pls['fi.error.surname']}
+        input.inputtxt-js(
+        id = forid + '-surname'
+        type = 'text'
+        name = 'surname'
+        value != "{$_pls['fi.surname']}"
+        maxlength = "50"
+        required = r
+        )
+        label(for = forid + '-surname')!= title
+
+//- input-email
+mixin input-email(r = false, title = 'E-mail', forid = formid)
+
+    if r
+        - var title = title + ' *'
+
+    p.form-row._email
+        span.form-row__error.error_email(data-error="email") {$_pls['fi.error.email']}
+        input.input(
+            id = forid + '-email'
+            type = 'email'
+            name = 'email'
+            value != "{$_pls['fi.email']}"
+            placeholder != title
+            maxlength = "100"
+            required = r
+        )
+        //-label(for = forid + '-email')!= title
+
+//- input-tel
+mixin input-tel(r = false, title = 'Phone', forid = formid)
+
+    if r
+        - var title = title + ' *'
+    
+    p.form-row._tel
+        span.form-row__error.error_tel(data-error="tel") {$_pls['fi.error.tel']}
+        input.input(
+            id = forid + '-tel'
+            type = 'tel'
+            name = 'tel'
+            value = "{$_pls['fi.tel']}"
+            placeholder != title
+            maxlength = "50"
+            required = r
+        )
+        //-label(for = forid + '-tel')!= title
+        //-title = "Вводите только цифры 6-13 символов"
+
+//- input-number
+mixin input-number(r = false, title = 'Number', ico = false, forid = formid)
+
+    if r
+        - var title = title + ' *'
+
+    p.form-row._number
+        //-span.error_number(data-error="number") {$_pls['fi.error.tel']}
+        if ico
+            span.form-row__ico
+                img(src=pathImgIcoForm + ico alt="Person icon" width=24 height=24)
+        span.form-row__ico--arrow.form-row__ico--arrow--top
+            img(src=pathImgIcoForm + "treugolnik.svg" alt="Arrow icon" width=24 height=24)
+        span.form-row__ico--arrow.form-row__ico--arrow--bottom
+            img(src=pathImgIcoForm + "treugolnik.svg" alt="Arrow icon" width=24 height=24 )
+        input.input(
+            id = 'number' + forid
+            type = 'number'
+            name = 'number' + forid
+            value = ""
+            placeholder != title
+            min="1" max="99"
+            required = r
+        )
+        //-title = "Вводите цифры"
+
+//- input-number
+mixin input-date(r = false, title = 'Date', forid = formid)
+
+    if r
+        - var title = title + ' *'
+    div.form-row
+        span.form-row__error.error_date(data-error="date") {$_pls['fi.error.date']}
+        label.form-row__label(for = forid + '-date')!= title
+        p.form-row._date
+            //-if ico
+                span.form-row__ico
+                    img(src=pathImgIcoForm + ico alt="" width=24 height=24)
+            input.input(
+                id = forid + '-date'
+                type = 'date'
+                name = 'date' + forid
+                value = ''
+                min="2023-04-01"
+                max="2025-04-31"
+                required = r
+            )
+                //-step="30"
+//- input-select
+mixin input-select(r = false, title = 'Select', ico = false, forid = formid)
+
+    if r
+        - var title = title + ' *'
+
+    p.form-row._select
+        span.form-row__error.error_select {$_pls['fi.error.select']}
+        if ico
+            span.form-row__ico
+                img(src=pathImgIcoForm + ico alt="Select icon" width=24 height=24)
+        span.form-row__ico--arrow
+            img(src=pathImgIcoForm + "treugolnik.svg" alt="Arrow icon" width=24 height=24)
+        select.input(
+            size="1"
+            name="select" + forid
+            )
+            option(value="" hidden disabled selected).option.option--default= title
+            block
+
+//- input-Тема сообщения        
+mixin input-theme(r = false, title = 'Тема сообщения', forid = formid)
+
+    if r
+        - var title = title + ' *'
+        
+    p.form-row._theme
+        span.form-row__error.error_sport_type(data-error="sport_type") {$_pls['fi.error.sport_type']}
+        input.input(
+            id = forid + '-sport_type'
+            type = 'text'
+            name = 'sport_type'
+            placeholder != title
+            value != "{$_pls['fi.sport_type']}"
+            maxlength = "40"
+            required = r
+        )
+        //label(for = forid + '-sport_type')!= title
+
+//- textarea-message
+mixin textarea-message(r = false, title = 'Текст сообщения', row = 8, forid = formid)
+
+    if r
+        - var title = title + ' <span>*</span>' 
+
+    p.form-row._message
+        span.error_message {$_pls['fi.error.message']}
+        textarea.inputtxt-js(
+            id = forid + '-message'
+            name = 'message'
+            rows = row
+            maxlength = "2500"
+            required = r
+        ) {$_pls['fi.message']}
+        label(for = forid + '-message')!= title
+   
+//- submit
+mixin file(title = 'Выберите файл', label = false, forid = formid)
+
+    p.form-file
+        input.minhidden.input-filecustom.form-file__input.inputfile_js(
+            id = forid + '_file'
+            type='file'
+            name='file'
+            value= title
+            data-multiple-caption="{ count } files selected"
+            multiple=""
+        )
+        if label
+            label(for = forid + '_file').btn_small._file
+                span
+                span.ellipsis(data-title!=title id=forid + "-file-title")
+        
+//- submit
+mixin submit(title = "{'polylang_site_make-request' | lexicon}")
+
+    p.form-submit
+        input.btn.btn_submit(
+            type='submit'
+            name='submit'
+            value= title
+        )

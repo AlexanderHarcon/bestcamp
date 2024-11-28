@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+.infostart-lt {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.infostart-lt {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.infostart-lt {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+/* < country.tpl
+* < home.tpl
+*/
+.infostart > *:not(:empty):not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.infostart-bl {
+  background-color: white;
+}
+.infostart-lt {
+  gap: 1.6rem;
+}
+@media (min-width: 768px) {
+  .infostart-lt {
+    gap: 3.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .infostart-lt {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+.infostart__header {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .infostart__header {
+    text-align: left;
+  }
+}
+.infostart-item {
+  max-width: 100%;
+  width: 18rem;
+}
+.infostart-item > *:not(:empty):not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+.infostart-item p {
+  font-size: 0.85rem;
+}
+.infostart-item p:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+
+/*# sourceMappingURL=infostart.css.map */

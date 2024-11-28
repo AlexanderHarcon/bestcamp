@@ -1,0 +1,718 @@
+[20-Mar-2024 14:48:11 Europe/Kiev] PHP Fatal error:  require_once(): Failed opening required '../galleryMigx.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 48
+[20-Mar-2024 14:48:17 Europe/Kiev] PHP Fatal error:  require_once(): Failed opening required '../galleryMigx.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 48
+[20-Mar-2024 14:57:17 Europe/Kiev] PHP Fatal error:  require_once(): Failed opening required '/home7/bestsportcamps/public_html/assets/templates/sportcamps/model/galleryMigx.phpgalleryMigx.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 48
+[16-Apr-2024 17:08:53 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function set() on null in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php:155
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once()
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  t in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php on line 155
+[16-Apr-2024 17:08:54 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function set() on null in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php:155
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once()
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  t in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php on line 155
+[16-Apr-2024 17:09:44 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function set() on null in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php:155
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once()
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  t in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php on line 155
+[16-Apr-2024 17:13:14 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function set() on null in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php:155
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once()
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  t in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php on line 155
+[16-Apr-2024 17:16:03 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function set() on null in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php:146
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once()
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  t in /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php on line 146
+[19-Apr-2024 20:45:21 Europe/Kiev] PHP Parse error:  syntax error, unexpected ''}'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(487) : eval()'d code on line 131
+[19-Apr-2024 20:48:49 Europe/Kiev] PHP Parse error:  syntax error, unexpected ''"}'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(487) : eval()'d code on line 131
+[20-Apr-2024 21:11:06 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:95
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 95
+[20-Apr-2024 21:11:14 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:95
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 95
+[20-Apr-2024 21:11:23 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:95
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 95
+[20-Apr-2024 21:12:26 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:95
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 95
+[20-Apr-2024 21:14:10 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:97
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 97
+[20-Apr-2024 21:17:41 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:97
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 97
+[20-Apr-2024 21:19:49 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:97
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publi in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 97
+[20-Apr-2024 21:26:25 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:28:04 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:31:13 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:32:12 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:34:21 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:36:06 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:37:47 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[20-Apr-2024 21:40:39 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function getCollection() on null in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php:159
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(Array)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/update.php(354): modX->runSnippet('objSportInfraAf...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/update.class.php(25): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxUpdateProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/upda...', Array, Array)
+#7 /home/bestsportcamps/publ in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/89.include.cache.php on line 159
+[04-Sep-2024 20:18:25 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[04-Sep-2024 20:18:25 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 19:18:01 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 19:18:01 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 20:12:30 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 20:31:27 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 20:44:33 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 20:47:53 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 21:42:35 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 21:47:33 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[09-Sep-2024 21:47:33 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[10-Sep-2024 16:18:10 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[11-Sep-2024 20:27:44 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[11-Sep-2024 20:27:45 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:28:33 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:28:51 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:29:25 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:29:52 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:30:42 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:30:47 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:30:51 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[11-Sep-2024 20:38:11 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 15:27:04 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 15:27:04 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 16:40:02 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[12-Sep-2024 17:48:43 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:49:44 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:49:53 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:52:46 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:53:05 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:56:34 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:57:36 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 17:58:15 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 18:00:01 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 18:02:34 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 18:02:52 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 18:10:54 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:37
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 37
+[12-Sep-2024 18:28:29 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:36
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 36
+[12-Sep-2024 18:32:05 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:39
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 39
+[12-Sep-2024 18:35:08 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:39
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 39
+[12-Sep-2024 18:39:18 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 18:41:27 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 18:59:35 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 18:59:44 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 18:59:52 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 19:01:31 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 19:04:29 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 19:05:43 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[12-Sep-2024 19:06:45 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php:41
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/model/modx/modscript.class.php(76): include()
+#1 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1865): modScript->process(NULL)
+#2 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/fields.php(150): modX->runSnippet('sportCampsAfter...', Array)
+#3 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/fields.class.php(63): include_once('/home/bestsport...')
+#4 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxFormProcessor->process()
+#5 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#6 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/fiel...', Array, Array)
+#7 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#8 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#9 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#10 {main}
+  thrown in /home/bestsportcamps/public_html/core/cache/includes/elements/modsnippet/96.include.cache.php on line 41
+[13-Sep-2024 19:38:08 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:40:50 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 19:53:08 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[13-Sep-2024 20:04:13 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[16-Sep-2024 19:04:55 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[16-Sep-2024 19:04:55 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[17-Sep-2024 19:15:04 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[17-Sep-2024 19:15:04 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[17-Sep-2024 19:15:05 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[18-Sep-2024 17:37:49 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[18-Sep-2024 17:37:50 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[18-Sep-2024 17:37:50 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[18-Sep-2024 18:12:04 Europe/Kiev] PHP Deprecated:  Required parameter $info follows optional parameter $options in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/msproductfile.class.php on line 148
+[18-Sep-2024 18:15:45 Europe/Kiev] PHP Deprecated:  Required parameter $info follows optional parameter $options in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/msproductfile.class.php on line 148
+[28-Sep-2024 14:24:44 Europe/Kiev] PHP Deprecated:  Required parameter $entry follows optional parameter $action in /home/bestsportcamps/public_html/core/components/minishop2/model/minishop2/minishop2.class.php on line 1029
+[28-Sep-2024 18:45:42 Europe/Kiev] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(487) : eval()'d code:382
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Render.php(215): Fenom\Template->{closure}(Array, Object(Fenom\Template))
+#1 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Render.php(215): Closure->__invoke(Array, Object(Fenom\Template))
+#2 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(492): Fenom\Render->display(Array)
+#3 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Render.php(229): Fenom\Template->display(Array)
+#4 /home/bestsportcamps/public_html/core/components/pdotools/model/pdotools/pdotools.class.php(582): Fenom\Render->fetch(Array)
+#5 /home/bestsportcamps/public_html/core/components/pdotools/model/pdotools/pdotools.class.php(421): pdoTools->fenom(Array, Array)
+#6 /home/bestsportcamps/public_html/core/components/pdotools/model/pdotools/_fenom.php(446): pdoTools->getChunk('@FILE sportcamp...', Array)
+#7 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(487) : eval()'d code(10): FenomX->{closure}('@FILE sportcamp...', Array)
+#8 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Render.php(215): Fenom\Template->{closure}(Array, Object(Fenom\Template))
+#9 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Render.php(215): Closure->__invoke(Array, Object(Fenom\Template))
+#10 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(492): Fenom\Render->display(Array)
+#11 /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Render.php(229): Fenom\Template->display(Array)
+#12 /home/bestsportcamps/public_html/core/components/pdotools/model/pdotools/pdotools.class.php(582): Fenom\Render->fetch(Array)
+#13 /home/bestsportcamps/public_html/core/components/pdotools/model/pdotools/pdoparser.class.php(61): pdoTools->fenom('{'@FILE sportca...', Array)
+#14 /home/bestsportcamps/public_html/core/components/migx/model/migx/migx.class.php(1661): pdoParser->processElementTags('', '{'@FILE sportca...', true, true, '[[', ']]', Array)
+#15 /home/bestsportcamps/public_html/core/components/migx/model/migx/migx.class.php(1688): Migx->renderChunk('{'@FILE sportca...', Array, false)
+#16 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/default/getlist.php(229): Migx->checkRenderOptions(Array)
+#17 /home/bestsportcamps/public_html/core/components/migx/processors/mgr/migxdb/getlist.class.php(30): include_once('/home/bestsport...')
+#18 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): migxGetListProcessor->process()
+#19 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#20 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/migxdb/getl...', Array, Array)
+#21 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#22 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#23 /home/bestsportcamps/public_html/assets/components/migx/connector.php(59): modConnectorRequest->handleRequest(Array)
+#24 {main}
+  thrown in /home/bestsportcamps/public_html/core/components/pdotools/vendor/fenom/fenom/src/Fenom/Template.php(487) : eval()'d code on line 382

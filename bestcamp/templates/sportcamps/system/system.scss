@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import "../../css/_mixin";
+@import "../../css/_var";
+@import "../../css/_ext";
+//------------------------------
+@import "../base/_var";
+@import "../base/_ext";
+
+//************_404_*************//
+.obj404_num
+{
+    font-family: $font-text;
+    font-weight: 900;
+    font-size: var(--ft_sz_slogan_txt);
+    color: $cl-accent;
+}
+
+.page404
+{
+    &-lt
+    {
+        @extend %flexbox;
+        @extend %flex-wrap;
+        @extend %justify-content_center;
+        @extend %align-items_center;
+        gap: 1.6rem;
+
+        > *
+        {
+            max-width: 100%;
+            flex-basis: 20rem;
+            flex-grow: 1;
+
+            &:nth-child(1)
+            {
+                flex-grow: 2;
+            }
+        }
+    }
+
+    &__img
+    {
+        text-align: center;
+    }
+}
+
+.obj404
+{
+    @include rhythm-margin(3.6rem);
+
+    &__header
+    {
+        @include rhythm-margin();
+    }
+
+    &__body
+    {
+        @include rhythm-margin(2rem);
+    }
+
+    &__num,
+    &__btn
+    {
+        text-align: center;
+    }
+}
+
+
+
+
+

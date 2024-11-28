@@ -1,0 +1,93 @@
+%font_init_add
+{
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+// padding
+%pd_lr_block {
+    @include pd_lr('0.8rem + ' + var(--pd_lr_block), 0, true);
+
+    @include mq-w($tab)
+    {
+        @include pd_lr('1.6rem + ' + var(--pd_lr_block), 0, true);
+    }
+}
+%pd_block {
+    @extend %pd_lr_block;
+    @include pd_tb('0.8rem + ' + var(--pd_tb_block), 0, true);
+
+    @include mq-w($tab)
+    {
+        @include pd_lr('1.6rem + ' + var(--pd_lr_block), 0, true);
+    }
+}
+
+%flex_mr_auto {
+    $pd_lr_block: 1rem !default;
+
+    @include mr_auto('0px - ((' + $pd_lr_block + ') / 2)', 0, true);
+}
+%flex_el_pd_lr {
+    $pd_lr_block: 1rem !default;
+
+    @include pd_lr('(' + $pd_lr_block + ') / 2', 0, true);
+}
+
+%txt_base
+{
+    font-family: $font-text;
+    font-weight: 400;
+}
+
+%company-el
+{
+    position: relative;
+    display: block;
+    padding: $pd_tb-company-el 0.8rem;
+}
+
+%menu-el
+{
+    @extend %company-el;
+    width: 100%;
+
+    &:before
+    {
+        content: none;
+        position: absolute;
+        @include calc(top, $pd_tb-company-el + ' + 0.4em' );
+        left: 0;
+        @include width-height(0.35em);
+        border-radius: 50%;
+        background-color: $cl-accent;
+    }
+
+    &:hover,
+    .active > &
+    {
+        &:before
+        {
+            content: '';
+        }
+    }
+
+    .active > &
+    {
+        font-weight: 600;
+    }
+}
+
+%box-shadow
+{
+    @include box-shadow(
+        0px 0px 50px rgba(0, 0, 0, 0.1)
+    );
+}
+
+%text-shadow
+{
+    @include text-shadow(
+        3px, 3px, 5px, rgba(0,0,0,.75)
+    );
+}

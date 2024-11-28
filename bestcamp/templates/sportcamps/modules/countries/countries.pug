@@ -1,0 +1,53 @@
+//- < country.html
+    < home.html
+    > countries.tpl
+    - $class_untop - adds top padding
+    - $parents - ID parent folder
+    - $header - header
+    - $sport - ID type of sport
+    - $limit - number of elements to be output
+include ../../../pug/_foreach
+include ../../../pug/_if
+//-- var pathImgIcoCountry = '{$opt.assets_url}images/ico/country/flags-32/'
+| {insert "file:sportcamps/modules/countries/countries.tpl"}
++if("$countries | len")
+    .countries-bl(data-test="{$images_path ~ $res.introtext | dbdata : 'cmpCountries' : 'photo'}")
+    //-+if("$access")
+        | {$countries | print}
+    section.countries.wrapper(class = "{$class_untop ?: 'pd_block'}")
+        .countries__header
+            h2.head_h2.head_h2--sport
+
+                +if("$parents != $res.id")
+                    a(href="{$parents | url_lang ?: ($parents | resource : 'uri')}")
+                        include _header
+
+                    | {else}
+
+                    include _header
+
+        .countries-lt.mySwiper
+            +foreach('$countries', '$country', false, false)
+
+                //- Is there data for the Region? / Есть ли данные по Региону
+                +if("$country.drop_region")
+                    | {set $select_country = $country.drop_region | dbarray : 'cmpRegions'}
+                    | {else}
+                    | {set $select_country = $country.drop_contry | dbarray : 'cmpCountries'}
+
+                .country__wrap(data-test!="")
+                    a.country(href!="{$country.id | url_lang ?: $country.uri}" title="{$country.pagetitle}")
+                        .country__title(style="background-image: url({$images_path ~ $select_country.photo})")
+                            p.head_h3.head_h3--flag.country__title__head
+                                span.head_h3.country__title__head__img
+                                    img(
+                                        src="{$images_path ~ $select_country.flag}"
+                                        alt="{$select_country['region_' ~ $opt.cultureKey]} flag icon"
+                                        width=32 height=32 loading="lazy"
+                                    )
+
+                                //- Is there data for the Region? / Есть ли данные по Региону
+                                +if("$country.drop_region")
+                                    | {$select_country['region_' ~ $opt.cultureKey]}
+                                    | {else}
+                                    | {$select_country['country_' ~ $opt.cultureKey]}

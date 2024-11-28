@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.preview__sec {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.preview__bl {
+  border-radius: 12px;
+  background-color: #FFF;
+  max-width: 332px;
+  width: 100%;
+  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.08);
+}
+.preview__bl:nth-child(2), .preview__bl:nth-child(3) {
+  display: none;
+}
+@media (min-width: 660px) {
+  .preview__bl {
+    width: calc(50% - 12px);
+  }
+  .preview__bl:nth-child(2) {
+    display: block;
+  }
+}
+@media (min-width: 990px) {
+  .preview__bl {
+    max-width: calc(33.33% - 16px);
+    flex: 1 1 100%;
+  }
+  .preview__bl:nth-child(3) {
+    display: block;
+  }
+}
+.preview__bl_container {
+  position: relative;
+  height: 100%;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+.preview__bl_container-img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  width: 100%;
+  height: 253px;
+  object-fit: cover;
+}
+.preview__bl_container .price-label__wrapper {
+  position: absolute;
+  width: 149px;
+  height: 68px;
+  left: 0;
+  bottom: 0;
+}
+.preview__bl_container .price-label__wrapper_overlap {
+  position: absolute;
+  width: 149px;
+  height: 68px;
+  background-image: url(../../../../images/rectanglePreview.png);
+  background-size: 100% 100%;
+}
+.preview__bl_container .price-label__wrapper_overlap-p {
+  color: #FFF;
+  text-align: center;
+}
+.preview__bl_container .price-label__wrapper_overlap-p-text-wrapper {
+  position: absolute;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  width: 100%;
+  height: 23px;
+  bottom: 13px;
+  top: auto;
+  left: -30px;
+  right: 0;
+  margin: 0 auto;
+}
+.preview__bl_container .price-label__wrapper_overlap-p-text-wrapper--supText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.preview__bl_container .price-label__wrapper_overlap-p-text-wrapper--subText {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.preview__bl_content {
+  padding: 24px 10px;
+}
+.preview__bl_content-btn {
+  text-align: center;
+}
+.preview__bl_content-btn .greenBtn {
+  margin: 0;
+  font-size: 12px;
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+@media (min-width: 990px) {
+  .preview__bl_content-btn .greenBtn {
+    padding: 15px 32px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+  }
+}
+.preview__bl_content-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+.preview__bl_content-main-icon {
+  display: flex;
+  gap: 16px;
+  align-self: flex-start;
+}
+.preview__bl_content-main-icon--flag {
+  width: 24px;
+  height: 16px;
+}
+.preview__bl_content-main-h3 {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 800;
+  align-self: flex-start;
+  margin: 0;
+  padding: 8px 0 16px 0;
+}
+.preview__bl_content-main-loc {
+  display: flex;
+  width: 100%;
+  padding: 16px 0;
+  position: relative;
+  gap: 8px;
+}
+@media (min-width: 1440px) {
+  .preview__bl_content-main-loc {
+    gap: 28px;
+  }
+}
+@media (min-width: 1600px) {
+  .preview__bl_content-main-loc {
+    gap: 34px;
+  }
+}
+.preview__bl_content-main-loc::before, .preview__bl_content-main-loc::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: radial-gradient(circle, rgb(85, 85, 85) 0%, rgba(163, 163, 163, 0) 100%);
+  background-size: 100% 1px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.preview__bl_content-main-loc::after {
+  bottom: 0;
+  top: auto;
+}
+.preview__bl_content-main-loc-p {
+  display: flex;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 152px;
+}
+.preview__bl_content-main-loc-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+}
+.preview__bl_content-info {
+  padding-bottom: 24px;
+}
+.preview__bl_content-info-ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 429px) {
+  .preview__bl_content-info-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+}
+@media (min-width: 1440px) {
+  .preview__bl_content-info-ul {
+    gap: 24px;
+  }
+}
+.preview__bl_content-info-ul-li {
+  letter-spacing: 0.2px;
+  line-height: 14px;
+  display: inline-flex;
+  flex: 1 1 calc(50% - 28px);
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 12px;
+  align-items: center;
+  padding-left: 28px;
+  position: relative;
+}
+.preview__bl_content-info-ul-li:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../../images/CheckRingLight.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+.preview__bl_content-info-ul-li:first-child {
+  padding-top: 0;
+}
+.preview__bl_content-info-ul-li:nth-child(2) {
+  padding-top: 0;
+}
+
+/* RATING STARS BLOCK */
+.stars {
+  display: flex;
+  gap: 10px;
+}
+.stars__item {
+  width: 15px;
+  height: 15px;
+}
+.stars__item--active {
+  fill: rgb(243, 204, 64);
+}
+
+/* END RATING STARS BLOCK */
+.greenBtn {
+  text-transform: none;
+  background-color: #94BE31;
+}
+
+/*# sourceMappingURL=preview.css.map */

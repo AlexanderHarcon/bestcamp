@@ -1,0 +1,68 @@
+{extends "file:sportcamps/base/base.html"}
+{block 'var'}
+{insert "file:sportcamps/country/country.tpl"}
+{/block}
+{block 'header'}
+{parent}
+{set $img_info}<picture><source srcset="{($images_path ~ $country.map) | replace : '.png' : '.webp'}" type="image/webp"/><img src="{$images_path ~ $country.map}" alt="{$country['country_' ~ $lang]} map" width="540" height="478"/></picture>{/set}
+{set $lockfree}
+{if $months}<div class="weather pd_block_micro" data-test=""><div class="weather__tablewrap"><table class="table"><caption>{'polylang_site_weather-in' | lexicon}<span> {$country_reg['country_' ~ $lang] ?: $country['country_' ~ $lang]}</span></caption><thead><tr><th class="table_ico"><img src="{$opt.assets_url}images/ico/weather/calendar.svg" alt="calendar icon" width="16" height="16"/></th>{foreach $months as $key => $month }<th>{$key}</th>{/foreach}</tr></thead><tbody><tr><td class="table_ico"><img src="{$opt.assets_url}images/ico/weather/sun.svg" alt="sun icon" width="16" height="16"/></td>{foreach $months as $key => $month }<td>{$month | round}°</td>{/foreach}</tr></tbody></table></div></div>{/if}
+{/set}
+{include "file:{$modules}info/info.html"
+class_lt='_inforight'
+video=$img_info
+head1=$res.pagetitle
+class_head='head_h1'
+content=$res['ace_intro_' ~ $lang] | wrap_tag : 'p'
+btn_name=$res['txt_header_btn_' ~ $lang] ?: ('polylang_site_make-request' | lexicon)
+btn_cl='formrequest_js'
+imgblockfree=$lockfree
+}
+{/block}
+{block 'main'}
+{include "file:{$modules}infostart/infostart.html"}
+{include "file:{$modules}maininfo/maininfo.html"}
+{include "file:{$modules}campoverview/campoverview.html"}
+{include "file:{$modules}infrastructure/infrastructure.html"}
+{include "file:{$modules}location/location.html"}
+{include "file:{$modules}hoteloverview/hoteloverview.html"}
+{include "file:{$modules}priceincluded/priceincluded.html"}
+{include "file:{$modules}visitcard/visitcard.html"}
+{include "file:{$modules}goodtoknow/goodtoknow.html"}
+{include "file:{$modules}excursions/excursions.html"}
+{include "file:{$modules}reviews/reviews.html"}
+{include "file:{$modules}preview/preview.html"}
+{set $img_info}{if $res.txt_video}<div class="videobox"><iframe class="videobox__iframe" src="https://www.youtube.com/embed/{$res.txt_video | preg_match_get : $youtube_reg}" srcdoc="<style>*{ padding:0;margin:0;overflow:hidden }html,body{ height:100% }img,span{ position:absolute;width:100%;top:0;bottom:0;margin:auto }span{ height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black }</style><a href={$res.txt_video}?autoplay=1><img src=https://img.youtube.com/vi/{$res.txt_video | preg_match_get : $youtube_reg}/hqdefault.jpg alt='Demo video'><span>▶</span></a>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>{/if}{/set}
+{include "file:{$modules}info/info.html"
+class_lt='_inforight'
+video=$img_info
+img=$res.img_alter
+header2=$res['txt_head_' ~ $lang]
+content=$res['ace_info_' ~ $lang] | wrap_tag : 'p'
+btn_name='Send a request'
+btn_cl='formrequest_js'
+}<!--************_countries_********//-->{include "file:{$modules}countries/countries.html"
+parents=$res.parent
+header=$res['txt_headprev_' ~ $lang]
+sport=$sport
+}{if $access}{include "file:{$modules}services/services.html"
+source=$res.parent
+}{/if}{include "file:{$modules}shooseus/shooseus.html"
+class_lt='_between'
+}
+{include "file:{$modules}info/info.html"
+class_lt='_inforight'
+img=$res.img_info_end
+alt=$res['txt_alt_end_' ~ $lang]
+head2=$res['txt_head_end_' ~ $lang]
+content=$res['ace_infoend_' ~ $lang] | wrap_tag : 'p'
+btn_name=$res['txt_btn_' ~ $lang] ?: 'Send a request'
+btn_cl='formrequest_js'
+}
+{/block}
+{block 'script'}
+{include "file:{$modules}formrequest/formrequest.html"
+id='request'
+}
+{'minify_js_item' | placeholder}
+{/block}

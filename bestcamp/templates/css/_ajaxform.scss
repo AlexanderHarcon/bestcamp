@@ -1,0 +1,93 @@
+//***************************************_ajaxForm и всплывающие сообщения
+.jGrowl {
+    position: absolute;
+    width: 100%;
+    z-index: 999999;
+    color: #fff;
+    font-size: 1.2rem;
+    @media print {
+        display: none;
+    }
+    body > & {
+        position: fixed;
+    }
+    &.top-left {
+        left: 0;
+        top: 0;
+    }
+    &.top-right {
+        right: 0;
+        top: 0;
+    }
+    &.bottom-left {
+        left: 0;
+        bottom: 0;
+    }
+    &.bottom-right {
+        right: 0;
+        bottom: 0;
+    }
+    &.center {
+        top: 0;
+        width: 50%;
+        left: 25%;
+    }
+    &-notification,
+    &-closer {
+        div.center & {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .jGrowl & {
+            background-color: #000;
+            opacity: .85;
+            zoom: 1;
+            width: 100%;
+            padding: 1.6rem 25px;
+            font-size: 1em;
+            text-align: center;
+            display: none;
+            border-radius: 5px;
+        }
+    }
+    &-notification {
+        .jGrowl & {
+            min-height: 40px;
+        }
+    }
+    &-closer {
+        .jGrowl & {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            cursor: pointer;
+            font-size: .9em;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &-header {
+        .jGrowl-notification & {
+            .jGrowl & {
+                font-weight: bold;
+                font-size: .85em;
+            }
+        }
+    }
+    &-close {
+        background-color: transparent;
+        color: white;
+        .jGrowl-notification & {
+            .jGrowl & {
+                z-index: 99;
+                float: right;
+                font-weight: bold;
+                font-size: 1em;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.af-message-success {background-color: green !important;}
+.af-message-error {background-color: brown !important;}
+.af-message-info {background-color: black !important;}

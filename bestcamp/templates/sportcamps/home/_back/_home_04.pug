@@ -1,0 +1,189 @@
+//- < base/base.html
+    > home.tpl
+    > modules/infostart/infostart.html
+    > modules/countries/countries.html
+    > modules/shooseus/shooseus.html
+    > modules/info/info.html
+    > modules/info/info_header.html
+include ../../pug/_foreach
+include ../../pug/_if
+- var pathImg = '{$opt.assets_url}images/home/'
+- var pathImgServices = '{$opt.assets_url}images/services/'
+| {extends "file:sportcamps/base/base.html"}
+
+| {block 'var'}
+| {insert "file:sportcamps/home/home.tpl"}
+| {/block}
+
+| {block 'head'}
+script(type="application/ld+json").
+    {$data | toJSONunicod}
+| {/block}
+
+| {block 'header'}
+| {parent}
+//-************_slide_*************//
+.slide-bl
+    .slide.wrapper.pd_lr_block
+        .slide-header
+            .slide__head
+                h1.head_h1 {$res.pagetitle}
+            .slide__slogan.head_slogan
+                p National Teams, Federations & Clubls
+| {/block}
+
+| {block 'main'}
+//-************_Form_*************//
+.request-bl
+    .request.wrapper.pd_block
+        .request__body
+            p.head_slogan.head_slogan--mini.request__head Be Active No Heading In Hotels
+            include ../form/_form
+            form.form(action='[[~[[*id]]]]' method='post').request-form.pd_block_mini
+                - var formid = 'request'
+                +input-hide
+                .request-form-lt
+                    div
+                        +input-date(false, 'Сheck-in date', 'From')
+                    div
+                        +input-date(false, 'Сheck-in date', 'To')
+                    .input-lt
+                        div
+                            +input-number(false, 'Athletes', 'user.svg', formid + '_athletes')
+                        div
+                            +input-number(false, 'Coaches', 'user.svg', formid + '_coaches')
+                    div
+                        +input-select(false, 'Type of sport', 'flag.svg')
+                            option(value="football").option Football
+                            option(value="swimming").option Swimming
+                            option(value="cycling").option Cycling
+                    div
+                        +input-tel(false, 'Phone')
+                    div
+                        +input-email(true)
+
+                .request-form__submit
+                    +submit
+
+//-************_infostart_**********//
+| {include "file:{$modules}infostart/infostart.html"
+| class_untop='pd_block_untop'
+| }
+
+//************_countries_********//
+| {include "file:{$modules}countries/countries.html"
+| class_untop='pd_block_untop'
+| }
+
+//-************_info_**********//
+| {set $img_info}
+picture
+    source(srcset=pathImg + "sport-other.webp" type="image/webp")
+    img(src=pathImg + 'sport-other.png' alt='The picture shows 4 athletes who train in the gym. In the background we can see sports equipment used by athletes.' loading="lazy")
+| {/set}
+
+| {set $content}
+p Active Planet organizes high-performance training camps for a wide range of sports. We cooperate with Olympic and Paralympic National teams and clubs. We host athletic teams from all over Europe.
+p Your sports type is just a click away.
+| {/set}
+
+| {include "file:{$modules}info/info_header.html"
+| img=$img_info
+| header='Just choose your sport type'
+| header_slogan='Active Planet offers Olympic Non-Olympic and Paralympic training camps Worldwide.'
+| content=$content
+| btn_name='Сhoose your sport type'
+| }
+
+//************_services_**********//
+.services-bl
+    section.services.wrapper.pd_block
+        .services__header
+            h2.head_h2 Our services
+        .services-lt
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-medicine.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-medicine.png' alt='Athlete running on a track with a health measurement sensor. His health indicators are shown in the background.' loading="lazy" width=200 height=200)
+                h3.head_h3 Sports medicine
+                .content.service__content
+                    p As a part of our training camps organization services, we provide a full variety of all medical treatment and testing, like cross-DNA Professional Sports Genetic Tests, Vo2 Testing, and ergometric assessments conducted by accredited Sports and Exercise Scientists. Also, we provide rehabilitation services, sports massages, and physiotherapy. Active Planet works with rehabilitation clinics all over the world.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-management.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-management.png' alt='The sports manager stands with a mouthpiece in his hands. A symbolic list of sports services is shown in the background.' loading="lazy" width=200 height=200)
+                h3.head_h3 Sports management
+                .content.service__content
+                    p We offer professional sports management services for all functional areas of sporting, special, and cause-related training camps and sports events. From pre-event planning through post-event analysis, the company can handle all operational, technical, and participatory functions of an event, accounting for team travel plans. We provide best flight options, visa support, top performance sports venues and hotels.
+
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-event.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-event.png' alt='The sports manager and the customer agree on the event and shake hands. The background shows the benefits of the deal: quality, time savings, customer satisfaction.' loading="lazy" width=250 height=166)
+                h3.head_h3 Sports Event organization
+                .content.service__content
+                    p Regardless of the type of event you are planning, we can handle every aspect of it. We provide flights, accommodation, sports equipment, transfers, inventory, tents, event personnel, and site management. Many sports venues cooperate with Active Planet. Our sporting event management partners include colleges and universities, National Championships, and Sports federations WorldWide.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "active-holidays.webp" type="image/webp")
+                        img(src=pathImgServices + 'active-holidays.png' alt='Two athletes after a run. They walking along the road at a fast pace. In the background are symbols of a healthy lifestyle: fruits, water, stopwatch, sports equipment.' loading="lazy" width=200 height=200)
+                h3.head_h3 Active Holidays & Sport Tours
+                .content.service__content
+                    p This service is ideal For runners, hikers, mountaineers, bikers, explorers, families, and pretty much all lovers of the outdoors. We organize active holidays of any type all around the world for small groups. Just tell us about your ideal sports tour and we will manage it!
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "individuals-tours.webp" type="image/webp")
+                        img(src=pathImgServices + 'individuals-tours.png' alt='Individual athlete is engaged in the gym.' loading="lazy" width=200 height=200)
+                h3.head_h3 Individuals tours
+                .content.service__content
+                    p Sports are your passion and you can't stand lying by the pool all day? With a list of our hotels with sporting facilities, you can easily make all travel arrangements for your individual training camps abroad.
+                    p Active Planet will package all the things you need: bike hire, the use of the lap pool, other sports facilities, airport transfers, etc.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "athletic-school.webp" type="image/webp")
+                        img(src=pathImgServices + 'athletic-school.png' alt='There are three athletes in the sports school. They train: run and jump. These are track and field athletes.' loading="lazy" width=200 height=200)
+                h3.head_h3 Athletic school
+                .content.service__content
+                    p Are you traveling with kids who attend sports clubs? We selected the best sports schools and clubs around the world so you can simply find sections for various sports for any level of physical fitness. Also, we can organize different levels of individual training for any sports typ
+
+//-************_shooseus_**********//
+| {include "file:{$modules}shooseus/shooseus.html"}
+
+//-************_faq_***********//
+.faq-bl
+    section.faq.wrapper.pd_block_untop
+        .faq__header
+            h2.head_h2 FAQ
+        .faq-body {$faq_html}
+
+//-************_info_**********//
+| {set $img_info}
+picture
+    source(srcset=pathImg + "training-camp.webp" type="image/webp")
+    img(src=pathImg + 'training-camp.png' alt='We can see four athletes in the picture. Each of the athletes represents their sport, namely: basketball, football, tennis and baseball.' loading="lazy")
+| {/set}
+
+| {set $content}
+p Make the right decision.
+p Book your first training camp with Active Planet and get a 10% discount for your next trip.
+| {/set}
+
+| {include "file:{$modules}info/info.html"
+| class_lt='_inforight'
+| img=$img_info
+| head='Book your training camp'
+| content=$content
+| btn_name='Ask an Offer'
+| }
+
+| {/block}
+
+| {block 'script'}
+| {'minify_js_item' | placeholder}
+| {/block}

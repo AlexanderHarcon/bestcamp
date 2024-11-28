@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+$cl-white: #FFF;
+$cl-green: #94BE31;
+$cl-orange: #F39540;
+$cl-blue: #5BBCE4;
+$cl-head: #A1ADB2;
+
+
+.infrastructure {
+  .wrapper.pd_block {
+    padding-top: 0;
+  }
+
+  &__swimpool {
+
+    &_headlines {
+      &-p {
+        color: $cl-head;
+        font-family: $font-head;
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      &-h {
+        font-family: $font-head;
+        font-size: 20px;
+        font-weight: 700;
+        padding: {
+          top: 32px;
+          bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+.inf-table {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 10%);
+  border-radius: 16px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    padding: {
+      top: 20px;
+      left: 16px;
+      right: 27px;
+      bottom: 24px;
+    }
+    overflow-y: auto;
+    background: linear-gradient(to right, $cl-grey 50%, $cl-grey 50%);
+    background-size: 100% 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    column-gap: 8px;
+
+    @include mq-w(481px) {
+      column-gap: 0;
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      font-family: $font-head;
+      font-weight: 700;
+      font-size: calc(10px + ((13 - 10) * ((100vw - 320px) / (1920 - 320))));
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    &-img {
+      margin-top: 10px;
+      position: relative;
+      bottom: -10px;
+      width: 64px;
+      height: 30px;
+    }
+  }
+
+  &__table {
+    justify-content: space-between;
+    border-collapse: collapse;
+    border-bottom: 1px solid $cl-grey;
+    width: 100%;
+    text-align: center;
+
+    &-tr {
+      border-bottom: 1px solid $cl-grey;
+    }
+
+    &-td {
+      font-family: $font-head;
+      font-weight: 700;
+      font-size: calc(10px + ((13 - 10) * ((100vw - 320px) / (1920 - 320))));
+      padding: {
+        top: 20px;
+        left: calc(16px + ((100 - 16) * ((24vw - 320px) / (1920 - 320))));
+        right: 24px;
+        bottom: 17px;
+      }
+
+      &--p {
+        text-align: center;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  &__list {
+    border-top: 1px solid $cl-grey;
+    width: 100%;
+    padding: {
+      top: 16px;
+      left: calc(24px + ((100 - 24) * ((24vw - 320px) / (1920 - 320))));
+      bottom: 24px;
+      right: 26px;
+    }
+
+    &-check {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+      column-gap: 45px;
+
+      @include mq-w(610px) {
+        column-gap: 109px;
+      }
+      @include mq-w(677px) {
+        column-gap: 4%;
+      }
+      @include mq-w(840px) {
+        column-gap: 61px;
+      }
+      @include mq-w(1012px) {
+        column-gap: 23px;
+      }
+      @include mq-w(1200px) {
+        column-gap: 41px;
+      }
+      @include mq-w(1509px) {
+        column-gap: 39px;
+      }
+      @include mq-w(1600px) {
+        column-gap: 48px;
+      }
+
+      &--td {
+        vertical-align: top;
+      }
+
+      &-p {
+        font-family: $font-head;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        position: relative;
+        padding-left: 16px;
+        margin-bottom: 14px;
+        max-width: 180px;
+        width: 100%;
+
+        @include mq-w(850px) {
+          max-width: 202px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          background-image: url(../../../../images/check.svg);
+          background-size: 10px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &--deny {
+          color: #ccc;
+
+          &:before {
+            background-image: url(../../../../images/dcheck.svg);
+          }
+        }
+      }
+    }
+  }
+}

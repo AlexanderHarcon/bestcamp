@@ -1,0 +1,117 @@
+%font_init {
+    display: inline-block;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+%transit {
+    -webkit-transition: 0.5s ease;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0;
+    transition: all 0.5s ease 0s;
+}
+%mr_auto { @include mr_auto(); }
+%underline {
+    text-decoration:        underline;
+    -webkit-text-decoration-skip:   ink;
+    text-decoration-skip:   ink;
+}
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+%minhidden {
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+%hyphens {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+%text-overflow { @include text-overflow(); }
+
+// absolute
+%absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+%width-height_100 { @include width-height(100%); }
+%absolute_100 {
+    @extend %absolute;
+    @extend %width-height_100;
+}
+%absolute_content {
+    @extend %absolute;
+    content: "";
+}
+%absolute_content_100 {
+    @extend %absolute_content;
+    @extend %width-height_100;
+}
+
+// flexbox
+%flexbox { @include flexbox(); }
+%flexbox-inline { @include flexbox-inline(); }
+%justify-content_center { @include justify-content(); }
+%align-items_center { @include align-items(); }
+%flex-direction_column { @include flex-direction(); }
+%flex-wrap { @include flex-wrap(); }
+%flex-basis { @include flex-basis(); }
+%flex-grow_1 { @include flex-grow(); }
+%flex-shrink { @include flex-shrink(); }
+
+// svg
+%svg_wrap {
+    position: relative;
+    display: inline-block;
+    @include width-height(inherit);
+    svg {
+        @extend %absolute;
+        width: 100%;
+    }
+}
+
+// padding
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+
+%transform_scale_105 {
+    @include transform(
+        scale(1.05)
+    );
+}

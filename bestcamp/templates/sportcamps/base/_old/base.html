@@ -1,0 +1,143 @@
+{*
+* > base.tpl
+*}
+{insert "file:sportcamps/base/base.tpl"}
+{block 'var'}{/block}
+<!DOCTYPE html>
+<html lang="{$opt.cultureKey}">
+    <head>
+        <base href="{$opt.site_url}" data-assets="{$opt.assets_url}"/>
+        <meta charset="{$opt.modx_charset}"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{$res.longtitle ? : $res.pagetitle}</title>
+        <meta name="description" content="{($res.description ? : $res.pagetitle) | htmlent}"/>
+        <meta name="keywords" content=""/>
+        <link rel="stylesheet" href="{$templates_libs}malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+        {block 'head'}{/block}
+        {'minify_css_base' | placeholder}
+        {*'minify_css_item' | placeholder*}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    {block 'body'}
+    <body data-test="{$_modx->isAuthenticated('mgr')}">
+    {/block}
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{$images}logo.svg" alt="" class="logo">
+                    </a>
+                </div>
+                <div class="header_hide_mobile">
+                    <div class="menu_wrapp">
+                        <ul class="menu">
+                            <li class="menu_item active have_childs">
+                                <a href="#">Services</a>
+                                <img src="{$images}arrow_black.svg" alt="">
+                                <div class="submenu_wrapp">
+                                    <ul class="submenu">
+                                        <li class="menu_item"><a href="#">Information</a></li>
+                                        <li class="menu_item"><a href="#">Our Trainers</a></li>
+                                        <li class="menu_item"><a href="#">Blog</a></li>
+                                        <li class="menu_item"><a href="#">Contacts</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_item"><a href="#">Information</a></li>
+                            <li class="menu_item"><a href="#">Our Trainers</a></li>
+                            <li class="menu_item"><a href="#">Blog</a></li>
+                            <li class="menu_item"><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="lang_wrapp">
+                        <div class="current_lang">ENG <img src="{$images}arrow_black.svg" alt=""></div>
+                        <div class="lang_list">
+                            <ul class="lang">
+                                <li class="lang_item"><a href="">RUS</a></li>
+                                <li class="lang_item active"><a href="">ENG</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="hamburger">
+                    <span class="hamburger_inner"></span>
+                </button>
+            </div>
+        </header>
+        <main>
+            {block 'main'}{/block}
+        </main>
+        {block 'footer'}
+        <footer>
+            <div class="container">
+                <div class="footer_logo">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="{$images}footer_logo.svg" alt="" class="logo">
+                        </a>
+                    </div>
+                    <div class="footer_logo_text">
+                        Рыба текст разработана спеицально для подобного случия реализации данной задачи. Которая в онечном итоге поможет вам сдлеать!
+                    </div>
+                </div>
+                <div class="footer_menu_wrapp">
+                    <div class="footer_menu_column">
+                        <div class="footer_title">Navigation:</div>
+                        <ul class="footer_menu">
+                            <li class="footer_menu_item"><a href="#">Спортивные Сборы</a></li>
+                            <li class="footer_menu_item"><a href="#">Спортивные туры</a></li>
+                            <li class="footer_menu_item"><a href="#">Спортивные базы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_menu_column">
+                        <div class="footer_title">Services:</div>
+                        <ul class="footer_menu">
+                            <li class="footer_menu_item"><a href="#">Услуги</a></li>
+                            <li class="footer_menu_item"><a href="#">Отзывы</a></li>
+                            <li class="footer_menu_item"><a href="#">Информация</a></li>
+                            <li class="footer_menu_item"><a href="#">Наши тренера</a></li>
+                            <li class="footer_menu_item"><a href="#">Блог</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_contacts">
+                    <div class="footer_title">Contact:</div>
+                    <div class="footer_contacts_text">ACTIVE PLANET LTD64D Metochiou Str, Egkomi,2407, Nicosia, CyprusTel. 22772360, fax 22780879</div>
+                    <div class="footer_contacts_phone">
+                        <img src="{$images}phone_viber.png" alt="">
+                        <a href="">(+357) 96-785-922</a>
+                    </div>
+                    <div class="footer_contacts_phone">
+                        <img src="{$images}phone_whatsapp.png" alt="">
+                        <a href="">(+7) 968 759-18-29</a>
+                    </div>
+                    <div class="footer_contacts_phone">
+                        <img src="{$images}phone_whatsapp.png" alt="">
+                        <a href="">(+380) 95-365-68-79</a>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="footer_bottom_title">Subscribe and watch!</div>
+                    <div class="footer_social_links">
+                        <a href=""><img src="{$images_social}social_youtube.png" alt=""></a>
+                        <a href=""><img src="{$images_social}social_facebook.png" alt=""></a>
+                        <a href=""><img src="{$images_social}social_instagram.png" alt=""></a>
+                        <a href=""><img src="{$images_social}social_telegram.png" alt=""></a>
+                        <a href=""><img src="{$images_social}social_whatsapp.png" alt=""></a>
+                    </div>
+                    <div class="footer_bottom_copyright">2012 - 2022 © Active Planet Тренировочные Сборы в Европе | Веб хостинг предоставлен Beehosting.pro 167 q 0.5202 s cache</div>
+                </div>
+            </div>
+        {/block}
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="{$templates_libs}malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+        {'minify_js_base' | placeholder}
+        {block 'script'}|{/block}
+    </body>
+</html>
+
+
+

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="campsports" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="" phpdoc-subpackage="" version="1.1">
+    <object class="cmpSports" table="cmp_sports" extends="xPDOSimpleObject">
+        <field key="group_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="sport_en" dbtype="varchar" precision="64" phptype="string" null="false" default="" />
+        <field key="sport_de" dbtype="varchar" precision="64" phptype="string" null="false" default="" />
+        <field key="sportlong_en" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="sportlong_de" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="ico" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="desc_en" dbtype="text" phptype="string" null="false" default="" index="fulltext" />
+        <field key="desc_de" dbtype="text" phptype="string" null="false" default="" index="fulltext" />
+        <field key="banner" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="img" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="imgalt_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="imgalt_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
+        <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" index="index" />
+        <field key="createdby" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+        <index alias="Group" name="group" primary="false" unique="false">
+            <column key="group_id" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Groups" class="cmpSportsGroups" local="group_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cmpSportsGroups" table="cmp_sports_groups" extends="xPDOSimpleObject">
+        <field key="group_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="group_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+    </object>
+
+    <object class="cmpSportInfrastr" table="cmp_sport_infrastr" extends="xPDOSimpleObject">
+        <field key="facility_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="sport_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="covered" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" index="index" />
+        <field key="sportinfra_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="sportinfra_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="ico" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
+        <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" index="index" />
+        <field key="createdby" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+        <index alias="Facility" name="facility" primary="false" unique="false">
+            <column key="facility_id" collation="A" null="false" />
+        </index>
+        <index alias="Sport" name="sport" primary="false" unique="false">
+            <column key="sport_id" collation="A" null="false" />
+        </index>
+        <index alias="covered" name="covered" primary="false" unique="false" type="BTREE">
+            <column key="covered" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Facility" class="cmpSportFacility" local="facility_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Sport" class="cmpSports" local="sport_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+        <composite alias="InfrastrCoverings" class="cmpInfrastrCoverings" local="id" foreign="infrastr_id" cardinality="many" owner="local" />
+        <composite alias="InfrastrMarking" class="cmpInfrastrMarking" local="id" foreign="infrastr_id" cardinality="many" owner="local" />
+        <composite alias="InfrastrFcOptions" class="cmpInfrastrFcOptions" local="id" foreign="infrastr_id" cardinality="many" owner="local" />
+        <composite alias="InfrastrFcRental" class="cmpInfrastrFcRental" local="id" foreign="infrastr_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="cmpSportFacility" table="cmp_sport_facility" extends="xPDOSimpleObject">
+        <field key="type_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="facility_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="facility_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="length" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+        <field key="width" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+        <field key="height" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+        <field key="depth" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+        <field key="properties" dbtype="text" phptype="json" null="true"/>
+        <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="1" index="index" />
+        <field key="createdby" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+        <index alias="Type" name="type" primary="false" unique="false">
+            <column key="type_id" collation="A" null="false" />
+        </index>
+
+        <composite alias="SportInfrastr" class="cmpSportInfrastr" local="id" foreign="facility_id" cardinality="many" owner="local" />
+        <aggregate alias="Type" class="cmpFacilityTypes" local="type_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cmpSportCoverings" table="cmp_sport_coverings" extends="xPDOSimpleObject">
+        <field key="covering_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="covering_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="covered" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" index="index" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+        <index alias="covered" name="covered" primary="false" unique="false" type="BTREE">
+            <column key="covered" length="" collation="A" null="false" />
+        </index>
+
+        <composite alias="CoveringsInfrastr" class="cmpInfrastrCoverings" local="id" foreign="covering_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="cmpSportMarking" table="cmp_sport_marking" extends="xPDOSimpleObject">
+        <field key="marking_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="marking_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+
+        <composite alias="MarkingInfrastr" class="cmpInfrastrMarking" local="id" foreign="marking_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="cmpFacilityOptions" table="cmp_facility_options" extends="xPDOSimpleObject">
+        <field key="option_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="option_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+
+        <composite alias="FcOptionsInfrastr" class="cmpInfrastrFcOptions" local="id" foreign="option_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="cmpFacilityRental" table="cmp_facility_rental" extends="xPDOSimpleObject">
+        <field key="rental_en" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+        <field key="rental_de" dbtype="varchar" precision="256" phptype="string" null="false" default="" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+
+        <composite alias="FcRentalInfrastr" class="cmpInfrastrFcRental" local="id" foreign="rental_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="cmpFacilityTypes" table="cmp_facility_types" extends="xPDOSimpleObject">
+        <field key="type_en" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+        <field key="type_de" dbtype="varchar" precision="128" phptype="string" null="false" default="" />
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+            <column key="id" collation="A" null="false" />
+        </index>
+
+        <composite alias="SportFacility" class="cmpSportFacility" local="id" foreign="type_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="cmpInfrastrCoverings" table="cmp_infrastr_coverings" extends="xPDOObject">
+        <field key="infrastr_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+        <field key="covering_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+
+        <index alias="InfrastrCovering" name="infrastrcovering" primary="true" unique="true" type="BTREE">
+            <column key="infrastr_id" length="" collation="A" null="false"/>
+            <column key="covering_id" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Infrastr" class="cmpSportInfrastr" local="infrastr_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Covering" class="cmpSportCoverings" local="covering_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+
+    <object class="cmpInfrastrMarking" table="cmp_infrastr_marking" extends="xPDOObject">
+        <field key="infrastr_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+        <field key="marking_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+
+        <index alias="InfrastrMarking" name="infrastrmarking" primary="true" unique="true" type="BTREE">
+            <column key="infrastr_id" length="" collation="A" null="false"/>
+            <column key="marking_id" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Infrastr" class="cmpSportInfrastr" local="infrastr_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Marking" class="cmpSportMarking" local="marking_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+
+    <object class="cmpInfrastrFcOptions" table="cmp_infrastr_fc_options" extends="xPDOObject">
+        <field key="infrastr_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+        <field key="option_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+
+        <index alias="InfrastrFcOptions" name="infrastrfcoptions" primary="true" unique="true" type="BTREE">
+            <column key="infrastr_id" length="" collation="A" null="false"/>
+            <column key="option_id" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Infrastr" class="cmpSportInfrastr" local="infrastr_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="FcOptions" class="cmpFacilityOptions" local="option_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+
+    <object class="cmpInfrastrFcRental" table="cmp_infrastr_fc_rental" extends="xPDOObject">
+        <field key="infrastr_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+        <field key="rental_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+
+        <index alias="InfrastrFcRental" name="infrastrfcrental" primary="true" unique="true" type="BTREE">
+            <column key="infrastr_id" length="" collation="A" null="false"/>
+            <column key="rental_id" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Infrastr" class="cmpSportInfrastr" local="infrastr_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="FcRental" class="cmpFacilityRental" local="rental_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+</model>
+
+<!--То что осталось на ДЭВе с добавлением опции с Крытыми сооружениями-->
+

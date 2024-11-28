@@ -1,0 +1,29 @@
+//- < home/home.html
+| {insert 'file:html/var_inc.tpl'}
+include ../form/_form
+form.form(action='[[~[[*id]]]]' method='post').request-form.pd_block_mini
+    - var formid = 'request'
+    +input-hide
+    .request-form-lt
+        div
+            +input-date(false, "{'polylang_site_from' | lexicon}", "From")
+        div
+            +input-date(false, "{'polylang_site_to' | lexicon}", "To")
+        .input-lt
+            div
+                +input-number(true, "{'polylang_site_athletes' | lexicon}", 'user.svg', '_athletes')
+            div
+                +input-number(true, "{'polylang_site_coaches' | lexicon}", 'user.svg', '_coaches')
+        div
+            +input-theme(true, "{'polylang_site_please-sports-type' | lexicon}")
+            //-+input-select(false, 'Type of sport', 'flag.svg', '_sport')
+                option(value="football").option Football
+                option(value="swimming").option Swimming
+                option(value="cycling").option Cycling
+        div
+            +input-tel(false, 'Phone')
+        div
+            +input-email(true)
+
+    .request-form__submit
+        +submit("{'polylang_site_make-request' | lexicon}")

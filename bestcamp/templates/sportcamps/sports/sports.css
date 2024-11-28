@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+.slide-bl:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide-bl:after {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-bl:after {
+  content: "";
+}
+
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.slide__slogan, .slide-header {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
+}
+
+.slide {
+  position: relative;
+  z-index: 1;
+}
+.slide-bl {
+  position: relative;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: top right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.slide-bl:after {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.slide-header {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-bottom: -webkit-calc(50vh - 1vw);
+  padding-bottom: -moz-calc(50vh - 1vw);
+  padding-bottom: calc(50vh - 1vw);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+}
+.slide-header > *:not(:empty):not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+@media (min-width: 768px) {
+  .slide-header {
+    max-width: 48em;
+  }
+}
+.slide__slogan {
+  color: white;
+}
+.slide__head {
+  position: relative;
+  top: 5rem;
+}
+
+main .request {
+  display: block;
+}
+.request-bl {
+  margin-top: -webkit-calc(0vh - (32vh - 1vw));
+  margin-top: -moz-calc(0vh - (32vh - 1vw));
+  margin-top: calc(0vh - (32vh - 1vw));
+}
+
+/*# sourceMappingURL=sports.css.map */

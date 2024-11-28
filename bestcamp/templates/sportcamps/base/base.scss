@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@import "../../css/_foundation";// сброс стилей
+@import "../../css/_mixin";
+@import "../../css/_var";
+@import "../../css/_ext";
+//***********************************************************_Переменные
+@import "_var"; // переменные
+@import "_ext"; // заготовки стилей
+@import "_font"; // Инициализация шрифтов
+@import "_class"; // заготовки стилей
+
+html,
+body
+{
+    height: 100%;
+}
+
+html {
+    font-family: $font-sans;
+    line-height: 1;
+    background: $cl-bg;
+    color: $cl_light;
+    @include calc(font-size, '14px + 0.2vw');
+}
+.my-container
+{
+    @extend %flexbox;
+    @extend %flex-direction_column;
+    min-height: 100%;
+    background-color: $cl-bg;
+
+    > *,
+    > footer > *
+    {
+        min-height: 24px;
+        @extend %flex-shrink;
+    }
+
+    > main
+    {
+        @extend %flex-grow_1;
+    }
+}
+
+//************_header_*************//
+    //************_company_*************//
+$menutop: $tab;
+
+//- top bar
+.company
+{
+    &-bl
+    {
+        background-color: $cl-bg;
+    }
+
+    //- blind menu mobile
+    &:before
+    {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        min-height: 100vh;
+        background-color: $cl-menutop-bg;
+        @extend %transit;
+
+        .menuopen-js &
+        {
+            left: 0;
+        }
+
+        @include mq-w($menutop)
+        {
+            content: none;
+        }
+    }
+
+    &-lt
+    {
+        @extend %flexbox;
+        @extend %align-items_center;
+        gap: 1.6rem;
+
+        > *
+        {
+            min-width: 1rem; //huk for IE
+
+            &:nth-child(1)
+            {
+                @extend %flex-grow_1;
+            }
+        }
+    }
+
+    &-bl
+    {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__nav
+    {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: $cl-menutop-bg;
+        @extend %transit;
+
+        .menuopen-js &
+        {
+            left: 0;
+        }
+
+        @include mq-w($menutop)
+        {
+            position: static;
+            width: auto;
+        }
+    }
+}
+
+//- Company Logo
+.logo
+{
+    max-width: 8rem;
+    @include pd_tb($pd_tb-company-el);
+    background-color: $cl-bg;
+
+    @include mq-w($menutop)
+    {
+        max-width: 10rem;
+    }
+}
+
+//- top menu
+.menutop
+{
+    color: $cl-menutop-font;
+    background-color: $cl-menutop-bg;
+
+    //- Button menu mobile
+    &-btn
+    {
+        cursor: pointer;
+
+        @include mq-w($menutop)
+        {
+            display: none;
+        }
+    }
+
+    &-nav
+    {
+        padding: 2.4rem 0 0 2.4rem;
+
+        @include rhythm-margin(1.6rem);
+
+        @include mq-w($menutop)
+        {
+            padding: 0;
+            @include rhythm-margin(0);
+        }
+
+        &-lt
+        {
+            @include mq-w($menutop)
+            {
+                @include flexbox;
+                gap: 1.6rem;
+                @include align-items();
+            }
+        }
+    }
+
+    &-list
+    {
+        &-wrap
+        {
+            @include rhythm-margin();
+        }
+
+        &__head
+        {
+            @include mq-w($menutop)
+            {
+                display: none;
+            }
+        }
+
+        &-lt
+        {
+            @include mq-w($menutop)
+            {
+                @include flexbox;
+                @include calc(gap, '0.4rem + 0.5vw');
+            }
+        }
+
+        > *
+        {
+            position: relative;
+        }
+
+        .menu-el
+        {
+            &:before
+            {
+                @include calc(top, $pd_tb-company-el + ' + 0.3em' );
+            }
+        }
+
+        &__sub
+        {
+            margin-left: 1.6rem;
+            @include pd_lr(1rem);
+            background-color: $cl-menutop-bg;
+            border-radius: 1rem;
+
+            overflow: hidden;
+            @extend %transit;
+
+            &:not(.opened-js)
+            {
+                @extend .maxhide;
+            }
+
+            @include mq-w($menutop)
+            {
+                overflow: visible;
+                position: absolute;
+                top: 130%;
+                left: -1rem;
+                z-index: 999;
+                margin-left: 0;
+                background-color: $cl-bg;
+
+                &:not(.opened-js)
+                {
+                    display: block;
+                }
+                @include hidden();
+
+                *.visible-js > &
+                {
+                    @include visible();
+                    top: 100%;
+                }
+                @include hover
+                {
+                    *:hover > &
+                    {
+                        @include visible();
+                        top: 100%;
+                    }
+                }
+            }
+
+            > *
+            {
+                &:last-child
+                {
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+//- language switcher
+.lang
+{
+    position: relative;
+    background-color: $cl-bg;
+
+    &-list
+    {
+        > *
+        {
+            &.active
+            {
+                display: none;
+            }
+        }
+    }
+
+    .menu-el
+    {
+        &:before
+        {
+            @include calc(top, $pd_tb-company-el + ' + 0.3em' );
+        }
+    }
+}
+//************_footer_*************//
+$qw-footer: 1100px;
+$bs-footer-item: 240px;
+
+.footer
+{
+    &-bl
+    {
+        background-color: $cl-bg;
+    }
+
+    overflow: hidden;
+    @include pd_tb(1.6rem, 0px);
+    @include rhythm-margin(1.6rem);
+
+    &-lt
+    {
+        @extend %flexbox;
+        @extend %flex-wrap;
+        @include justify-content(space-between);
+        gap:1.6rem;
+
+        > *
+        {
+            @extend %flex-grow_1;
+            max-width: 100%;
+
+            @include mq-w($qw-footer)
+            {
+                @include flex-grow(unset);
+
+                &:nth-child(2)
+                {
+                    @include flex-grow(1);
+                }
+            }
+        }
+    }
+
+    //- Bar logo und minicontent
+    &-company
+    {
+        max-width: 100%;
+        width: $w_prev;
+        @include mr_auto();
+        background-color: $cl-bg;
+
+        &:not(.navigation)
+        {
+            @include rhythm-margin();
+        }
+
+        @include mq-w($qw-footer)
+        {
+            margin: 0;
+        }
+
+        &-list
+        {
+            @include rhythm-margin(0.8rem);
+
+            > *
+            {
+                padding-left: $pd_tb-company-el;
+            }
+        }
+    }
+
+    //- Company Logo
+    &-logo
+    {
+        max-width: 80%;
+        width: 224px;
+        background-color: $cl-bg;
+    }
+
+    &__content
+    {
+        font-size: 14px;
+    }
+
+    &-navigation
+    {
+        &-lt
+        {
+            @extend %flexbox;
+            @extend %flex-wrap;
+            @extend %justify-content_center;
+            gap:1.6rem;
+
+            @include mq-w(600px)
+            {
+                @include flex-wrap(nowrap);
+            }
+
+            > *
+            {
+                @include flex-basis($bs-footer-item);
+            }
+        }
+    }
+}
+
+.navigation
+{
+    @include rhythm-margin(0.8rem);
+}
+
+.adress
+{
+    &-lt
+    {
+        @extend %flexbox;
+        @extend %flex-wrap;
+        @extend %justify-content_center;
+        gap:1.6rem;
+
+        @include mq-w($qw-footer)
+        {
+            display: block;
+            @include rhythm-margin(1.6rem);
+        }
+
+        > *
+        {
+            @include flex-basis($bs-footer-item);
+        }
+    }
+}
+
+.social
+{
+    text-align: center;
+    @include rhythm-margin(0.5rem);
+
+    &-list
+    {
+        > *
+        {
+            display: inline-block;
+            padding: 0.4rem;
+        }
+    }
+}
+
+//- System info
+.after
+{
+    @include pd_tb(0.8rem);
+    text-align: center;
+    background-color: $cl-bg;
+
+    > *
+    {
+        display: inline-block;
+    }
+}

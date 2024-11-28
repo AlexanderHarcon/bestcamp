@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+.visit-card {
+  background: {
+    image: url("../../../../images/visitSectroMobile.png");
+    repeat: no-repeat;
+  }
+
+  @include mq-w(730px) {
+    background-image: url("../../../../images/visitSection.png");
+  }
+
+  &__bl {
+    text-align: center;
+
+    @include mq-w(730px) {
+      display: flex;
+      justify-content: center;
+    }
+
+    &_video {
+      margin: {
+        bottom: 40px;
+      }
+      width: 243px;
+      height: 430px;
+      border-radius: 12px;
+      object-fit: cover;
+
+      @include mq-w(430px) {
+        height: 526px;
+      }
+    }
+
+    &_text {
+      justify-items: center;
+      @include mq-w(730px) {
+        padding: {
+          top: 32px;
+          left: 67px;
+        }
+      }
+
+      &-content {
+
+        &_image {
+          padding-bottom: 16px;
+        }
+
+        &_h2 {
+          padding-bottom: 8px;
+          font: {
+            family: Raleway;
+            weight: 800;
+            size: 32px;
+          }
+          line-height: 38px;
+        }
+
+        &_position,
+        &_description {
+          font: {
+            family: Raleway;
+            weight: 500;
+            size: 16px;
+          }
+          color: #637075;
+          line-height: 24px;
+          padding-bottom: 16px;
+        }
+      }
+
+      &_line {
+        width: 2px;
+        height: 80px;
+        background-color: #5BBCE4;
+      }
+
+      &_question {
+        &_h4 {
+          padding-top: 24px;
+          font: {
+            family: Raleway;
+            weight: 800;
+            size: 18px;
+          }
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  margin-top: 24px;
+  background-color: #95C032;
+  padding: 15px 32px;
+}

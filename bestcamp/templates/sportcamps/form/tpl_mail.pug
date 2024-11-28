@@ -1,0 +1,53 @@
+//- Шаблон письма, приходящего с формы
+    > form.tpl
+include ../../pug/_if
+br
+| Посетитель {if $name}по имени: #[strong {$name}]{/if}
+| {if $lastname}<br> по фамилии: #[strong {$lastname}]{/if}
+br
++if("$page == 'bell'")
+    | Прислал(а) телефон для обратного звонка.
+    br
+    br
+
++if("$tel")
+    | Его Телефон: #[strong {$tel}]
+    br
+    br
+
++if("$email")
+    | Его электронный адрес: #[strong {$email}]
+    br
+    br
+
++if("$dateFrom")
+    | Дата приезда: #[strong {$dateFrom}]
+    br
+    br
+
++if("$dateTo")
+    | Дата отъезда: #[strong {$dateTo}]
+    br
+    br
+
++if("$number_athletes")
+    | Athletes: #[strong {$number_athletes}]
+    br
+    br
+
++if("$number_coaches")
+    | Coaches: #[strong {$number_coaches}]
+    br
+    br
+
++if("$sport_type")
+    | Type of sport: #[strong {$sport_type}]
+    br
+    br
+
++if("$select_sport")
+    | Type of sport: #[strong {$select_sport}]
+    br
+    br
+| Form page link:
+a(href="{$page}") #[strong(style="color: red;") {$page}]

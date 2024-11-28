@@ -1,0 +1,50 @@
+- var pathImg = '{$opt.assets_url}images/'
+
+mixin svgSprite()
+    svg(width="0" height="0" class="hidden")
+        symbol(fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 8" id="linearrow")
+            path(d="M22.0189 4.35355C22.2142 4.15829 22.2142 3.84171 22.0189 3.64645L18.8369 0.464466C18.6417 0.269204 18.3251 0.269204 18.1298 0.464466C17.9346 0.659728 17.9346 0.976311 18.1298 1.17157L20.9583 4L18.1298 6.82843C17.9346 7.02369 17.9346 7.34027 18.1298 7.53553C18.3251 7.7308 18.6417 7.7308 18.8369 7.53553L22.0189 4.35355ZM0.832031 4.5L21.6654 4.5V3.5L0.832031 3.5L0.832031 4.5Z" fill="#2F3B40")
+        symbol(fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 2" id="line")
+            path(d="M0 1L20.8333 1" stroke="#2F3B40")
+        symbol(fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="greenmarker")
+            path(fill-rule="evenodd" clip-rule="evenodd" d="M12.3467 18.3304C13.7586 17.6062 19 14.5759 19 9.5C19 5.63401 15.866 2.5 12 2.5C8.13401 2.5 5 5.63401 5 9.5C5 14.5759 10.2414 17.6062 11.6533 18.3304C11.8739 18.4436 12.1261 18.4436 12.3467 18.3304ZM12 12.5C13.6569 12.5 15 11.1569 15 9.5C15 7.84315 13.6569 6.5 12 6.5C10.3431 6.5 9 7.84315 9 9.5C9 11.1569 10.3431 12.5 12 12.5Z" fill="#95C032")
+            path(d="M18.0623 17C18.6767 17.4561 19.0001 17.9734 19.0001 18.5C19.0001 19.0266 18.6767 19.5439 18.0623 20C17.4479 20.4561 16.5642 20.8348 15.5001 21.0981C14.436 21.3614 13.2289 21.5 12.0001 21.5C10.7714 21.5 9.56424 21.3614 8.50011 21.0981C7.43597 20.8348 6.55231 20.4561 5.93793 20C5.32355 19.5439 5.00011 19.0266 5.00011 18.5C5.00011 17.9734 5.32355 17.4561 5.93793 17" stroke="#95C032" stroke-width="1.74094" stroke-linecap="round")
+        symbol(fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" id="airplane")
+            path(d="M8.74733 19.75H7.49952C7.37414 19.75 7.25077 19.7185 7.14069 19.6585C7.03062 19.5984 6.93735 19.5118 6.86941 19.4064C6.80147 19.301 6.76104 19.1803 6.7518 19.0552C6.74257 18.9302 6.76483 18.8048 6.81655 18.6906L9.83811 12.0227L5.30108 11.9219L3.64639 13.9267C3.33092 14.3233 3.07921 14.5 2.43702 14.5H1.59702C1.46402 14.5043 1.33195 14.4764 1.212 14.4188C1.09205 14.3612 0.987757 14.2755 0.907956 14.1691C0.796393 14.0186 0.686706 13.7636 0.793581 13.3998L1.72264 10.0717C1.72967 10.0469 1.73811 10.022 1.74749 9.99766C1.74793 9.99533 1.74793 9.99295 1.74749 9.99063C1.73782 9.96626 1.72953 9.94138 1.72264 9.91609L0.792643 6.56687C0.691862 6.21016 0.802018 5.96078 0.912643 5.81406C0.986929 5.71549 1.08331 5.63573 1.19403 5.58118C1.30475 5.52664 1.42672 5.49883 1.55014 5.5H2.43702C2.91655 5.5 3.38202 5.71516 3.65577 6.0625L5.27624 8.03359L9.83811 7.96609L6.81749 1.30984C6.7657 1.19568 6.74335 1.07036 6.75249 0.945327C6.76163 0.820298 6.80196 0.699555 6.8698 0.594135C6.93764 0.488715 7.03082 0.401982 7.14083 0.341864C7.25083 0.281747 7.37416 0.250163 7.49952 0.25H8.76092C8.9369 0.253536 9.10983 0.29667 9.26685 0.376197C9.42388 0.455724 9.56097 0.569602 9.66796 0.709375L15.5297 7.83438L18.2376 7.76312C18.4359 7.75234 18.9853 7.74859 19.1123 7.74859C21.7026 7.75 23.2495 8.59094 23.2495 10C23.2495 10.4434 23.0723 11.2656 21.8869 11.7887C21.187 12.0981 20.2533 12.2547 19.1114 12.2547C18.9858 12.2547 18.4378 12.2509 18.2367 12.2402L15.5292 12.168L9.65296 19.293C9.54588 19.4321 9.40891 19.5454 9.25216 19.6246C9.0954 19.7037 8.92288 19.7465 8.74733 19.75Z" fill="#F39540")
+
+.camp-overview
+    .wrapper.pd_block
+        +svgSprite
+        section.camp-overview__bl
+            .camp-overview__bl-wrapper
+                .camp-overview__items
+                    .camp-overview__items-item
+                        svg.camp-overview__items-svg
+                            use(href='#airplane')
+                    .camp-overview__items-item
+                        p.camp-overview__items-p.camp-overview__items-p--orng
+                            | Antalya AYT
+                    .camp-overview__items-item
+                        svg.camp-overview__items-svg
+                            use(href='#line')
+                    .camp-overview__items-item
+                        p.camp-overview__items-p.camp-overview__items-p--blue
+                            | 15 km
+                    .camp-overview__items-item
+                        svg.camp-overview__items-svg
+                            use(href='#linearrow')
+                    .camp-overview__items-item
+                        svg.camp-overview__items-svg
+                            use(href='#greenmarker')
+                h2.camp-overview__bl-title Training Camp Overview
+                .camp-overview__bl-text
+                    input.camp-overview__bl-checkbox(type="checkbox" id="read-more")
+                    .camp-overview__bl-description
+                        p.camp-overview__bl-description-text This modern 4-star all-inclusive resort in Hurghada is located just 700 meters from the Red Sea. Ideal for swimming in sports camps. On the territory, there is a classic outdoor Olympic swimming pool of 50 m with 10 lanes and starting bollards. Hurghada International Airport is 7 km from the hotel. Distance to the center of Hurghada - 15 km. Guests can also take a shuttle to the beach at the nearby Beach Albatros Resort.
+                        p.camp-overview__bl-description-text This modern 4-star all-inclusive resort in Hurghada is located just 700 meters from the Red Sea. Ideal for swimming in sports camps. On the territory, there is a classic outdoor Olympic swimming pool of 50 m with 10 lanes and starting bollards. Hurghada International Airport is 7 km from the hotel. Distance to the center of Hurghada - 15 km. Guests can also take a shuttle to the beach at the nearby Beach Albatros Resort.
+                        p.camp-overview__bl-description-text This modern 4-star all-inclusive resort in Hurghada is located just 700 meters from the Red Sea. Ideal for swimming in sports camps. On the territory, there is a classic outdoor Olympic swimming pool of 50 m with 10 lanes and starting bollards. Hurghada International Airport is 7 km from the hotel. Distance to the center of Hurghada - 15 km. Guests can also take a shuttle to the beach at the nearby Beach Albatros Resort.
+                    label.camp-overview__bl-toggle(for="read-more")
+            .camp-overview__bl-img
+                img.camp-overview__bl-img--el(src=pathImg +'coralPool.png' alt='coralPool')
+                .camp-overview__bl-img-btn
+                    button.btn.greenBtn send a request

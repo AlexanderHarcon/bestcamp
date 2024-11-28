@@ -1,0 +1,17 @@
+//- include ../pug/_include
+mixin inc(name = '', alias = false, type = 'block', ext = 'html', puth = 'css/', cl = '')
+    if !alias
+        - var alias = name
+    if type == 'mixin'
+        | {set $puth = 'file:#{puth}#{type}/_#{alias}.#{ext}'}
+    else if type
+        | {set $puth = 'file:#{puth}#{type}/#{alias}/#{alias}.#{ext}'}
+        
+    +if('$puth is template')
+        if name && !type
+            | {include $puth name=#{name} class='#{cl}'}
+        else 
+            | {include $puth name='#{name}' class='#{cl}'}
+        | {else}
+        | Нет такого файла
+        | {$puth}

@@ -1,0 +1,20 @@
+- var pathImg = '{$opt.assets_url}images/'
+
+.location
+    .wrapper.pd_block
+        section.location__bl
+            .location__bl_map
+                img.location__bl_map-img(src=pathImg +'distanceMap.png')
+            .location__bl_distance
+                h3.location__bl_distance-h3 The Distance
+                .location__bl_distance_info
+                    img.location__bl_distance_info-img(src=pathImg + 'orangeMarker.svg')
+                    img.location__bl_distance_info-img(src=pathImg + 'linearrow.svg')
+                    img.location__bl_distance_info-img(src=pathImg + 'walkingMan.svg')
+                    p.location__bl_distance_info-p 1.3 km (~5 min)
+                    img.location__bl_distance_info-img--revers(src=pathImg + 'linearrow.svg')
+                    img.location__bl_distance_info-img(src=pathImg + 'greenMarker.svg')
+                .location__bl_distance-text
+                    p.location__bl_distance-text-p Тут можно указать описание расстояния и время до спортивных объектов
+                    p.location__bl_distance-text-p *Путь можно сократить
+                    p.location__bl_distance-text-p *Трансфер включено

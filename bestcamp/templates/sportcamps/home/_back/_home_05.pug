@@ -1,0 +1,145 @@
+//- < base/base.html
+    > home.tpl
+    > modules/infostart/infostart.html
+    > modules/countries/countries.html
+    > modules/shooseus/shooseus.html
+    > modules/info/info.html
+    > modules/info/info_header.html
+include ../../pug/_foreach
+include ../../pug/_if
+- var pathImg = '{$opt.assets_url}images/home/'
+- var pathImgServices = '{$opt.assets_url}images/services/'
+| {extends "file:sportcamps/base/base.html"}
+
+| {block 'var'}
+| {insert "file:sportcamps/home/home.tpl"}
+| {/block}
+
+| {block 'head'}
+script(type="application/ld+json").
+    {$data | toJSONunicod}
+| {/block}
+
+| {block 'header'}
+| {parent}
+//-************_slide_*************//
+.slide-bl
+    .slide.wrapper.pd_lr_block
+        .slide-header
+            .slide__head
+                h1.head_h1 {$res.pagetitle}
+            .slide__slogan.head_slogan
+                p {$res.txt_slogan}
+| {/block}
+
+| {block 'main'}
+//-************_Form_*************//
+.request-bl
+    .request.wrapper.pd_block
+        .request__body
+            p.head_slogan.head_slogan--mini.request__head {$res.txt_head_form}
+            | {include 'file:sportcamps/form/form.tpl'
+            | form='@FILE sportcamps/home/tpl_form_header.html'
+            | pagetitle_res=$res.pagetitle
+            | validate='workemail:blank,email:required:email:minLength=^6^:maxLength=^100^,dateFrom:isDate=^%d-%m-%Y^,,dateTo:isDate=^%d-%m-%Y^,number_athletes:required:isNumber:minValue=^1^:maxValue=^99^,,number_coaches:required:isNumber:minValue=^1^:maxValue=^99^,sport_type:required:minLength=^3^:maxLength=^40^:stripTags'}
+
+//-************_infostart_**********//
+| {include "file:{$modules}infostart/infostart.html"
+| class_untop='pd_block_untop'
+| }
+
+//************_countries_********//
+| {include "file:{$modules}countries/countries.html"
+| class_untop='pd_block_untop'
+| }
+
+//-************_info_Two**********//
+| {include "file:{$modules}info/info.html"
+| img=$res.img_info_two
+| header2=$res.txt_info_two_head
+| header_slogan=$res.txt_info_two_slogan
+| content=$res.text_info_two | wrap_tag : 'p'
+| btn_name=$res.txt_info_two_btn
+| }
+
+//************_services_**********//
+.services-bl
+    section.services.wrapper.pd_block
+        .services__header
+            h2.head_h2 Our services
+        .services-lt
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-medicine.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-medicine.png' alt='Athlete running on a track with a health measurement sensor. His health indicators are shown in the background.' loading="lazy" width=200 height=200)
+                h3.head_h3 Sports medicine
+                .content.service__content
+                    p As a part of our training camps organization services, we provide a full variety of all medical treatment and testing, like cross-DNA Professional Sports Genetic Tests, Vo2 Testing, and ergometric assessments conducted by accredited Sports and Exercise Scientists. Also, we provide rehabilitation services, sports massages, and physiotherapy. Active Planet works with rehabilitation clinics all over the world.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-management.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-management.png' alt='The sports manager stands with a mouthpiece in his hands. A symbolic list of sports services is shown in the background.' loading="lazy" width=200 height=200)
+                h3.head_h3 Sports management
+                .content.service__content
+                    p We offer professional sports management services for all functional areas of sporting, special, and cause-related training camps and sports events. From pre-event planning through post-event analysis, the company can handle all operational, technical, and participatory functions of an event, accounting for team travel plans. We provide best flight options, visa support, top performance sports venues and hotels.
+
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "sports-event.webp" type="image/webp")
+                        img(src=pathImgServices + 'sports-event.png' alt='The sports manager and the customer agree on the event and shake hands. The background shows the benefits of the deal: quality, time savings, customer satisfaction.' loading="lazy" width=250 height=166)
+                h3.head_h3 Sports Event organization
+                .content.service__content
+                    p Regardless of the type of event you are planning, we can handle every aspect of it. We provide flights, accommodation, sports equipment, transfers, inventory, tents, event personnel, and site management. Many sports venues cooperate with Active Planet. Our sporting event management partners include colleges and universities, National Championships, and Sports federations WorldWide.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "active-holidays.webp" type="image/webp")
+                        img(src=pathImgServices + 'active-holidays.png' alt='Two athletes after a run. They walking along the road at a fast pace. In the background are symbols of a healthy lifestyle: fruits, water, stopwatch, sports equipment.' loading="lazy" width=200 height=200)
+                h3.head_h3 Active Holidays & Sport Tours
+                .content.service__content
+                    p This service is ideal For runners, hikers, mountaineers, bikers, explorers, families, and pretty much all lovers of the outdoors. We organize active holidays of any type all around the world for small groups. Just tell us about your ideal sports tour and we will manage it!
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "individuals-tours.webp" type="image/webp")
+                        img(src=pathImgServices + 'individuals-tours.png' alt='Individual athlete is engaged in the gym.' loading="lazy" width=200 height=200)
+                h3.head_h3 Individuals tours
+                .content.service__content
+                    p Sports are your passion and you can't stand lying by the pool all day? With a list of our hotels with sporting facilities, you can easily make all travel arrangements for your individual training camps abroad.
+                    p Active Planet will package all the things you need: bike hire, the use of the lap pool, other sports facilities, airport transfers, etc.
+            article.service
+                .service__img
+                    picture
+                        source(srcset=pathImgServices + "athletic-school.webp" type="image/webp")
+                        img(src=pathImgServices + 'athletic-school.png' alt='There are three athletes in the sports school. They train: run and jump. These are track and field athletes.' loading="lazy" width=200 height=200)
+                h3.head_h3 Athletic school
+                .content.service__content
+                    p Are you traveling with kids who attend sports clubs? We selected the best sports schools and clubs around the world so you can simply find sections for various sports for any level of physical fitness. Also, we can organize different levels of individual training for any sports typ
+
+//-************_shooseus_**********//
+| {include "file:{$modules}shooseus/shooseus.html"}
+
+//-************_faq_***********//
+.faq-bl
+    section.faq.wrapper.pd_block_untop
+        .faq__header
+            h2.head_h2 FAQ
+        .faq-body {$faq_html}
+
+//-************_info_end**********//
+| {include "file:{$modules}info/info.html"
+| class_lt='_inforight'
+| img=$res.img_info_end
+| head2=$res.txt_head_end
+| content=$res.text_info_end | wrap_tag : 'p'
+| btn_name=$res.txt_btn
+| }
+
+| {/block}
+
+| {block 'script'}
+| {'minify_js_item' | placeholder}
+| {/block}

@@ -1,0 +1,14 @@
+#modx-resource-tabs  .msfm-fieldset .x-tool.x-tool-toggle {
+     position: relative;
+     top: auto;
+     right: auto;
+}
+
+.msfm-tab  .x-column-inner > .x-column ~ .x-column {
+     margin-left: 0;
+}
+
+.msfm-tab   .x-column-inner >  .x-column ~ .x-column.msfm-column2 {
+     margin-left: 15px;
+}
+

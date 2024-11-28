@@ -1,0 +1,178 @@
+//- > var_inc.tpl
+    > base.tpl
+    > head_inc.html
+- var pathImg = '{$opt.assets_url}images/'
+- var pathSocial = '{$opt.assets_url}images/social/'
+include ../../pug/_if
+| {insert 'file:html/var_inc.tpl'}
+| {insert "file:sportcamps/base/base.tpl"}
+| {block 'var'}{/block}
+doctype html
+| <html lang="{$opt.cultureKey}" class="no-js">
+head
+    | {insert 'file:html/head_inc.html'}
+    //- {*Alternate meta tags*}
+    | {$PolylangCanonical}
+    | {block 'head'}{/block}
+    | {'minify_css_base' | placeholder}
+    | {'minify_css_item' | placeholder}
+    script(src="https://www.googletagmanager.com/gtag/js?id=G-HGV4N50C86" async)
+    script.
+        document.documentElement.className += " js";
+        document.documentElement.classList.remove('no-js');
+
+        //- gtag
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HGV4N50C86');
+
+| {block 'body'}
+body
+    | {/block}
+
+    .my-container
+        | {block 'header'}
+        header
+
+            //- top bar
+            .company-bl
+                .company.wrapper.company-lt.pd_lr_block
+                    div
+                        .logo
+                            //- Company Logo
+                            +if('$res.id != $opt.site_start')
+                                a(href='{$opt.site_start | url}')
+                                    img(src=pathImg + 'best-sport-camps-logo.svg' alt="{'polylang_site_company-logo' | lexicon}" width=300 height=77)
+                                | {else}
+                                span
+                                    img(src=pathImg + 'best-sport-camps-logo.svg' alt="{'polylang_site_company-logo' | lexicon}" width=300 height=77)
+
+                    div
+                        .menutop
+                            //- Menu top Button mobile
+                            button.menutop-btn#menutop-btn
+                                input(type="checkbox" id="menutop-check" role="button").uncheck-js.gamburg
+                                label.gamburger(for='menutop-check')
+
+                            //- Menu top Navigation
+                            nav#menutop-nav.menutop-nav.company__nav.menutop-nav-lt
+                                div
+                                    //-+if("$access")
+                                    div.menutop-list-wrap
+                                        span.head_list.menutop-list__head Menu:
+                                        ul.menutop-list.menutop-list-lt(data-test="{12 | resource : 'published'}")
+                                            //-li.active
+                                                span.txt_menu.menu-el.menu-el--folder.menu-el--folder-js Services
+                                                ul.menutop-list__sub
+                                                    li.active: span.txt_menu.menu-el Information
+                                                    li: a(href='#').txt_menu.menu-el Our Trainers
+                                                    li: a(href='[[~5]]').txt_menu.menu-el Country
+                                                    li: a(href='#').txt_menu.menu-el Contacts
+                                            | {include "file:sportcamps/base/inc_menuitem.html"
+                                            | id=11
+                                            | }
+
+                                            | {include "file:sportcamps/base/inc_menuitem.html"
+                                            | id=12
+                                            | }
+                                            //-li: span.txt_menu.menu-el.menu-el--folder Our Trainers
+                                            //-li: a(href='#').txt_menu.menu-el Blog
+                                            //-li: a(href='#').txt_menu.menu-el Contacts
+
+
+                                div
+                                    //- {*Language switcher*}
+                                    div.menutop-list-wrap
+                                        | {$PolylangLinks}
+            | {/block}
+
+        main
+            | {block 'main'}{$res.content}{/block}
+
+        | {block 'footer'}
+        footer
+            .footer-bl
+                .footer.wrapper.pd_lr_block
+                    .footer-lt
+                        div
+                            .footer-company
+                                .footer-logo
+                                    //- Company Logo
+                                    +if('$res.id != $opt.site_start')
+                                        a(href='/')
+                                            img(src=pathImg + 'best-sport-camps-logo.svg' alt="{'polylang_site_company-logo' | lexicon}" width=300 height=77)
+                                        | {else}
+                                        span
+                                            img(src=pathImg + 'best-sport-camps-logo.svg' alt="{'polylang_site_company-logo' | lexicon}" width=300 height=77)
+                                .content.footer__content
+                                    //-p Рыба текст разработана спеицально для подобного случия реализации данной задачи. Которая в онечном итоге поможет вам сдлеать!
+
+                        div
+                            .footer-navigation.footer-navigation-lt
+                                div
+                                    .navigation
+                                        span.head_list Navigation:
+                                        ul.txt_submenu.strong
+                                            +if("$res.id == 11")
+                                                li.active: span.menu-el {'menutitle' | field_res : 11}
+                                                | {else}
+                                                li: a(href='[[~11]]').menu-el {'menutitle' | field_res : 11}
+
+                                div
+                                    .navigation
+                                        span.head_list {'polylang_site_services' | lexicon}:
+                                        //-ul.txt_submenu
+                                            li.active: span.menu-el Услуги
+                                            li: a(href='#').menu-el Отзывы
+                                            li: a(href='#').menu-el Информация
+                                            li: a(href='#').menu-el Наши тренера
+                                            li: a(href='#').menu-el Блог
+
+                        div
+                            .adress.adress-lt
+                                div
+                                    .navigation
+                                        span.head_list {'polylang_site_contact' | lexicon}:
+                                        ul.txt.footer-company-list.footer__content
+                                            li Active Planet
+                                            li LTD64D Metochiou Str, Egkomi, 2407
+                                            li Nicosia, Cyprus Tel. ‎‎22772360
+                                            li fax ‎‎22780879
+
+                                div
+                                    .telefons
+                                        ul.footer-company-list
+                                            li: a.link_social(href="tel:+35796785922" rel="nofollow" title="Number: +357 96 785922") +357 96 785922
+                                            li: a.link_social(href="tel:+4917630763090" rel="nofollow" title="Number: +49 17630763090") +49 17630763090
+                                            li: a.link_social(href="tel:+37256874621" rel="nofollow" title="Number: +372 56 8746 21") +372 56 8746 21
+
+                    .social
+                        p.head_social {'polylang_site_subscribe-watch' | lexicon}:
+                        ul.social-list
+                            li: a.link-social(href="https://www.youtube.com/channel/UCnv1Dj0aetv53spSg7bN7Fw" rel="nofollow" title="YouTube")
+                                img(src=pathSocial + 'youtube.svg' alt='YouTube icon' width=32 height=32 loading="lazy")
+                            li: a.link-social(href="https://www.facebook.com/ActivePlanetOfficial/" rel="nofollow" title="Facebook")
+                                img(src=pathSocial + 'facebook.svg' alt='Facebook icon' width=32 height=32 loading="lazy")
+                            li: a.link-social(href="https://www.instagram.com/active.planet/" rel="nofollow" title="Instagram")
+                                img(src=pathSocial + 'instagram.svg' alt='Instagram icon' width=32 height=32 loading="lazy")
+                            li: a.link-social(href="https://t.me/ActivePlanet" rel="nofollow" title="Telegram")
+                                img(src=pathSocial + 'telegram.svg' alt='Telegram icon' width=32 height=32 loading="lazy")
+                            //-li: a.link-social(href="https://wa.me/380953656879" rel="nofollow" title="Whatsapp")
+                                img(src=pathSocial + 'whatsapp.svg' alt='Whatsapp' width=32 height=32 loading="lazy")
+
+
+            .after-bl
+                //- System info
+                .after.txt_phpinfo.pd_lr_block
+                    p {'polylang_site_copyright' | lexicon} Active Planet — {'polylang_site_company-slogan' | lexicon}
+                    p  | {$_modx->getInfo('queries')} q {$_modx->getInfo('totalTime')} {$_modx->getInfo('source')}
+
+            | {/block}
+
+    //-script(src='{$templates_js}jquery-2.2.4.min.js')
+    //-link(rel='stylesheet' href='assets/templates/js/intl-tel-input/css/intlTelInput.min.css')
+    | {'minify_js_base' | placeholder}
+    //-base.js
+    | {block 'script'}|{/block}
+| </html>

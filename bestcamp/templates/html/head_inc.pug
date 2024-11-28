@@ -1,0 +1,13 @@
+//- => var_inc.tpl
+    => base.tpl
+- var pathImg = '{$opt.assets_url}images/'
+base(href="{$opt.site_url | replace : 'http://' : 'https://'}" data-assets='{$opt.assets_url}')
+meta(charset="{$opt.modx_charset}")
+meta(http-equiv='X-UA-Compatible' content='IE=edge')
+meta(name='viewport' content='width=device-width, initial-scale=1.0')
+title {$res.longtitle ? : $res.pagetitle}
+meta(name='description' content='{($res.description ? : $res.pagetitle) | htmlent}')
+meta(name='keywords' content='')
+meta(name='google-site-verification' content='55BckCacebJOAO9rSYR9JKhCX44PyrDr2lZWrVOEOis')
+link(rel='shortcut icon' href=pathImg + 'favicon.ico')
+link(rel='apple-touch-icon' href=pathImg + 'favicon.ico')

@@ -1,0 +1,45 @@
+[26-Aug-2024 09:26:09 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function mb_substr() in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php:85
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php(67): SeoSuiteMetaPreviewProcessor->truncate('Football Traini...', 70)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): SeoSuiteMetaPreviewProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/resource/pr...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/seo in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php on line 85
+[29-Aug-2024 12:10:31 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function mb_substr() in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php:85
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php(67): SeoSuiteMetaPreviewProcessor->truncate('Football Traini...', 70)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): SeoSuiteMetaPreviewProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/resource/pr...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/seo in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php on line 85
+[29-Aug-2024 12:12:16 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function mb_substr() in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php:85
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php(67): SeoSuiteMetaPreviewProcessor->truncate('Football Traini...', 70)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): SeoSuiteMetaPreviewProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/resource/pr...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/seo in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php on line 85
+[29-Aug-2024 12:22:11 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function mb_substr() in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php:85
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php(67): SeoSuiteMetaPreviewProcessor->truncate('Synchronized Sw...', 70)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): SeoSuiteMetaPreviewProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/resource/pr...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/seo in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php on line 85
+[29-Aug-2024 12:58:51 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function mb_substr() in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php:85
+Stack trace:
+#0 /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php(67): SeoSuiteMetaPreviewProcessor->truncate('Football Traini...', 70)
+#1 /home/bestsportcamps/public_html/core/model/modx/modprocessor.class.php(185): SeoSuiteMetaPreviewProcessor->process()
+#2 /home/bestsportcamps/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home/bestsportcamps/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('mgr/resource/pr...', Array, Array)
+#4 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(87): modConnectorResponse->outputContent(Array)
+#5 /home/bestsportcamps/public_html/core/model/modx/modconnectorrequest.class.php(74): modConnectorRequest->prepareResponse(Array)
+#6 /home/bestsportcamps/public_html/assets/components/seo in /home/bestsportcamps/public_html/core/components/seosuite/processors/mgr/resource/preview.class.php on line 85

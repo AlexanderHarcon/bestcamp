@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+/* < country.tpl
+* < home.tpl
+*/
+
+.infostart
+{
+    @include rhythm-margin(2.4rem);
+
+    &-bl
+    {
+        background-color: $cl-bg;
+    }
+
+    &-lt
+    {
+        @extend %flexbox;
+        @extend %flex-wrap;
+        @extend %justify-content_center;
+        gap: 1.6rem;
+
+        @include mq-w($tab)
+        {
+            gap: 3.2rem;
+        }
+
+        @include mq-w($pk)
+        {
+            @include justify-content(space-between);
+        }
+    }
+
+    &__header
+    {
+        text-align: center;
+
+        @include mq-w($pk)
+        {
+            text-align: left;
+        }
+    }
+
+    &-item
+    {
+
+        max-width: 100%;
+        width: $w_prev;
+        @include rhythm-margin(0.4rem);
+
+        p
+        {
+            font-size: 0.85rem;
+
+            &:not(:last-child)
+            {
+                margin-bottom: 0.4rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+

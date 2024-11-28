@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@import "../../css/_mixin";
+@import "../../css/_var";
+@import "../../css/_ext";
+//------------------------------
+@import "../base/_var";
+@import "../base/_ext";
+
+//************_slide_*************//
+.slide
+{
+    position: relative;
+    z-index: 1;
+
+    &-bl
+    {
+        position: relative;
+        z-index: 0;
+        background-repeat: no-repeat;
+        background-position: top right;
+        @include background-size();
+
+        &:after
+        {
+            @extend %absolute_content_100;
+            @include linear-gradient(
+                'top', transparentize(black, 0.5), transparentize(black, 1)
+            );
+        }
+    }
+
+    &-header
+    {
+        @include pd_tb(4rem);
+        @include calc(padding-bottom, '50vh - 1vw');
+        @include mr_auto();
+        text-align: center;
+        @extend %text-shadow;
+        color: $cl-bg;
+
+        @include rhythm-margin(1.6rem);
+
+        @include mq-w($tab)
+        {
+            max-width: 48em;
+        }
+    }
+
+    &__slogan
+    {
+        @extend %text-shadow;
+        color: $cl-bg;
+    }
+
+    &__head
+    {
+        position: relative;
+        top: 5rem;
+    }
+}
+
+//************_Form_*************//
+.request
+{
+    main &
+    {
+        display: block;
+    }
+
+    &-bl
+    {
+        @include calc(margin-top, '0vh - (32vh - 1vw)');
+    }
+}
+
+
+
+
+

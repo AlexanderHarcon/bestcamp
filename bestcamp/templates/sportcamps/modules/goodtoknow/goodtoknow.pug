@@ -1,0 +1,38 @@
+include ../../../pug/_foreach
+include ../../../pug/_if
+
+- var pathImg = '{$opt.assets_url}images/'
+- var pathWeather = '{$opt.assets_url}images/ico/weather/'
+
+.good-to-know
+    .wrapper.pd_block
+        section.good-to-know__bl
+            .good-to-know__bl_text
+                h2.good-to-know__bl_text-h2 Good to know
+                input.good-to-know__bl-checkbox(type="checkbox" id="goodtoknow")
+                .good-to-know__bl_description
+                    p.good-to-know__bl_description-p This modern 4-star all-inclusive Hurghada resort is just 700 m from the Red Sea. Hotel base on all-inclusive concept. It offers a lagoon-style outdoor pool and 3 buffet restaurants. All rooms have a balcony or terrace. Guests can enjoy free access to Albatros Aqua Park and children's aqua park at Aqua Blu Resort, and it offers WIFI in the entire property.
+                    p.good-to-know__bl_description-p This modern 4-star all-inclusive Hurghada resort is just 700 m from the Red Sea. Hotel base on all-inclusive concept. It offers a lagoon-style outdoor pool and 3 buffet restaurants. All rooms have a balcony or terrace. Guests can enjoy free access to Albatros Aqua Park and children's aqua park at Aqua Blu Resort, and it offers WIFI in the entire property.
+                label.good-to-know__bl-toggle(for="goodtoknow")
+            .good-to-know__bl_weather
+                p.good-to-know__bl_weather-p Average day and night temperatures in °C
+                | {if $months}
+                .good-to-know__weather.weather.pd_block_micro(data-test="")
+                    .weather__tablewrap
+                        table.table
+                            caption.good-to-know__weather_lexicon {'polylang_site_weather-in' | lexicon}:
+                                span.good-to-know__weather_lexicon-country {$country_reg['country_' ~ $lang] ?: $country['country_' ~ $lang]}
+                            thead
+                                tr
+                                    td.table_ico: img(src=pathWeather + 'sun.svg' alt='sun icon' width=16 height=16)
+                                    +foreach('$months', '$key => $month', false, false)
+                                        td.good-to-know__weather_round {$month | round}°C
+                                tr
+                                    td.weather__border(colspan=7)
+                            tbody
+                                tr
+                                    th.table_ico: img(src=pathWeather + 'calendar.svg' alt='calendar icon' width=16 height=16)
+                                    +foreach('$months', '$key => $month', false, false)
+                                        th.good-to-know__weather_key {$key}
+                | {/if}
+

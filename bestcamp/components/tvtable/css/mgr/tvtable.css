@@ -1,0 +1,247 @@
+.tvtEditor {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 0 5px;
+}
+
+.tvt-toolbar {
+    position: absolute;
+    top: 20px;
+    padding: 5px 0;
+    left: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    background: #f0f0ee;
+}
+
+.tvt-toolbar .tvt-button {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.tvt-header {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+}
+
+.tvt-tmp {
+    position: relative;
+    width: 216px;
+}
+
+.tvt-input {
+    min-width: 20px;
+    width: 200px; 
+    max-width: 200px;
+    height: 20px;
+    padding: 4px;
+    transition: none;
+}
+
+.tvt-input:focus {
+    border-color: #2d86b7;
+}
+
+.tvt-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.tvt-input-wrapper+.tvt-input-wrapper {
+    margin-left: 5px;
+}
+
+.tvt-headers {
+    overflow: hidden;
+}
+
+.tvt-headers::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: calc(100% - 5px);
+    background: linear-gradient(to right, transparent, white);
+}
+
+.tvt-headers,
+.tvt-delete-column {
+    position: absolute;
+    padding: 3px 0 3px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tvt-delete-column {
+    display: none;
+    background-color: #f0f0ee;
+    border-bottom: 5px solid #f0f0ee;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 2px 0;
+    color: #666;
+    left: 0;
+    width: 100%;
+    box-shadow: inset 0px -7px 16px -12px rgba(0,0,0,.3);
+}
+
+.tvt-delete-column:not(.tvt-delete-column-sm)::after,
+.tvt-delete-column:not(.tvt-delete-column-sm)::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: calc(100% + 3px);
+    background-color: white;
+    top: -5px;
+}
+
+.tvt-delete-column:not(.tvt-delete-column-sm)::before {
+    right: calc(100% - 11px);
+    transform: rotate(28deg);
+    transform-origin: top left;
+}
+
+.tvt-delete-column:not(.tvt-delete-column-sm)::after {
+    left: calc(100% - 11px);
+    transform: rotate(-28deg);
+    transform-origin: top right;
+}
+
+.tvt-delete-column:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.tvt-delete-column:active {
+    background-color: #c62828;
+    color: white;
+}
+
+.tvt-row {
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
+.tvt-row.drag-active {
+    opacity: .3;
+}
+
+.tvtEditor.drag .tvt-row {
+    position: relative;
+}
+
+.tvt-handle {
+    position: absolute;
+    top: 0;
+    left: -13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 10px;
+    height: 34px;
+    color: #000;
+    cursor: move;
+    padding: 3px 2px;
+    text-shadow: 0 0 0 black;
+    user-select: none;
+    white-space: normal;
+}
+
+.tvt-handle-dot {
+    line-height: 0;
+    height: 4px;
+}
+
+.tvt-handle-dot:first-child {
+    margin-top: -5px;
+}
+
+.tvt-row+.tvt-row {
+    padding: 3px 5px 3px 5px;
+}
+
+.tvt-row:first-child {
+    align-items: flex-end;
+    background: #f0f0ee;
+    padding: 5px;
+}
+
+.tvt-row:first-child .tvt-input-wrapper {
+    position: relative;
+}
+
+.tvtEditor:not(.locked) .tvt-tmp:hover .tvt-delete-column {
+    display: block;
+}
+
+.tvt-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.tvt-button:disabled,
+.tvt-button.disabled {
+    background-color: #cacaca;
+    background-image: unset;
+    box-shadow: none;
+}
+
+.tvt-button:disabled:hover,
+.tvt-button.disabled:hover {
+    background-color: #cacaca;
+    background-image: unset;
+    cursor: not-allowed;
+}
+
+.tvt-button:hover,
+.tvt-button:focus {
+    box-shadow: none;
+}
+
+.tvt-button-danger {
+    color: white;
+    background-color: #d32f2f;
+}
+
+.tvt-button-danger:not(:disabled):not(.disabled):hover {
+    background-color: #c62828;
+    box-shadow: none;
+}
+
+.tvt-button-danger:not(:disabled):not(.disabled):focus {
+    background-color: #b71c1c;
+}
+
+.tvt-button-warning {
+    color: white;
+    background-color: #ffa000;
+}
+
+.tvt-button-warning:not(:disabled):not(.disabled):hover {
+    background-color: #ff8f00;
+}
+
+.tvt-button-warning:not(:disabled):not(.disabled):focus {
+    background-color: #ff6f00;
+}

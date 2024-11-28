@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
+//------------------------------
+@import "../../base/_var";
+@import "../../base/_ext";
+
+$cl_background: #F2F9FD;
+$cl_lightBlack: #2F3B40;
+
+.price-included {
+  background-color: #F2F9FD;
+  text-align: center;
+
+  &__bl {
+    &-title {
+      font: {
+        family: Raleway;
+        size: 22px;
+        weight: 800;
+      }
+      margin-bottom: 1.5rem;
+      color: $cl_lightBlack;
+    }
+
+    &-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+
+      @include mq-w(1115px) {
+        gap: 10px;
+      }
+      @include mq-w(1400px) {
+        gap: 24px;
+      }
+    }
+
+    &-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 24px 50px 0px rgba(0, 0, 0, 8%);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 139px;
+      height: 134px;
+      padding: 4px;
+
+      @include mq-w(430px) {
+        width: 187px;
+        height: 185px;
+        padding: 16px;
+      }
+      @include mq-w(730px) {
+        width: 332px;
+        height: 104px;
+        display: flex;
+        align-items: center;
+      }
+      @include mq-w(924px) {
+        width: calc(100% / 3 - (16px));
+      }
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 16px;
+      @include mq-w(730px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      line-height: 16px;
+      font: {
+        weight: 600;
+        family: Raleway;
+        size: 11px;
+      }
+      color: $cl_lightBlack;
+
+      @include mq-w(430px) {
+        font: {
+          size: 16px;
+        }
+      }
+      @include mq-w(730px) {
+        padding: 0 16px;
+        text-align: left;
+      }
+
+      &-description {
+        line-height: 14px;
+        font: {
+          family: Raleway;
+          weight: 400;
+          size: 8px;
+        }
+        color: $cl_lightBlack;
+
+        @include mq-w(430px) {
+          font: {
+            size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

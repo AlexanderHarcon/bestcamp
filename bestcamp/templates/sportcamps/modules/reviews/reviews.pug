@@ -1,0 +1,49 @@
+// - var pathImg = '{$opt.assets_url}images/'
+- var pathImg = "../../../../images/";
+- var pathCarousel = "../../../../templates/js/carousel/";
+
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' href=pathCarousel + 'carousel.css')
+    script(src=pathCarousel + 'carousel.umd.js')
+    link(rel='stylesheet' href='reviews.css')
+    title Football Camps
+
+.reviews
+    .wrapper.pd_block
+        section.reviews__bl
+            h2.reviews__bl-h2 Reviews
+            .reviews__sector.f-carousel#reviewsCarousel
+                .reviews__sector_container.f-carousel__slide
+                    img.reviews__sector_container-img(src=pathImg + 'reviews.png' alt'reviews')
+                    .reviews__sector_container-info
+                        p.reviews__sector_container-info-text “Price and quality of the athletics facility and we need endurance running tracks in the area”
+                        p.reviews__sector_container-info-author Mathias Jarck, Hamburger SV
+                .reviews__sector_container.f-carousel__slide
+                    img.reviews__sector_container-img(src=pathImg + 'reviews.png' alt'reviews')
+                    .reviews__sector_container-info
+                        p.reviews__sector_container-info-text “Price and quality of the athletics facility and we need endurance running tracks in the area”
+                        p.reviews__sector_container-info-author Mathias Jarck, Hamburger SV
+                .reviews__sector_container.f-carousel__slide
+                    img.reviews__sector_container-img(src=pathImg + 'reviews.png' alt'reviews')
+                    .reviews__sector_container-info
+                        p.reviews__sector_container-info-text “Price and quality of the athletics facility and we need endurance running tracks in the area”
+                        p.reviews__sector_container-info-author Mathias Jarck, Hamburger SV
+                .reviews__sector_container.f-carousel__slide
+                    img.reviews__sector_container-img(src=pathImg + 'logo.svg' alt'reviews')
+                    .reviews__sector_container-info
+                        p.reviews__sector_container-info-text “Price and quality of the athletics facility and we need endurance running tracks in the area”
+                        p.reviews__sector_container-info-author Mathias Jarck, Hamburger SV
+                .reviews__sector_container.f-carousel__slide
+                    img.reviews__sector_container-img(src=pathImg + 'logo.svg' alt'reviews')
+                    .reviews__sector_container-info
+                        p.reviews__sector_container-info-text “Price and quality of the athletics facility and we need endurance running tracks in the area”
+                        p.reviews__sector_container-info-author Mathias Jarck, Hamburger SV
+                .reviews__sector_container.f-carousel__slide
+                    img.reviews__sector_container-img(src=pathImg + 'logo.svg' alt'reviews')
+                    .reviews__sector_container-info
+                        p.reviews__sector_container-info-text “Price and quality of the athletics facility and we need endurance running tracks in the area”
+                        p.reviews__sector_container-info-author Mathias Jarck, Hamburger SV
+script(src='reviews.js')

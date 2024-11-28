@@ -1,0 +1,6 @@
+//- include ../pug/_switch
+//- | {case default}
+mixin switch(a)
+    | {switch !{a}}
+    block
+    | {/switch}

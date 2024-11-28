@@ -1,0 +1,11 @@
+//- < base.tpl
+include ../../pug/_foreach
+include ../../pug/_if
++if('$languages.0')
+    div.lang.active(data-test="")
+        span.txt_menu.strong.menu-el.menu-el--folder.menu-el--folder-js {$current.culture_key}
+        ul.lang-list.menutop-list__sub.lang__sub
+            +foreach('$languages', '$key => $language', false, false)
+                +if('!$language.active || ($language.active && $showActive)')
+                    li: a(href="{$language.link | ereplace : '/\\/$/i' : ''}").txt_menu.menu-el.strong {$language.culture_key}
+

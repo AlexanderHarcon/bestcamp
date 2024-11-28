@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="campsregions" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="cmpCountris" table="cmp_countris" extends="xPDOSimpleObject">
+		<field key="resource_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="resource_ids" dbtype="text" phptype="string" null="false" default="" />
+		<field key="tags_ids" dbtype="text" phptype="string" null="false" default=""/>
+		<field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" index="index" />
+		<field key="menuindex" dbtype="int" precision="10" phptype="integer" null="false" default="0" index="index" />
+		<field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="0" />
+        <field key="editedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="editedon" dbtype="int" precision="20" phptype="timestamp" null="false" default="0" />
+        <field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0" />
+        <field key="deletedon" dbtype="int" precision="20" phptype="timestamp" null="false" default="0" />
+        <field key="deletedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="publishedon" dbtype="int" precision="20" phptype="timestamp" null="true" default="0" />
+        <field key="publishedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+		<field key="unpublishedon" dbtype="int" precision="20" phptype="timestamp" null="false" default="0" />
+        <field key="unpublishedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+		
+		<field key="heading" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="description" dbtype="text" phptype="string" null="false" default="" index="fulltext" />
+		<field key="content" dbtype="text" phptype="string" null="false" default="" index="fulltext" />
+		<field key="contentType" dbtype="varchar" precision="50" phptype="string" null="false" default="text" />
+		<field key="image" dbtype="text" phptype="string" null="false" default="" />
+		<field key="documentType" dbtype="varchar" precision="50" phptype="string" null="false" default="link" />
+		<field key="alias" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="folder" dbtype="varchar" precision="64" phptype="string" null="false" default="" />
+		<field key="parentChain" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="source" dbtype="text" phptype="string" null="false" default="" />
+		<field key="source_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="properties" dbtype="text" phptype="json" null="true"/>
+		
+		<index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+			<column key="id" collation="A" null="false" />
+		</index>
+		<index alias="resource_id" name="resource_id" primary="false" unique="false" type="BTREE">
+			<column key="resource_id" collation="A" null="false" />
+		</index>
+		<index alias="source_id" name="source_id" primary="false" unique="false" type="BTREE">
+			<column key="source_id" collation="A" null="false" />
+		</index>
+		<index alias="published" name="published" primary="false" unique="false" type="BTREE">
+            <column key="published" length="" collation="A" null="false" />
+        </index>
+		<index alias="menuindex" name="menuindex" primary="false" unique="false" type="BTREE">
+            <column key="menuindex" length="" collation="A" null="false" />
+        </index>
+		
+		<aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+		<aggregate alias="sourceId" class="modResource" local="source_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Creator" class="modUser" local="createdby" foreign="id" cardinality="one" owner="foreign" />
+		<aggregate alias="Deletor" class="modUser" local="deletedby" foreign="id" cardinality="one" owner="foreign" />
+		<aggregate alias="Editor" class="modUser" local="editedby" foreign="id" cardinality="one" owner="foreign" />
+		<aggregate alias="Publishetor" class="modUser" local="publishedby" foreign="id" cardinality="one" owner="foreign" />
+		<aggregate alias="Unpublishetor" class="modUser" local="unpublishedby" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+	
+	<object class="miniCategories" table="mini_categories" extends="xPDOObject">
+		<field key="minidoc_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+		<field key="category_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+		
+		<index alias="minidoc" name="minidoc" primary="true" unique="true" type="BTREE">
+            <column key="minidoc_id" length="" collation="A" null="false"/>
+            <column key="category_id" length="" collation="A" null="false"/>
+        </index>
+ 
+        <aggregate alias="Document" class="miniDocument" local="minidoc_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Category" class="modResource" local="category_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+	
+	<object class="miniTags" table="mini_tags" extends="xPDOObject">
+		<field key="minidoctag_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+		<field key="tags_id" dbtype="int" precision="11" attributes="unsigned" phptype="integer" null="false" default="0" index="pk" />
+		
+		<index alias="minidoctag" name="minidoctag" primary="true" unique="true" type="BTREE">
+            <column key="minidoctag_id" length="" collation="A" null="false"/>
+            <column key="tags_id" length="" collation="A" null="false"/>
+        </index>
+ 
+        <aggregate alias="DocumentTag" class="miniDocument" local="minidoctag_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Tags" class="modResource" local="tags_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+</model>

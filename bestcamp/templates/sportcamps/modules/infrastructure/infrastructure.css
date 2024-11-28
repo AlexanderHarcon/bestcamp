@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/**
+ * Хлебные крошки
+ */
+/*%pd_lr_block {
+    $pd_lr_block: '0.6rem + 1.6vw' !default;
+
+    @include pd_lr($pd_lr_block, 0, true);
+}
+%pd_block {
+    $pd_tb_block: '1.6rem + 2vw' !default;
+
+    @extend %pd_lr_block;
+    @include pd_tb($pd_tb_block, 0, true);
+}*/
+.infrastructure .wrapper.pd_block {
+  padding-top: 0;
+}
+.infrastructure__swimpool_headlines-p {
+  color: #A1ADB2;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.infrastructure__swimpool_headlines-h {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+.inf-table {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.inf-table__head {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 27px;
+  padding-bottom: 24px;
+  overflow-y: auto;
+  background: linear-gradient(to right, #999999 50%, #999999 50%);
+  background-size: 100% 1px;
+  background-position: center;
+  background-repeat: no-repeat;
+  column-gap: 8px;
+}
+@media (min-width: 481px) {
+  .inf-table__head {
+    column-gap: 0;
+  }
+}
+.inf-table__head-col {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: calc(10px + 3 * (100vw - 320px) / 1600);
+  justify-content: space-between;
+  height: 64px;
+}
+.inf-table__head-img {
+  margin-top: 10px;
+  position: relative;
+  bottom: -10px;
+  width: 64px;
+  height: 30px;
+}
+.inf-table__table {
+  justify-content: space-between;
+  border-collapse: collapse;
+  border-bottom: 1px solid #999999;
+  width: 100%;
+  text-align: center;
+}
+.inf-table__table-tr {
+  border-bottom: 1px solid #999999;
+}
+.inf-table__table-td {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: calc(10px + 3 * (100vw - 320px) / 1600);
+  padding-top: 20px;
+  padding-left: calc(16px + 84 * (24vw - 320px) / 1600);
+  padding-right: 24px;
+  padding-bottom: 17px;
+}
+.inf-table__table-td--p {
+  text-align: center;
+}
+.inf-table__table-td:last-child {
+  text-align: right;
+}
+.inf-table__table-td:first-child {
+  text-align: left;
+}
+.inf-table__list {
+  border-top: 1px solid #999999;
+  width: 100%;
+  padding-top: 16px;
+  padding-left: calc(24px + 76 * (24vw - 320px) / 1600);
+  padding-bottom: 24px;
+  padding-right: 26px;
+}
+.inf-table__list-check {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  column-gap: 45px;
+}
+@media (min-width: 610px) {
+  .inf-table__list-check {
+    column-gap: 109px;
+  }
+}
+@media (min-width: 677px) {
+  .inf-table__list-check {
+    column-gap: 4%;
+  }
+}
+@media (min-width: 840px) {
+  .inf-table__list-check {
+    column-gap: 61px;
+  }
+}
+@media (min-width: 1012px) {
+  .inf-table__list-check {
+    column-gap: 23px;
+  }
+}
+@media (min-width: 1200px) {
+  .inf-table__list-check {
+    column-gap: 41px;
+  }
+}
+@media (min-width: 1509px) {
+  .inf-table__list-check {
+    column-gap: 39px;
+  }
+}
+@media (min-width: 1600px) {
+  .inf-table__list-check {
+    column-gap: 48px;
+  }
+}
+.inf-table__list-check--td {
+  vertical-align: top;
+}
+.inf-table__list-check-p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 14px;
+  max-width: 180px;
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .inf-table__list-check-p {
+    max-width: 202px;
+  }
+}
+.inf-table__list-check-p:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../../../../images/check.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.inf-table__list-check-p--deny {
+  color: #ccc;
+}
+.inf-table__list-check-p--deny:before {
+  background-image: url(../../../../images/dcheck.svg);
+}
+
+/*# sourceMappingURL=infrastructure.css.map */
