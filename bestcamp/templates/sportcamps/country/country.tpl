@@ -26,13 +26,13 @@
         $theme_modules ~ 'priceincluded/priceincluded.css,' ~
         $theme_modules ~ 'visitcard/visitcard.css,' ~
         $theme_modules ~ 'goodtoknow/goodtoknow.css,' ~
-        $theme_modules ~ 'excursions/excursions.css,' ~
-        $theme_modules ~ 'reviews/reviews.css,' ~
-        $theme_modules ~ 'preview/preview.css,' ~
         $template ~ 'country.css',
     'jsSources'     =>
         $theme_modules ~ 'formrequest/formrequest.js,' ~
         $theme_modules ~ 'hoteloverview/hoteloverview.js,' ~
+        $theme_modules ~ 'excursions/excursions.js,' ~
+        $theme_modules ~ 'reviews/reviews.js,' ~
+        $theme_modules ~ 'preview/preview.js,' ~
         $template ~ 'country.js'
 ]}
 

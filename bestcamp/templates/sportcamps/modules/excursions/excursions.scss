@@ -5,6 +5,8 @@
 //------------------------------
 @import "../../base/_var";
 @import "../../base/_ext";
+//------------------------------
+@include f-carouselStyle;
 
 $cl_green: #95C03D;
 $cl_black: #637075;
@@ -21,132 +23,122 @@ $cl_black: #637075;
       text-align: center;
       margin-bottom: 16px;
     }
-
   }
 
-  &__complex {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
+  &__sector {
+    --f-carousel-spacing: 12px;
+    --f-carousel-slide-width: 100% ;
 
-    @include mq-w(780px) {
-      gap: 24px;
+    @include mq-w(430px) {
+      --f-carousel-spacing: 16px;
+      --f-carousel-slide-width: calc((100% - 32px) / 2);
     }
 
-    &_sector {
-      box-shadow: 0 27.69230842590332px 88.61538696289062px 0 rgba(0, 0, 0, 8%);
+    @include mq-w(670px) {
+      --f-carousel-spacing: 24px;
+      --f-carousel-slide-width: calc((100% - (24px * 2)) / 3);
+    }
+    @include mq-w(1024px) {
+      --f-carousel-spacing: 24px;
+      --f-carousel-slide-width: calc((100% - (24px * 3)) / 4);    }
+
+    &_container {
       border-radius: 16px;
-      max-width: 183px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 8%);
 
-
-
-      &:nth-child(3), &:nth-child(4) {
-        display: none;
+      &-img {
+        width: 100%;
       }
 
-      @include mq-w(614px) {
-        max-width: calc(100% / 3 - 16px);
-        &:nth-child(3) {
-          display: block;
+      &_info {
+        text-align: center;
+        padding: {
+          top: 8px;
+          right: 8px;
+          left: 8px;
+          bottom: 16px;
         }
-      }
-      @include mq-w(1320px) {
-        max-width: calc(25% - 12px);
-        flex: 1 1 100%;
-        &:nth-child(4) {
-          display: block;
-        }
-      }
-
-      &_container {
-        &-img {
-          width: 100%;
-        }
-
-        &_info {
-          text-align: center;
+        @include mq-w(850px) {
           padding: {
             top: 8px;
-            right: 8px;
-            left: 8px;
-            bottom: 16px;
+            right: 16px;
+            left: 16px;
+            bottom: 32px;
           }
-          @include mq-w(850px) {
-            padding: {
-              top: 8px;
-              right: 16px;
-              left: 16px;
-              bottom: 32px;
-            }
+        }
+
+        &-h3 {
+          font: {
+            family: Raleway;
+            weight: 600;
+            size: 10px;
+          }
+          line-height: 27px;
+
+          @include mq-w(401px) {
+            font-size: 14px;
+          }
+          @include mq-w(780px) {
+            font-size: 18px;
+          }
+        }
+
+        &-price,
+        &-span {
+          font: {
+            family: Inter;
+            weight: 700;
+            size: 14px;
+          }
+          color: $cl_green;
+          line-height: 19.36px;
+          display: flex;
+          justify-content: center;
+          gap: 6px;
+          padding: 5px 0;
+
+          @include mq-w(401px) {
+            font-size: 16px;
+            padding: 8px 0;
+          }
+        }
+
+        &-span {
+          color: $cl_black;
+        }
+
+        &-duration {
+          display: flex;
+          justify-content: center;
+
+          &-svg {
+            width: 18px;
+            height: 18px;
+            padding-left: 2px;
           }
 
-          &-h3 {
-            font: {
-              family: Raleway;
-              weight: 600;
-              size: 10px;
-            }
-            line-height: 27px;
-
-            @include mq-w(401px) {
-              font-size: 14px;
-            }
-            @include mq-w(780px) {
-              font-size: 18px;
-            }
-          }
-
-          &-price,
-          &-span {
+          &-p {
             font: {
               family: Inter;
               weight: 700;
               size: 14px;
             }
-            color: $cl_green;
-            line-height: 19.36px;
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-            padding: 5px 0;
-
+            color: $cl_black;
+            line-height: 18px;
             @include mq-w(401px) {
               font-size: 16px;
-              padding: 8px 0;
-            }
-          }
-
-          &-span {
-            color: $cl_black;
-
-
-          }
-
-          &-duration {
-            display: flex;
-            justify-content: center;
-
-            &-svg {
-              width: 18px;
-              height: 18px;
-              padding-left: 2px;
-            }
-
-            &-p {
-              font: {
-                family: Inter;
-                weight: 700;
-                size: 14px;
-              }
-              color: $cl_black;
-              line-height: 18px;
-              @include mq-w(401px) {
-                font-size: 16px;
-              }
             }
           }
         }
       }
     }
   }
+  .f-carousel {
+    &__track {
+      padding: 0 3px;
+    }
+  }
 }
+
+
+

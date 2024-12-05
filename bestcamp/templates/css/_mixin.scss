@@ -1,322 +1,391 @@
+//кастомные стили карусели
+@mixin f-carouselStyle() {
+  .f-carousel {
+
+    &__slide {
+      margin-bottom: 46px;
+    }
+
+    &__dots {
+      gap: 8px;
+      --f-carousel-dots-height: 0;
+
+      li {
+        button {
+          width: 7px;
+          height: 4px;
+
+          @include mq-w(400px) {
+            width: 29px;
+          }
+        }
+      }
+    }
+
+    &__dot {
+      width: 7px;
+      border-radius: 4px;
+      height: 4px;
+
+      @include mq-w(400px) {
+        width: 29px;
+      }
+    }
+
+    .f-button {
+      background-color: #A9B4B9;
+      border-radius: 8px;
+      width: 45px;
+      height: 45px;
+      --f-button-svg-width: 37.4px;
+      --f-button-svg-height: 52px;
+      --f-button-color: #FFF;
+      --f-button-hover-bg: #A9B4B9;
+      @include mq-w(430px) {
+        width: 60px;
+        height: 60px;
+      }
+      @include mq-w(1270px) {
+        width: 65px;
+        height: 65px;
+      }
+
+      svg {
+        stroke-linecap: butt;
+      }
+    }
+  }
+  .is-horizontal .f-carousel__nav .f-button.is-prev {
+    @include mq-w(1224px) {
+      left: -7%;
+    }
+  }
+  .is-horizontal .f-carousel__nav .f-button.is-prev,
+  .is-horizontal .f-carousel__nav .f-button.is-next {
+    top: 100%;
+
+    @include mq-w(1224px) {
+      top: 50%;
+      right: -7%;
+    }
+  }
+
+}
+
 // медиазапросы
 @mixin mq-w($mq_point, $v: min) {
-    @media (#{$v}-width: $mq_point) { @content; }
+  @media (#{$v}-width: $mq_point) {
+    @content;
+  }
 }
 
 // Проверка на наведение
 @mixin hover {
-    @media (hover: hover) { @content; }
+  @media (hover: hover) {
+    @content;
+  }
 }
 
 @mixin calc($prop, $expre...) {
-    #{$prop}: -webkit-calc(#{$expre});
-    #{$prop}: -moz-calc(#{$expre});
-    #{$prop}: calc(#{$expre});
+  #{$prop}: -webkit-calc(#{$expre});
+  #{$prop}: -moz-calc(#{$expre});
+  #{$prop}: calc(#{$expre});
 }
 
 // margin r, mardin l
 @mixin mr_auto($pl: auto, $pr: 0, $calc: 0) {
 
-    @if $pr == 0 and $calc == 0
-    {
-        margin-left: $pl;
-        margin-right: $pl;
-    }
-    @else if $pr == 0 and $calc == true
-    {
-        @include calc(margin-left, $pl);
-        @include calc(margin-right, $pl);
-    }
-    @else if $pr != 0 and $calc == true
-    {
-        @include calc(margin-left, $pl);
-        @include calc(margin-right, $pr);
-    }
-    @else
-    {
-        margin-left: $pl;
-        margin-right: $pr;
-    }
+  @if $pr == 0 and $calc == 0 {
+    margin-left: $pl;
+    margin-right: $pl;
+  } @else if $pr == 0 and $calc == true {
+    @include calc(margin-left, $pl);
+    @include calc(margin-right, $pl);
+  } @else if $pr != 0 and $calc == true {
+    @include calc(margin-left, $pl);
+    @include calc(margin-right, $pr);
+  } @else {
+    margin-left: $pl;
+    margin-right: $pr;
+  }
 }
 
 // padding r, padding l
 @mixin pd_lr($pl: 1rem, $pr: 0, $calc: 0) {
 
-    @if $pr == 0 and $calc == 0
-    {
-        padding-left: $pl;
-        padding-right: $pl;
-    }
-    @else if $pr == 0 and $calc == true
-    {
-        @include calc(padding-left, $pl);
-        @include calc(padding-right, $pl);
-    }
-    @else if $pr != 0 and $calc == true
-    {
-        @include calc(padding-left, $pl);
-        @include calc(padding-right, $pr);
-    }
-    @else
-    {
-        padding-left: $pl;
-        padding-right: $pr;
-    }
+  @if $pr == 0 and $calc == 0 {
+    padding-left: $pl;
+    padding-right: $pl;
+  } @else if $pr == 0 and $calc == true {
+    @include calc(padding-left, $pl);
+    @include calc(padding-right, $pl);
+  } @else if $pr != 0 and $calc == true {
+    @include calc(padding-left, $pl);
+    @include calc(padding-right, $pr);
+  } @else {
+    padding-left: $pl;
+    padding-right: $pr;
+  }
 }
 
 // padding top, padding bottom
 @mixin pd_tb($vt: 1rem, $vb: 0, $calc: 0) {
 
-    @if $vb == 0 and $calc == 0
-    {
-        padding-top: $vt;
-        padding-bottom: $vt;
-    }
-    @else if $vb == 0 and $calc == true
-    {
-        @include calc(padding-top, $vt);
-        @include calc(padding-bottom, $vt);
-    }
-    @else if $vb != 0 and $calc == true
-    {
-        @include calc(padding-top, $vt);
-        @include calc(padding-bottom, $vb);
-    }
-    @else
-    {
-        padding-top: $vt;
-        padding-bottom: $vb;
-    }
+  @if $vb == 0 and $calc == 0 {
+    padding-top: $vt;
+    padding-bottom: $vt;
+  } @else if $vb == 0 and $calc == true {
+    @include calc(padding-top, $vt);
+    @include calc(padding-bottom, $vt);
+  } @else if $vb != 0 and $calc == true {
+    @include calc(padding-top, $vt);
+    @include calc(padding-bottom, $vb);
+  } @else {
+    padding-top: $vt;
+    padding-bottom: $vb;
+  }
 }
 
 // Длина и высота
 @mixin width-height($w, $h: 0, $calc: 0) {
 
-    @if $h == 0 and $calc == 0
-    {
-        width: $w;
-        height: $w;
-    }
-    @else if $h == 0 and $calc == true
-    {
-        @include calc(width, $w);
-        @include calc(height, $w);
-    }
-    @else if $h != 0 and $calc == true
-    {
-        @include calc(width, $w);
-        @include calc(height, $h);
-    }
-    @else
-    {
-        width: $w;
-        height: $h;
-    }
+  @if $h == 0 and $calc == 0 {
+    width: $w;
+    height: $w;
+  } @else if $h == 0 and $calc == true {
+    @include calc(width, $w);
+    @include calc(height, $w);
+  } @else if $h != 0 and $calc == true {
+    @include calc(width, $w);
+    @include calc(height, $h);
+  } @else {
+    width: $w;
+    height: $h;
+  }
 }
 
 @mixin box-shadow($shadows...) {
-    -webkit-box-shadow: $shadows;
-    -moz-box-shadow: $shadows;
-    box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  -moz-box-shadow: $shadows;
+  box-shadow: $shadows;
 }
+
 @mixin linear-gradient($angle, $color-stops...) {
-    $_angle-with-vendor-prefix: "";
-    $_angle: "";
-    @if $angle == "to top" or $angle == "bottom" {
-        $_angle-with-vendor-prefix: bottom;
-        $_angle: to top;
-    } @else if $angle == "to right" or $angle == "left" {
-        $_angle-with-vendor-prefix: left;
-        $_angle: to right;
-    } @else if $angle == "to bottom" or $angle == "top" {
-        $_angle-with-vendor-prefix: top;
-        $_angle: to bottom;
-    } @else if $angle == "to left" or $angle == "right" {
-        $_angle-with-vendor-prefix: right;
-        $_angle: to left;
-    } @else if $angle == "to top right" or $angle == "bottom left" {
-        $_angle-with-vendor-prefix: bottom left;
-        $_angle: to top right;
-    } @else if $angle == "to bottom right" or $angle == "top left" {
-        $_angle-with-vendor-prefix: top left;
-        $_angle: to bottom right;
-    } @else if $angle == "to bottom left" or $angle == "top right" {
-        $_angle-with-vendor-prefix: top right;
-        $_angle: to bottom left;
-    } @else if $angle == "to top left" or $angle == "bottom right" {
-        $_angle-with-vendor-prefix: bottom right;
-        $_angle: to top left;
-    } @else {
-        $_angle-with-vendor-prefix: $angle % 360;
-        $_angle: (90 - $angle) % 360;
-    }
-    background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
-    background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
-    background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
-    background: linear-gradient($_angle, $color-stops);
+  $_angle-with-vendor-prefix: "";
+  $_angle: "";
+  @if $angle == "to top" or $angle == "bottom" {
+    $_angle-with-vendor-prefix: bottom;
+    $_angle: to top;
+  } @else if $angle == "to right" or $angle == "left" {
+    $_angle-with-vendor-prefix: left;
+    $_angle: to right;
+  } @else if $angle == "to bottom" or $angle == "top" {
+    $_angle-with-vendor-prefix: top;
+    $_angle: to bottom;
+  } @else if $angle == "to left" or $angle == "right" {
+    $_angle-with-vendor-prefix: right;
+    $_angle: to left;
+  } @else if $angle == "to top right" or $angle == "bottom left" {
+    $_angle-with-vendor-prefix: bottom left;
+    $_angle: to top right;
+  } @else if $angle == "to bottom right" or $angle == "top left" {
+    $_angle-with-vendor-prefix: top left;
+    $_angle: to bottom right;
+  } @else if $angle == "to bottom left" or $angle == "top right" {
+    $_angle-with-vendor-prefix: top right;
+    $_angle: to bottom left;
+  } @else if $angle == "to top left" or $angle == "bottom right" {
+    $_angle-with-vendor-prefix: bottom right;
+    $_angle: to top left;
+  } @else {
+    $_angle-with-vendor-prefix: $angle % 360;
+    $_angle: (90 - $angle) % 360;
+  }
+  background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+  background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+  background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+  background: linear-gradient($_angle, $color-stops);
 }
+
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.7)) {
-    text-shadow: $x $y $blur $color;
+  text-shadow: $x $y $blur $color;
 }
+
 //---------------------------------------background
 @mixin background-size($value: cover) {
-    -webkit-background-size: $value;
-    -moz-background-size: $value;
-    -o-background-size: $value;
-    background-size: $value;
-}//
+  -webkit-background-size: $value;
+  -moz-background-size: $value;
+  -o-background-size: $value;
+  background-size: $value;
+}
+
+//
 //----------------------------------------columns
-@mixin columns($i: 2, $value: 24rem){
-    -moz-columns: $value $i;
-    -webkit-columns: $value $i;
-    -o-columns: $value $i;
-    columns: $value $i;
+@mixin columns($i: 2, $value: 24rem) {
+  -moz-columns: $value $i;
+  -webkit-columns: $value $i;
+  -o-columns: $value $i;
+  columns: $value $i;
 }
-@mixin column-gap($value: 1.6rem){
-    -moz-column-gap: $value;
-    -webkit-column-gap: $value;
-    column-gap: $value;
+
+@mixin column-gap($value: 1.6rem) {
+  -moz-column-gap: $value;
+  -webkit-column-gap: $value;
+  column-gap: $value;
 }
+
 //-------------------------------------------flexbox
 @mixin flexbox() {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
+
 @mixin flexbox-inline() {
-    display: -webkit-inline-box;
-    display: -moz-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
+
 @mixin justify-content($value: center) {
-    @if $value == flex-start {
-        -webkit-box-pack: start;
-        -moz-box-pack: start;
-        -ms-flex-pack: start;
-    } @else if $value == flex-end {
-        -webkit-box-pack: end;
-        -moz-box-pack: end;
-        -ms-flex-pack: end;
-    } @else if $value == space-between {
-        -webkit-box-pack: justify;
-        -moz-box-pack: justify;
-        -ms-flex-pack: justify;
-    } @else if $value == space-around {
-        -ms-flex-pack: distribute;
-    } @else {
-        -webkit-box-pack: $value;
-        -moz-box-pack: $value;
-        -ms-flex-pack: $value;
-    }
-    -webkit-justify-content: $value;
-    justify-content: $value;
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
 }
+
 @mixin align-items($value: center) {
-    @if $value == flex-start {
-        -webkit-box-align: start;
-        -moz-box-align: start;
-        -ms-flex-align: start;
-    } @else if $value == flex-end {
-        -webkit-box-align: end;
-        -moz-box-align: end;
-        -ms-flex-align: end;
-    } @else {
-        -webkit-box-align: $value;
-        -moz-box-align: $value;
-        -ms-flex-align: $value;
-    }
-    -webkit-align-items: $value;
-    align-items: $value;
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  align-items: $value;
 }
+
 @mixin flex-direction($value: column) {
-    @if $value == row-reverse {
-        -webkit-box-direction: reverse;
-        -webkit-box-orient: horizontal;
-        -moz-box-direction: reverse;
-        -moz-box-orient: horizontal;
-    } @else if $value == column {
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-        -moz-box-direction: normal;
-        -moz-box-orient: vertical;
-    } @else if $value == column-reverse {
-        -webkit-box-direction: reverse;
-        -webkit-box-orient: vertical;
-        -moz-box-direction: reverse;
-        -moz-box-orient: vertical;
-    } @else {
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -moz-box-direction: normal;
-        -moz-box-orient: horizontal;
-    }
-    -webkit-flex-direction: $value;
-    -ms-flex-direction: $value;
-    flex-direction: $value;
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
 }
+
 @mixin flex-wrap($value: wrap) {
-    // No Webkit/FF Box fallback.
-    -webkit-flex-wrap: $value;
-    @if $value == nowrap {
-        -ms-flex-wrap: none;
-    } @else {
-        -ms-flex-wrap: $value;
-    }
-    flex-wrap: $value;
+  // No Webkit/FF Box fallback.
+  -webkit-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
 }
+
 @mixin flex-basis($value: auto) {
-    -webkit-flex-basis: $value;
-    -ms-flex-preferred-size: $value;
-    flex-basis: $value;
+  -webkit-flex-basis: $value;
+  -ms-flex-preferred-size: $value;
+  flex-basis: $value;
 }
+
 @mixin order($int: 0) {
-    -webkit-box-ordinal-group: $int + 1;
-    -moz-box-ordinal-group: $int + 1;
-    -webkit-order: $int;
-    -ms-flex-order: $int;
-    order: $int;
+  -webkit-box-ordinal-group: $int + 1;
+  -moz-box-ordinal-group: $int + 1;
+  -webkit-order: $int;
+  -ms-flex-order: $int;
+  order: $int;
 }
+
 @mixin flex-grow($int: 1) {
-    -webkit-box-flex: $int;
-    -moz-box-flex: $int;
-    -webkit-flex-grow: $int;
-    -ms-flex-positive: $int;
-    flex-grow: $int;
+  -webkit-box-flex: $int;
+  -moz-box-flex: $int;
+  -webkit-flex-grow: $int;
+  -ms-flex-positive: $int;
+  flex-grow: $int;
 }
+
 @mixin flex-shrink($int: 0) {
-    -webkit-flex-shrink: $int;
-    -moz-flex-shrink: $int;
-    -ms-flex-negative: $int;
-    flex-shrink: $int;
+  -webkit-flex-shrink: $int;
+  -moz-flex-shrink: $int;
+  -ms-flex-negative: $int;
+  flex-shrink: $int;
 }
+
 @mixin align-self($value: auto) {
-    // No Webkit Box Fallback.
-    -webkit-align-self: $value;
-    @if $value == flex-start {
-        -ms-flex-item-align: start;
-    } @else if $value == flex-end {
-        -ms-flex-item-align: end;
-    } @else {
-        -ms-flex-item-align: $value;
-    }
-    align-self: $value;
+  // No Webkit Box Fallback.
+  -webkit-align-self: $value;
+  @if $value == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
+  }
+  align-self: $value;
 }
+
 @mixin align-content($value: stretch) {
-    // No Webkit Box Fallback.
-    -webkit-align-content: $value;
-    @if $value == flex-start {
-        -ms-flex-line-pack: start;
-    } @else if $value == flex-end {
-        -ms-flex-line-pack: end;
-    } @else {
-        -ms-flex-line-pack: $value;
-    }
-    align-content: $value;
+  // No Webkit Box Fallback.
+  -webkit-align-content: $value;
+  @if $value == flex-start {
+    -ms-flex-line-pack: start;
+  } @else if $value == flex-end {
+    -ms-flex-line-pack: end;
+  } @else {
+    -ms-flex-line-pack: $value;
+  }
+  align-content: $value;
 }
+
 //flex-wrap: wrap; Многострочная организация блоков
 //flex-shrink: 0;
 //Justify Content: center, space-between, space-around
@@ -327,125 +396,129 @@
 //order – порядок следования отдельно взятого flex-блока
 
 //---------------------------------------animation
-@mixin transition($value...){
-    -webkit-transition: $value;
-    -moz-transition: $value;
-    -ms-transition: $value;
-    -o-transition: $value;
-    animation: $value;
+@mixin transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  animation: $value;
 }
 
-@mixin animation($value...){
-    -webkit-animation: $value;
-    -moz-animation: $value;
-    -ms-animation: $value;
-    -o-animation: $value;
-    animation: $value;
+@mixin animation($value...) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
 }
+
 @mixin animation-fill-mode($mode) {
-    webkit-animation-fill-mode: $mode;
-    animation-fill-mode: $mode;
+  webkit-animation-fill-mode: $mode;
+  animation-fill-mode: $mode;
 }
-@mixin keyframes($name){
-    @-webkit-keyframes #{$name} {
-        @content;
-    }
-    @-moz-keyframes #{$name} {
-        @content;
-    }
-    @-ms-keyframes #{$name} {
-        @content;
-    }
-    @-o-keyframes #{$name} {
-        @content;
-    }
-    @keyframes #{$name} {
-        @content;
-    }
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
 }
-@mixin transform($value){
-    -webkit-transform: $value;
-    -moz-transform: $value;
-    -ms-transform: $value;
-    -o-transform: $value;
-    transform: $value;
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
 }
-@mixin transform-origin($value){
-    -webkit-transform-origin: $value;
-    -moz-transform-origin: $value;
-    -ms-transform-origin: $value;
-    -o-transform-origin: $value;
-    transform-origin: $value;
+
+@mixin transform-origin($value) {
+  -webkit-transform-origin: $value;
+  -moz-transform-origin: $value;
+  -ms-transform-origin: $value;
+  -o-transform-origin: $value;
+  transform-origin: $value;
 }
 
 //---------------------------------------спинеры
 @mixin spiner_ball-scale(
 
-    $cl: darken(#ebf3f5, 10%),
-    $size: 3em
-){
-    background-color: $cl;
-    border-radius: 100%;
-    display: inline-block;
-    height: $size;
-    width: $size;
-    @include animation-fill-mode(both);
-    @include animation(ball-scale 1s 0s ease-in-out infinite);
-    @at-root {
-        @include keyframes(ball-scale) {
-            0% {
-                @include transform(scale(0.0));
-            }
-            100% {
-                @include transform(scale(1.0));
-                opacity: 0;
-            }
-        }
+  $cl: darken(#ebf3f5, 10%),
+  $size: 3em
+) {
+  background-color: $cl;
+  border-radius: 100%;
+  display: inline-block;
+  height: $size;
+  width: $size;
+  @include animation-fill-mode(both);
+  @include animation(ball-scale 1s 0s ease-in-out infinite);
+  @at-root {
+    @include keyframes(ball-scale) {
+      0% {
+        @include transform(scale(0.0));
+      }
+      100% {
+        @include transform(scale(1.0));
+        opacity: 0;
+      }
     }
+  }
 }
 
 @mixin keyframes_loader-rotate {
-    @include keyframes(loader-rotate) {
-        0% {
-            @include transform(
-                rotate(0deg)
-            );
-        }
-
-        100% {
-            @include transform(
-                rotate(360deg)
-            );
-        }
+  @include keyframes(loader-rotate) {
+    0% {
+      @include transform(
+                      rotate(0deg)
+      );
     }
+
+    100% {
+      @include transform(
+                      rotate(360deg)
+      );
+    }
+  }
 }
 
 @mixin loader02(
-    $size: 48px,
-    $color: lighten(black, 20%),
-    $border-size: 6px,
-    $duration: 1s,
-    $align: null
+  $size: 48px,
+  $color: lighten(black, 20%),
+  $border-size: 6px,
+  $duration: 1s,
+  $align: null
 ) {
-    width: $size;
-    height: $size;
-    border: $border-size solid rgba($color, 0.25);
-    border-top-color: $color;
-    border-radius: 50%;
-    position: relative;
+  width: $size;
+  height: $size;
+  border: $border-size solid rgba($color, 0.25);
+  border-top-color: $color;
+  border-radius: 50%;
+  position: relative;
 
-    @include animation(loader-rotate $duration linear infinite);
+  @include animation(loader-rotate $duration linear infinite);
 
-    @if ($align == center) {
-        margin: 0 auto;
-    }
-    @if ($align == middle) {
-        top: 50%;
-        margin: -$size / 2 auto 0;
-    }
-    @at-root {
-        @include keyframes_loader-rotate;
-    }
+  @if ($align == center) {
+    margin: 0 auto;
+  }
+  @if ($align == middle) {
+    top: 50%;
+    margin: -$size / 2 auto 0;
+  }
+  @at-root {
+    @include keyframes_loader-rotate;
+  }
 }
 
 //---------------------------------------Гриды
@@ -453,41 +526,41 @@
 ///*
 //* Треугольник
 //*/
-@mixin arrow($direction, $color, $size){
+@mixin arrow($direction, $color, $size) {
 
-    //display: block;
-    height: 0;
-    width: 0;
+  //display: block;
+  height: 0;
+  width: 0;
 
-    @if $direction == 'top' {
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-        border-bottom: $size solid $color;
-    } @else if $direction == 'right' {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-left: $size solid $color;
-    } @else if $direction == 'bottom' {
-        border-top: $size solid $color;
-        border-right: $size solid transparent;
-        border-left: $size solid transparent;
-    } @else if $direction == 'left' {
-        border-top: $size solid transparent;
-        border-right: $size solid $color;
-        border-bottom: $size solid transparent;
-    } @else if $direction == 'top-left' {
-        border-top: $size solid $color;
-        border-right: $size solid transparent;
-    } @else if $direction == 'top-right' {
-        border-top: $size solid $color;
-        border-left: $size solid transparent;
-    } @else if $direction == 'bottom-left' {
-        border-bottom: $size solid $color;
-        border-right: $size solid transparent;
-    } @else if $direction == 'bottom-right' {
-        border-bottom: $size solid $color;
-        border-left: $size solid transparent;
-    }
+  @if $direction == 'top' {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == 'right' {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if $direction == 'bottom' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+  } @else if $direction == 'left' {
+    border-top: $size solid transparent;
+    border-right: $size solid $color;
+    border-bottom: $size solid transparent;
+  } @else if $direction == 'top-left' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $direction == 'top-right' {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+  } @else if $direction == 'bottom-left' {
+    border-bottom: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $direction == 'bottom-right' {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+  }
 }
 
 ///*
@@ -495,219 +568,207 @@
 //*/
 @mixin gamburger(
 
-    $w: 36px, // 1.8rem
-    $h: 20px, // 1.1rem
-    $h_item: 2px, // 0.15rem
-    $cl: black,
-    $class: 'close-js'
-){
-    position: relative;
-    display: block;
-    width: $w;
-    height: $h;
-    color: $cl;
+  $w: 36px, // 1.8rem
+  $h: 20px, // 1.1rem
+  $h_item: 2px, // 0.15rem
+  $cl: black,
+  $class: 'close-js'
+) {
+  position: relative;
+  display: block;
+  width: $w;
+  height: $h;
+  color: $cl;
 
-    padding: ($h - $h_item) / 2 0;
+  padding: ($h - $h_item) / 2 0;
+  background-color: currentColor;
+  background-clip: content-box;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $h_item;
     background-color: currentColor;
-    background-clip: content-box;
-    cursor: pointer;
+    @extend %transit;
+    //@include transition(
+    //top 0.3s ease 0s,
+    //transform 0.3s ease 0.3s
+    //);
+  }
+  &:before {
+    top: 1px;
+  }
+  &:after {
+    top: $h - $h_item - 1; // - 0.05
+  }
+  [type="checkbox"]:checked ~ &,
+    //*:hover > &,
+  .#{$class} & {
+    background-color: transparent;
+    top: -$h / 6;
 
     &:before,
-    &:after
-    {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: $h_item;
-        background-color: currentColor;
-        @extend %transit;
-        //@include transition(
-        //top 0.3s ease 0s,
-        //transform 0.3s ease 0.3s
-        //);
+    &:after {
+      top: $h / 2 + $h_item / 2;
     }
-    &:before
-    {
-        top: 1px;
-    }
-    &:after
-    {
-        top: $h - $h_item - 1; // - 0.05
-    }
-    [type="checkbox"]:checked ~ &,
-    //*:hover > &,
-    .#{$class} &
-    {
-        background-color: transparent;
-        top: -$h / 6;
 
-        &:before,
-        &:after
-        {
-            top: $h / 2 + $h_item / 2;
-        }
-        &:before
-        {
-            @include transform(
-                rotate(-45deg)
-                //scaleX(1.2)
-            );
-        }
-        &:after
-        {
-            @include transform(
-                rotate(45deg)
-                //scaleX(1.2)
-            );
-        }
+    &:before {
+      @include transform(
+                      rotate(-45deg) //scaleX(1.2)
+      );
     }
+
+    &:after {
+      @include transform(
+                      rotate(45deg) //scaleX(1.2)
+      );
+    }
+  }
 }
 
 ///*
 //* Иконка крестика закрытия
 //*/
 @mixin ico_close(
-$cl:    #333,
-$size:  32px,
-$h_item: 2px
-){
-    display: inline-block;
-    position: relative;
-    width: $size;
-    height: $size;
-    cursor: pointer;
+  $cl:    #333,
+  $size:  32px,
+  $h_item: 2px
+) {
+  display: inline-block;
+  position: relative;
+  width: $size;
+  height: $size;
+  cursor: pointer;
 
-    @content;
+  @content;
 
-    &:before,
-    &:after
-    {
-        content: '';
+  &:before,
+  &:after {
+    content: '';
 
-        position: absolute;
-        left: 0;
-        top: $size / 2 - $h_item / 2;
-        width: 100%;
-        height: $h_item;
-        background-color: $cl;
-    }
+    position: absolute;
+    left: 0;
+    top: $size / 2 - $h_item / 2;
+    width: 100%;
+    height: $h_item;
+    background-color: $cl;
+  }
 
-    &:before
-    {
-        @include transform(rotate(45deg));
-    }
+  &:before {
+    @include transform(rotate(45deg));
+  }
 
-    &:after
-    {
-        @include transform(rotate(-45deg));
-    }
+  &:after {
+    @include transform(rotate(-45deg));
+  }
 }
 
 //------------------------------------------------
 // единица сетки экрана
-@function precent-vw($n) { @return $n * 100vw; }
+@function precent-vw($n) {
+  @return $n * 100vw;
+}
 
 // Скрытие и показ элементов
 @mixin hidden() {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
+
 @mixin visible() {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 // Сокращение текста
 @mixin text-overflow() {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 $max: 1600 !default;
 $w_min: 320px !default;
 @mixin adaptiv_rem($mobSize, $pcSize, $peram: 'font-size') {
-    $addSize: ($pcSize - $mobSize) * 20;
-    $maxWidth: $max - 240;
-    $mobSize: $mobSize + rem;
-    @include calc($peram, $mobSize + ' + ' + $addSize + ' * ((100vw - ' + $w_min + ') / ' + $maxWidth + ')');
-}
-@mixin adaptiv_px($mobSize, $pcSize, $peram: 'font-size') {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $max - 240;
-    $mobSize: $mobSize + px;
-    @include calc($peram, $mobSize + ' + ' + $addSize + ' * ((100vw - ' + $w_min + ') / ' + $maxWidth + ')');
+  $addSize: ($pcSize - $mobSize) * 20;
+  $maxWidth: $max - 240;
+  $mobSize: $mobSize + rem;
+  @include calc($peram, $mobSize + ' + ' + $addSize + ' * ((100vw - ' + $w_min + ') / ' + $maxWidth + ')');
 }
 
-@mixin pd_lr_block($pd_lr_block: '0.6rem + 1.6vw'){
-    @include calc(padding-left, $pd_lr_block);
-    @include calc(padding-right, $pd_lr_block);
+@mixin adaptiv_px($mobSize, $pcSize, $peram: 'font-size') {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $max - 240;
+  $mobSize: $mobSize + px;
+  @include calc($peram, $mobSize + ' + ' + $addSize + ' * ((100vw - ' + $w_min + ') / ' + $maxWidth + ')');
 }
-@mixin pd_block($pd_tb_block: '1rem + 1.6vw'){
-    @include calc(padding-top, $pd_tb_block);
-    @include calc(padding-bottom, $pd_tb_block);
+
+@mixin pd_lr_block($pd_lr_block: '0.6rem + 1.6vw') {
+  @include calc(padding-left, $pd_lr_block);
+  @include calc(padding-right, $pd_lr_block);
+}
+
+@mixin pd_block($pd_tb_block: '1rem + 1.6vw') {
+  @include calc(padding-top, $pd_tb_block);
+  @include calc(padding-bottom, $pd_tb_block);
 }
 
 @mixin rhythm-margin($m: 1rem, $prop: bottom) {
-    & > *:not(:empty):not(:last-child) {
-        @if $m != 'auto' {
-            margin-#{$prop}: $m;
-        }
-        @content;
+  & > *:not(:empty):not(:last-child) {
+    @if $m != 'auto' {
+      margin-#{$prop}: $m;
     }
+    @content;
+  }
 }
 
 /**
  * Хлебные крошки
  */
 @mixin list-breadcrumb(
-    $cl: $cl-menu-font,
-    $cl_hver_link: $cl-menu-font,
-    $cl_hver_link-alias: $cl_font-slogan
-){
-    color: $cl-menu-font;
+  $cl: $cl-menu-font,
+  $cl_hver_link: $cl-menu-font,
+  $cl_hver_link-alias: $cl_font-slogan
+) {
+  color: $cl-menu-font;
 
-    > *
-    {
-        display: inline-block;
+  > * {
+    display: inline-block;
 
-        &:not(:first-child)
-        {
-            &:before
-            {
-                content: '/';
-                padding-right: 0.8rem;
-            }
-        }
+    &:not(:first-child) {
+      &:before {
+        content: '/';
+        padding-right: 0.8rem;
+      }
+    }
+  }
+
+  @include rhythm-margin(0.6rem, right);
+
+  &__link {
+    border-bottom: 1px solid transparent;
+    @extend %transit;
+
+    &:not(span) {
+      font-weight: 600;
     }
 
-    @include rhythm-margin(0.6rem, right);
-
-    &__link
-    {
-        border-bottom: 1px solid transparent;
-        @extend %transit;
-
-        &:not(span)
-        {
-            font-weight: 600;
-        }
-
-        &:not(span):hover
-        {
-            color: $cl_hver_link;
-            border-color: $cl_hver_link;
-        }
-
-        &--alias
-        {
-            color: $cl_hver_link-alias;
-        }
+    &:not(span):hover {
+      color: $cl_hver_link;
+      border-color: $cl_hver_link;
     }
+
+    &--alias {
+      color: $cl_hver_link-alias;
+    }
+  }
 }
 
 @function rem($size) {
-    $remSize: $size / 14;
-    @return $remSize * 1rem;
+  $remSize: $size / 14;
+  @return $remSize * 1rem;
 }

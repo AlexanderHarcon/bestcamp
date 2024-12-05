@@ -111,45 +111,42 @@ function removeClass(classname, callback)
  */
 function loaderBody(uri, callback, types)
 {
-    const old = document.querySelector('[href="'+ uri +'"], [src="'+ uri +'"]');
-    const type = types || 'script';
-
+    let old;
     if (uri)
     {
-        const el = document.createElement(type);
+        old = document.querySelector('[href="'+ uri +'"], [src="'+ uri +'"]');
+    }
 
-        if (type === 'link')
-        {
-            el.rel = "stylesheet";
-            el.href = uri;
-        }
-        else
-        {
-            el.src = uri;
-        }
+    if (!callback && old) return;
 
-        //console.log('loaderBody()', old);
+    if (callback && (!uri || old))
+    {
+        callback();
+        return;
+    }
 
-        if (!old)
-        {
-            document.body.appendChild(el);
-            if (!callback) return;
-            el.onload = () =>
-            {
-                callback();
-            }
-        }
-        else
-        {
-            if (!callback) return;
-            callback();
-        }
+    if (!uri) return;
+
+    const type = types || 'script';
+    const el = document.createElement(type);
+
+    if (type === 'link')
+    {
+        el.rel = "stylesheet";
+        el.href = uri;
     }
     else
     {
-        if (!callback) return;
-        callback();
+        el.src = uri;
     }
+
+    document.body.appendChild(el);
+
+    if (!callback) return;
+    el.onload = () =>
+    {
+        callback();
+    };
 }
 
 const sportcamps = {

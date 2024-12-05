@@ -15,7 +15,11 @@
 }*/
 .good-to-know {
   background-color: #F2F9FD;
-  display: flex;
+}
+@media (min-width: 500px) {
+  .good-to-know {
+    display: flex;
+  }
 }
 @media (min-width: 730px) {
   .good-to-know__bl {

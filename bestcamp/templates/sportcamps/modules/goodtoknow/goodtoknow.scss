@@ -10,7 +10,9 @@ $cl-blue: #5BBCE4;
 
 .good-to-know {
   background-color: #F2F9FD;
-  display: flex;
+  @include mq-w(500px) {
+    display: flex;
+  }
 
   &__bl {
     @include mq-w(730px) {

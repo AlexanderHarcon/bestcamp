@@ -74,6 +74,8 @@
   width: 2px;
   height: 80px;
   background-color: #5BBCE4;
+  display: block;
+  margin: 0 auto;
 }
 .visit-card__bl_text_question_h4 {
   padding-top: 24px;

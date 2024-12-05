@@ -13,6 +13,76 @@
     @extend %pd_lr_block;
     @include pd_tb($pd_tb_block, 0, true);
 }*/
+.f-carousel__slide {
+  margin-bottom: 46px;
+}
+.f-carousel__dots {
+  gap: 8px;
+  --f-carousel-dots-height: 0;
+}
+.f-carousel__dots li button {
+  width: 7px;
+  height: 4px;
+}
+@media (min-width: 400px) {
+  .f-carousel__dots li button {
+    width: 29px;
+  }
+}
+.f-carousel__dot {
+  width: 7px;
+  border-radius: 4px;
+  height: 4px;
+}
+@media (min-width: 400px) {
+  .f-carousel__dot {
+    width: 29px;
+  }
+}
+.f-carousel .f-button {
+  background-color: #A9B4B9;
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  --f-button-svg-width: 37.4px;
+  --f-button-svg-height: 52px;
+  --f-button-color: #FFF;
+  --f-button-hover-bg: #A9B4B9;
+}
+@media (min-width: 430px) {
+  .f-carousel .f-button {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 1270px) {
+  .f-carousel .f-button {
+    width: 65px;
+    height: 65px;
+  }
+}
+.f-carousel .f-button svg {
+  stroke-linecap: butt;
+}
+
+@media (min-width: 1224px) {
+  .is-horizontal .f-carousel__nav .f-button.is-prev {
+    left: -7%;
+  }
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-prev,
+.is-horizontal .f-carousel__nav .f-button.is-next {
+  top: 100%;
+}
+@media (min-width: 1224px) {
+  .is-horizontal .f-carousel__nav .f-button.is-prev,
+  .is-horizontal .f-carousel__nav .f-button.is-next {
+    top: 50%;
+    right: -7%;
+  }
+}
+
 .excursions__bl-h2 {
   font-family: Raleway;
   font-weight: 800;
@@ -21,45 +91,36 @@
   text-align: center;
   margin-bottom: 16px;
 }
-.excursions__complex {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
+.excursions__sector {
+  --f-carousel-spacing: 12px;
+  --f-carousel-slide-width: 100% ;
 }
-@media (min-width: 780px) {
-  .excursions__complex {
-    gap: 24px;
+@media (min-width: 430px) {
+  .excursions__sector {
+    --f-carousel-spacing: 16px;
+    --f-carousel-slide-width: calc((100% - 32px) / 2);
   }
 }
-.excursions__complex_sector {
-  box-shadow: 0 27.6923084259px 88.6153869629px 0 rgba(0, 0, 0, 0.08);
+@media (min-width: 670px) {
+  .excursions__sector {
+    --f-carousel-spacing: 24px;
+    --f-carousel-slide-width: calc((100% - (24px * 2)) / 3);
+  }
+}
+@media (min-width: 1024px) {
+  .excursions__sector {
+    --f-carousel-spacing: 24px;
+    --f-carousel-slide-width: calc((100% - (24px * 3)) / 4);
+  }
+}
+.excursions__sector_container {
   border-radius: 16px;
-  max-width: 183px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
 }
-.excursions__complex_sector:nth-child(3), .excursions__complex_sector:nth-child(4) {
-  display: none;
-}
-@media (min-width: 614px) {
-  .excursions__complex_sector {
-    max-width: calc(33.3333333333% - 16px);
-  }
-  .excursions__complex_sector:nth-child(3) {
-    display: block;
-  }
-}
-@media (min-width: 1320px) {
-  .excursions__complex_sector {
-    max-width: calc(25% - 12px);
-    flex: 1 1 100%;
-  }
-  .excursions__complex_sector:nth-child(4) {
-    display: block;
-  }
-}
-.excursions__complex_sector_container-img {
+.excursions__sector_container-img {
   width: 100%;
 }
-.excursions__complex_sector_container_info {
+.excursions__sector_container_info {
   text-align: center;
   padding-top: 8px;
   padding-right: 8px;
@@ -67,30 +128,30 @@
   padding-bottom: 16px;
 }
 @media (min-width: 850px) {
-  .excursions__complex_sector_container_info {
+  .excursions__sector_container_info {
     padding-top: 8px;
     padding-right: 16px;
     padding-left: 16px;
     padding-bottom: 32px;
   }
 }
-.excursions__complex_sector_container_info-h3 {
+.excursions__sector_container_info-h3 {
   font-family: Raleway;
   font-weight: 600;
   font-size: 10px;
   line-height: 27px;
 }
 @media (min-width: 401px) {
-  .excursions__complex_sector_container_info-h3 {
+  .excursions__sector_container_info-h3 {
     font-size: 14px;
   }
 }
 @media (min-width: 780px) {
-  .excursions__complex_sector_container_info-h3 {
+  .excursions__sector_container_info-h3 {
     font-size: 18px;
   }
 }
-.excursions__complex_sector_container_info-price, .excursions__complex_sector_container_info-span {
+.excursions__sector_container_info-price, .excursions__sector_container_info-span {
   font-family: Inter;
   font-weight: 700;
   font-size: 14px;
@@ -102,24 +163,24 @@
   padding: 5px 0;
 }
 @media (min-width: 401px) {
-  .excursions__complex_sector_container_info-price, .excursions__complex_sector_container_info-span {
+  .excursions__sector_container_info-price, .excursions__sector_container_info-span {
     font-size: 16px;
     padding: 8px 0;
   }
 }
-.excursions__complex_sector_container_info-span {
+.excursions__sector_container_info-span {
   color: #637075;
 }
-.excursions__complex_sector_container_info-duration {
+.excursions__sector_container_info-duration {
   display: flex;
   justify-content: center;
 }
-.excursions__complex_sector_container_info-duration-svg {
+.excursions__sector_container_info-duration-svg {
   width: 18px;
   height: 18px;
   padding-left: 2px;
 }
-.excursions__complex_sector_container_info-duration-p {
+.excursions__sector_container_info-duration-p {
   font-family: Inter;
   font-weight: 700;
   font-size: 14px;
@@ -127,9 +188,12 @@
   line-height: 18px;
 }
 @media (min-width: 401px) {
-  .excursions__complex_sector_container_info-duration-p {
+  .excursions__sector_container_info-duration-p {
     font-size: 16px;
   }
+}
+.excursions .f-carousel__track {
+  padding: 0 3px;
 }
 
 /*# sourceMappingURL=excursions.css.map */

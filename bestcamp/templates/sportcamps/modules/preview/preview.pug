@@ -15,133 +15,263 @@ mixin svgSprite()
 .preview
     .wrapper.pd_block
         +svgSprite
-        section.preview__sec
-            .preview__bl
-                .preview__bl_container
-                    img.preview__bl_container-img(src=pathImg + 'coralPool.png' alt='')
-                    .price-label.preview__bl_container
-                        .price-label__wrapper
-                            .price-label__wrapper_overlap
-                                p.price-label__wrapper_overlap-p
-                                    span.price-label__wrapper_overlap-p-text-wrapper 89
-                                        sup.price-label__wrapper_overlap-p-text-wrapper--supText $
-                                        span.price-label__wrapper_overlap-p-text-wrapper--subText per day
-                .preview__bl_content
-                    .preview__bl_content-main
-                        .preview__bl_content-main-icon
-                            img.preview__bl_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
-                            .preview__bl_content-main-rate.stars
-                                - for (let i = 0; i < 5; i++)
-                                    - const className = 'stars__item'
-                                    if i < 4
-                                        svg(class=className)
-                                            use(href='#starFill')
-                                    else
-                                        svg(class=className)
-                                            use(href='#star')
-                        h3.preview__bl_content-main-h3 Fussballtrainingslager Miracle Resort
-                        .preview__bl_content-main-loc
-                            p.preview__bl_content-main-loc-p
-                                svg.preview__bl_content-main-loc-icon
-                                    use(href='#pinAltFill')
-                                | Antaliya (Turkey)
-                            p.preview__bl_content-main-loc-p
-                                svg.preview__bl_content-main-loc-icon
-                                    use(href='#mdiAirplaneMarker')
-                                | 15 km
-                    .preview__bl_content-info
-                        ul.preview__bl_content-info-ul
-                            li.preview__bl_content-info-ul-li CrossFit Area & Fitness Center
-                            li.preview__bl_content-info-ul-li For Professional Teams
-                            li.preview__bl_content-info-ul-li All Ear around camps
-                            li.preview__bl_content-info-ul-li All Inclusive
-                            li.preview__bl_content-info-ul-li Spa Center & Hammam
-                            li.preview__bl_content-info-ul-li Near the Beach
-                    .preview__bl_content-btn
-                        button.btn.greenBtn Check out more
-            .preview__bl
-                .preview__bl_container
-                    img.preview__bl_container-img(src=pathImg + 'background.jpeg' alt='')
-                    .price-label.preview__bl_container
-                        .price-label__wrapper
-                            .price-label__wrapper_overlap
-                                p.price-label__wrapper_overlap-p
-                                    span.price-label__wrapper_overlap-p-text-wrapper 89
-                                        sup.price-label__wrapper_overlap-p-text-wrapper--supText $
-                                        span.price-label__wrapper_overlap-p-text-wrapper--subText per day
-                .preview__bl_content
-                    .preview__bl_content-main
-                        .preview__bl_content-main-icon
-                            img.preview__bl_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
-                            .preview__bl_content-main-rate.stars
-                                - for (let i = 0; i < 5; i++)
-                                    - const className = 'stars__item'
-                                    if i < 4
-                                        svg(class=className)
-                                            use(href='#starFill')
-                                    else
-                                        svg(class=className)
-                                            use(href='#star')
-                        h3.preview__bl_content-main-h3 Fussballtrainingslager Miracle Resort
-                        .preview__bl_content-main-loc
-                            p.preview__bl_content-main-loc-p
-                                svg.preview__bl_content-main-loc-icon
-                                    use(href='#pinAltFill')
-                                | Antaliya (Turkey)
-                            p.preview__bl_content-main-loc-p
-                                svg.preview__bl_content-main-loc-icon
-                                    use(href='#mdiAirplaneMarker')
-                                | 15 km
-                    .preview__bl_content-info
-                        ul.preview__bl_content-info-ul
-                            li.preview__bl_content-info-ul-li CrossFit Area & Fitness Center
-                            li.preview__bl_content-info-ul-li For Professional Teams
-                            li.preview__bl_content-info-ul-li All Ear around camps
-                            li.preview__bl_content-info-ul-li All Inclusive
-                            li.preview__bl_content-info-ul-li Spa Center & Hammam
-                            li.preview__bl_content-info-ul-li Near the Beach
-                    .preview__bl_content-btn
-                        button.btn.greenBtn Check out more
-            .preview__bl
-                .preview__bl_container
-                    img.preview__bl_container-img(src=pathImg + 'plug_img.jpg' alt='')
-                    .price-label.preview__bl_container
-                        .price-label__wrapper
-                            .price-label__wrapper_overlap
-                                p.price-label__wrapper_overlap-p
-                                    span.price-label__wrapper_overlap-p-text-wrapper 89
-                                        sup.price-label__wrapper_overlap-p-text-wrapper--supText $
-                                        span.price-label__wrapper_overlap-p-text-wrapper--subText per day
-                .preview__bl_content
-                    .preview__bl_content-main
-                        .preview__bl_content-main-icon
-                            img.preview__bl_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
-                            .preview__bl_content-main-rate.stars
-                                - for (let i = 0; i < 5; i++)
-                                    - const className = 'stars__item'
-                                    if i < 4
-                                        svg(class=className)
-                                            use(href='#starFill')
-                                    else
-                                        svg(class=className)
-                                            use(href='#star')
-                        h3.preview__bl_content-main-h3 Fussballtrainingslager Miracle Resort
-                        .preview__bl_content-main-loc
-                            p.preview__bl_content-main-loc-p
-                                svg.preview__bl_content-main-loc-icon
-                                    use(href='#pinAltFill')
-                                | Antaliya (Turkey)
-                            p.preview__bl_content-main-loc-p
-                                svg.preview__bl_content-main-loc-icon
-                                    use(href='#mdiAirplaneMarker')
-                                | 15 km
-                    .preview__bl_content-info
-                        ul.preview__bl_content-info-ul
-                            li.preview__bl_content-info-ul-li CrossFit Area & Fitness Center
-                            li.preview__bl_content-info-ul-li For Professional Teams
-                            li.preview__bl_content-info-ul-li All Ear around camps
-                            li.preview__bl_content-info-ul-li All Inclusive
-                            li.preview__bl_content-info-ul-li Spa Center & Hammam
-                            li.preview__bl_content-info-ul-li Near the Beach
-                    .preview__bl_content-btn
-                        button.btn.greenBtn Check out more
+        section.preview__bl
+            .preview__sector.f-carousel#previewCarousel
+                .preview__sector_container.f-carousel__slide
+                    .preview__sector_container_wrapper
+                        img.preview__sector_container_wrapper-img(src=pathImg + 'coralPool.png' alt='')
+                        .price-label.preview__sector_container_wrapper
+                            .price-label__wrapper
+                                .price-label__wrapper_overlap
+                                    p.price-label__wrapper_overlap-p
+                                        span.price-label__wrapper_overlap-p-text-wrapper 89
+                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
+                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
+                    .preview__sector_container_content
+                        .preview__sector_container_content-main
+                            .preview__sector_container_content-main-icon
+                                img.preview__sector_container_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
+                                .preview__sector_container_content-main-rate.stars
+                                    - for (let i = 0; i < 5; i++)
+                                        - const className = 'stars__item'
+                                        if i < 4
+                                            svg(class=className)
+                                                use(href='#starFill')
+                                        else
+                                            svg(class=className)
+                                                use(href='#star')
+                            h3.preview__sector_container_content-main-h3 Fussballtrainingslager Miracle Resort
+                            .preview__sector_container_content-main-loc
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#pinAltFill')
+                                    | Antaliya (Turkey)
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#mdiAirplaneMarker')
+                                    | 15 km
+                        .preview__sector_container_content-info
+                            ul.preview__sector_container_content-info-ul
+                                li.preview__sector_container_content-info-ul-li CrossFit Area & Fitness Center
+                                li.preview__sector_container_content-info-ul-li For Professional Teams
+                                li.preview__sector_container_content-info-ul-li All Ear around camps
+                                li.preview__sector_container_content-info-ul-li All Inclusive
+                                li.preview__sector_container_content-info-ul-li Spa Center & Hammam
+                                li.preview__sector_container_content-info-ul-li Near the Beach
+                        .preview__sector_container_content-btn
+                            button.btn.greenBtn Check out more
+                .preview__sector_container.f-carousel__slide
+                    .preview__sector_container_wrapper
+                        img.preview__sector_container_wrapper-img(src=pathImg + 'background.jpeg' alt='')
+                        .price-label.preview__sector_container_wrapper
+                            .price-label__wrapper
+                                .price-label__wrapper_overlap
+                                    p.price-label__wrapper_overlap-p
+                                        span.price-label__wrapper_overlap-p-text-wrapper 89
+                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
+                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
+                    .preview__sector_container_content
+                        .preview__sector_container_content-main
+                            .preview__sector_container_content-main-icon
+                                img.preview__sector_container_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
+                                .preview__sector_container_content-main-rate.stars
+                                    - for (let i = 0; i < 5; i++)
+                                        - const className = 'stars__item'
+                                        if i < 4
+                                            svg(class=className)
+                                                use(href='#starFill')
+                                        else
+                                            svg(class=className)
+                                                use(href='#star')
+                            h3.preview__sector_container_content-main-h3 Fussballtrainingslager Miracle Resort
+                            .preview__sector_container_content-main-loc
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#pinAltFill')
+                                    | Antaliya (Turkey)
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#mdiAirplaneMarker')
+                                    | 15 km
+                        .preview__sector_container_content-info
+                            ul.preview__sector_container_content-info-ul
+                                li.preview__sector_container_content-info-ul-li CrossFit Area & Fitness Center
+                                li.preview__sector_container_content-info-ul-li For Professional Teams
+                                li.preview__sector_container_content-info-ul-li All Ear around camps
+                                li.preview__sector_container_content-info-ul-li All Inclusive
+                                li.preview__sector_container_content-info-ul-li Spa Center & Hammam
+                                li.preview__sector_container_content-info-ul-li Near the Beach
+                        .preview__sector_container_content-btn
+                            button.btn.greenBtn Check out more
+                .preview__sector_container.f-carousel__slide
+                    .preview__sector_container_wrapper
+                        img.preview__sector_container_wrapper-img(src=pathImg + 'plug_img.jpg' alt='')
+                        .price-label.preview__sector_container_wrapper
+                            .price-label__wrapper
+                                .price-label__wrapper_overlap
+                                    p.price-label__wrapper_overlap-p
+                                        span.price-label__wrapper_overlap-p-text-wrapper 89
+                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
+                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
+                    .preview__sector_container_content
+                        .preview__sector_container_content-main
+                            .preview__sector_container_content-main-icon
+                                img.preview__sector_container_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
+                                .preview__sector_container_content-main-rate.stars
+                                    - for (let i = 0; i < 5; i++)
+                                        - const className = 'stars__item'
+                                        if i < 4
+                                            svg(class=className)
+                                                use(href='#starFill')
+                                        else
+                                            svg(class=className)
+                                                use(href='#star')
+                            h3.preview__sector_container_content-main-h3 Fussballtrainingslager Miracle Resort
+                            .preview__sector_container_content-main-loc
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#pinAltFill')
+                                    | Antaliya (Turkey)
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#mdiAirplaneMarker')
+                                    | 15 km
+                        .preview__sector_container_content-info
+                            ul.preview__sector_container_content-info-ul
+                                li.preview__sector_container_content-info-ul-li CrossFit Area & Fitness Center
+                                li.preview__sector_container_content-info-ul-li For Professional Teams
+                                li.preview__sector_container_content-info-ul-li All Ear around camps
+                                li.preview__sector_container_content-info-ul-li All Inclusive
+                                li.preview__sector_container_content-info-ul-li Spa Center & Hammam
+                                li.preview__sector_container_content-info-ul-li Near the Beach
+                        .preview__sector_container_content-btn
+                            button.btn.greenBtn Check out more
+                .preview__sector_container.f-carousel__slide
+                    .preview__sector_container_wrapper
+                        img.preview__sector_container_wrapper-img(src=pathImg + 'plug_img.jpg' alt='')
+                        .price-label.preview__sector_container_wrapper
+                            .price-label__wrapper
+                                .price-label__wrapper_overlap
+                                    p.price-label__wrapper_overlap-p
+                                        span.price-label__wrapper_overlap-p-text-wrapper 89
+                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
+                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
+                    .preview__sector_container_content
+                        .preview__sector_container_content-main
+                            .preview__sector_container_content-main-icon
+                                img.preview__sector_container_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
+                                .preview__sector_container_content-main-rate.stars
+                                    - for (let i = 0; i < 5; i++)
+                                        - const className = 'stars__item'
+                                        if i < 4
+                                            svg(class=className)
+                                                use(href='#starFill')
+                                        else
+                                            svg(class=className)
+                                                use(href='#star')
+                            h3.preview__sector_container_content-main-h3 Fussballtrainingslager Miracle Resort
+                            .preview__sector_container_content-main-loc
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#pinAltFill')
+                                    | Antaliya (Turkey)
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#mdiAirplaneMarker')
+                                    | 15 km
+                        .preview__sector_container_content-info
+                            ul.preview__sector_container_content-info-ul
+                                li.preview__sector_container_content-info-ul-li CrossFit Area & Fitness Center
+                                li.preview__sector_container_content-info-ul-li For Professional Teams
+                                li.preview__sector_container_content-info-ul-li All Ear around camps
+                                li.preview__sector_container_content-info-ul-li All Inclusive
+                                li.preview__sector_container_content-info-ul-li Spa Center & Hammam
+                                li.preview__sector_container_content-info-ul-li Near the Beach
+                        .preview__sector_container_content-btn
+                            button.btn.greenBtn Check out more
+                .preview__sector_container.f-carousel__slide
+                    .preview__sector_container_wrapper
+                        img.preview__sector_container_wrapper-img(src=pathImg + 'coralPool.png' alt='')
+                        .price-label.preview__sector_container_wrapper
+                            .price-label__wrapper
+                                .price-label__wrapper_overlap
+                                    p.price-label__wrapper_overlap-p
+                                        span.price-label__wrapper_overlap-p-text-wrapper 89
+                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
+                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
+                    .preview__sector_container_content
+                        .preview__sector_container_content-main
+                            .preview__sector_container_content-main-icon
+                                img.preview__sector_container_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
+                                .preview__sector_container_content-main-rate.stars
+                                    - for (let i = 0; i < 5; i++)
+                                        - const className = 'stars__item'
+                                        if i < 4
+                                            svg(class=className)
+                                                use(href='#starFill')
+                                        else
+                                            svg(class=className)
+                                                use(href='#star')
+                            h3.preview__sector_container_content-main-h3 Fussballtrainingslager Miracle Resort
+                            .preview__sector_container_content-main-loc
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#pinAltFill')
+                                    | Antaliya (Turkey)
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#mdiAirplaneMarker')
+                                    | 15 km
+                        .preview__sector_container_content-info
+                            ul.preview__sector_container_content-info-ul
+                                li.preview__sector_container_content-info-ul-li CrossFit Area & Fitness Center
+                                li.preview__sector_container_content-info-ul-li For Professional Teams
+                                li.preview__sector_container_content-info-ul-li All Ear around camps
+                                li.preview__sector_container_content-info-ul-li All Inclusive
+                                li.preview__sector_container_content-info-ul-li Spa Center & Hammam
+                                li.preview__sector_container_content-info-ul-li Near the Beach
+                        .preview__sector_container_content-btn
+                            button.btn.greenBtn Check out more
+                .preview__sector_container.f-carousel__slide
+                    .preview__sector_container_wrapper
+                        img.preview__sector_container_wrapper-img(src=pathImg + 'background.jpeg' alt='')
+                        .price-label.preview__sector_container_wrapper
+                            .price-label__wrapper
+                                .price-label__wrapper_overlap
+                                    p.price-label__wrapper_overlap-p
+                                        span.price-label__wrapper_overlap-p-text-wrapper 89
+                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
+                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
+                    .preview__sector_container_content
+                        .preview__sector_container_content-main
+                            .preview__sector_container_content-main-icon
+                                img.preview__sector_container_content-main--flag(src=pathImg + 'flagturk.svg' alt='')
+                                .preview__sector_container_content-main-rate.stars
+                                    - for (let i = 0; i < 5; i++)
+                                        - const className = 'stars__item'
+                                        if i < 4
+                                            svg(class=className)
+                                                use(href='#starFill')
+                                        else
+                                            svg(class=className)
+                                                use(href='#star')
+                            h3.preview__sector_container_content-main-h3 Fussballtrainingslager Miracle Resort
+                            .preview__sector_container_content-main-loc
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#pinAltFill')
+                                    | Antaliya (Turkey)
+                                p.preview__sector_container_content-main-loc-p
+                                    svg.preview__sector_container_content-main-loc-icon
+                                        use(href='#mdiAirplaneMarker')
+                                    | 15 km
+                        .preview__sector_container_content-info
+                            ul.preview__sector_container_content-info-ul
+                                li.preview__sector_container_content-info-ul-li CrossFit Area & Fitness Center
+                                li.preview__sector_container_content-info-ul-li For Professional Teams
+                                li.preview__sector_container_content-info-ul-li All Ear around camps
+                                li.preview__sector_container_content-info-ul-li All Inclusive
+                                li.preview__sector_container_content-info-ul-li Spa Center & Hammam
+                                li.preview__sector_container_content-info-ul-li Near the Beach
+                        .preview__sector_container_content-btn
+                            button.btn.greenBtn Check out more

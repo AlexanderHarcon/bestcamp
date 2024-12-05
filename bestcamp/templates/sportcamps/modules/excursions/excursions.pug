@@ -1,4 +1,4 @@
-- var pathImg = '{$opt.assets_url}images/'
+-var pathImg = '{$opt.assets_url}images/'
 
 mixin svgSprite
     svg(width="0" height="0" class="hidden")
@@ -11,48 +11,74 @@ mixin svgSprite
         +svgSprite
         section.excursions__bl
             h2.excursions__bl-h2 Excursions
-            .excursions__complex
-                .excursions__complex_sector
-                    .excursions__complex_sector_container
-                        img.excursions__complex_sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
-                        .excursions__complex_sector_container_info
-                            h3.excursions__complex_sector_container_info-h3 Black Pearl Pirate Cru....
-                            .excursions__complex_sector_container_info-price $57.31
-                                span.excursions__complex_sector_container_info-price-span per adult
-                            .excursions__complex_sector_container_info-duration
-                                svg.excursions__complex_sector_container_info-duration-svg
-                                    use(href='#duration')
-                                p.excursions__complex_sector_container_info-duration-p Duration: 4h
-                .excursions__complex_sector
-                    .excursions__complex_sector_container
-                        img.excursions__complex_sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
-                        .excursions__complex_sector_container_info
-                            h3.excursions__complex_sector_container_info-h3 Black Pearl Pirate Cru....
-                            .excursions__complex_sector_container_info-price $57.31
-                                span.excursions__complex_sector_container_info-price-span per adult
-                            .excursions__complex_sector_container_info-duration
-                                svg.excursions__complex_sector_container_info-duration-svg
-                                    use(href='#duration')
-                                p.excursions__complex_sector_container_info-duration-p Duration: 4h
-                .excursions__complex_sector
-                    .excursions__complex_sector_container
-                        img.excursions__complex_sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
-                        .excursions__complex_sector_container_info
-                            h3.excursions__complex_sector_container_info-h3 Black Pearl Pirate Cru....
-                            .excursions__complex_sector_container_info-price $57.31
-                                span.excursions__complex_sector_container_info-price-span per adult
-                            .excursions__complex_sector_container_info-duration
-                                svg.excursions__complex_sector_container_info-duration-svg
-                                    use(href='#duration')
-                                p.excursions__complex_sector_container_info-duration-p Duration: 4h
-                .excursions__complex_sector
-                    .excursions__complex_sector_container
-                        img.excursions__complex_sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
-                        .excursions__complex_sector_container_info
-                            h3.excursions__complex_sector_container_info-h3 Black Pearl Pirate Cru....
-                            .excursions__complex_sector_container_info-price $57.31
-                                span.excursions__complex_sector_container_info-price-span per adult
-                            .excursions__complex_sector_container_info-duration
-                                svg.excursions__complex_sector_container_info-duration-svg
-                                    use(href='#duration')
-                                p.excursions__complex_sector_container_info-duration-p Duration: 4h
+            .excursions__sector.f-carousel#excursionsCarousel
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h
+                .excursions__sector_container.f-carousel__slide
+                    img.excursions__sector_container-img(src=pathImg + 'excursions.png' alt='excursions')
+                    .excursions__sector_container_info
+                        h3.excursions__sector_container_info-h3 Black Pearl Pirate Cru....
+                        .excursions__sector_container_info-price $57.31
+                            span.excursions__sector_container_info-price-span per adult
+                        .excursions__sector_container_info-duration
+                            svg.excursions__sector_container_info-duration-svg
+                                use(href='#duration')
+                            p.excursions__sector_container_info-duration-p Duration: 4h

@@ -1,20 +1,18 @@
 @charset "UTF-8";
-@import "../../../css/mixin";
-@import "../../../css/foundation";
-@import "../../../css/ext";
-@import "../../../css/var";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
 //------------------------------
-@import "../../base/var";
-@import "../../base/class";
-@import "../../base/font";
-@import "../../base/ext";
-@import "../../base/base";
-
+@import "../../base/_var";
+@import "../../base/_ext";
+//------------------------------
+@include f-carouselStyle;
 
 .reviews {
   background-color: #F2F9FD;
 
   &__bl {
+
     &-h2 {
       text-align: center;
       font: {
@@ -29,7 +27,7 @@
 
   &__sector {
     --f-carousel-spacing: 12px;
-    --f-carousel-slide-width: calc((100% - 24px) / 1);
+    --f-carousel-slide-width: calc((100% - 12px) / 1);
 
     @include mq-w(664px) {
       --f-carousel-spacing: 24px;
@@ -37,7 +35,7 @@
     }
     @include mq-w(1024px) {
       --f-carousel-spacing: 24px;
-      --f-carousel-slide-width: calc((100% - 70px) / 3);
+      --f-carousel-slide-width: calc((100% - (24px * 2)) / 3);
     }
 
     &_container {
@@ -75,15 +73,4 @@
   }
 }
 
-.f-carousel {
 
-  &__dots {
-    gap: 8px;
-  }
-
-  &__dot {
-    border-radius: 4px;
-    width: 29px;
-    height: 4px;
-  }
-}
