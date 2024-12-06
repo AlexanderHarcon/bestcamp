@@ -46,18 +46,18 @@
     padding-top: 0;
   }
 }
-.hotel-overview__bl_info-wrapper-img {
+.hotel-overview__bl_info-wrapper-carou-img {
   object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 12px;
 }
 @media (min-width: 680px) {
-  .hotel-overview__bl_info-wrapper-img {
+  .hotel-overview__bl_info-wrapper-carou-img {
     width: 330px;
   }
 }
-.hotel-overview__bl_info-wrapper-p {
+.hotel-overview__bl_info-wrapper-carou-p {
   position: absolute;
   bottom: -4px;
   left: 50%;
@@ -558,6 +558,51 @@
 }
 .hotel-overview .show {
   display: flex;
+}
+.hotel-overview .f-carousel__slide {
+  margin-bottom: 0;
+}
+.hotel-overview .f-carousel .f-button {
+  --f-button-svg-width: 14x;
+  --f-button-svg-height: 29px;
+  --f-button-color: #FFF;
+  --f-button-hover-color: #FFF;
+  --f-button-border: none;
+}
+.hotel-overview .f-carousel .f-button svg {
+  stroke-linecap: butt;
+}
+.hotel-overview .is-horizontal .f-carousel__nav .f-button.is-next,
+.hotel-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 100%;
+  width: 65px;
+  right: calc(8px + 92 * (100vw - 320px) / 1600);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 77%);
+}
+.hotel-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  left: calc(8px + 92 * (100vw - 320px) / 1600);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 77%);
+}
+.hotel-overview .f-button:focus-visible {
+  box-shadow: none;
+}
+.hotel-overview .is-horizontal .f-carousel__nav .f-button.is-next,
+.hotel-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 100%;
+  width: 65px;
+  right: 0;
+}
+.hotel-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  left: 0;
 }
 
 /*# sourceMappingURL=hoteloverview.css.map */

@@ -5,7 +5,7 @@ if (reviewsCarousel) {
         const carouselUri = {
             css: sportcamps.js + 'carousel/carousel.css',
             js: sportcamps.js + 'carousel/carousel.umd.js',
-            moduleCss: sportcamps.templates + 'sportcamps/modules/reviews/reviews.css'
+            moduleCss: sportcamps.templates + 'sportcamps/modules/reviews/reviews.css',
         };
 
         // Загружаем стили и скрипты carousel
@@ -45,5 +45,5 @@ if (reviewsCarousel) {
         });
         loaderBody(carouselUri.moduleCss, null, 'link');
     });
-
 }
+

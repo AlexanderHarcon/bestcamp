@@ -85,23 +85,33 @@
 .camp-overview__bl-checkbox:checked ~ .camp-overview__bl-toggle::after {
   content: "Show less";
 }
-.camp-overview__bl-img {
+.camp-overview__bl_container {
   position: relative;
   margin: -160px auto 0;
   padding-left: calc(8px + 92 * (100vw - 320px) / 1600);
   padding-right: calc(8px + 92 * (100vw - 320px) / 1600);
 }
-.camp-overview__bl-img--el {
+.camp-overview__bl_container-img--el {
   height: auto;
   width: 100%;
   max-height: 347px;
   object-fit: cover;
   border-radius: 16px;
 }
-.camp-overview__bl-img-btn {
+.camp-overview__bl_container-img--el--el::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, black 70px, transparent, transparent calc(100% - 70px), black 100%);
+  pointer-events: none; /* Щоб градієнт не блокував кліки */
+}
+.camp-overview__bl-btn {
   text-align: center;
 }
-.camp-overview__bl-img-btn .greenBtn {
+.camp-overview__bl-btn .greenBtn {
   margin-top: 24px;
   text-transform: uppercase;
 }
@@ -125,6 +135,38 @@
 }
 .camp-overview__items-p--blue {
   color: #5BBCE4;
+}
+.camp-overview .f-carousel__slide {
+  margin-bottom: 0;
+}
+.camp-overview .f-carousel .f-button {
+  --f-button-svg-width: 14x;
+  --f-button-svg-height: 29px;
+  --f-button-color: #FFF;
+  --f-button-hover-color: #FFF;
+  --f-button-border: none;
+}
+.camp-overview .f-carousel .f-button svg {
+  stroke-linecap: butt;
+}
+.camp-overview .is-horizontal .f-carousel__nav .f-button.is-next,
+.camp-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 100%;
+  width: 65px;
+  right: calc(8px + 92 * (100vw - 320px) / 1600);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 77%);
+}
+.camp-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  left: calc(8px + 92 * (100vw - 320px) / 1600);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 77%);
+}
+.camp-overview .f-button:focus-visible {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=campoverview.css.map */

@@ -1,11 +1,11 @@
-let previewCarousel = document.getElementById("previewCarousel");
+let campCarousel = document.getElementById("campCarousel");
 
-if (previewCarousel) {
+if (campCarousel) {
     window.addEventListener('load', () => {
         const carouselUri = {
             css: sportcamps.js + 'carousel/carousel.css',
             js: sportcamps.js + 'carousel/carousel.umd.js',
-            moduleCss: sportcamps.templates + 'sportcamps/modules/preview/preview.css',
+            moduleCss: sportcamps.templates + 'sportcamps/modules/campoverview/campoverview.css',
         };
 
         // Загружаем стили и скрипты carousel
@@ -16,23 +16,11 @@ if (previewCarousel) {
         loaderBody(carouselUri.js, () => {
             carouselUri.js = '';
             const options = {
-                dragFree: false,
-                center: false,
-                breakpoints: {
-                    "(min-width: 320px)": {
-                        slidesPerPage: 1,
-                    },
-                    "(min-width: 633px)": {
-                        slidesPerPage: 2,
-                    },
-                    "(min-width: 958px)": {
-                        slidesPerPage: 3,
-                    },
-                },
+                Dots: false,
             };
 
             function tryCreateCarousel() {
-                new Carousel(previewCarousel, options);
+                new Carousel(campCarousel, options);
             }
 
             if (typeof Carousel !== 'undefined') {

@@ -22,9 +22,16 @@ mixin svgSprite()
         section.hotel-overview__bl
             h1.hotel-overview__bl-h1 Hotel overview
             .hotel-overview__bl_info
-                .hotel-overview__bl_info-wrapper
-                    img.hotel-overview__bl_info-wrapper-img(src=pathImg + 'coralPool.png' alt='coralBeach')
-                    p.hotel-overview__bl_info-wrapper-p Swimming pool
+                .hotel-overview__bl_info-wrapper.f-carousel#hotelCarousel
+                    .hotel-overview__bl_info-wrapper-carou.f-carousel__slide
+                        img.hotel-overview__bl_info-wrapper-carou-img(src=pathImg + 'coralPool.png' alt='coralBeach')
+                        p.hotel-overview__bl_info-wrapper-carou-p Swimming pool
+                    .hotel-overview__bl_info-wrapper-carou.f-carousel__slide
+                        img.hotel-overview__bl_info-wrapper-carou-img(src=pathImg + 'background.jpeg' alt='coralBeach')
+                        p.hotel-overview__bl_info-wrapper-carou-p Swimming pool
+                    .hotel-overview__bl_info-wrapper-carou.f-carousel__slide
+                        img.hotel-overview__bl_info-wrapper-carou-img(src=pathImg + 'distanceMap.png' alt='coralBeach')
+                        p.hotel-overview__bl_info-wrapper-carou-p Swimming pool
                 .hotel-overview__bl_info-details
                     .hotel-overview__bl_info-details-rate.stars
                         - for (let i = 0; i < 5; i++)

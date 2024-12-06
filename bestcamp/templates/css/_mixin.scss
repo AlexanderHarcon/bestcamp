@@ -1,75 +1,46 @@
-//кастомные стили карусели
-@mixin f-carouselStyle() {
+@mixin f-carouselOneSlideStyle() {
+  $dynamic-padding: calc(8px + ((100 - 8) * ((100vw - 320px) / (1920 - 320))));
+  //*** Carousel Style ***//
   .f-carousel {
-
     &__slide {
-      margin-bottom: 46px;
-    }
-
-    &__dots {
-      gap: 8px;
-      --f-carousel-dots-height: 0;
-
-      li {
-        button {
-          width: 7px;
-          height: 4px;
-
-          @include mq-w(400px) {
-            width: 29px;
-          }
+          margin-bottom: 0;
         }
-      }
-    }
-
-    &__dot {
-      width: 7px;
-      border-radius: 4px;
-      height: 4px;
-
-      @include mq-w(400px) {
-        width: 29px;
-      }
-    }
-
     .f-button {
-      background-color: #A9B4B9;
-      border-radius: 8px;
-      width: 45px;
-      height: 45px;
-      --f-button-svg-width: 37.4px;
-      --f-button-svg-height: 52px;
+      --f-button-svg-width: 14x;
+      --f-button-svg-height: 29px;
       --f-button-color: #FFF;
-      --f-button-hover-bg: #A9B4B9;
-      @include mq-w(430px) {
-        width: 60px;
-        height: 60px;
-      }
-      @include mq-w(1270px) {
-        width: 65px;
-        height: 65px;
-      }
+      --f-button-hover-color: #FFF;
+      --f-button-border: none;
 
       svg {
         stroke-linecap: butt;
       }
     }
   }
-  .is-horizontal .f-carousel__nav .f-button.is-prev {
-    @include mq-w(1224px) {
-      left: -7%;
-    }
-  }
+  //** Carousel Arrow **//
+  .is-horizontal .f-carousel__nav .f-button.is-next,
   .is-horizontal .f-carousel__nav .f-button.is-prev,
-  .is-horizontal .f-carousel__nav .f-button.is-next {
-    top: 100%;
-
-    @include mq-w(1224px) {
-      top: 50%;
-      right: -7%;
-    }
+  {
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 100%;
+    width: 65px;
+    right: $dynamic-padding;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 77%);
   }
 
+  .is-horizontal .f-carousel__nav .f-button.is-prev,
+  {
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    left: $dynamic-padding;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 77%);
+  }
+
+  .f-button:focus-visible {
+    box-shadow: none;
+  }
 }
 
 // медиазапросы
@@ -771,4 +742,79 @@ $w_min: 320px !default;
 @function rem($size) {
   $remSize: $size / 14;
   @return $remSize * 1rem;
+}
+
+
+//кастомные стили карусели
+@mixin f-carouselStyle() {
+  .f-carousel {
+
+    &__slide {
+      margin-bottom: 46px;
+    }
+
+    &__dots {
+      gap: 8px;
+      --f-carousel-dots-height: 0;
+
+      li {
+        button {
+          width: 7px;
+          height: 4px;
+
+          @include mq-w(400px) {
+            width: 29px;
+          }
+        }
+      }
+    }
+
+    &__dot {
+      width: 7px;
+      border-radius: 4px;
+      height: 4px;
+
+      @include mq-w(400px) {
+        width: 29px;
+      }
+    }
+
+    .f-button {
+      background-color: #A9B4B9;
+      border-radius: 8px;
+      width: 45px;
+      height: 45px;
+      --f-button-svg-width: 37.4px;
+      --f-button-svg-height: 52px;
+      --f-button-color: #FFF;
+      --f-button-hover-bg: #A9B4B9;
+      @include mq-w(430px) {
+        width: 60px;
+        height: 60px;
+      }
+      @include mq-w(1270px) {
+        width: 65px;
+        height: 65px;
+      }
+
+      svg {
+        stroke-linecap: butt;
+      }
+    }
+  }
+  .is-horizontal .f-carousel__nav .f-button.is-prev {
+    @include mq-w(1224px) {
+      left: -7%;
+    }
+  }
+  .is-horizontal .f-carousel__nav .f-button.is-prev,
+  .is-horizontal .f-carousel__nav .f-button.is-next {
+    top: 100%;
+
+    @include mq-w(1224px) {
+      top: 50%;
+      right: -7%;
+    }
+  }
+
 }

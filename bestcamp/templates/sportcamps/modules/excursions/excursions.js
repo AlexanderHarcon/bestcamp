@@ -5,7 +5,7 @@ if (excursionsCarousel) {
         const carouselUri = {
             css: sportcamps.js + 'carousel/carousel.css',
             js: sportcamps.js + 'carousel/carousel.umd.js',
-            moduleCss: sportcamps.templates + 'sportcamps/modules/excursions/excursions.css'
+            moduleCss: sportcamps.templates + 'sportcamps/modules/excursions/excursions.css',
         };
 
         // Загружаем стили и скрипты carousel

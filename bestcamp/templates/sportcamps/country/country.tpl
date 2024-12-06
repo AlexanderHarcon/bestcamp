@@ -19,9 +19,7 @@
         $theme_modules ~ 'included/included.css,' ~
         $theme_modules ~ 'services2/services2.css,' ~
         $theme_modules ~ 'maininfo/maininfo.css,' ~
-        $theme_modules ~ 'campoverview/campoverview.css,' ~
         $theme_modules ~ 'infrastructure/infrastructure.css,' ~
-        $theme_modules ~ 'hoteloverview/hoteloverview.css,' ~
         $theme_modules ~ 'location/location.css,' ~
         $theme_modules ~ 'priceincluded/priceincluded.css,' ~
         $theme_modules ~ 'visitcard/visitcard.css,' ~
@@ -30,6 +28,7 @@
     'jsSources'     =>
         $theme_modules ~ 'formrequest/formrequest.js,' ~
         $theme_modules ~ 'hoteloverview/hoteloverview.js,' ~
+        $theme_modules ~ 'campoverview/campoverview.js,' ~
         $theme_modules ~ 'excursions/excursions.js,' ~
         $theme_modules ~ 'reviews/reviews.js,' ~
         $theme_modules ~ 'preview/preview.js,' ~
