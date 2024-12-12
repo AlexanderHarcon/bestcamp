@@ -596,8 +596,8 @@
   border-bottom-right-radius: 12px;
   border-top-right-radius: 12px;
   height: 100%;
-  width: 65px;
   right: 0;
+  top: 50%;
 }
 .hotel-overview .is-horizontal .f-carousel__nav .f-button.is-prev {
   border-bottom-left-radius: 12px;

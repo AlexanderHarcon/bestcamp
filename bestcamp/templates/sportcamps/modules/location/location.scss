@@ -6,9 +6,6 @@
 @import "../../base/_var";
 @import "../../base/_ext";
 
-$cl-white: #FFF;
-$cl-green: #94BE31;
-$cl-blue: #5BBCE4;
 
 .location {
   &__bl {
@@ -36,7 +33,6 @@ $cl-blue: #5BBCE4;
     &_distance {
       padding: 24px 0;
       width: 100%;
-
       @include mq-w(760px) {
         max-width: 400px;
         display: flex;

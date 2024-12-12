@@ -1,15 +1,4 @@
 @charset "UTF-8";
-//@import "../../../css/mixin";
-//@import "../../../css/foundation";
-//@import "../../../css/ext";
-//@import "../../../css/var";
-////------------------------------
-//@import "../../base/var";
-//@import "../../base/class";
-//@import "../../base/font";
-//@import "../../base/ext";
-//@import "../../base/base";
-
 @import "../../../css/_mixin";
 @import "../../../css/_var";
 @import "../../../css/_ext";
@@ -18,29 +7,19 @@
 @import "../../base/_ext";
 //------------------------------
 @include f-carouselStyle;
-$cl-white: #FFF;
-$cl-green: #94BE31;
 
 .preview {
   &__sector {
     --f-carousel-spacing: 12px;
     --f-carousel-slide-width: 100%;
-
-
     @include mq-w(410px) {
       --f-carousel-spacing: 24px;
       --f-carousel-slide-width: 100%;
     }
-
     @include mq-w(633px) {
       --f-carousel-spacing: 24px;
       --f-carousel-slide-width: calc((100% - 24px) / 2);
     }
-
-    //@include mq-w(670px) {
-    //  --f-carousel-spacing: 40px;
-    //  --f-carousel-slide-width: calc((100% - 43px) / 2);
-    //}
     @include mq-w(958px) {
       --f-carousel-spacing: 24px;
       --f-carousel-slide-width: calc((100% - (24px * 2)) / 3);
@@ -80,7 +59,7 @@ $cl-green: #94BE31;
               width: 149px;
               height: 68px;
               background: {
-                image: url(../../../../images/rectanglePreview.png);
+                image: url($urlPic + 'rectanglePreview.png');
                 size: 100% 100%;
               }
 
@@ -133,7 +112,6 @@ $cl-green: #94BE31;
             font-size: 14px;
             padding: 12px 25px;
             border-radius: 12px;
-
             @include mq-w(958px) {
               padding: 15px 32px;
               font-size: 16px;
@@ -168,7 +146,6 @@ $cl-green: #94BE31;
             margin: 0;
             padding: 8px 0 16px 0;
           }
-
 
           &-loc {
             display: flex;
@@ -212,7 +189,6 @@ $cl-green: #94BE31;
               justify-content: flex-start;
               align-items: center;
               width: 152px;
-
             }
 
             &-icon {
@@ -222,7 +198,6 @@ $cl-green: #94BE31;
             }
           }
         }
-
         &-info {
           padding-bottom: 24px;
 
@@ -261,7 +236,7 @@ $cl-green: #94BE31;
                 content: '';
                 width: 20px;
                 height: 20px;
-                background-image: url("../../../../images/CheckRingLight.svg");
+                background-image: url($urlPic + "CheckRingLight.svg");
                 background-size: contain;
                 background-repeat: no-repeat;
                 position: absolute;
@@ -283,17 +258,17 @@ $cl-green: #94BE31;
   }
 
   .f-carousel {
-
     &__track {
       padding: 0 3px;
     }
-    &__viewport{
+
+    &__viewport {
       max-width: calc(332px + 6px);
       margin: 0 auto;
-      @include mq-w(633px){
+      @include mq-w(633px) {
         max-width: calc(332px * 2 + (6px + 24px));
       }
-      @include mq-w(958px){
+      @include mq-w(958px) {
         max-width: calc(332px * 3 + (6px + 24px));
       }
     }

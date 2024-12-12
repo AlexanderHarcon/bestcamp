@@ -45,8 +45,14 @@ mixin svgSprite()
                         p.camp-overview__bl-description-text This modern 4-star all-inclusive resort in Hurghada is located just 700 meters from the Red Sea. Ideal for swimming in sports camps. On the territory, there is a classic outdoor Olympic swimming pool of 50 m with 10 lanes and starting bollards. Hurghada International Airport is 7 km from the hotel. Distance to the center of Hurghada - 15 km. Guests can also take a shuttle to the beach at the nearby Beach Albatros Resort.
                     label.camp-overview__bl-toggle(for="read-more")
             .camp-overview__bl_container.f-carousel#campCarousel
-                img.camp-overview__bl_container-img--el.f-carousel__slide(src=pathImg +'coralPool.png' alt='coralPool')
-                img.camp-overview__bl_container-img--el.f-carousel__slide(src=pathImg +'background.jpeg' alt='coralPool')
-                img.camp-overview__bl_container-img--el.f-carousel__slide(src=pathImg +'distanceMap.png' alt='coralPool')
+                .camp-overview__bl_container-carou.f-carousel__slide
+                    img.camp-overview__bl_container-carou-img(src=pathImg +'coralPool.png' alt='coralPool')
+                    p.camp-overview__bl_container-carou-p Swimming pool
+                .camp-overview__bl_container-carou.f-carousel__slide
+                    img.camp-overview__bl_container-carou-img(src=pathImg +'background.jpeg' alt='coralPool')
+                    p.camp-overview__bl_container-carou-p Swimming pool
+                .camp-overview__bl_container-carou.f-carousel__slide
+                    img.camp-overview__bl_container-carou-img(src=pathImg +'distanceMap.png' alt='coralPool')
+                    p.camp-overview__bl_container-carou-p Swimming pool
             .camp-overview__bl-btn
                 button.btn.greenBtn send a request

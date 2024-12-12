@@ -8,12 +8,12 @@
 
 .visit-card {
   background: {
-    image: url("../../../../images/visitSectroMobile.png");
+    image: url($urlPic + "visitSectroMobile.png");
     repeat: no-repeat;
   }
 
   @include mq-w(730px) {
-    background-image: url("../../../../images/visitSection.png");
+    background-image: url($urlPic + "visitSection.png");
   }
 
   &__bl {

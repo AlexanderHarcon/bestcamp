@@ -2,9 +2,9 @@
   $dynamic-padding: calc(8px + ((100 - 8) * ((100vw - 320px) / (1920 - 320))));
   //*** Carousel Style ***//
   .f-carousel {
-    &__slide {
-          margin-bottom: 0;
-        }
+    &__slide{
+      margin-bottom: 0;
+    }
     .f-button {
       --f-button-svg-width: 14x;
       --f-button-svg-height: 29px;
@@ -12,10 +12,12 @@
       --f-button-hover-color: #FFF;
       --f-button-border: none;
 
+
       svg {
         stroke-linecap: butt;
       }
     }
+
   }
   //** Carousel Arrow **//
   .is-horizontal .f-carousel__nav .f-button.is-next,

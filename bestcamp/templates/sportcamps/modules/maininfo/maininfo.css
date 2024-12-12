@@ -273,7 +273,7 @@
   position: absolute;
   width: 149px;
   height: 68px;
-  background-image: url(../../../../images/rectangle.svg);
+  background-image: url("../../../../images/rectangle.svg");
   background-size: 100% 100%;
 }
 @media (min-width: 529px) {

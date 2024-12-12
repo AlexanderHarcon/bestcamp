@@ -6,23 +6,15 @@
 @import "../../base/_var";
 @import "../../base/_ext";
 
-$cl-white: #FFF;
-$cl-green: #94BE31;
-$cl-orange: #F39540;
-$cl-blue: #5BBCE4;
-$cl-head: #A1ADB2;
-
-
 .infrastructure {
   .wrapper.pd_block {
     padding-top: 0;
   }
 
   &__swimpool {
-
     &_headlines {
       &-p {
-        color: $cl-head;
+        color: $cl-h1grey;
         font-family: $font-head;
         font-size: 16px;
         line-height: 27px;
@@ -64,7 +56,6 @@ $cl-head: #A1ADB2;
     background-position: center;
     background-repeat: no-repeat;
     column-gap: 8px;
-
     @include mq-w(481px) {
       column-gap: 0;
     }

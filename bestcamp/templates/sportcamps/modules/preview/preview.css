@@ -136,7 +136,7 @@
   position: absolute;
   width: 149px;
   height: 68px;
-  background-image: url(../../../../images/rectanglePreview.png);
+  background-image: url("../../../../images/rectanglePreview.png");
   background-size: 100% 100%;
 }
 .preview__sector_container_wrapper .price-label__wrapper_overlap-p {

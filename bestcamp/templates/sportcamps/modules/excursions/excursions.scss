@@ -8,8 +8,7 @@
 //------------------------------
 @include f-carouselStyle;
 
-$cl_green: #95C03D;
-$cl_black: #637075;
+
 
 .excursions {
   &__bl {
@@ -27,20 +26,19 @@ $cl_black: #637075;
 
   &__sector {
     --f-carousel-spacing: 12px;
-    --f-carousel-slide-width: 100% ;
-
+    --f-carousel-slide-width: 100%;
     @include mq-w(430px) {
       --f-carousel-spacing: 16px;
       --f-carousel-slide-width: calc((100% - 32px) / 2);
     }
-
     @include mq-w(670px) {
       --f-carousel-spacing: 24px;
       --f-carousel-slide-width: calc((100% - (24px * 2)) / 3);
     }
     @include mq-w(1024px) {
       --f-carousel-spacing: 24px;
-      --f-carousel-slide-width: calc((100% - (24px * 3)) / 4);    }
+      --f-carousel-slide-width: calc((100% - (24px * 3)) / 4);
+    }
 
     &_container {
       border-radius: 16px;
@@ -74,7 +72,6 @@ $cl_black: #637075;
             size: 10px;
           }
           line-height: 27px;
-
           @include mq-w(401px) {
             font-size: 14px;
           }
@@ -90,13 +87,12 @@ $cl_black: #637075;
             weight: 700;
             size: 14px;
           }
-          color: $cl_green;
+          color: $cl_othergreen;
           line-height: 19.36px;
           display: flex;
           justify-content: center;
           gap: 6px;
           padding: 5px 0;
-
           @include mq-w(401px) {
             font-size: 16px;
             padding: 8px 0;
@@ -104,7 +100,7 @@ $cl_black: #637075;
         }
 
         &-span {
-          color: $cl_black;
+          color: $cl_Lightgray;
         }
 
         &-duration {
@@ -123,7 +119,7 @@ $cl_black: #637075;
               weight: 700;
               size: 14px;
             }
-            color: $cl_black;
+            color: $cl_Lightgray;
             line-height: 18px;
             @include mq-w(401px) {
               font-size: 16px;
@@ -133,6 +129,7 @@ $cl_black: #637075;
       }
     }
   }
+
   .f-carousel {
     &__track {
       padding: 0 3px;

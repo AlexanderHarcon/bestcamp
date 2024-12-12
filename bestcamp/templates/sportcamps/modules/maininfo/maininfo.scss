@@ -6,13 +6,10 @@
 @import "../../base/_var";
 @import "../../base/_ext";
 
-$cl-white: #FFF;
-$cl-green: #94BE31;
-
 .main-info {
   background: {
     color: rgba(7, 5, 14, 0.8);
-    image: url("../../../../images/background.jpeg");
+    image: url($urlPic + "background.jpeg");
     size: cover;
     repeat: no-repeat;
     position: center center;
@@ -41,11 +38,9 @@ $cl-green: #94BE31;
       margin: 8px 0 24px 0;
       stroke: rgba(0, 0, 0, 1);
       stroke-width: 1px;
-
       @include mq-w(820px) {
         font-size: rem(40);
       }
-
       @include mq-w(935px) {
         font-size: rem(48);
       }
@@ -64,7 +59,6 @@ $cl-green: #94BE31;
         margin: 0 auto;
         padding-bottom: calc(57.38% + ((88.84 - 57.38) * ((100vw - 430px) / 190)));
         text-align: center;
-
         @include mq-w(528px) {
           max-width: 575px;
           margin: 0 auto;
@@ -75,7 +69,6 @@ $cl-green: #94BE31;
           height: 406px;
           padding-bottom: 0;
         }
-
         @include mq-w(921px) {
           max-height: 401px;
           height: 100%;
@@ -91,7 +84,6 @@ $cl-green: #94BE31;
           right: 0;
           margin: 0 auto;
           width: 100%;
-
           @include mq-w(620px) {
             position: relative;
           }
@@ -118,11 +110,9 @@ $cl-green: #94BE31;
           font-weight: 700;
           align-items: center;
           padding-top: rem(24);
-
           @include mq-w(621px) {
             padding-top: rem(32);
           }
-
           @include mq-w(921px) {
             padding-top: rem(13);
           }
@@ -131,11 +121,9 @@ $cl-green: #94BE31;
             display: inline-flex;
             align-items: center;
             white-space: pre-line;
-
             @include mq-w(921px) {
               font-size: rem(13);
             }
-
             @include mq-w(950px) {
               font-size: rem(14);
             }
@@ -152,11 +140,9 @@ $cl-green: #94BE31;
               margin-left: 24px;
               width: 24px;
               height: 24px;
-
               @include mq-w(921px) {
                 margin-left: 14px;
               }
-
               @include mq-w(950px) {
                 margin-left: 24px;
               }
@@ -173,21 +159,17 @@ $cl-green: #94BE31;
           justify-content: flex-start;
           padding: 40px 0 0 0;
           gap: 11px;
-
           @include mq-w(450px) {
             justify-content: space-between;
             gap: 24px;
           }
-
           @include mq-w(515px) {
             gap: 22px;
             justify-content: start;
           }
-
           @include mq-w(720px) {
             justify-content: space-between;
           }
-
           @include mq-w(1074px) {
             gap: 17px;
           }
@@ -207,27 +189,22 @@ $cl-green: #94BE31;
               display: inline-block;
               width: 24px;
               height: 24px;
-              background: url("../../../../images/CheckRingLight.svg") no-repeat center center;
+              background: url($urlPic + "CheckRingLight.svg") no-repeat center center;
               flex-shrink: 0;
             }
-
             @include mq-w(450px) {
               width: 193px;
             }
-
             @include mq-w(515px) {
               width: 47%;
             }
-
             @include mq-w(620px) {
               width: 48%;
             }
-
             @include mq-w(921px) {
               width: 100%;
               font-size: 14px;
             }
-
             @include mq-w(1074px) {
               width: 186px;
             }
@@ -246,7 +223,6 @@ $cl-green: #94BE31;
     height: 68px;
     left: 0;
     bottom: 0;
-
     @include mq-w(529px) {
       height: 110px;
       width: 240px;
@@ -254,7 +230,6 @@ $cl-green: #94BE31;
     @include mq-w(620px) {
       height: 115px;
     }
-
     @include mq-w(921px) {
       height: 110px;
     }
@@ -264,15 +239,13 @@ $cl-green: #94BE31;
       width: 149px;
       height: 68px;
       background: {
-        image: url(../../../../images/rectangle.svg);
+        image: url($urlPic + 'rectangle.svg');
         size: 100% 100%;
       }
-
       @include mq-w(529px) {
         height: 110px;
         width: 240px;
       }
-
       @include mq-w(921px) {
         height: 110px;
       }
@@ -293,7 +266,6 @@ $cl-green: #94BE31;
           left: 0;
           right: 0;
           margin: 0 auto;
-
           @include mq-w(529px) {
             font-size: rem(48);
             height: 56px;
@@ -305,7 +277,6 @@ $cl-green: #94BE31;
             font-family: $font-text;
             font-weight: 400;
             font-size: rem(14);
-
             @include mq-w(529px) {
               font-size: rem(26);
             }
@@ -315,7 +286,6 @@ $cl-green: #94BE31;
             font-family: $font-text;
             font-size: rem(12);
             font-weight: 400;
-
             @include mq-w(529px) {
               font-size: rem(16);
             }

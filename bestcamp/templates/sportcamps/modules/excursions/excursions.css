@@ -93,7 +93,7 @@
 }
 .excursions__sector {
   --f-carousel-spacing: 12px;
-  --f-carousel-slide-width: 100% ;
+  --f-carousel-slide-width: 100%;
 }
 @media (min-width: 430px) {
   .excursions__sector {

@@ -6,13 +6,6 @@
 @import "../../base/_var";
 @import "../../base/_ext";
 
-$cl-white: #FFF;
-$cl-green: #94BE31;
-$cl-lightgreen: #FAFFED;
-$cl-orange: #F39540;
-$cl-blue: #5BBCE4;
-$cl-h1grey: #A1ADB2;
-$cl-black: #2F3B40;
 
 .hotel-overview {
   &__bl {
@@ -600,18 +593,16 @@ $cl-black: #2F3B40;
   .show {
     display: flex;
   }
-
   @include f-carouselOneSlideStyle;
   //*** Carousel Custom Style ***//
-
   .is-horizontal .f-carousel__nav .f-button.is-next,
   .is-horizontal .f-carousel__nav .f-button.is-prev,
   {
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
     height: 100%;
-    width: 65px;
     right: 0;
+    top: 50%;
   }
 
   .is-horizontal .f-carousel__nav .f-button.is-prev,
