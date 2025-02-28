@@ -5,10 +5,14 @@
 //------------------------------
 @import "../../base/_var";
 @import "../../base/_ext";
-
+$cl_background: #F2F9FD;
+$cl-grey: #535556;
+$cl-black: #2F3B40;
+$cl-blue: #5BBCE4;
+$cl_orange: #CC6F00;
 
 .good-to-know {
-  background-color: #F2F9FD;
+  background-color: $cl_background;
   @include mq-w(500px) {
     display: flex;
   }
@@ -26,7 +30,7 @@
       flex-direction: column;
       flex-wrap: nowrap;
       line-height: 24px;
-      color: #535556;
+      color: $cl-grey;
       position: relative;
       padding-bottom: 40px;
 
@@ -38,7 +42,7 @@
         }
         padding-bottom: 16px;
         line-height: 38px;
-        color: #2F3B40;
+        color: $cl-black;
         @include mq-w(730px) {
           padding-bottom: 32px;
         }
@@ -61,7 +65,7 @@
       @include mq-w(916px) {
         max-height: 9em;
       }
-      @include mq-w(1403px) {
+      @include mq-w(1363px) {
         max-height: 8em;
       }
     }
@@ -129,7 +133,7 @@
       line-height: 14px;
 
       span {
-        color: #CC6F00;
+        color: $cl_orange;
         padding-left: 14px;
         font: {
           family: Raleway;

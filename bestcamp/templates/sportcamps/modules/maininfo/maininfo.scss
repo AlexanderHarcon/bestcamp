@@ -6,10 +6,12 @@
 @import "../../base/_var";
 @import "../../base/_ext";
 
+$urlImg: 'images/';
+
 .main-info {
   background: {
     color: rgba(7, 5, 14, 0.8);
-    image: url($urlPic + "background.jpeg");
+    image: url($urlImg + 'background.jpeg');
     size: cover;
     repeat: no-repeat;
     position: center center;
@@ -56,20 +58,13 @@
         height: 256px;
         flex: 1 1 100%;
         max-width: 100%;
-        margin: 0 auto;
         padding-bottom: calc(57.38% + ((88.84 - 57.38) * ((100vw - 430px) / 190)));
         text-align: center;
-        @include mq-w(528px) {
-          max-width: 575px;
-          margin: 0 auto;
-        }
         @include mq-w(620px) {
-          max-width: 616px;
-          margin: 0 auto;
           height: 406px;
           padding-bottom: 0;
         }
-        @include mq-w(921px) {
+        @include mq-w(950px) {
           max-height: 401px;
           height: 100%;
           flex: 1 1 575px;
@@ -102,53 +97,95 @@
         flex: 1 1 calc(100% - 575px - 24px);
         flex-direction: column;
 
-        &-loc {
+        .main-info__bl_details-rb-loc {
           display: flex;
+          flex-wrap: wrap;
           font-family: $font-head;
           font-size: rem(16);
           color: $cl-white;
           font-weight: 700;
           align-items: center;
           padding-top: rem(24);
+
           @include mq-w(621px) {
             padding-top: rem(32);
           }
+
           @include mq-w(921px) {
             padding-top: rem(13);
           }
 
+          &-item {
+            display: flex;
+            align-items: center;
+
+            &:nth-child(3) {
+              flex-basis: 100%;
+              @include mq-w(406px) {
+                &:nth-child(3) {
+                  flex-basis: auto;
+                }
+              }
+
+            }
+
+            @include mq-w(950px) {
+              &:nth-child(1) {
+                flex-basis: 100%;
+                padding-bottom: 24px;
+              }
+            }
+            @include mq-w(1320px) {
+              &:nth-child(1) {
+                flex-basis: auto;
+                padding-bottom: 0;
+              }
+            }
+          }
+
           &-p {
+            margin-left: 8px;
             display: inline-flex;
             align-items: center;
             white-space: pre-line;
+
             @include mq-w(921px) {
               font-size: rem(13);
             }
+
             @include mq-w(950px) {
               font-size: rem(14);
             }
           }
 
           &-img {
+            width: 24px;
+            height: 24px;
+
             &--mr {
-              margin-right: 8px;
-              width: 24px;
-              height: 24px;
+            }
+
+            &--mrt {
+              margin-left: 24px;
+              @include mq-w(950px) {
+                margin-left: 0;
+
+              }
+              @include mq-w(1320px) {
+                margin-left: 25px;
+              }
             }
 
             &--ml {
-              margin-left: 24px;
-              width: 24px;
-              height: 24px;
-              @include mq-w(921px) {
-                margin-left: 14px;
-              }
-              @include mq-w(950px) {
+              padding-top: 12px;
+              @include mq-w(406px) {
                 margin-left: 24px;
               }
             }
+
           }
         }
+
 
         &-check {
           display: flex;
@@ -156,10 +193,11 @@
           font-family: $font-head;
           font-size: rem(14);
           color: $cl-white;
+          padding: 20px 0 0 0;
           justify-content: flex-start;
-          padding: 40px 0 0 0;
           gap: 11px;
           @include mq-w(450px) {
+            padding: 40px 0 0 0;
             justify-content: space-between;
             gap: 24px;
           }
@@ -169,6 +207,9 @@
           }
           @include mq-w(720px) {
             justify-content: space-between;
+          }
+          @include mq-w(950px) {
+            padding-top: 24px;
           }
           @include mq-w(1074px) {
             gap: 17px;
@@ -189,9 +230,10 @@
               display: inline-block;
               width: 24px;
               height: 24px;
-              background: url($urlPic + "CheckRingLight.svg") no-repeat center center;
+              background: url($urlImg + "CheckRingLight.svg") no-repeat center center;
               flex-shrink: 0;
             }
+
             @include mq-w(450px) {
               width: 193px;
             }
@@ -201,7 +243,7 @@
             @include mq-w(620px) {
               width: 48%;
             }
-            @include mq-w(921px) {
+            @include mq-w(950px) {
               width: 100%;
               font-size: 14px;
             }
@@ -230,7 +272,7 @@
     @include mq-w(620px) {
       height: 115px;
     }
-    @include mq-w(921px) {
+    @include mq-w(950px) {
       height: 110px;
     }
 
@@ -239,7 +281,7 @@
       width: 149px;
       height: 68px;
       background: {
-        image: url($urlPic + 'rectangle.svg');
+        image: url($urlImg + 'rectangle.svg');
         size: 100% 100%;
       }
       @include mq-w(529px) {

@@ -47,7 +47,7 @@
   --f-button-svg-width: 37.4px;
   --f-button-svg-height: 52px;
   --f-button-color: #FFF;
-  --f-button-hover-bg: #A9B4B9;
+  --f-button-hover-bg: #72797C;
 }
 @media (min-width: 430px) {
   .f-carousel .f-button {
@@ -63,6 +63,10 @@
 }
 .f-carousel .f-button svg {
   stroke-linecap: butt;
+}
+.f-carousel .f-button:hover {
+  background-color: #72797C;
+  color: #FFFFFF;
 }
 
 @media (min-width: 1224px) {

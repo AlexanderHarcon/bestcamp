@@ -378,6 +378,7 @@
   font-weight: 800;
   font-size: 14px;
   line-height: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 @media (min-width: 430px) {
   .hotel-overview__bl_request_btn .btn {
@@ -387,6 +388,10 @@
 }
 .hotel-overview__bl_request_btn .btn .greenBtn {
   margin: 0;
+}
+.hotel-overview__bl_request_btn .btn:hover {
+  color: #535556;
+  background-color: #2F3B40;
 }
 .hotel-overview .stars {
   display: flex;
@@ -401,7 +406,7 @@
 }
 .hotel-overview .tabs {
   width: 100%;
-  max-width: 235px;
+  max-width: 180px;
   padding: 4px;
   border: 2px solid #2F3B40;
   border-radius: 12px;
@@ -413,7 +418,7 @@
 }
 @media (min-width: 350px) {
   .hotel-overview .tabs {
-    max-width: 285px;
+    max-width: 220px;
   }
 }
 .hotel-overview .tabs__head {
@@ -436,7 +441,10 @@
   }
 }
 .hotel-overview .tabs__head.active {
-  color: #fff;
+  color: #FFF;
+  background-color: #2F3B40;
+}
+.hotel-overview .tabs__head.active:hover {
   background-color: #2F3B40;
 }
 .hotel-overview .tabs__head:first-child {
@@ -446,6 +454,10 @@
 .hotel-overview .tabs__head:last-child {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+}
+.hotel-overview .tabs__head:hover {
+  color: #FFF;
+  background-color: #637075;
 }
 .hotel-overview .tabs-content__item {
   width: 100%;

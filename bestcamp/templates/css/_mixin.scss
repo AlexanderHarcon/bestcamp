@@ -789,7 +789,7 @@ $w_min: 320px !default;
       --f-button-svg-width: 37.4px;
       --f-button-svg-height: 52px;
       --f-button-color: #FFF;
-      --f-button-hover-bg: #A9B4B9;
+      --f-button-hover-bg: #72797C;
       @include mq-w(430px) {
         width: 60px;
         height: 60px;
@@ -801,6 +801,10 @@ $w_min: 320px !default;
 
       svg {
         stroke-linecap: butt;
+      }
+      &:hover{
+        background-color: #72797C;
+        color: #FFFFFF;
       }
     }
   }

@@ -5,7 +5,15 @@
 //------------------------------
 @import "../../base/_var";
 @import "../../base/_ext";
-
+$cl-h1grey: #A1ADB2;
+$cl-white: #FFF;
+$cl-black: #2F3B40;
+$cl-blue: #5BBCE4;
+$cl-grey: #535556;
+$cl-green: #94BE31;
+$cl_lightBlack: #2F3B40;
+$cl_Lightgray: #637075;
+$cl-lightgreen: #FAFFED;
 
 .hotel-overview {
   &__bl {
@@ -94,7 +102,7 @@
           flex-direction: column;
           flex-wrap: nowrap;
           line-height: 24px;
-          color: #535556;
+          color: $cl-grey;
           gap: 8px;
           position: relative;
         }
@@ -366,6 +374,13 @@
           .greenBtn {
             margin: 0;
           }
+
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          &:hover {
+            color: $cl-grey;
+            background-color: $cl_lightBlack;
+          }
         }
       }
     }
@@ -389,7 +404,7 @@
   /* TABS BLOCK */
   .tabs {
     width: 100%;
-    max-width: 235px;
+    max-width: 180px;
     padding: 4px;
     border: 2px solid $cl-black;
     border-radius: 12px;
@@ -402,7 +417,7 @@
     }
 
     @include mq-w(350px) {
-      max-width: 285px;
+      max-width: 220px;
     }
 
     &__head {
@@ -424,8 +439,12 @@
       line-height: 24px;
 
       &.active {
-        color: #fff;
+        color: $cl-white;
         background-color: $cl-black;
+
+        &:hover {
+          background-color: $cl-black;
+        }
       }
 
       &:first-child {
@@ -436,6 +455,11 @@
       &:last-child {
         border-bottom-right-radius: 10px;
         border-top-right-radius: 10px;
+      }
+
+      &:hover {
+        color: $cl-white;
+        background-color: $cl_Lightgray;
       }
     }
 
@@ -593,6 +617,7 @@
   .show {
     display: flex;
   }
+
   @include f-carouselOneSlideStyle;
   //*** Carousel Custom Style ***//
   .is-horizontal .f-carousel__nav .f-button.is-next,
