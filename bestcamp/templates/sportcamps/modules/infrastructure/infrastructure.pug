@@ -1,5 +1,4 @@
-// - var pathImg = "images/"
-- var pathImg = '{$opt.assets_url}images/'
+- var pathImg = '{$theme_modules}infrastructure/images/'
 
 .infrastructure
     .wrapper.pd_block
@@ -7,196 +6,124 @@
             .infrastructure__swimpool_headlines
                 p.infrastructure__swimpool_headlines-p Sport infrastructure overview
                 h2.infrastructure__swimpool_headlines-h Swimming pool
+            //table #1
             .infrastructure__filling
                 .infrastructure__filling_table.head
                     .infrastructure__filling_table-wrapper.head
                         .infrastructure__filling_table_first_col
                         .infrastructure__filling_table_second_col.head
-                            .infrastructure__filling_table_horizon
+                            each param in ['Lines', 'Length', 'Width', 'Depth', 'Indoor/Outdoor']
+                                .infrastructure__filling_table_horizon
+                                    .infrastructure__filling_table_row
+                                        p.infrastructure__filling_table-params=param
+
+                each pool, index in [{img: 'minipool.svg', name: 'Olympic Swimming pool', values: ['6', '25 m', '20 m', '2 m', 'Indoor']},{img: 'minipool.svg', name: 'Olympic Swimming pool', values: ['6', '25 m', '20 m', '2 m', 'Outdoor']},{img: 'minipool.svg', name: 'Olympic Swimming pool', values: ['6', '25 m', '20 m', '2 m', 'Outdoor']}]
+                    .infrastructure__filling_table.pt-0(class=(index === 0 ? 'no-border rotated' : ''))
+                        .infrastructure__filling_table-wrapper
+                            .infrastructure__filling_table_first_col
                                 .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Lines
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Length
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Width
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Depth
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Indoor/Outdoor
-                .infrastructure__filling_table.pt-0.no-border.rotated
-                    .infrastructure__filling_table-wrapper
-                        .infrastructure__filling_table_first_col
-                            .infrastructure__filling_table_row
-                                img.infrastructure__filling_table-img(src=pathImg + 'minipool.svg' alt='coralPool')
-                                .infrastructure__filling_table-text
-                                    | Olympic Swimming pool
-                        .infrastructure__filling_table_second_col
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Lines
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 6
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Length
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 25 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Width
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 20 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Depth
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 2 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Indoor/Outdoor
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value Indoor
-                        svg(width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg").infrastructure_arrow
-                            path(d="M11.9463 17.4824C11.6964 17.2324 11.5559 16.8934 11.5559 16.5399C11.5559 16.1864 11.6964 15.8474 11.9463 15.5974L17.2148 10.3289L1.57897 10.3383C1.22402 10.3383 0.883609 10.1973 0.632623 9.94634C0.381637 9.69536 0.240635 9.35495 0.240635 9C0.240635 8.64505 0.381637 8.30464 0.632623 8.05366C0.883609 7.80267 1.22402 7.66167 1.57897 7.66167L17.2148 7.67109L11.9463 2.40259C11.6964 2.15262 11.5559 1.8136 11.5559 1.4601C11.5559 1.1066 11.6964 0.767575 11.9463 0.517611C12.1963 0.267648 12.5353 0.127219 12.8888 0.127219C13.2423 0.127219 13.5813 0.267648 13.8313 0.517611L21.3712 8.05751C21.6212 8.30748 21.7616 8.6465 21.7616 9C21.7616 9.3535 21.6212 9.69252 21.3712 9.94249L13.8313 17.4824C13.5813 17.7324 13.2423 17.8728 12.8888 17.8728C12.5353 17.8728 12.1963 17.7324 11.9463 17.4824Z" fill="#F39540")
-                    .infrastructure__filling_table_addition.visible
-                        p.infrastructure__filling_table_addition-p Option Lorem ipsum.
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option Lorem ipsum dolor sit amet.
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                .infrastructure__filling_table.pt-0
-                    .infrastructure__filling_table-wrapper
-                        .infrastructure__filling_table_first_col
-                            .infrastructure__filling_table_row
-                                img.infrastructure__filling_table-img(src=pathImg + 'minipool.svg' alt='coralPool')
-                                .infrastructure__filling_table-text
-                                    | Olympic Swimming pool
-                        .infrastructure__filling_table_second_col
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Lines
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 6
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Length
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 25 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Width
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 20 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Depth
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 2 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Indoor/Outdoor
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value Outdoor
-                        svg(width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg").infrastructure_arrow
-                            path(d="M11.9463 17.4824C11.6964 17.2324 11.5559 16.8934 11.5559 16.5399C11.5559 16.1864 11.6964 15.8474 11.9463 15.5974L17.2148 10.3289L1.57897 10.3383C1.22402 10.3383 0.883609 10.1973 0.632623 9.94634C0.381637 9.69536 0.240635 9.35495 0.240635 9C0.240635 8.64505 0.381637 8.30464 0.632623 8.05366C0.883609 7.80267 1.22402 7.66167 1.57897 7.66167L17.2148 7.67109L11.9463 2.40259C11.6964 2.15262 11.5559 1.8136 11.5559 1.4601C11.5559 1.1066 11.6964 0.767575 11.9463 0.517611C12.1963 0.267648 12.5353 0.127219 12.8888 0.127219C13.2423 0.127219 13.5813 0.267648 13.8313 0.517611L21.3712 8.05751C21.6212 8.30748 21.7616 8.6465 21.7616 9C21.7616 9.3535 21.6212 9.69252 21.3712 9.94249L13.8313 17.4824C13.5813 17.7324 13.2423 17.8728 12.8888 17.8728C12.5353 17.8728 12.1963 17.7324 11.9463 17.4824Z" fill="#F39540")
-                    .infrastructure__filling_table_addition
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                .infrastructure__filling_table.pt-0
-                    .infrastructure__filling_table-wrapper
-                        .infrastructure__filling_table_first_col
-                            .infrastructure__filling_table_row
-                                img.infrastructure__filling_table-img(src=pathImg + 'minipool.svg' alt='coralPool')
-                                .infrastructure__filling_table-text
-                                    | Olympic Swimming pool
-                        .infrastructure__filling_table_second_col
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Lines
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 6
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Length
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 25 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Width
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 20 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Depth
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value 2 m
-                            .infrastructure__filling_table_horizon
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-params Indoor/Outdoor
-                                .infrastructure__filling_table_row
-                                    p.infrastructure__filling_table-value Outdoor
-                        svg(width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg").infrastructure_arrow
-                            path(d="M11.9463 17.4824C11.6964 17.2324 11.5559 16.8934 11.5559 16.5399C11.5559 16.1864 11.6964 15.8474 11.9463 15.5974L17.2148 10.3289L1.57897 10.3383C1.22402 10.3383 0.883609 10.1973 0.632623 9.94634C0.381637 9.69536 0.240635 9.35495 0.240635 9C0.240635 8.64505 0.381637 8.30464 0.632623 8.05366C0.883609 7.80267 1.22402 7.66167 1.57897 7.66167L17.2148 7.67109L11.9463 2.40259C11.6964 2.15262 11.5559 1.8136 11.5559 1.4601C11.5559 1.1066 11.6964 0.767575 11.9463 0.517611C12.1963 0.267648 12.5353 0.127219 12.8888 0.127219C13.2423 0.127219 13.5813 0.267648 13.8313 0.517611L21.3712 8.05751C21.6212 8.30748 21.7616 8.6465 21.7616 9C21.7616 9.3535 21.6212 9.69252 21.3712 9.94249L13.8313 17.4824C13.5813 17.7324 13.2423 17.8728 12.8888 17.8728C12.5353 17.8728 12.1963 17.7324 11.9463 17.4824Z" fill="#F39540")
-                    .infrastructure__filling_table_addition
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
-                        p.infrastructure__filling_table_addition-p.infrastructure__filling_table_addition-p--deny Option
+                                    img.infrastructure__filling_table-img(src=pathImg + pool.img alt='coralPool')
+                                    .infrastructure__filling_table-text= pool.name
+                            .infrastructure__filling_table_second_col
+                                each val, index in pool.values
+                                    .infrastructure__filling_table_horizon
+                                        .infrastructure__filling_table_row
+                                            p.infrastructure__filling_table-params= ['Lines', 'Length', 'Width', 'Depth', 'Indoor/Outdoor'][index]
+                                        .infrastructure__filling_table_row
+                                            p.infrastructure__filling_table-value= val
+                                    svg.infrastructure_arrow(width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d="M11.9463 17.4824C11.6964 17.2324 11.5559 16.8934 11.5559 16.5399C11.5559 16.1864 11.6964 15.8474 11.9463 15.5974L17.2148 10.3289L1.57897 10.3383C1.22402 10.3383 0.883609 10.1973 0.632623 9.94634C0.381637 9.69536 0.240635 9.35495 0.240635 9C0.240635 8.64505 0.381637 8.30464 0.632623 8.05366C0.883609 7.80267 1.22402 7.66167 1.57897 7.66167L17.2148 7.67109L11.9463 2.40259C11.6964 2.15262 11.5559 1.8136 11.5559 1.4601C11.5559 1.1066 11.6964 0.767575 11.9463 0.517611C12.1963 0.267648 12.5353 0.127219 12.8888 0.127219C13.2423 0.127219 13.5813 0.267648 13.8313 0.517611L21.3712 8.05751C21.6212 8.30748 21.7616 8.6465 21.7616 9C21.7616 9.3535 21.6212 9.69252 21.3712 9.94249L13.8313 17.4824C13.5813 17.7324 13.2423 17.8728 12.8888 17.8728C12.5353 17.8728 12.1963 17.7324 11.9463 17.4824Z" fill="#F39540")
+                        .infrastructure__filling_table_addition(class=(index === 0 ? 'visible' : ''))
+                            each option, idx in ['Option Lorem ipsum.', 'Option', 'Option Lorem ipsum dolor sit amet.', 'Option', 'Option', 'Option', 'Option']
+                                p(class={
+                                    'infrastructure__filling_table_addition-p': true,
+                                    'infrastructure__filling_table_addition-p--deny': idx > 5
+                                })
+                                    | #{option}
+                                    span.infrastructure__filling_table_addition-span (101)
+
                 .infrastructure__filling_table_info
                     .infrastructure__filling_table_info_contains.infrastructure__head_arrow
                         h3.infrastructure__filling_table_info_contains-h3 Swimming Equipment (Storage Room)
-                            svg(width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg").infrastructure__filling_table_info_contains-arrow
-                                path(d="M0.602385 17.6038C0.348693 17.35 0.206177 17.0059 0.206177 16.6471C0.206177 16.2882 0.348693 15.9441 0.602385 15.6903L7.30088 8.99183L0.602384 2.29334C0.355882 2.03811 0.219483 1.69629 0.222567 1.34147C0.22565 0.98666 0.367968 0.647251 0.618868 0.396351C0.869768 0.145452 1.20917 0.00313564 1.56399 5.14391e-05C1.9188 -0.00303085 2.26063 0.133367 2.51585 0.379869L10.1711 8.0351C10.4248 8.28886 10.5673 8.633 10.5673 8.99183C10.5673 9.35066 10.4248 9.6948 10.1711 9.94856L2.51585 17.6038C2.26208 17.8575 1.91795 18 1.55912 18C1.20029 18 0.856153 17.8575 0.602385 17.6038Z" fill="#2F3B40")
+                        svg.infrastructure__filling_table_info_contains-arrow(width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d="M0.602385 17.6038C0.348693 17.35 0.206177 17.0059 0.206177 16.6471C0.206177 16.2882 0.348693 15.9441 0.602385 15.6903L7.30088 8.99183L0.602384 2.29334C0.355882 2.03811 0.219483 1.69629 0.222567 1.34147C0.22565 0.98666 0.367968 0.647251 0.618868 0.396351C0.869768 0.145452 1.20917 0.00313564 1.56399 5.14391e-05C1.9188 -0.00303085 2.26063 0.133367 2.51585 0.379869L10.1711 8.0351C10.4248 8.28886 10.5673 8.633 10.5673 8.99183C10.5673 9.35066 10.4248 9.6948 10.1711 9.94856L2.51585 17.6038C2.26208 17.8575 1.91795 18 1.55912 18C1.20029 18 0.856153 17.8575 0.602385 17.6038Z" fill="#2F3B40")
                     .infrastructure__filling_table_info-wrapper
                         .infrastructure__filling_table_info_text
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                            p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
+                            each idx in [1,2,3,4,5,6,7,8,9,10]
+                                p.infrastructure__filling_table_info_text-p
+                                    | 01 Name of equipment for an Olympic swimming pool
+                                    span.equipment-number= '(' + idx + ')'
                         .infrastructure__filling_table_info_text
                             h4.infrastructure__filling_table_info_text-h4 Product available for order from Active Planet Sport for Swimming:
-                            .infrastructure__filling_table_info_text
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
+                            each idx in [1,2,3,4]
+                                p.infrastructure__filling_table_info_text-p
+                                    | 01 Name of equipment for an Olympic swimming pool
+                                    span.equipment-number= '(' + idx + ')'
                         .infrastructure__filling_table_info_text.disabled
                             h4.infrastructure__filling_table_info_text-h4 Inventory not available:
-                            .infrastructure__filling_table_info_text
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
-                                p.infrastructure__filling_table_info_text-p 01 Name of equipment for an Olympic swimming pool (10)
+                            each idx in [1,2,3,4,5]
+                                p.infrastructure__filling_table_info_text-p
+                                    | 01 Name of equipment for an Olympic swimming pool
+                                    span.equipment-number= '(' + idx + ')'
+
+            .infrastructure__swimpool_headlines
+                h2.infrastructure__swimpool_headlines-h Fitness
+            //table #2
+            .infrastructure__filling
+                .infrastructure__filling_table.head
+                    .infrastructure__filling_table-wrapper.head
+                        .infrastructure__filling_table_first_col
+                        .infrastructure__filling_table_second_col.head
+                            each param in ['Hall square footage', 'Surface', 'Indoor/Outdoor']
+                                .infrastructure__filling_table_horizon
+                                    .infrastructure__filling_table_row
+                                        p.infrastructure__filling_table-params=param
+
+                each pool, index in [{name: 'Gym Hall', values: ['40 m²', 'Hard', 'Indoor']},{name: 'Gym Hall', values: ['40 m²', 'Hard', 'Outdoor']}]
+                    .infrastructure__filling_table.pt-0(class=(index === 0 ? 'no-border rotated' : ''))
+                        .infrastructure__filling_table-wrapper
+                            .infrastructure__filling_table_first_col
+                                .infrastructure__filling_table_row
+                                    .infrastructure__filling_table-text= pool.name
+                            .infrastructure__filling_table_second_col
+                                each val, index in pool.values
+                                    .infrastructure__filling_table_horizon
+                                        .infrastructure__filling_table_row
+                                            p.infrastructure__filling_table-params= ['Hall square footage', 'Surface', 'Indoor/Outdoor'][index]
+                                        .infrastructure__filling_table_row
+                                            p.infrastructure__filling_table-value= val
+                                    svg.infrastructure_arrow(width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d="M11.9463 17.4824C11.6964 17.2324 11.5559 16.8934 11.5559 16.5399C11.5559 16.1864 11.6964 15.8474 11.9463 15.5974L17.2148 10.3289L1.57897 10.3383C1.22402 10.3383 0.883609 10.1973 0.632623 9.94634C0.381637 9.69536 0.240635 9.35495 0.240635 9C0.240635 8.64505 0.381637 8.30464 0.632623 8.05366C0.883609 7.80267 1.22402 7.66167 1.57897 7.66167L17.2148 7.67109L11.9463 2.40259C11.6964 2.15262 11.5559 1.8136 11.5559 1.4601C11.5559 1.1066 11.6964 0.767575 11.9463 0.517611C12.1963 0.267648 12.5353 0.127219 12.8888 0.127219C13.2423 0.127219 13.5813 0.267648 13.8313 0.517611L21.3712 8.05751C21.6212 8.30748 21.7616 8.6465 21.7616 9C21.7616 9.3535 21.6212 9.69252 21.3712 9.94249L13.8313 17.4824C13.5813 17.7324 13.2423 17.8728 12.8888 17.8728C12.5353 17.8728 12.1963 17.7324 11.9463 17.4824Z" fill="#F39540")
+                        .infrastructure__filling_table_addition(class=(index === 0 ? 'visible' : ''))
+                            p.infrastructure__filling_table_addition-text Access to the gym is included in the price of the Gloria Sport Arena packages. Access to the gym is included in the price of the Gloria Sport Arena packages. Access to the gym is included in the price of the Gloria Sport Arena packages.Access to the gym is included in the price of the Gloria Sport Arena packages. Access to the gym is included in the price of the Gloria Sport Arena packages.
+                            each option, idx in ['Option Lorem ipsum.', 'Option', 'Option Lorem ipsum dolor sit amet.', 'Option', 'Option', 'Option', 'Option']
+                                p(class={
+                                    'infrastructure__filling_table_addition-p': true,
+                                    'infrastructure__filling_table_addition-p--deny': idx > 5
+                                })
+                                    | #{option}
+                                    span.infrastructure__filling_table_addition-span (101)
+
+                .infrastructure__filling_table_info
+                    .infrastructure__filling_table_info_contains.infrastructure__head_arrow
+                        h3.infrastructure__filling_table_info_contains-h3 Equipment On-Site
+                        svg.infrastructure__filling_table_info_contains-arrow(width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d="M0.602385 17.6038C0.348693 17.35 0.206177 17.0059 0.206177 16.6471C0.206177 16.2882 0.348693 15.9441 0.602385 15.6903L7.30088 8.99183L0.602384 2.29334C0.355882 2.03811 0.219483 1.69629 0.222567 1.34147C0.22565 0.98666 0.367968 0.647251 0.618868 0.396351C0.869768 0.145452 1.20917 0.00313564 1.56399 5.14391e-05C1.9188 -0.00303085 2.26063 0.133367 2.51585 0.379869L10.1711 8.0351C10.4248 8.28886 10.5673 8.633 10.5673 8.99183C10.5673 9.35066 10.4248 9.6948 10.1711 9.94856L2.51585 17.6038C2.26208 17.8575 1.91795 18 1.55912 18C1.20029 18 0.856153 17.8575 0.602385 17.6038Z" fill="#2F3B40")
+                    .infrastructure__filling_table_info-wrapper
+                        .infrastructure__filling_table_info_text
+                            each idx in [1,2,3,4,5,6,7,8,9,10]
+                                p.infrastructure__filling_table_info_text-p
+                                    | 01 Name of equipment for an Olympic swimming pool
+                                    span.equipment-number= '('+ idx +')'
+                        .infrastructure__filling_table_info_text
+                            h4.infrastructure__filling_table_info_text-h4 Product available for order from Active Planet Sport for Swimming:
+                            each idx in [1,2,3,4]
+                                p.infrastructure__filling_table_info_text-p
+                                    | 01 Name of equipment for an Olympic swimming pool
+                                    span.equipment-number= '(' + idx + ')'
+                        .infrastructure__filling_table_info_text.disabled
+                            h4.infrastructure__filling_table_info_text-h4 Inventory not available:
+                            each idx in [1,2,3,4,5]
+                                p.infrastructure__filling_table_info_text-p
+                                    | 01 Name of equipment for an Olympic swimming pool
+                                    span.equipment-number= '(' + idx + ')'

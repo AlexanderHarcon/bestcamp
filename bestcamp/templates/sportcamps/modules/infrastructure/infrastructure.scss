@@ -5,7 +5,7 @@
 //------------------------------
 @import "../../base/_var";
 @import "../../base/_ext";
-
+//
 //@import "../../../css/mixin";
 //@import "../../../css/foundation";
 //@import "../../../css/ext";
@@ -18,6 +18,12 @@
 //@import "../../base/base";
 
 $cl-black: #2F3B40;
+$cl-grey: #ccc;
+$cl-blue: #5BBCE4FF;
+$cl-gradient: #D3D3D3;
+$cl-white: #FFFFFF;
+$cl-hover: #F4FCFF;
+$cl-h1grey: #7F7F7F;
 
 .infrastructure {
   .wrapper.pd_block {
@@ -69,7 +75,6 @@ $cl-black: #2F3B40;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 10%);
     border-radius: 16px;
 
-
     &_table {
       padding: {
         top: 16px;
@@ -89,19 +94,19 @@ $cl-black: #2F3B40;
 
       &.pt-0 {
         padding-top: 16px;
-        background: linear-gradient(to right, #D3D3D3 50%, #D3D3D3 50%);
+        background: linear-gradient(to right, $cl-gradient 50%, $cl-gradient 50%);
         background-size: 100% 1px;
         background-position: top;
         background-repeat: no-repeat;
-
+        cursor: pointer;
+        transition: ease-out .2s;
         @include mq-w(785px) {
           padding-top: 0;
         }
 
-        cursor: pointer;
-        transition: ease-out .2s;
         &:hover {
-          background-color: #F4FCFF;
+          background-color: $cl-hover;
+
           .infrastructure_arrow {
             path {
               fill: $cl-blue;
@@ -118,32 +123,20 @@ $cl-black: #2F3B40;
 
       &.no-border {
         background: none;
-      }
-
-      &:last-child {
-        background: linear-gradient(to right, #D3D3D3 50%, #D3D3D3 50%);
-        background-size: 100% 1px;
-        background-position: top;
-        background-repeat: no-repeat;
+        @include mq-w(785px) {
+          background: linear-gradient(to right, $cl-gradient 50%, $cl-gradient 50%);
+          background-size: 100% 1px;
+          background-position: top;
+          background-repeat: no-repeat;
+        }
       }
 
       &-wrapper {
         position: relative;
         @include mq-w(785px) {
           display: flex;
-          &.head::before {
-            content: '';
-            display: block;
-            background: linear-gradient(to right, #D3D3D3 50%, #D3D3D3 50%);
-            background-size: 100% 1px;
-            background-position: top;
-            background-repeat: no-repeat;
-            height: 1px;
-            position: absolute;
-            width: calc(100% + 32px);
-            margin-left: -16px;
-            top: 34px;
-          }
+          justify-content: space-between;
+          padding-right: 70px;
         }
       }
 
@@ -155,7 +148,8 @@ $cl-black: #2F3B40;
           @include mq-w(785px) {
             width: 326px;
             display: inline-flex;
-            align-items: flex-end;
+            //align-items: flex-end;
+            padding-bottom:0;
           }
         }
       }
@@ -206,10 +200,11 @@ $cl-black: #2F3B40;
       &-img {
         width: 64px;
         height: 30px;
+        margin-right: 8px;
       }
 
       &-text {
-        padding-left: 8px;
+
         font: {
           size: 12px;
           family: Inter;
@@ -279,9 +274,7 @@ $cl-black: #2F3B40;
         width: calc(100% + 32px);
         margin-left: -16px;
         padding: 16px 16px 24px 16px;
-        column-count: 2;
-
-        background: linear-gradient(to right, #D3D3D3 50%, #D3D3D3 50%);
+        background: linear-gradient(to right, $cl-gradient 50%, $cl-gradient 50%);
         background-size: 100% 1px;
         background-position: top;
         background-repeat: no-repeat;
@@ -292,14 +285,22 @@ $cl-black: #2F3B40;
           display: block;
           cursor: auto;
         }
+        &-text{
+          font:{
+            family: Inter;
+            weight: 400;
+            size: 12px;
+          }
+          padding-bottom: 16px;
+          line-height: 16px;
+          letter-spacing: 0.2px;
 
-        @include mq-w(570px) {
-          column-count: 3;
+          @include mq-w(744px){
+            padding-bottom: 24px;
+            line-height: 24px;
+            font-size: 14px;
+          }
         }
-        @include mq-w(785px) {
-          column-count: 4;
-        }
-
         &-p {
           font-family: $font-head;
           font-weight: 500;
@@ -308,8 +309,19 @@ $cl-black: #2F3B40;
           position: relative;
           padding-left: 16px;
           margin-bottom: 14px;
-          max-width: 180px;
-          width: 100%;
+          display: inline-block;
+          width: 50%;
+          vertical-align: top;
+          @include mq-w(383px) {
+            padding-right: 8px;
+            width: calc(100% / 2);
+          }
+          @include mq-w(431px) {
+            width: calc(100% / 3);
+          }
+          @include mq-w(1100px) {
+            width: calc(100% / 4);
+          }
 
           &:before {
             content: '';
@@ -324,23 +336,29 @@ $cl-black: #2F3B40;
           }
 
           &--deny {
-            color: #ccc;
+            color: $cl-grey;
 
             &:before {
               background-image: url(images/dcheck.svg);
             }
           }
-
         }
-
+        &-span{
+          padding-left: 1px;
+          font:{
+            family: Inter;
+            weight: 300;
+            size: 11px;
+          }
+          line-height: 16px;
+        }
       }
 
       &_info {
-        background: linear-gradient(to right, #D3D3D3 50%, #D3D3D3 50%);
+        background: linear-gradient(to right, $cl-gradient 50%, $cl-gradient 50%);
         background-size: 100% 1px;
         background-position: top;
         background-repeat: no-repeat;
-
         padding: 24px 16px;
 
         &-wrapper {
@@ -362,14 +380,6 @@ $cl-black: #2F3B40;
               family: Inter;
             }
             cursor: pointer;
-            &:hover {
-              color: $cl-blue;
-              .infrastructure__filling_table_info_contains-arrow {
-                path {
-                  fill: $cl-blue;
-                }
-              }
-            }
 
             @include mq-w(383px) {
               line-height: 28px;
@@ -379,11 +389,22 @@ $cl-black: #2F3B40;
               font-size: 18px;
             }
           }
+          &:hover {
+            color: $cl-blue;
 
+            .infrastructure__filling_table_info_contains-arrow {
+              path {
+                fill: $cl-blue;
+              }
+            }
+          }
           &-arrow {
             transition: transform .2s;
             margin-left: 8px;
-            margin-top: -3px;
+              margin-top: -3px;
+            @include mq-w(385px) {
+              margin-top: 0;
+            }
           }
 
           &.rotated {
@@ -447,11 +468,15 @@ $cl-black: #2F3B40;
         }
 
         &.disabled {
-          color: #ccc;
+          color: $cl-grey;
         }
       }
     }
   }
+}
+.equipment-number{
+  padding-left: 1px;
+  font-weight: 300;
 }
 
 
