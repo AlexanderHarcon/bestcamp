@@ -1,14 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const arrow = document.querySelector('.inf-table__head-arrow');
-    const list = document.querySelector('.inf-table__list');
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".infrastructure__filling_table").forEach(arrow => {
+        arrow.addEventListener("click", function () {
+            const tableAddition = this.querySelector(".infrastructure__filling_table_addition");
 
-    arrow.addEventListener('click', function() {
-        list.classList.toggle('visible');
-        const arrowIcon = this.querySelector('.arrow');
-        if (list.classList.contains('visible')) {
-            arrowIcon.textContent = '▼'; // Стрілка вниз
-        } else {
-            arrowIcon.textContent = '▶'; // Стрілка вправо
-        }
+            if (tableAddition) {
+                tableAddition.classList.toggle("visible");
+                this.classList.toggle("rotated");
+            }
+        });
+    });
+
+    document.querySelectorAll(".infrastructure__head_arrow").forEach(arrow => {
+        arrow.addEventListener("click", function () {
+            const wrapper = this.closest(".infrastructure__filling_table_info")
+                .querySelector(".infrastructure__filling_table_info-wrapper");
+
+            if (wrapper) {
+                wrapper.classList.toggle("visible");
+                this.classList.toggle("rotated");
+            }
+        });
     });
 });

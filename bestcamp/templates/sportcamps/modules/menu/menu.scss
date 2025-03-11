@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+//@import "../../../css/_mixin";
+//@import "../../../css/_var";
+//@import "../../../css/_ext";
+////------------------------------
+//@import "../../base/_var";
+//@import "../../base/_ext";
+
+@import "../../../css/mixin";
+@import "../../../css/foundation";
+@import "../../../css/ext";
+@import "../../../css/var";
+//------------------------------
+@import "../../base/var";
+@import "../../base/class";
+@import "../../base/font";
+@import "../../base/ext";
+@import "../../base/base";
+
+.container {
+  display: flex;
+  //max-width: 900px;
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 16%);;
+}
+
+.continent-list {
+  background: #f5f5f5;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .continent {
+    font: {
+      family: Inter;
+      size: 14px;
+      weight: 700;
+    }
+    line-height: 16px;
+    padding: 16px;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: #f7943d;
+      color: white;
+    }
+    &:last-child{
+      //margin-bottom: 15px;
+    }
+  }
+}
+
+.country-list {
+  flex: 1;
+  padding: 19px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  .country-group {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; // Додає відступи між країнами
+    column-count: 1;
+
+    @include mq-w(744px) {
+      column-count: 3;
+    }
+    @include mq-w(1044px) {
+      column-count: 4;
+    }
+  }
+
+
+
+  .country {
+    padding: 8px 0;
+    color: #333;
+    font: {
+      family: Inter;
+      size: 14px;
+      weight: 500;
+    }
+    line-height: 16px;
+    cursor: pointer;
+
+    &:hover {
+      color: #F39540;
+      background-color: #FFF8F1;
+    }
+
+    &.highlighted {
+      color: #f7943d;
+      background: rgba(247, 148, 61, 0.2);
+    }
+    .span-count{
+      font: {
+        family: Inter;
+        size: 14px;
+        weight: 300;
+      }
+      color: #333;
+      line-height: 16px;
+      padding-left: 5px;
+    }
+  }
+}
+

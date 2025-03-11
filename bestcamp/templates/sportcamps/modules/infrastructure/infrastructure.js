@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".infrastructure__filling_table").forEach(arrow => {
+    document.querySelectorAll(".infrastructure__filling_table-wrapper").forEach(arrow => {
         arrow.addEventListener("click", function () {
-            const tableAddition = this.querySelector(".infrastructure__filling_table_addition");
+            const tableAddition = this.closest(".infrastructure__filling_table")
+                .querySelector(".infrastructure__filling_table_addition")
 
             if (tableAddition) {
                 tableAddition.classList.toggle("visible");
-                this.classList.toggle("rotated");
+                this.closest(".infrastructure__filling_table").classList.toggle("rotated");
             }
         });
     });

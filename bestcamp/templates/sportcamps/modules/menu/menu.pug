@@ -1,0 +1,40 @@
+// - var pathImg = '{$theme_modules}infrastructure/images/'
+- var pathImg = "images/"
+
+- var europe = [{ name: "France", count: 2 }, { name: "Germany" }, { name: "Spain" }, { name: "Italy" }, { name: "United Kingdom" }, { name: "Netherlands" }, { name: "Poland" }, { name: "Sweden" }, { name: "Belgium" }, { name: "Greece" }, { name: "Portugal" }, { name: "Switzerland" }, { name: "Austria" }, { name: "Norway" }, { name: "Finland" }, { name: "Denmark" }, { name: "Ireland" }, { name: "Czech Republic" }, { name: "Hungary" }, { name: "Romania" }, { name: "Bulgaria" }, { name: "Slovakia" }, { name: "Croatia" }, { name: "Serbia" }, { name: "Slovenia" }, { name: "Estonia" }, { name: "Latvia" }, { name: "Lithuania" }, { name: "Belarus" }, { name: "Ukraine" }, { name: "Moldova" }, { name: "Kosovo" }, { name: "Albania" }, { name: "North Macedonia" }, { name: "Montenegro" }, { name: "Bosnia and Herzegovina" }, { name: "Luxembourg" }, { name: "Malta" }, { name: "Andorra" }, { name: "Monaco" }, { name: "San Marino" }, { name: "Liechtenstein" }, { name: "Vatican City" }, { name: "Armenia" }, { name: "Georgia" }, { name: "Turkey" }, { name: "Cyprus" }, { name: "Azerbaijan" }, { name: "Kazakhstan" }, { name: "Uzbekistan" }, { name: "Kyrgyzstan" }];
+- var asia = [{ name: "China" }, { name: "India" }, { name: "Japan" }, { name: "Indonesia" }, { name: "Vietnam" }, { name: "Pakistan" }, { name: "Bangladesh" }, { name: "Philippines" }, { name: "Turkey" }, { name: "Iran" }, { name: "Thailand" }, { name: "Myanmar" }, { name: "South Korea" }, { name: "Iraq" }, { name: "Afghanistan" }, { name: "Saudi Arabia" }, { name: "Uzbekistan" }, { name: "Malaysia" }, { name: "Yemen" }, { name: "Nepal" }, { name: "North Korea" }, { name: "Sri Lanka" }, { name: "Kazakhstan" }, { name: "Syria" }, { name: "Cambodia" }, { name: "Jordan" }, { name: "Azerbaijan" }, { name: "United Arab Emirates" }, { name: "Tajikistan" }, { name: "Israel" }, { name: "Laos" }, { name: "Lebanon" }, { name: "Kyrgyzstan" }, { name: "Turkmenistan" }, { name: "Singapore" }, { name: "Oman" }, { name: "State of Palestine" }, { name: "Kuwait" }, { name: "Georgia" }, { name: "Mongolia" }, { name: "Armenia" }, { name: "Qatar" }, { name: "Bahrain" }, { name: "Timor-Leste" }, { name: "Bhutan" }, { name: "Maldives" }, { name: "Brunei" }, { name: "Macau" }, { name: "Hong Kong" }];
+- var africa = [{ name: "Nigeria" }, { name: "South Africa" }, { name: "Egypt" }, { name: "Kenya" }, { name: "Morocco" }, { name: "Ethiopia" }, { name: "Tanzania" }, { name: "Uganda" }, { name: "Algeria" }, { name: "Sudan" }, { name: "Angola" }, { name: "Ghana" }, { name: "Mozambique" }, { name: "Madagascar" }, { name: "Cameroon" }, { name: "Côte d'Ivoire" }, { name: "Niger" }, { name: "Burkina Faso" }, { name: "Mali" }, { name: "Malawi" }, { name: "Zambia" }, { name: "Senegal" }, { name: "Chad" }, { name: "Rwanda" }, { name: "Guinea" }, { name: "Benin" }, { name: "Burundi" }, { name: "Tunisia" }, { name: "South Sudan" }, { name: "Togo" }, { name: "Sierra Leone" }, { name: "Libya" }, { name: "Congo" }, { name: "Liberia" }, { name: "Mauritania" }, { name: "Eritrea" }, { name: "Central African Republic" }, { name: "Mauritius" }, { name: "Eswatini" }, { name: "Djibouti" }, { name: "Comoros" }, { name: "Cabo Verde" }, { name: "Seychelles" }, { name: "Lesotho" }, { name: "Gabon" }, { name: "Equatorial Guinea" }, { name: "Botswana" }, { name: "Gambia" }, { name: "Somalia" }, { name: "Guinea-Bissau" }, { name: "São Tomé and Príncipe" }, { name: "Zanzibar" }];
+- var australiaOceania = [{ name: "Australia" }, { name: "New Zealand" }, { name: "Fiji" }, { name: "Papua New Guinea" }, { name: "Solomon Islands" }, { name: "Vanuatu" }, { name: "Samoa" }, { name: "American Samoa" }, { name: "Tonga" }, { name: "Kiribati" }, { name: "Marshall Islands" }, { name: "Palau" }, { name: "Micronesia" }, { name: "Nauru" }, { name: "Tuvalu" }, { name: "Cook Islands" }, { name: "Niue" }, { name: "French Polynesia" }, { name: "New Caledonia" }, { name: "Wallis and Futuna" }, { name: "Easter Island" }, { name: "Pitcairn Islands" }, { name: "Norfolk Island" }];
+- var northAmerica = [{ name: "USA" }, { name: "Canada" }, { name: "Mexico" }, { name: "Cuba" }, { name: "Guatemala" }, { name: "Honduras" }, { name: "El Salvador" }, { name: "Nicaragua" }, { name: "Costa Rica" }, { name: "Panama" }, { name: "Belize" }, { name: "Jamaica" }, { name: "Trinidad and Tobago" }, { name: "Bahamas" }, { name: "Barbados" }, { name: "Saint Lucia" }, { name: "Grenada" }, { name: "Saint Vincent and the Grenadines" }, { name: "Antigua and Barbuda" }, { name: "Saint Kitts and Nevis" }, { name: "Dominica" }, { name: "Saint Pierre and Miquelon" }, { name: "Bermuda" }, { name: "Anguilla" }, { name: "Montserrat" }, { name: "Cayman Islands" }, { name: "Turks and Caicos Islands" }, { name: "Aruba" }, { name: "Curacao" }, { name: "Bonaire" }, { name: "Saint Barthelemy" }, { name: "Sint Eustatius" }, { name: "Sint Maarten" }, { name: "Bonaire, Sint Eustatius and Saba" }];
+- var southAmerica = [{ name: "Brazil" }, { name: "Argentina" }, { name: "Colombia" }, { name: "Chile" }, { name: "Peru" }, { name: "Venezuela" }, { name: "Ecuador" }, { name: "Bolivia" }, { name: "Paraguay" }, { name: "Uruguay" }, { name: "Guyana" }, { name: "Suriname" }, { name: "French Guiana" }, { name: "Falkland Islands" }, { name: "Saint Helena" }, { name: "Ascension Island" }, { name: "Trinidad and Tobago" }, { name: "Barbados" }, { name: "Grenada" }, { name: "Saint Vincent and the Grenadines" }, { name: "Saint Kitts and Nevis" }, { name: "Antigua and Barbuda" }, { name: "Dominica" }, { name: "Saint Lucia" }, { name: "Panama" }, { name: "Guyana" }, { name: "French Guiana" }, { name: "Equator" }, { name: "Uruguay" }, { name: "Colombia" }, { name: "Peru" }, { name: "Chile" }, { name: "Guyana" }, { name: "Brazil" }, { name: "Argentina" }, { name: "Colombia" }];
+- var middleEastNorthAfrica = [{ name: "Saudi Arabia" }, { name: "United Arab Emirates" }, { name: "Israel" }, { name: "Jordan" }, { name: "Lebanon" }, { name: "Syria" }, { name: "Iraq" }, { name: "Kuwait" }, { name: "Oman" }, { name: "Qatar" }, { name: "Bahrain" }, { name: "Yemen" }, { name: "Egypt" }, { name: "Libya" }, { name: "Tunisia" }, { name: "Algeria" }, { name: "Morocco" }, { name: "Mauritania" }, { name: "Western Sahara" }, { name: "Sudan" }, { name: "Djibouti" }, { name: "Comoros" }, { name: "Somalia" }, { name: "Palestine" }, { name: "Jordan" }, { name: "Cyprus" }, { name: "Turkey" }, { name: "Iran" }, { name: "Azerbaijan" }, { name: "Armenia" }];
+
+- var countries = { "Europe": europe, "Asia": asia, "Africa": africa, "Australia / Oceania": australiaOceania, "North America": northAmerica, "South America": southAmerica, "Middle East & North Africa": middleEastNorthAfrica }
+
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' href='menu.css')
+    script(rel='script' src='menu.js')
+    title Football Camps
+
+.menu
+    .wrapper.pd_block
+        section.menu__headline
+            .menu__headline_wrapper
+                a.headline_wrapper-link
+                    img.headline_wrapper-img(src=pathImg + 'logo.svg')
+                .container
+                    .continent-list
+                        each countryList, continent in countries
+                            .continent(data-continent=continent, class=(continent === activeContinent ? 'active' : ''))= continent
+
+                    .country-list
+                        each countryList, continent in countries
+                            .country-group(data-continent=continent, style=(continent === activeContinent ? 'display: block;' : 'display: none;'))
+                                each country in countryList
+                                    .country
+                                        = country.name
+                                        if country.count > 0
+                                            span.span-count= `(${country.count})`
