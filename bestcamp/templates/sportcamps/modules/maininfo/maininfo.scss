@@ -6,12 +6,10 @@
 @import "../../base/_var";
 @import "../../base/_ext";
 
-$urlImg: 'images/';
-
 .main-info {
   background: {
     color: rgba(7, 5, 14, 0.8);
-    image: url($urlImg + 'background.jpeg');
+    image: url('images/background.jpeg');
     size: cover;
     repeat: no-repeat;
     position: center center;
@@ -230,7 +228,7 @@ $urlImg: 'images/';
               display: inline-block;
               width: 24px;
               height: 24px;
-              background: url($urlImg + "CheckRingLight.svg") no-repeat center center;
+              background: url("images/CheckRingLight.svg") no-repeat center center;
               flex-shrink: 0;
             }
 
@@ -281,7 +279,7 @@ $urlImg: 'images/';
       width: 149px;
       height: 68px;
       background: {
-        image: url($urlImg + 'rectangle.svg');
+        image: url('images/rectangle.svg');
         size: 100% 100%;
       }
       @include mq-w(529px) {

@@ -1,21 +1,21 @@
-@charset "UTF-8";
-@import "../../../css/_mixin";
-@import "../../../css/_var";
-@import "../../../css/_ext";
-//------------------------------
-@import "../../base/_var";
-@import "../../base/_ext";
-//
-//@import "../../../css/mixin";
-//@import "../../../css/foundation";
-//@import "../../../css/ext";
-//@import "../../../css/var";
+//@charset "UTF-8";
+//@import "../../../css/_mixin";
+//@import "../../../css/_var";
+//@import "../../../css/_ext";
 ////------------------------------
-//@import "../../base/var";
-//@import "../../base/class";
-//@import "../../base/font";
-//@import "../../base/ext";
-//@import "../../base/base";
+//@import "../../base/_var";
+//@import "../../base/_ext";
+
+@import "../../../css/mixin";
+@import "../../../css/foundation";
+@import "../../../css/ext";
+@import "../../../css/var";
+//------------------------------
+@import "../../base/var";
+@import "../../base/class";
+@import "../../base/font";
+@import "../../base/ext";
+@import "../../base/base";
 
 $cl-black: #2F3B40;
 $cl-grey: #ccc;
@@ -26,7 +26,7 @@ $cl-hover: #F4FCFF;
 $cl-h1grey: #7F7F7F;
 
 .infrastructure {
-  .wrapper.pd_block {
+  &.wrapper {
     padding-top: 0;
   }
 
@@ -148,7 +148,6 @@ $cl-h1grey: #7F7F7F;
           @include mq-w(785px) {
             width: 326px;
             display: inline-flex;
-            //align-items: flex-end;
             padding-bottom:0;
           }
         }

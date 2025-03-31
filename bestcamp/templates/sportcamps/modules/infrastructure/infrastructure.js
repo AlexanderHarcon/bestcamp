@@ -1,25 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".infrastructure__filling_table-wrapper").forEach(arrow => {
-        arrow.addEventListener("click", function () {
-            const tableAddition = this.closest(".infrastructure__filling_table")
-                .querySelector(".infrastructure__filling_table_addition")
+document.addEventListener("DOMContentLoaded", () => {
+    const infrastructure = document.querySelector(".infrastructure");
 
-            if (tableAddition) {
-                tableAddition.classList.toggle("visible");
-                this.closest(".infrastructure__filling_table").classList.toggle("rotated");
+    if (infrastructure) {
+        // Делегування для .infrastructure__filling_table-wrapper
+        infrastructure.addEventListener("click", (e) => {
+            const arrow = e.target.closest(".infrastructure__filling_table-wrapper");
+            if (!arrow) return;
+
+            const table = arrow.closest(".infrastructure__filling_table");
+            const addition = table?.querySelector(".infrastructure__filling_table_addition");
+
+            if (addition) {
+                addition.classList.toggle("visible");
+                table.classList.toggle("rotated");
             }
         });
-    });
 
-    document.querySelectorAll(".infrastructure__head_arrow").forEach(arrow => {
-        arrow.addEventListener("click", function () {
-            const wrapper = this.closest(".infrastructure__filling_table_info")
-                .querySelector(".infrastructure__filling_table_info-wrapper");
+        // Делегування для .infrastructure__head_arrow
+        infrastructure.addEventListener("click", (e) => {
+            const arrow = e.target.closest(".infrastructure__head_arrow");
+            if (!arrow) return;
+
+            const wrapper = arrow.closest(".infrastructure__filling_table_info")
+                ?.querySelector(".infrastructure__filling_table_info-wrapper");
 
             if (wrapper) {
                 wrapper.classList.toggle("visible");
-                this.classList.toggle("rotated");
+                arrow.classList.toggle("rotated");
             }
         });
-    });
+    }
 });
