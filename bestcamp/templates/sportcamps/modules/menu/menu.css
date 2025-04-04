@@ -3952,10 +3952,14 @@ body {
     padding: 8px 4px;
     color: #333;
   }
-  .country-group > * > *:hover {
-    color: #F39540;
-    background: #FFF8F1;
-  }
+}
+.country-group > * > *:hover {
+  color: #f39540;
+  background-color: #fff8f1;
+}
+.country-group > * > *.highlighted {
+  color: #f7943d;
+  background: rgba(247, 148, 61, 0.2);
 }
 .country--count {
   font-weight: 300;

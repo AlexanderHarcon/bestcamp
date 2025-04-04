@@ -49,8 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (group.scrollHeight >= elements.continentList.scrollHeight) {
                 let calculated = group.scrollHeight;
                 elements.container.style.height = `${calculated}px`;
-            }else{
+            } else {
                 elements.container.style.height = `${elements.continentList.scrollHeight}px`;
+                group.style.minHeight = `${elements.continentList.scrollHeight}px`;
             }
         }
     };

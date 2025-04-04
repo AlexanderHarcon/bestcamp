@@ -1033,10 +1033,15 @@ body {
           line-height: 16px;
           padding: 8px 4px;
           color: #333;
-          &:hover {
-            color: #F39540;
-            background: #FFF8F1;
-          }
+        }
+        &:hover {
+          color: #f39540;
+          background-color: #fff8f1;
+        }
+
+        &.highlighted {
+          color: #f7943d;
+          background: rgba(247, 148, 61, 0.2);
         }
       }
     }
