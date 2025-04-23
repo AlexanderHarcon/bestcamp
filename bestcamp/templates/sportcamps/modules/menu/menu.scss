@@ -1,14 +1,27 @@
 @charset "UTF-8";
+//@import "../../../css/_mixin";
+//@import "../../../css/_var";
+//@import "../../../css/_ext";
+////______________________________
+//@import "../../base/_var";
+//@import "../../base/_ext";
 
 @import "../../../css/mixin";
 @import "../../../css/foundation";
 @import "../../../css/ext";
 @import "../../../css/var";
+//______________________________
 @import "../../base/var";
 @import "../../base/class";
 @import "../../base/font";
 @import "../../base/ext";
 @import "../../base/base";
+
+@mixin max-w($max_point, $v: max) {
+  @media (#{$v}-width: $max_point) {
+    @content;
+  }
+}
 
 $MainOrange: #F39540;
 body {
@@ -17,15 +30,17 @@ body {
 
 .menuopen-js {
   transition: all .5s ease 0s;
-  .menu__destinations{
+
+  .menu__destinations {
     height: 100vh;
   }
+
   .overlay_dark {
     z-index: 3;
     background: rgba(21, 21, 22, .9);
   }
 
-  .menutop {
+  .menumob {
     position: fixed;
     top: 24px;
     left: 24px;
@@ -64,7 +79,7 @@ body {
       }
     }
 
-    .country-group {
+    .mcountry-group {
       display: none;
     }
 
@@ -109,7 +124,7 @@ body {
     }
   }
 
-  &top {
+  &mob {
     background-color: transparent;
 
     @include mq-w(744px) {
@@ -248,15 +263,17 @@ body {
 
         &.active {
           color: #F39540;
+
           &::before {
             content: '';
             position: absolute;
             left: 0;
             width: 6px;
             height: 6px;
-            background-color: #F39540;
             border-radius: 50%;
+            background-color: #F39540;
           }
+
           &::after {
             background: url("images/selector-hover.svg") center no-repeat;
             transform: rotate(180deg);
@@ -265,6 +282,7 @@ body {
 
         &:hover {
           color: #f7943d;
+
           &::before {
             content: '';
             position: absolute;
@@ -608,7 +626,7 @@ body {
         &--open .custom-select__arrow {
           background-position: center;
           transform: rotate(180deg);
-          background-image: url('images/selector-hover.svg') ;
+          background-image: url('images/selector-hover.svg');
         }
       }
     }
@@ -660,51 +678,52 @@ body {
         }
       }
     }
+  }
 
-    &-submenu {
-      display: none;
+  &__submenu {
+    display: none;
+
+    @include mq-w(744px) {
+      position: absolute;
+      //top: 31px;
+      top: 120px;
+      right: 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
+      z-index: 20;
+    }
+
+    @include mq-w(1044px) {
+      top: 67.8px;
+    }
+
+    //&.menu__submenu--active {
+    //  display: block;
+    //}
+
+    > * {
+      display: block;
+      color: #333;
+      font: {
+        family: Inter;
+        size: 18px;
+        weight: 500;
+      }
+      line-height: 20px;
+      text-decoration: none;
+      padding: 16px 24px;
 
       @include mq-w(744px) {
-        position: absolute;
-        top: 31px;
-        right: 0;
-        background: #fff;
-        border-radius: 4px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
-        z-index: 20;
-      }
-
-      @include mq-w(1044px) {
-        top: 45px;
-      }
-
-      &.menu__submenu--active {
-        display: block;
-      }
-
-      > * {
-        display: block;
-        color: #333;
+        padding: 16px;
+        line-height: 16px;
         font: {
-          family: Inter;
-          size: 18px;
-          weight: 500;
+          size: 14px;
         }
-        line-height: 20px;
-        text-decoration: none;
-        padding: 16px 24px;
+      }
 
-        @include mq-w(744px) {
-          padding: 16px;
-          line-height: 16px;
-          font: {
-            size: 14px;
-          }
-        }
-
-        &:hover {
-          color: #f7943d;
-        }
+      &:hover {
+        color: #f7943d;
       }
     }
   }
@@ -771,7 +790,7 @@ body {
     position: fixed;
     width: 100%;
     left: 0;
-    top: 91px;
+    //top: 91px;
     background: #fff;
     overflow-y: auto;
     padding-bottom: 25px;
@@ -784,7 +803,6 @@ body {
 
     @include mq-w(744px) {
       position: absolute;
-      top: 94px;
       left: 0;
       width: 100%;
       z-index: 10;
@@ -797,7 +815,6 @@ body {
     }
 
     @include mq-w(1044px) {
-      top: 47px;
       background: linear-gradient(to right, #F8F8F8 260px, white 260px 100%);
     }
 
@@ -843,7 +860,9 @@ body {
     }
     line-height: 16px;
     cursor: pointer;
+
     &.menu__dropdown {
+
       @include mq-w(744px) {
         position: static;
         width: 180px;
@@ -883,7 +902,8 @@ body {
         .menu__headline-link {
           padding: 16px;
           width: 100%;
-          &:hover{
+
+          &:hover {
             color: $cl-white;
           }
         }
@@ -895,7 +915,9 @@ body {
     }
 
     @include mq-w(1044px) {
-      text-transform: uppercase;
+      .mcountry{
+        text-transform: none;
+      }
       &.menu__dropdown {
         .menu__headline-link {
           font-weight: 700;
@@ -904,14 +926,14 @@ body {
     }
   }
 
-  .country-list {
+  .mcountry-list {
     flex: 1;
     padding: 19px 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
 
-    .country-group {
+    .mcountry-group {
       flex-direction: row;
 
       flex: 1 1 30%;
@@ -927,7 +949,8 @@ body {
       }
     }
 
-    .country {
+    .mcountry {
+      text-transform: none;
       display: block;
       padding: 6px 4px;
       color: #333;
@@ -937,12 +960,12 @@ body {
         weight: 500;
       }
       line-height: 16px;
-      cursor: pointer;
       box-sizing: border-box;
 
       &:hover {
         color: #f39540;
         background-color: #fff8f1;
+        cursor: pointer;
       }
 
       &.highlighted {
@@ -954,15 +977,18 @@ body {
 
   &__dropdown {
     position: relative;
-
+    &:hover::after {
+      background: url("images/selector-hover.svg") center no-repeat;
+      background-size: contain;
+    }
     &:after {
       content: '';
       display: flex;
       align-items: center;
       background: url("images/selector.svg") center no-repeat;
-      width: 18px;
+      width: 12px;
       height: 11px;
-      background-size: 18px 11px;
+      background-size: contain;
       transform: rotate(-90deg);
       transition: transform 0.3s ease;
       position: absolute;
@@ -970,11 +996,13 @@ body {
       right: 24px;
     }
 
+
     @include mq-w(744px) {
+
       &:after {
         width: 12px;
         height: 12px;
-        background-size: 12px;
+        background-size: contain;
         transform: rotate(0deg);
         top: 0;
         bottom: 0;
@@ -985,10 +1013,11 @@ body {
   }
 }
 
-.country {
+.mcountry {
   &-group {
     background: #fff;
     gap: 5px;
+    cursor: auto;
 
     @include mq-w(744px) {
       //align-items: start;
@@ -999,7 +1028,7 @@ body {
       right: 0;
       //grid-template-columns: repeat(3, 1fr);
       gap: 0;
-      padding: 16px 12px;
+      padding: 0 12px;
       //height: 100%;
     }
     @include mq-w(1044px) {
@@ -1018,6 +1047,7 @@ body {
       @include mq-w(1044px) {
         width: calc(100% / 4);
       }
+
       > * {
         display: block;
         padding: 16px 24px;
@@ -1031,9 +1061,10 @@ body {
         @include mq-w(744px) {
           font-size: 14px;
           line-height: 16px;
-          padding: 8px 4px;
+          padding: 14px 4px;
           color: #333;
         }
+
         &:hover {
           color: #f39540;
           background-color: #fff8f1;
@@ -1053,27 +1084,28 @@ body {
   }
 }
 
-.overlay_dark {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  display: block;
-  z-index: -1;
-  transition: .15s all ease-in;
-  background: transparent;
-
-  @include mq-w(744px) {
-    position: static;
+@include mq-w(743px) {
+  .overlay_dark {
     width: 100%;
-    height: auto;
-    z-index: 1;
+    @include mq-w(1044px) {
+      width: auto;
+    }
   }
-  @include mq-w(1044px) {
-    width: auto;
+}
+
+@include max-w(743px) {
+  .overlay_dark {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    z-index: -1;
+    transition: .15s all ease-in;
+    background: transparent;
   }
 }

@@ -4,15 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (infrastructure) {
         // Делегування для .infrastructure__filling_table-wrapper
         infrastructure.addEventListener("click", (e) => {
-            const arrow = e.target.closest(".infr__table__wrap");
+            const arrow = e.target.closest(".arrow-table");
             if (!arrow) return;
 
-            const table = arrow.closest(".infr__table__row");
-            const addition = table?.querySelector(".infr__table__info");
+            // Знаходимо найближчий .infr__table__wrap
+            const tableWrap = arrow.closest(".infr__table__wrap");
+            const tableRow = arrow.closest(".infr__table__param");
+            const optionsList = tableWrap?.querySelector(".infr__table__info");
 
-            if (addition) {
-                addition.classList.toggle("visible");
-                table.classList.toggle("rotated");
+            if (optionsList && tableRow) {
+                optionsList.classList.toggle("visible");
+                tableRow.classList.toggle("rotated");
             }
         });
 

@@ -1,167 +1,146 @@
-doctype html
-head
-    meta(charset='UTF-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel='stylesheet' href='menu.css')
-    script(rel='script' src='../../base/base.js')
-    script(rel='script' src='menu.js')
-    title Football Camps
+- var pathImg = '{$theme_modules}menu/images/'
+ - var pathImg = 'images/'
+ doctype html
+ head
+     meta(charset='UTF-8')
+     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+     link(rel='stylesheet' href='menu.css')
+     script(rel='script' src='../../base/base.js')
+     script(rel='script' src='menu.js')
+     title Football Camps
 
-.menu-bl
+.menu-bl#menu
     section.menu.wrapper.pd_block
        .menu__headline
-            a.menu__headline-logo(href="#")
-                img.menu__headline-logo--img(src='images/logo.svg', alt="Logo")
-            .menutop
+            a.menu__headline-logo(href="javascript:void(0)")
+                img.menu__headline-logo--img(src=pathImg + 'logo.svg', alt="Logo")
+            .menumob
                 //- Menu top Button mobile
-                button.menutop-btn#mainmenu-btn
-                    input(type="checkbox" id="menutop-check" role="button").uncheck-js.gamburg
-                    label.gamburger(for='menutop-check')
+                button.menumob-btn#mainmenu-btn
+                    input(type="checkbox" id="menumob-check" role="button").uncheck-js.gamburg
+                    label.gamburger(for='menumob-check')
             div.overlay_dark
                 nav#mainmenu-nav.menu__headline-wrapper
                     div
-                        a.menu__mobile-logo(href="#")
-                            img.menu__headline-logo--img(src='images/logo.svg', alt="Logo")
+                        a.menu__mobile-logo(href="javascript:void(0)")
+                            img.menu__headline-logo--img(src=pathImg + 'logo.svg', alt="Logo")
                         ul.menu__list
                             li
-                                a.menu__headline-link(href="#") Other Camps
+                                a.menu__headline-link(href="javascript:void(0)") Other Camps
                             li.menu__destinations-wrapper
-                                a.menu__headline-link.menu__dropdown(href="#", data-toggle="destinations") Destinations
-                                .menu__destinations
+                                a.menu__headline-link.menu__dropdown(href="javascript:void(0)", data-toggle="destinations") Destinations
+                                .menu__submenu.menu__destinations
                                     button.menu__mobile-back.menu__mobile-back--js Back to Main Menu
                                     .container
                                         h6.menu__mobile-active Destinations:
                                         ul.continent-list
                                             li.continent.menu__dropdown(data-continent="Europe")
-                                                a.menu__headline-link(href="#") Europe
-                                                ul.country-group(data-continent="Europe")
+                                                a.menu__headline-link(href="javascript:void(0)") Europe
+                                                ul.mcountry-group(data-continent="Europe")
                                                     li
-                                                        a.country France Francee France Francee France Francee
-                                                            span.country-count (2)
+                                                        a.mcountry FranceFrance France France
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Germany
-                                                            span.country--count (442)
+                                                        a.mcountry Germany
+                                                            span.mcountry--count (442)
                                                     li
-                                                        a.country Spain
-                                                            span.country--count (322)
+                                                        a.mcountry Spain
+                                                            span.mcountry--count (322)
                                                     li
-                                                        a.country Italy
+                                                        a.mcountry Italy
                                                     li
-                                                        a.country France Francee
-                                                            span.country--count (2)
+                                                        a.mcountry France Francee
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Germany
-                                                            span.country--count (442)
+                                                        a.mcountry Germany
+                                                            span.mcountry--count (442)
                                                     li
-                                                        a.country Spain
-                                                            span.country--count (322)
+                                                        a.mcountry Spain
+                                                            span.mcountry--count (322)
                                                     li
-                                                        a.country Italy
+                                                        a.mcountry Italy
                                                     li
-                                                        a.country France Francee
-                                                            span.country--count (2)
+                                                        a.mcountry France Francee
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Germany
-                                                            span.country--count (442)
+                                                        a.mcountry Germany
+                                                            span.mcountry--count (442)
                                                     li
-                                                        a.country Spain
-                                                            span.country--count (322)
+                                                        a.mcountry Spain
+                                                            span.mcountry--count (322)
                                                     li
-                                                        a.country Italy
+                                                        a.mcountry Italy
                                                     li
-                                                        a.country France Francee
-                                                            span.country--count (2)
+                                                        a.mcountry France Francee
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Germany
-                                                            span.country--count (442)
+                                                        a.mcountry Germany
+                                                            span.mcountry--count (442)
                                                     li
-                                                        a.country Spain
-                                                            span.country--count (322)
+                                                        a.mcountry Spain
+                                                            span.mcountry--count (322)
                                                     li
-                                                        a.country Italy
+                                                        a.mcountry Italy
                                             li.continent.menu__dropdown(data-continent="Asia")
-                                                a.menu__headline-link(href="#") Asia
-                                                ul.country-group(data-continent="Asia")
+                                                a.menu__headline-link(href="javascript:void(0)") Asia
+                                                ul.mcountry-group(data-continent="Asia")
                                                     li
-                                                        a.country China
-                                                            span.country--count (2)
+                                                        a.mcountry China
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country India
-                                                            span.country--count (2)
+                                                        a.mcountry India
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Japan
-                                                            span.country--count (2)
+                                                        a.mcountry Japan
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Thailand
+                                                        a.mcountry Thailand
                                                     li
-                                                        a.country China
-                                                            span.country--count (2)
+                                                        a.mcountry China
+                                                            span.mcountry--count (2)
                                             li.continent.menu__dropdown(data-continent="Africa")
-                                                a.menu__headline-link(href="#") Africa
-                                                ul.country-group(data-continent="Africa")
+                                                a.menu__headline-link(href="javascript:void(0)") Africa
+                                                ul.mcountry-group(data-continent="Africa")
                                                     li
-                                                        a.country China
-                                                            span.country--count (2)
+                                                        a.mcountry China
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country India
-                                                            span.country--count (2)
+                                                        a.mcountry India
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Japan
-                                                            span.country--count (2)
+                                                        a.mcountry Japan
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Thailand
+                                                        a.mcountry Thailand
                                                     li
-                                                        a.country China
-                                                            span.country--count (2)
+                                                        a.mcountry China
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country India
-                                                            span.country--count (2)
+                                                        a.mcountry India
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Japan
-                                                            span.country--count (2)
+                                                        a.mcountry Japan
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Thailand
+                                                        a.mcountry Thailand
                                                     li
-                                                        a.country China
-                                                            span.country--count (2)
+                                                        a.mcountry China
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country India
-                                                            span.country--count (2)
+                                                        a.mcountry India
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Japan
-                                                            span.country--count (2)
+                                                        a.mcountry Japan
+                                                            span.mcountry--count (2)
                                                     li
-                                                        a.country Thailand
-                                        //ul.country-list
-                                            //ul.country-group(data-continent="Europe")
-                                            //    li
-                                            //        a.country France Francee
-                                            //    li
-                                            //        a.country Germany
-                                            //    li
-                                            //        a.country Spain
-                                            //    li
-                                            //        a.country Italy
-                                            //ul.country-group(data-continent="Asia")
-                                            //    li
-                                            //        a.country China
-                                            //                span.country--count (2)
-                                            //    li
-                                            //        a.country India
-                                            //                span.country--count (2)
-                                            //    li
-                                            //        a.country Japan
-                                            //                span.country--count (2)
-                                            //    li
-                                            //        a.country Thailand
+                                                        a.mcountry Thailand
                             li
-                                a.menu__headline-link.inactive(href="#") Blog
+                                a.menu__headline-link.inactive(href="javascript:void(0)") Blog
                             li.menu__headline-item
-                                a.menu__headline-link.menu__dropdown(href="#")
-                                    span About Us
-                                ul
+                                a.menu__headline-link.menu__dropdown(href="javascript:void(0)") About Us
+                                ul.menu__submenu
                                     li.menu__headline-submenu
-                                        a(href="#") Contact
+                                        a(href="javascript:void(0)") Contact
                     div
                         .menu__headline-language
                             p.menu__headline-language--ttl Language:
@@ -174,6 +153,6 @@ head
                                     li.custom-select__option(data-value="fr") FR
                                     li.custom-select__option(data-value="it") IT
                                     li.custom-select__option(data-value="es") ES
-                        a.menu__headline-profile(href="#")
+                        a.menu__headline-profile(href="javascript:void(0)")
                             span.menu__headline-profile--text Personal account
                         button.btn.greenBtn Make a Request
