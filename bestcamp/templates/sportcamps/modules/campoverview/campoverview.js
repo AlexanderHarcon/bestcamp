@@ -3,9 +3,9 @@ let campCarousel = document.getElementById("campCarousel");
 if (campCarousel) {
     window.addEventListener('load', () => {
         const carouselUri = {
-            css: sportcamps.js + 'carousel/carousel.css',
-            js: sportcamps.js + 'carousel/carousel.umd.js',
-            moduleCss: sportcamps.templates + 'sportcamps/modules/campoverview/campoverview.css'
+            css: sportcamps.js + 'assets/templates/js/carousel/carousel.css',
+            js: sportcamps.js + 'assets/templates/js/carousel/carousel.umd.js',
+            moduleCss: sportcamps.templates + '/campoverview.css'
         };
 
         // Загружаем стили и скрипты carousel

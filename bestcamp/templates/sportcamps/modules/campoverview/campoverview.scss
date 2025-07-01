@@ -1,10 +1,22 @@
 @charset "UTF-8";
-@import "../../../css/_mixin";
-@import "../../../css/_var";
-@import "../../../css/_ext";
-//------------------------------
-@import "../../base/_var";
-@import "../../base/_ext";
+//@import "../../../css/_mixin";
+//@import "../../../css/_var";
+//@import "../../../css/_ext";
+////------------------------------
+//@import "../../base/_var";
+//@import "../../base/_ext";
+
+@import "../../../css/mixin";
+@import "../../../css/foundation";
+@import "../../../css/ext";
+@import "../../../css/var";
+//______________________________
+@import "../../base/var";
+@import "../../base/class";
+@import "../../base/font";
+@import "../../base/ext";
+@import "../../base/base";
+
 $cl-blue: #5BBCE4;
 $cl-orange: #F39540;
 $cl-grey: #535556;
@@ -98,6 +110,7 @@ $cl-grey: #535556;
 
       &-carou {
         display: flex;
+
         &-img {
           object-fit: cover;
           height: auto;

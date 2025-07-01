@@ -1,59 +1,53 @@
-- var pathImg = '{$opt.assets_url}images/'
-- var modulPath = '{$theme_modules}maininfo/images/'
+// - var pathImg = '{$opt.assets_url}images/'
+// - var modulPath = '{$theme_modules}maininfo/images/'
 
-mixin svgSprite()
-    svg(width="0" height="0" class="hidden")
-        symbol(fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" id="star")
-            path(d="M7.30456 3.21986C7.94663 1.61918 8.26767 0.818834 8.78925 0.70791C8.92639 0.678744 9.06814 0.678744 9.20528 0.70791C9.72686 0.818834 10.0479 1.61918 10.69 3.21986C11.0551 4.13014 11.2377 4.58528 11.5793 4.89485C11.6751 4.98168 11.7791 5.05901 11.8899 5.12576C12.2847 5.36374 12.7776 5.40788 13.7634 5.49617C15.4321 5.64562 16.2665 5.72034 16.5213 6.19609C16.5741 6.29462 16.61 6.4013 16.6275 6.51169C16.7119 7.04472 16.0986 7.60278 14.8718 8.7189L14.5311 9.02884C13.9575 9.55065 13.6708 9.81155 13.5049 10.1372C13.4054 10.3325 13.3387 10.5428 13.3074 10.7598C13.2553 11.1215 13.3393 11.5 13.5072 12.2569L13.5672 12.5274C13.8684 13.8849 14.019 14.5637 13.831 14.8973C13.6622 15.197 13.3511 15.3889 13.0075 15.4053C12.625 15.4236 12.086 14.9844 11.0081 14.106C10.2978 13.5273 9.94274 13.2379 9.54853 13.1249C9.18828 13.0216 8.80625 13.0216 8.44601 13.1249C8.0518 13.2379 7.69669 13.5273 6.98648 14.106C5.90851 14.9844 5.36952 15.4236 4.987 15.4053C4.6434 15.3889 4.33235 15.197 4.16349 14.8973C3.97549 14.5637 4.12609 13.8849 4.42729 12.5274L4.4873 12.2569C4.65525 11.5 4.73923 11.1215 4.68711 10.7598C4.65585 10.5428 4.58914 10.3325 4.48964 10.1372C4.32376 9.81155 4.03699 9.55065 3.46345 9.02884L3.12277 8.7189C1.89598 7.60278 1.28259 7.04472 1.36706 6.51169C1.38456 6.4013 1.42044 6.29462 1.47321 6.19609C1.72801 5.72034 2.56239 5.64562 4.23115 5.49617C5.21693 5.40788 5.70983 5.36374 6.10467 5.12576C6.21541 5.05901 6.31943 4.98168 6.41525 4.89485C6.75686 4.58528 6.93943 4.13014 7.30456 3.21986Z" stroke="#F3CC40")
-        symbol(fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="starFill")
-            path(d="M7.30456 4.21986C7.94663 2.61918 8.26767 1.81883 8.78925 1.70791C8.92639 1.67874 9.06814 1.67874 9.20528 1.70791C9.72686 1.81883 10.0479 2.61918 10.69 4.21986C11.0551 5.13014 11.2377 5.58528 11.5793 5.89485C11.6751 5.98168 11.7791 6.05901 11.8899 6.12576C12.2847 6.36374 12.7776 6.40788 13.7634 6.49617C15.4321 6.64562 16.2665 6.72034 16.5213 7.19609C16.5741 7.29462 16.61 7.4013 16.6275 7.51169C16.7119 8.04472 16.0986 8.60278 14.8718 9.7189L14.5311 10.0288C13.9575 10.5506 13.6708 10.8116 13.5049 11.1372C13.4054 11.3325 13.3387 11.5428 13.3074 11.7598C13.2553 12.1215 13.3393 12.5 13.5072 13.2569L13.5672 13.5274C13.8684 14.8849 14.019 15.5637 13.831 15.8973C13.6622 16.197 13.3511 16.3889 13.0075 16.4053C12.625 16.4236 12.086 15.9844 11.0081 15.106C10.2978 14.5273 9.94274 14.2379 9.54853 14.1249C9.18828 14.0216 8.80625 14.0216 8.44601 14.1249C8.0518 14.2379 7.69669 14.5273 6.98648 15.106C5.90851 15.9844 5.36952 16.4236 4.987 16.4053C4.6434 16.3889 4.33235 16.197 4.16349 15.8973C3.97549 15.5637 4.12609 14.8849 4.42729 13.5274L4.4873 13.2569C4.65525 12.5 4.73923 12.1215 4.68711 11.7598C4.65585 11.5428 4.58914 11.3325 4.48964 11.1372C4.32376 10.8116 4.03699 10.5506 3.46344 10.0288L3.12277 9.7189C1.89598 8.60278 1.28259 8.04472 1.36706 7.51169C1.38456 7.4013 1.42044 7.29462 1.47321 7.19609C1.72801 6.72034 2.56239 6.64562 4.23115 6.49617C5.21693 6.40788 5.70983 6.36374 6.10467 6.12576C6.21541 6.05901 6.31943 5.98168 6.41525 5.89485C6.75686 5.58528 6.93942 5.13014 7.30456 4.21986Z" fill="#F3CC40" stroke="#F3CC40" stroke-width="1.86038")
+- var modulPath = 'images/'
 
-.main-info
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' href='maininfo.css')
+    title Football Camps
+
+.main-info-bl#maininfo
     .wrapper.pd_block
-        // info block
-        +svgSprite
-        section.main-info__bl
-            .main-info__bl_title
-                .main-info__bl_title-rate.stars
+        .main-info.main-info--lt
+            .main-info__title
+                .main-info__icon
                     - for (let i = 0; i < 5; i++)
-                        - const className = 'stars__item'
                         if i < 4
-                            svg(class=className)
-                                use(href='#starFill')
+                            svg
+                                use(xlink:href=modulPath + 'all-svg.svg#starFill')
                         else
-                            svg(class=className)
-                                use(href='#star')
-                h1.main-info__bl_h1 Swimming Camp Corallia Beach and Coral Beach olympic
-            .main-info__bl_details
-                // left block
-                .main-info__bl_details-lb
-                    .main-info__bl_details-lb-container
-                        img.main-info__bl_details-lb-img(src=pathImg +'coralPool.png' alt='coralBeach')
-                        .price-label
-                            .price-label__wrapper
-                                .price-label__wrapper_overlap
-                                    p.price-label__wrapper_overlap-p
-                                        span.price-label__wrapper_overlap-p-text-wrapper 89
-                                            sup.price-label__wrapper_overlap-p-text-wrapper--supText $
-                                            span.price-label__wrapper_overlap-p-text-wrapper--subText per day
-                // right block
-                .main-info__bl_details-rb
-                    .main-info__bl_details-rb-loc
-                        .main-info__bl_details-rb-loc-item
-                            img.main-info__bl_details-rb-loc-img--mr(src=modulPath + 'marker.svg' alt='mountain')
-                            p.main-info__bl_details-rb-loc-p Hurgada/Egypt
-                        .main-info__bl_details-rb-loc-item
-                            img.main-info__bl_details-rb-loc-img--mrt(src=modulPath + 'airplane.svg' alt='airplane')
-                            p.main-info__bl_details-rb-loc-p 15 km
-                        .main-info__bl_details-rb-loc-item
-                            img.main-info__bl_details-rb-loc-img--ml(src=modulPath + 'mountain.svg' alt='mountain')
-                            p.main-info__bl_details-rb-loc-p 150 m
-                    .main-info__bl_details-rb-check
-                        p.main-info__bl_details-rb-check-p CrossFit Area &amp; Fitness Center
-                        p.main-info__bl_details-rb-check-p All Inclusive
-                        p.main-info__bl_details-rb-check-p Near the Beach
-                        p.main-info__bl_details-rb-check-p All Ear around camps
-                        p.main-info__bl_details-rb-check-p For Professional Teams
-                        p.main-info__bl_details-rb-check-p Spa Center &amp; Hammam
-                    .main-info__bl_details-rb-btn
-                        button.btn.greenBtn Get a Free Quotes
+                            svg
+                                use(xlink:href=modulPath + 'all-svg.svg#star')
+                header.main-info__head.head_h1 Swimming Camp Corallia Beach and Coral Beach olympic
+            .main-info__details--lt
+                div
+                    .main-info__container
+                        img.main-info__img(src=modulPath +'coralPool.png' alt='coralBeach')
+                        .price-bl
+                            span 89
+                                sup $
+                                sub per day
+                div
+                    ul.main-info__loc
+                        li
+                            img(src=modulPath + 'marker.svg' alt='mountain')
+                            span Hurgada/Egypt
+                        li
+                            img(src=modulPath + 'airplane.svg' alt='airplane')
+                            span 15 km
+                        li
+                            img(src=modulPath + 'mountain.svg' alt='mountain')
+                            span 150 m
+                    ul.main-info__list
+                        li CrossFit Area &amp; Fitness Center
+                        li All Inclusive
+                        li Near the Beach
+                        li All Ear around camps
+                        li For Professional Teams
+                        li Spa Center &amp; Hammam
+                    div
+                        button.btn.main-btn Get a free quotes

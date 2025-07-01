@@ -1,16 +1,16 @@
-// - var pathImg = '{$theme_modules}infrastructure/images/'
+- var pathImg = '{$theme_modules}infrastructure/images/'
 // - var pathImg = 'images/'
 //
-//  doctype html
-//  head
-//  meta(charset='UTF-8')
-//  meta(name="viewport" content="width=device-width, initial-scale=1.0")
-//  link(rel='stylesheet' href='infrastructure.css')
-//  script(rel='script' src='infrastructure.js')
-//  title Football Camps
+// doctype html
+// head
+// meta(charset='UTF-8')
+// meta(name="viewport" content="width=device-width, initial-scale=1.0")
+// link(rel='stylesheet' href='infrastructure.css')
+// script(rel='script' src='infrastructure.js')
+// title Football Camps
 
-mixin tableArrow()
-    .arrow-table
+mixin tableArrow(isOpen)
+    .arrow-table_js(class={'rotated': isOpen})
 
 mixin headers()
     .infr__table__head
@@ -18,7 +18,7 @@ mixin headers()
         h4.infr__table__text Olympic Swimming pool
 
 mixin tableRow(isOpen)
-    dl.infr__table__param.infr__table__param--lt
+    dl.parameters.parameters--lt
         div
             dt Lines
             dd 6
@@ -34,11 +34,11 @@ mixin tableRow(isOpen)
         div
             dt Indoor/Outdoor
             dd Indoor
-        +tableArrow()
+    +tableArrow(isOpen)
 
-mixin optionsList()
-    .infr__table__info.infr__table__row(class={'visible': isOpen})
-        ul.infr__table__list
+mixin optionsList(isOpen)
+    .infr__table__info.infr__table__info--lt.infr__table__info_js(class={'visible': isOpen})
+        ul.infr__table__list.infr__table__list--lt
             li Option Lorem ipsum.
                 span (101)
             li Option
@@ -55,14 +55,14 @@ mixin optionsList()
                 span (101)
             li.disabled Option
                 span (101)
-        p Access to the gym is included in the price of the Gloria Sport Arena packages. Access to the gym is included in the price of the Gloria Sport Arena packages.
+        p.content Access to the gym is included in the price of the Gloria Sport Arena packages. Access to the gym is included in the price of the Gloria Sport Arena packages.
 
 mixin headersFintess()
     .infr__table__head
-        .infr__table__text Gym Hall
+        h4.infr__table__text Gym Hall
 
 mixin tableRowFitness(isOpen)
-    dl.infr__table__param.infr__table__param--lt
+    dl.parameters.parameters--lt
         //div
         //    dt Lines
         //    dd 6
@@ -78,33 +78,44 @@ mixin tableRowFitness(isOpen)
         div
             dt Indoor/Outdoor
             dd Indoor
-        +tableArrow() is included in the price of the Gloria Sport Arena packages. Access to the gym is included in the price of the Gloria Sport Arena packages.
+    +tableArrow()
 
 mixin equipmentListItem
-    li.infr__drop__item 01 Name of equipment for an Olympic swimming pool
+    li 01 Name of equipment for an Olympic swimming pool
         span (3)
 
 .infr-bl#infrastructure
     section.infr.wrapper.pd_block
         div
-            h2.infr__h2 Sport infrastructure overview
+            h2.head_h2 Sport infrastructure overview
             section
                 header
-                    h3.infr__h3 Swimming
-                .infr__table__wrap.infr__table
-                    .infr__table--lt
+                    h3.infr__title.head_h3 Swimming
+                .infr__table.infr__table--lt.infr__table_js
+                    div
                         div
                             +headers
                         div
-                            +tableRow(false)
+                            +tableRow(true)
+                    div
+                        +optionsList(true)
+                .infr__table.infr__table--lt.infr__table_js
+                    div
+                        div
+                            +headers
+                        div
+                            +tableRow()
                     div
                         +optionsList()
-                section.infr__drop
+                section.drop.drop_js
                     header
-                        h4.infr__drop__h4 Swimming Equipment (Storage Room)
-                    .infr__drop__wrap
-                        .infr__drop__text
-                            ul
+                        .drop__header
+                            h4.drop__head.drop__head--lt Swimming Equipment (Storage Room)
+                            svg.drop__icon.drop__icon_js
+                                use(href=pathImg + 'all-svg.svg#arrow-equipment')
+                    ul.drop__wrap_js
+                        li
+                            ul.equipment.equipment--lt
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
@@ -112,58 +123,57 @@ mixin equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
-                        .infr__drop__text
-                            h5.infr__drop__h5 Product available for order from Active Planet Sport for Swimming:
-                            ul
+                        li
+                            h5.drop__title Product available for order from Active Planet Sport for Swimming:
+                            ul.equipment.equipment--lt
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
-                        .infr__drop__text.disabled
-                            h5.infr__drop__h5 Inventory not available:
-                            ul
+                        li.disabled
+                            h5.drop__title Inventory not available:
+                            ul.equipment.equipment--lt
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
             section
                 header
-                    h3.infr__h3 Fitness
-                .infr__table__wrap.infr__table
-                    .infr__table--lt
+                    h3.infr__title.head_h3 Fitness
+                .infr__table.infr__table--lt.infr__table_js
+                    div
                         div
                             +headersFintess
                         div
-                            +tableRowFitness(true)
+                            +tableRowFitness()
                     div
                         +optionsList()
-                section.infr__drop
+                section.drop.drop_js
                     header
-                        h4.infr__drop__h4 Swimming On-site
-                    .infr__drop__wrap
-                        .infr__drop__text
-                            ul
+                        .drop__header
+                            h4.drop__head.drop__head--lt Swimming Equipment (Storage Room)
+                            svg.drop__icon.drop__icon_js
+                                use(href=pathImg + 'all-svg.svg#arrow-equipment')
+                    ul.drop__wrap_js
+                        li
+                            ul.equipment.equipment--lt
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
-
-                        .infr__drop__text
-                            h5.infr__drop__h5 Product available for order from Active Planet Sport for Swimming:
-                            ul
+                                +equipmentListItem
+                        li
+                            h5.drop__title Product available for order from Active Planet Sport for Swimming:
+                            ul.equipment.equipment--lt
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem
-                                +equipmentListItem
-                                +equipmentListItem
-                        .infr__drop__text.disabled
-                            h5.infr__drop__h5 Inventory not available:
-                            ul
-                                +equipmentListItem
-                                +equipmentListItem
+                        li.disabled
+                            h5.drop__title Inventory not available:
+                            ul.equipment.equipment--lt
                                 +equipmentListItem
                                 +equipmentListItem
                                 +equipmentListItem

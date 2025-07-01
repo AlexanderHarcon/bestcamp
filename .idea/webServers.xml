@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="689677b5-98bf-44c5-85af-75a609d31254" name="ftp.bestsportcamps.com" url="http://ftp.bestsportcamps.com">
+        <fileTransfer host="ftp.bestsportcamps.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="3e5eb7eb-6761-4b0a-b3ea-6119adcf5a2e" name="devassets" url="http://135.181.14.210">
+        <fileTransfer host="135.181.14.210" port="21">
+          <advancedOptions>
+            <advancedOptions passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

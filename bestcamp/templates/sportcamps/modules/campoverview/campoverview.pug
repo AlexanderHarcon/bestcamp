@@ -1,4 +1,14 @@
-- var pathImg = '{$opt.assets_url}images/'
+// - var pathImg = '{$opt.assets_url}images/'
+// - var pathImg = '{$theme_modules}infrastructure/images/'
+- var pathImg = 'images/'
+
+doctype html
+head
+meta(charset='UTF-8')
+meta(name="viewport" content="width=device-width, initial-scale=1.0")
+link(rel='stylesheet' href='campoverview.css')
+script(rel='script' src='campoverview.js')
+title Football Camps
 
 .camp-overview
     .wrapper.pd_block
@@ -6,19 +16,19 @@
             .camp-overview__bl-wrapper
                 .camp-overview__items
                     .camp-overview__items-item
-                        img.camp-overview__items-img(src='assets/templates/sportcamps/modules/campoverview/images/airplane.svg' alt='airplane')
+                        img.camp-overview__items-img(src=pathImg + 'airplane.svg' alt='airplane')
                     .camp-overview__items-item
                         p.camp-overview__items-p.camp-overview__items-p--orng
                             | Antalya AYT
                     .camp-overview__items-item
-                        img.camp-overview__items-img(src='assets/templates/sportcamps/modules/campoverview/images/line.svg' alt='line')
+                        img.camp-overview__items-img(src=pathImg + 'line.svg' alt='line')
                     .camp-overview__items-item
                         p.camp-overview__items-p.camp-overview__items-p--blue
                             | 15 km
                     .camp-overview__items-item
-                        img.camp-overview__items-img(src='assets/templates/sportcamps/modules/campoverview/images/linearrow.svg' alt='linearrow')
+                        img.camp-overview__items-img(src=pathImg + 'linearrow.svg' alt='linearrow')
                     .camp-overview__items-item
-                        img.camp-overview__items-img(src='assets/templates/sportcamps/modules/campoverview/images/greenMarker.svg' alt='greenMarker')
+                        img.camp-overview__items-img(src=pathImg + 'greenMarker.svg' alt='greenMarker')
                 h2.camp-overview__bl-title Training Camp Overview
                 .camp-overview__bl-text
                     input.camp-overview__bl-checkbox(type="checkbox" id="read-more")

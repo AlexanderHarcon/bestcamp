@@ -1,12 +1,27 @@
 @charset "UTF-8";
-@import "../../../css/_mixin";
-@import "../../../css/_var";
-@import "../../../css/_ext";
-//------------------------------
-@import "../../base/_var";
-@import "../../base/_ext";
+//@import "../../../css/_mixin";
+//@import "../../../css/_var";
+//@import "../../../css/_ext";
+////------------------------------
+//@import "../../base/_var";
+//@import "../../base/_ext";
 
-.main-info {
+@import "../../../css/mixin";
+@import "../../../css/foundation";
+@import "../../../css/ext";
+@import "../../../css/var";
+//______________________________
+@import "../../base/var";
+@import "../../base/class";
+@import "../../base/font";
+@import "../../base/ext";
+@import "../../base/base";
+
+$cl-back: #07050ECC;
+$cl-white: #FFF;
+$cl-stroke: #000000FF;
+
+.main-info-bl {
   background: {
     color: rgba(7, 5, 14, 0.8);
     image: url('images/background.jpeg');
@@ -16,348 +31,317 @@
     attachment: scroll;
     blend-mode: multiply;
   }
-  padding-bottom: 48px;
+}
 
-  &__bl {
+.main-info {
+  &__icon {
+    display: flex;
+    gap: rem(10);
+
+    > * {
+      width: rem(15);
+      height: rem(15);
+    }
+  }
+
+  &__lt {
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
+  }
 
-    &_title {
-      display: inline-flex;
-      flex: 1 1 100%;
-      flex-direction: column;
+  &__title {
+    display: inline-flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+  }
+
+  &__head {
+    color: $cl-white;
+    margin: rem(8) 0 rem(24) 0;
+    stroke: $cl-stroke;
+    stroke-width: rem(1);
+    @include mq-w(820px) {
+      //font-size: rem(40);
     }
-
-    &_h1 {
-      font-family: $font-head;
-      font-size: rem(24);
-      color: $cl-white;
-      font-weight: 900;
-      margin: 8px 0 24px 0;
-      stroke: rgba(0, 0, 0, 1);
-      stroke-width: 1px;
-      @include mq-w(820px) {
-        font-size: rem(40);
-      }
-      @include mq-w(935px) {
-        font-size: rem(48);
-      }
+    @include mq-w(935px) {
+      //font-size: rem(48);
     }
+  }
 
-    &_details {
+  &__container {
+    position: absolute;
+    height: 100%;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    @include mq-w(620px) {
+      position: relative;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: rem(12);
+    object-fit: cover;
+  }
+
+  &__details {
+
+    &--lt {
       display: flex;
       flex-wrap: wrap;
-
-      &-lb {
-        position: relative;
-        display: inline-flex;
-        height: 256px;
-        flex: 1 1 100%;
-        max-width: 100%;
-        padding-bottom: calc(57.38% + ((88.84 - 57.38) * ((100vw - 430px) / 190)));
-        text-align: center;
-        @include mq-w(620px) {
-          height: 406px;
-          padding-bottom: 0;
-        }
-        @include mq-w(950px) {
-          max-height: 401px;
-          height: 100%;
-          flex: 1 1 575px;
-          margin-right: 24px;
-        }
-
-        &-container {
-          position: absolute;
-          height: 100%;
-          display: block;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          width: 100%;
-          @include mq-w(620px) {
-            position: relative;
-          }
-        }
-
-        &-img {
-          width: 100%;
-          height: 401px;
-          border-radius: 12px;
-          object-fit: cover;
-        }
+      gap: 1rem;
+      @include mq-w(770px) {
+        flex-wrap: nowrap;
       }
 
-      &-rb {
-        display: inline-flex;
-        flex: 1 1 calc(100% - 575px - 24px);
-        flex-direction: column;
+      > * {
+        &:first-child {
+          position: relative;
+          //display: inline-flex;
+          height: 18rem;
+          width: 100%;
+          //max-width: calc(50% - 1rem);
+          //padding-bottom: calc(57.38% + ((88.84 - 57.38) * ((100vw - 430px) / 190)));
+          text-align: center;
+          @include mq-w(500px) {
+            height: 20rem;
 
-        .main-info__bl_details-rb-loc {
-          display: flex;
-          flex-wrap: wrap;
-          font-family: $font-head;
-          font-size: rem(16);
-          color: $cl-white;
-          font-weight: 700;
-          align-items: center;
-          padding-top: rem(24);
-
-          @include mq-w(621px) {
-            padding-top: rem(32);
+            //height: rem(406);
+            //padding-bottom: 0;
           }
-
-          @include mq-w(921px) {
-            padding-top: rem(13);
-          }
-
-          &-item {
-            display: flex;
-            align-items: center;
-
-            &:nth-child(3) {
-              flex-basis: 100%;
-              @include mq-w(406px) {
-                &:nth-child(3) {
-                  flex-basis: auto;
-                }
-              }
-
-            }
-
-            @include mq-w(950px) {
-              &:nth-child(1) {
-                flex-basis: 100%;
-                padding-bottom: 24px;
-              }
-            }
-            @include mq-w(1320px) {
-              &:nth-child(1) {
-                flex-basis: auto;
-                padding-bottom: 0;
-              }
-            }
-          }
-
-          &-p {
-            margin-left: 8px;
-            display: inline-flex;
-            align-items: center;
-            white-space: pre-line;
-
-            @include mq-w(921px) {
-              font-size: rem(13);
-            }
-
-            @include mq-w(950px) {
-              font-size: rem(14);
-            }
-          }
-
-          &-img {
-            width: 24px;
-            height: 24px;
-
-            &--mr {
-            }
-
-            &--mrt {
-              margin-left: 24px;
-              @include mq-w(950px) {
-                margin-left: 0;
-
-              }
-              @include mq-w(1320px) {
-                margin-left: 25px;
-              }
-            }
-
-            &--ml {
-              padding-top: 12px;
-              @include mq-w(406px) {
-                margin-left: 24px;
-              }
-            }
-
-          }
-        }
-
-
-        &-check {
-          display: flex;
-          flex-wrap: wrap;
-          font-family: $font-head;
-          font-size: rem(14);
-          color: $cl-white;
-          padding: 20px 0 0 0;
-          justify-content: flex-start;
-          gap: 11px;
-          @include mq-w(450px) {
-            padding: 40px 0 0 0;
-            justify-content: space-between;
-            gap: 24px;
-          }
-          @include mq-w(515px) {
-            gap: 22px;
-            justify-content: start;
-          }
-          @include mq-w(720px) {
-            justify-content: space-between;
+          @include mq-w(770px) {
+            width: calc(50% + 30rem);
+            height: 50%;
           }
           @include mq-w(950px) {
-            padding-top: 24px;
+            max-height: rem(401);
+            height: 100%;
+            max-width: calc(50% - 1rem);
           }
-          @include mq-w(1074px) {
-            gap: 17px;
-          }
+        }
 
-          &-p {
-            display: inline-flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            height: 28px;
-            white-space: pre-line;
-            letter-spacing: 0.02em;
-            gap: 4px;
-
-            &::before {
-              content: '';
-              display: inline-block;
-              width: 24px;
-              height: 24px;
-              background: url("images/CheckRingLight.svg") no-repeat center center;
-              flex-shrink: 0;
-            }
-
-            @include mq-w(450px) {
-              width: 193px;
-            }
-            @include mq-w(515px) {
-              width: 47%;
-            }
-            @include mq-w(620px) {
-              width: 48%;
-            }
-            @include mq-w(950px) {
-              width: 100%;
-              font-size: 14px;
-            }
-            @include mq-w(1074px) {
-              width: 186px;
-            }
-          }
+        &:last-child {
+          //display: inline-flex;
+          //flex: 1 1 calc(100% - 575px - 24px);
+          width: 100%;
+          flex-direction: column;
+          @include rhythm-margin(1.2rem)
+          //gap: 20px;
         }
       }
     }
   }
-}
 
-/* PRICE LABEL BLOCK */
-.price-label {
-  &__wrapper {
-    position: absolute;
-    width: 149px;
-    height: 68px;
-    left: 0;
-    bottom: 0;
-    @include mq-w(529px) {
-      height: 110px;
-      width: 240px;
+  &__loc {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-head;
+    font-size: rem(16);
+    color: $cl-white;
+    font-weight: 700;
+    align-items: center;
+    //padding-top: rem(24);
+    gap: rem(20);
+
+    > * {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(3) {
+        flex-basis: 100%;
+        //margin-top: rem(15);
+        @include mq-w(410px) {
+          &:nth-child(3) {
+            margin-top: 0;
+            flex-basis: auto;
+          }
+        }
+      }
+
+      @include mq-w(950px) {
+        &:nth-child(1) {
+          flex-basis: 100%;
+          //padding-bottom: rem(24);
+        }
+      }
+      @include mq-w(1320px) {
+        &:nth-child(1) {
+          flex-basis: auto;
+          padding-bottom: 0;
+        }
+      }
     }
-    @include mq-w(620px) {
-      height: 115px;
+
+    @include mq-w(621px) {
+      //padding-top: rem(32);
+    }
+
+    @include mq-w(921px) {
+      padding-top: rem(13);
+    }
+
+    img {
+      width: rem(24);
+      height: rem(24);
+    }
+
+    span {
+      margin-left: rem(8);
+      white-space: pre-line;
+
+      @include mq-w(921px) {
+        font-size: rem(13);
+      }
+
+      @include mq-w(950px) {
+        font-size: rem(13);
+      }
+    }
+  }
+
+  &__list {
+    //display: flex;
+    //flex-wrap: wrap;
+    display: grid;
+    font-family: $font-head;
+    font-size: rem(14);
+    color: $cl-white;
+    //padding: rem(20) 0 0 0;
+    //justify-content: flex-start;
+    //gap: rem(11);
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    @include mq-w(450px) {
+      //padding: 40px 0 0 0;
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr 1fr;
+      //gap: rem(24);
+    }
+    @include mq-w(515px) {
+      //gap: rem(22);
+      //justify-content: start;
+
+    }
+    @include mq-w(720px) {
+      //justify-content: space-between;
+      grid-template-columns: 1fr 1fr ;
     }
     @include mq-w(950px) {
-      height: 110px;
+      //padding-top: rem(24);
+    }
+    @include mq-w(1074px) {
+      //gap: rem(17);
     }
 
-    &_overlap {
-      position: absolute;
-      width: 149px;
-      height: 68px;
-      background: {
-        image: url('images/rectangle.svg');
-        size: 100% 100%;
+    > * {
+      //display: inline-flex;
+      //justify-content: flex-start;
+      //width: 100%;
+      //height: rem(28);
+      //grid-template-columns: 1fr 1fr;
+      white-space: pre-line;
+      letter-spacing: 0.02em;
+      gap: rem(8);
+      line-height: rem(22);
+      display: inline-flex;
+
+      &::before {
+        transform: translateY(rem(4));
+        content: '';
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.1rem;
+        background: url("images/CheckRingLight.svg") no-repeat center center;
+        flex-shrink: 0;
+
       }
-      @include mq-w(529px) {
-        height: 110px;
-        width: 240px;
+
+      @include mq-w(450px) {
+        //width: rem(193);
       }
-      @include mq-w(921px) {
-        height: 110px;
+      @include mq-w(515px) {
+        //width: 47%;
       }
-
-      &-p {
-        color: $cl-white;
-        text-align: center;
-
-        &-text-wrapper {
-          position: absolute;
-          font-weight: 800;
-          font-family: $font-text;
-          font-size: rem(20);
-          width: 100%;
-          height: 23px;
-          bottom: 13px;
-          top: auto;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          @include mq-w(529px) {
-            font-size: rem(48);
-            height: 56px;
-            top: 44px;
-            margin: 0;
-          }
-
-          &--supText {
-            font-family: $font-text;
-            font-weight: 400;
-            font-size: rem(14);
-            @include mq-w(529px) {
-              font-size: rem(26);
-            }
-          }
-
-          &--subText {
-            font-family: $font-text;
-            font-size: rem(12);
-            font-weight: 400;
-            @include mq-w(529px) {
-              font-size: rem(16);
-            }
-          }
-        }
+      @include mq-w(720px) {
+        //width: 30%;
+      }
+      @include mq-w(950px) {
+        //width: 100%;
+        font-size: rem(14);
+      }
+      @include mq-w(1074px) {
+        //width: rem(186);
       }
     }
   }
 }
 
-/* END PRICE LABEL BLOCK */
+.price-bl {
+  position: absolute;
+  width: rem(149);
+  height: rem(68);
+  left: 0;
+  bottom: 0;
+  background: {
+    image: url('images/rectangle.svg');
+    size: 100% 100%;
+  }
+  @include mq-w(529px) {
+    height: rem(110);
+    width: rem(240);
+  }
 
-/* RATING STARS BLOCK */
-.stars {
-  display: flex;
-  gap: 10px;
+  > * {
+    color: $cl-white;
+    text-align: center;
+  }
 
-  &__item {
-    width: 15px;
-    height: 15px;
+  > * {
+    position: absolute;
+    font-weight: 800;
+    font-family: $font-text;
+    font-size: rem(20);
+    width: 100%;
+    height: rem(23);
+    bottom: rem(13);
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    @include mq-w(529px) {
+      font-size: rem(48);
+      height: rem(56);
+      top: rem(44);
+      margin: 0;
+    }
+  }
 
-    &--active {
-      fill: rgba(243, 204, 64, 1);
+  sup {
+    font-family: $font-text;
+    font-weight: 400;
+    font-size: rem(14);
+    @include mq-w(529px) {
+      font-size: rem(26);
+    }
+  }
+
+  sub {
+    font-family: $font-text;
+    font-size: rem(12);
+    font-weight: 400;
+    @include mq-w(529px) {
+      font-size: rem(16);
     }
   }
 }
 
-/* END RATING STARS BLOCK */
-
-//button style
-.greenBtn {
-  margin-top: rem(40);
+.main-btn {
+  margin-top: 2rem;
   text-transform: none;
-  background-color: $cl-green;
 }
