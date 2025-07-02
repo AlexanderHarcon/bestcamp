@@ -9,3 +9,68 @@
 @import "../../base/font";
 @import "../../base/ext";
 @import "../../base/base";
+
+$cl-green: #95C032;
+$cl-blue: #5BBCE4;
+$cl-orange: #F39540;
+$cl-text: #637075;
+
+.othercamps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-title {
+    @include mq-w(720px) {
+      width: 70%;
+    }
+    text-align: -webkit-center;
+
+    * {
+      &:last-child {
+        color: $cl-text;
+        padding-top: 16px;
+        line-height: 24px;
+        font: {
+          family: Raleway;
+          size: 16px;
+          weight: 500;
+        }
+      }
+    }
+  }
+
+  &-nav {
+    width: 100%;
+    margin: 40px 0 80px 0;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 2px;
+
+    * {
+      text-align-last: center;
+
+      * {
+        padding: 11px;
+        width: 100%;
+        font: {
+          family: Raleway;
+          weight: 700;
+          size: 16px;
+        }
+        color: $cl-text;
+        line-height: 24px;
+
+        &:hover {
+          background-color: $cl-orange;
+          color: #FFFFFF;
+          border: 1px;
+          border-radius: 16px;
+        }
+      }
+    }
+  }
+
+  &-sections {
+  }
+}
