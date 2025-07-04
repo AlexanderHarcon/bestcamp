@@ -1,39 +1,56 @@
 @charset "UTF-8";
-@import "../../../css/mixin";
-@import "../../../css/foundation";
-@import "../../../css/ext";
-@import "../../../css/var";
+@import "../../../css/_mixin";
+@import "../../../css/_var";
+@import "../../../css/_ext";
 //______________________________
-@import "../../base/var";
-@import "../../base/class";
-@import "../../base/font";
-@import "../../base/ext";
-@import "../../base/base";
+@import "../../base/_var";
+@import "../../base/_ext";
+
+//@import "../../../css/mixin";
+//@import "../../../css/foundation";
+//@import "../../../css/ext";
+//@import "../../../css/var";
+////______________________________
+//@import "../../base/var";
+//@import "../../base/class";
+//@import "../../base/font";
+//@import "../../base/ext";
+//@import "../../base/base";
 
 $cl-green: #95C032;
 $cl-blue: #5BBCE4;
 $cl-orange: #F39540;
 $cl-text: #637075;
-
+@mixin sticky-nav {
+  position: sticky;
+  top: 3px;
+  z-index: 10;
+  background-color: #FFFFFF;
+}
+@mixin border-nav{
+  border: 1px;
+  border-radius: 12px;
+  color: #FFFFFF;
+}
 .othercamps {
+  text-align: -webkit-center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Raleway;
 
   &-title {
     @include mq-w(720px) {
       width: 70%;
     }
-    text-align: -webkit-center;
 
     * {
       &:last-child {
         color: $cl-text;
-        padding-top: 16px;
+        padding-top: rem(16);
         line-height: 24px;
         font: {
-          family: Raleway;
-          size: 16px;
+          size: rem(16);
           weight: 500;
         }
       }
@@ -42,35 +59,150 @@ $cl-text: #637075;
 
   &-nav {
     width: 100%;
-    margin: 40px 0 80px 0;
+    margin: 40px 0 0 0;
     border: 2px solid black;
-    border-radius: 16px;
-    padding: 2px;
+    border-radius: 12px;
+    padding: rem(2);
+    @include sticky-nav;
 
-    * {
+    > * {
       text-align-last: center;
+      @include mq-w(500px) {
+        display: flex;
+        justify-content: center;
+      }
 
-      * {
-        padding: 11px;
+      > * {
         width: 100%;
-        font: {
-          family: Raleway;
-          weight: 700;
-          size: 16px;
-        }
-        color: $cl-text;
-        line-height: 24px;
 
-        &:hover {
-          background-color: $cl-orange;
-          color: #FFFFFF;
-          border: 1px;
-          border-radius: 16px;
+        > * {
+          padding: rem(11);
+          font: {
+            family: Raleway;
+            weight: 700;
+            size: rem(16);
+          }
+          color: $cl-text;
+          line-height: 24px;
+          display: block;
+
+        }
+
+        .cl_orange {
+          &:hover, &.active {
+            background-color: $cl-orange;
+            @include border-nav;
+          }
+        }
+
+        .cl_green {
+          &:hover, &.active {
+            background-color: $cl-green;
+            @include border-nav;
+          }
+        }
+
+        .cl_blue {
+          &:hover, &.active {
+            background-color: $cl-blue;
+            @include border-nav;
+          }
         }
       }
     }
+
   }
 
   &-sections {
+    > * {
+      padding-top: rem(80);
+
+      > * {
+        &:first-child {
+          margin-bottom: rem(40);
+        }
+      }
+    }
+
+    .head_h2 {
+      text-transform: none;
+      padding-bottom: rem(8);
+      font: {
+        weight: 800;
+        size: rem(22);
+      }
+      line-height: 38px;
+
+      &.olympic {
+        color: $cl-orange;
+      }
+
+      &.paralympic {
+        color: $cl-green;
+      }
+
+      &.nonolympic {
+        color: $cl-blue;
+      }
+    }
+
+    .subtitle {
+      font: {
+        size: rem(16);
+        weight: 500;
+      }
+      color: $cl-text;
+      line-height: 24px;
+    }
+  }
+
+  .item-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-row-gap: rem(12);
+    @include mq-w(500px) {
+      grid-template-columns: repeat(2, 2fr);
+      grid-column-gap: rem(24);
+    }
+    @include mq-w(1024px) {
+      grid-template-columns: repeat(3, 2fr);
+      grid-row-gap: rem(24);
+      grid-column-gap: rem(24);
+
+    }
+
+    &__item {
+      display: flex;
+      text-align: left;
+    }
+
+    &__content {
+      width: 24px;
+
+      > * {
+        width: 100%;
+        height: 24px;
+      }
+    }
+
+    &__wrapper {
+      width: calc(100% - 24px);
+      padding-left: rem(8);
+    }
+
+    &__title {
+      padding-bottom: rem(4);
+      line-height: 27px;
+    }
+
+    &__text {
+      color: $cl-text;
+      line-height: 24px;
+      font: {
+        size: rem(16);
+        weight: 500;
+      }
+    }
   }
 }
