@@ -110,45 +110,46 @@
   color: #637075;
   line-height: 24px;
 }
-.othercamps .item-list {
+
+.item-list {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 2fr);
   grid-row-gap: 0.8571428571rem;
 }
 @media (min-width: 500px) {
-  .othercamps .item-list {
+  .item-list {
     grid-template-columns: repeat(2, 2fr);
     grid-column-gap: 1.7142857143rem;
   }
 }
 @media (min-width: 1024px) {
-  .othercamps .item-list {
+  .item-list {
     grid-template-columns: repeat(3, 2fr);
     grid-row-gap: 1.7142857143rem;
     grid-column-gap: 1.7142857143rem;
   }
 }
-.othercamps .item-list__item {
+.item-list__item {
   display: flex;
   text-align: left;
 }
-.othercamps .item-list__content {
+.item-list__content {
   width: 24px;
 }
-.othercamps .item-list__content > * {
+.item-list__content > * {
   width: 100%;
   height: 24px;
 }
-.othercamps .item-list__wrapper {
+.item-list__wrapper {
   width: calc(100% - 24px);
   padding-left: 0.5714285714rem;
 }
-.othercamps .item-list__title {
+.item-list__title {
   padding-bottom: 0.2857142857rem;
   line-height: 27px;
 }
-.othercamps .item-list__text {
+.item-list__text {
   color: #637075;
   line-height: 24px;
   font-size: 1.1428571429rem;
